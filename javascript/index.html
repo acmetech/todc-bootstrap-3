@@ -1,9 +1,85 @@
----
-layout: default
-title: JavaScript plugins
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
 
-<!-- Subhead
+<title>
+  
+    JavaScript plugins &middot; TODC Bootstrap
+  
+</title>
+
+<!-- Bootstrap core CSS -->
+<link href="/assets/css/bootstrap.css" rel="stylesheet">
+
+<!-- Documentation extras -->
+<link href="/assets/css/docs.css" rel="stylesheet">
+<link href="/assets/css/pygments-manni.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="/assets/js/html5shiv.js"></script>
+  <script src="/assets/js/respond/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/ico/apple-touch-icon-72-precomposed.png">
+                <link rel="apple-touch-icon-precomposed" href="/assets/ico/apple-touch-icon-57-precomposed.png">
+                               <link rel="shortcut icon" href="/assets/ico/favicon.png">
+
+
+<link href="/assets/css/todc-bootstrap.css" rel="stylesheet"></head>
+<link rel="stylesheet" href="/assets/css/select2.css">
+
+    <!-- Place anything custom after this. -->
+  </head>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Main navbar for all docs pages. -->
+    <!-- Navbar
+================================================== -->
+<div class="navbar navbar navbar-fixed-top">
+  <div class="container">
+    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="brand" href="/">Bootstrap</a>
+    <div class="nav-collapse collapse">
+      <ul class="nav">
+        <li >
+          <a href="/">Home</a>
+        </li>
+        <li >
+          <a href="/getting-started">Get started</a>
+        </li>
+        <li >
+          <a href="/css">CSS</a>
+        </li>
+        <li >
+          <a href="/components">Components</a>
+        </li>
+        <li class="active">
+          <a href="/javascript">JavaScript</a>
+        </li>
+        <li >
+          <a href="/gallery">Gallery</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Page content of course! -->
+    <!-- Subhead
 ================================================== -->
 <header class="bs-docs-jumbotron subhead">
   <div class="container">
@@ -52,46 +128,40 @@ title: JavaScript plugins
           <p>You can use all Bootstrap plugins purely through the markup API without writing a single line of JavaScript. This is Bootstrap's first class API and should be your first consideration when using a plugin.</p>
 
           <p>That said, in some situations it may be desirable to turn this functionality off. Therefore, we also provide the ability to disable the data attribute API by unbinding all events on the body namespaced with `'data-api'`. This looks like this:
-{% highlight js linenos %}
-$('body').off('.data-api')
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">&#39;.data-api&#39;</span><span class="p">)</span>
+</code></pre></div>
 
           <p>Alternatively, to target a specific plugin, just include the plugin's name as a namespace along with the data-api namespace like this:</p>
-{% highlight js linenos %}
-$('body').off('.alert.data-api')
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">&#39;.alert.data-api&#39;</span><span class="p">)</span>
+</code></pre></div>
 
           <h3>Programmatic API</h3>
           <p>We also believe you should be able to use all Bootstrap plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
-{% highlight js linenos %}
-$(".btn.danger").button("toggle").addClass("fat")
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.btn.danger&quot;</span><span class="p">).</span><span class="nx">button</span><span class="p">(</span><span class="s2">&quot;toggle&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;fat&quot;</span><span class="p">)</span>
+</code></pre></div>
 
           <p>All methods should accept an optional options object, a string which targets a particular method, or nothing (which initiates a plugin with default behavior):</p>
-{% highlight js linenos %}
-$("#myModal").modal()                      // initialized with defaults
-$("#myModal").modal({ keyboard: false })   // initialized with no keyboard
-$("#myModal").modal('show')                // initializes and invokes show immediately</p>
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#myModal&quot;</span><span class="p">).</span><span class="nx">modal</span><span class="p">()</span>                      <span class="c1">// initialized with defaults</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#myModal&quot;</span><span class="p">).</span><span class="nx">modal</span><span class="p">({</span> <span class="nx">keyboard</span><span class="o">:</span> <span class="kc">false</span> <span class="p">})</span>   <span class="c1">// initialized with no keyboard</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#myModal&quot;</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">)</span>                <span class="c1">// initializes and invokes show immediately&lt;/p&gt;</span>
+</code></pre></div>
 
           <p>Each plugin also exposes its raw constructor on a `Constructor` property: <code>$.fn.popover.Constructor</code>. If you'd like to get a particular plugin instance, retrieve it directly from an element: <code>$('[rel=popover]').data('popover')</code>.</p>
 
           <h3>No conflict</h3>
           <p>Sometimes it is necessary to use Bootstrap plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call <code>.noConflict</code> on the plugin you wish to revert the value of.</p>
-{% highlight js linenos %}
-var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
-$.fn.bootstrapBtn = bootstrapButton            // give $().bootstrapBtn the bootstrap functionality
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">bootstrapButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">()</span> <span class="c1">// return $.fn.button to previously assigned value</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapBtn</span> <span class="o">=</span> <span class="nx">bootstrapButton</span>            <span class="c1">// give $().bootstrapBtn the bootstrap functionality</span>
+</code></pre></div>
 
 
           <h3>Events</h3>
           <p>Bootstrap provides custom events for most plugin's unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and its past participle form (ex. <code>shown</code>) is trigger on the completion of an action.</p>
           <p>All infinitive events provide <code>preventDefault</code> functionality. This provides the ability to stop the execution of an action before it starts.</p>
-{% highlight js linenos %}
-$('#myModal').on('show', function (e) {
-    if (!data) return e.preventDefault() // stops modal from being shown
-})
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span> <span class="c1">// stops modal from being shown</span>
+<span class="p">})</span>
+</code></pre></div>
 
         </section>
 
@@ -151,25 +221,24 @@ $('#myModal').on('show', function (e) {
               </div><!-- /.modal-dalog -->
             </div><!-- /.modal -->
           </div><!-- /example -->
-{% highlight html linenos %}
-<div class="modal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        <p>One fine body&hellip;</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#" class="btn">Close</a>
-        <a href="#" class="btn btn-primary">Save changes</a>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dalog -->
-</div><!-- /.modal -->
-{% endhighlight %}
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-dialog&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-content&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-header&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;close&quot;</span> <span class="na">data-dismiss=</span><span class="s">&quot;modal&quot;</span> <span class="na">aria-hidden=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;modal-title&quot;</span><span class="nt">&gt;</span>Modal title<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-body&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>One fine body<span class="ni">&amp;hellip;</span><span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-footer&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>Save changes<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal-content --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal-dalog --&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal --&gt;</span>
+</code></pre></div>
 
           <h3>Live demo</h3>
           <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
@@ -214,29 +283,28 @@ $('#myModal').on('show', function (e) {
           <div class="bs-docs-example" style="padding-bottom: 24px;">
             <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">Launch demo modal</a>
           </div><!-- /example -->
-{% highlight html linenos %}
-<div class="modal">
-  <!-- Button trigger modal -->
-  <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">Launch demo modal</a>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal&quot;</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- Button trigger modal --&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">&quot;modal&quot;</span> <span class="na">href=</span><span class="s">&quot;#myModal&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-large&quot;</span><span class="nt">&gt;</span>Launch demo modal<span class="nt">&lt;/a&gt;</span>
 
-  <!-- Modal -->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Modal title</h4>
-      </div>
-      <div class="modal-body">
+  <span class="c">&lt;!-- Modal --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-dialog&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-content&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-header&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;close&quot;</span> <span class="na">data-dismiss=</span><span class="s">&quot;modal&quot;</span> <span class="na">aria-hidden=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;modal-title&quot;</span><span class="nt">&gt;</span>Modal title<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-body&quot;</span><span class="nt">&gt;</span>
         ...
-      </div>
-      <div class="modal-footer">
-        <a href="#" class="btn">Close</a>
-        <a href="#" class="btn btn-primary">Save changes</a>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dalog -->
-</div><!-- /.modal -->
-{% endhighlight %}
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal-footer&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>Save changes<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal-content --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal-dalog --&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal --&gt;</span>
+</code></pre></div>
 
 
 
@@ -244,13 +312,13 @@ $('#myModal').on('show', function (e) {
 
           <h3>Via data attributes</h3>
           <p>Activate a modal without writing JavaScript. Set <code>data-toggle="modal"</code> on a controller element, like a button, along with a <code>data-target="#foo"</code> or <code>href="#foo"</code> to target a specific modal to toggle.</p>
-{% highlight html linenos %}
-<button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
-{% endhighlight %}
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;modal&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#myModal&quot;</span><span class="nt">&gt;</span>Launch modal<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
 
           <h3>Via JavaScript</h3>
           <p>Call a modal with id <code>myModal</code> with a single line of JavaScript:</p>
-          {% highlight js linenos %}$('#myModal').modal(options){% endhighlight %}
+          <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+</code></pre></div>
 
           <h3>Options</h3>
           <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.</p>
@@ -287,9 +355,8 @@ $('#myModal').on('show', function (e) {
                <td>path</td>
                <td>false</td>
                <td><p>If a remote url is provided, content will be loaded via jQuery's <code>load</code> method and injected into the <code>.modal-body</code>. If you're using the data api, you may alternatively use the <code>href</code> tag to specify the remote source. An example of this is shown below:</p>
-{% highlight html linenos %}
-<a data-toggle="modal" href="remote.html" data-target="#modal">Click me</a>
-{% endhighlight %}
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">&quot;modal&quot;</span> <span class="na">href=</span><span class="s">&quot;remote.html&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#modal&quot;</span><span class="nt">&gt;</span>Click me<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
              </tr>
             </tbody>
           </table>
@@ -298,23 +365,25 @@ $('#myModal').on('show', function (e) {
 
           <h4>.modal(options)</h4>
           <p>Activates your content as a modal. Accepts an optional options <code>object</code>.</p>
-{% highlight js linenos %}
-$('#myModal').modal({
-  keyboard: false
-})
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">({</span>
+  <span class="nx">keyboard</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">})</span>
+</code></pre></div>
 
           <h4>.modal('toggle')</h4>
           <p>Manually toggles a modal.</p>
-          {% highlight js linenos %}$('#myModal').modal('toggle'){% endhighlight %}
+          <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">&#39;toggle&#39;</span><span class="p">)</span>
+</code></pre></div>
 
           <h4>.modal('show')</h4>
           <p>Manually opens a modal.</p>
-          {% highlight js linenos %}$('#myModal').modal('show'){% endhighlight %}
+          <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">)</span>
+</code></pre></div>
 
           <h4>.modal('hide')</h4>
           <p>Manually hides a modal.</p>
-          {% highlight js linenos %}$('#myModal').modal('hide'){% endhighlight %}
+          <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">&#39;hide&#39;</span><span class="p">)</span>
+</code></pre></div>
 
           <h3>Events</h3>
           <p>Bootstrap's modal class exposes a few events for hooking into modal functionality.</p>
@@ -344,11 +413,10 @@ $('#myModal').modal({
              </tr>
             </tbody>
           </table>
-{% highlight js linenos %}
-$('#myModal').on('hidden', function () {
-  // do something…
-})
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;hidden&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// do something…</span>
+<span class="p">})</span>
+</code></pre></div>
         </section>
 
 
@@ -454,31 +522,28 @@ $('#myModal').on('hidden', function () {
 
           <h3>Via data attributes</h3>
           <p>Add <code>data-toggle="dropdown"</code> to a link or button to toggle a dropdown.</p>
-{% highlight html linenos %}
-<div class="dropdown">
-  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown trigger</a>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Dropdown trigger<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span> <span class="na">aria-labelledby=</span><span class="s">&quot;dLabel&quot;</span><span class="nt">&gt;</span>
     ...
-  </ul>
-</div>
-{% endhighlight %}
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
           <p>To keep URLs intact, use the <code>data-target</code> attribute instead of <code>href="#"</code>.</p>
-{% highlight html linenos %}
-<div class="dropdown">
-  <a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
-    Dropdown <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">id=</span><span class="s">&quot;dLabel&quot;</span> <span class="na">role=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#&quot;</span> <span class="na">href=</span><span class="s">&quot;/page.html&quot;</span><span class="nt">&gt;</span>
+    Dropdown <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span> <span class="na">aria-labelledby=</span><span class="s">&quot;dLabel&quot;</span><span class="nt">&gt;</span>
     ...
-  </ul>
-</div>
-{% endhighlight %}
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
 
           <h3>Via JavaScript</h3>
           <p>Call the dropdowns via JavaScript:</p>
-{% highlight js linenos %}
-$('.dropdown-toggle').dropdown()
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.dropdown-toggle&#39;</span><span class="p">).</span><span class="nx">dropdown</span><span class="p">()</span>
+</code></pre></div>
 
           <h3>Options</h3>
           <p><em>None</em></p>
@@ -545,17 +610,15 @@ $('.dropdown-toggle').dropdown()
 
           <h3>Via data attributes</h3>
           <p>To easily add scrollspy behavior to your topbar navigation, just add <code>data-spy="scroll"</code> to the element you want to spy on (most typically this would be the body) and <code>data-target=".navbar"</code> to select which nav to use. You'll want to use scrollspy with a <code>.nav</code> component.</p>
-{% highlight html linenos %}
-<body data-spy="scroll" data-target=".navbar">
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;body</span> <span class="na">data-spy=</span><span class="s">&quot;scroll&quot;</span> <span class="na">data-target=</span><span class="s">&quot;.navbar&quot;</span><span class="nt">&gt;</span>
   ...
-</body>
-{% endhighlight %}
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div>
 
           <h3>Via JavaScript</h3>
           <p>Call the scrollspy via JavaScript:</p>
-{% highlight js linenos %}
-$('#navbar').scrollspy()
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#navbar&#39;</span><span class="p">).</span><span class="nx">scrollspy</span><span class="p">()</span>
+</code></pre></div>
 
           <div class="alert alert-info">
             <strong>Heads up!</strong>
@@ -565,11 +628,10 @@ $('#navbar').scrollspy()
           <h3>Methods</h3>
           <h4>.scrollspy('refresh')</h4>
           <p>When using scrollspy in conjunction with adding or removing of elements from the DOM, you'll need to call the refresh method like so:</p>
-{% highlight js linenos %}
-$('[data-spy="scroll"]').each(function () {
-  var $spy = $(this).scrollspy('refresh')
-});
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[data-spy=&quot;scroll&quot;]&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">$spy</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">scrollspy</span><span class="p">(</span><span class="s1">&#39;refresh&#39;</span><span class="p">)</span>
+<span class="p">});</span>
+</code></pre></div>
 
 
           <h3>Options</h3>
@@ -656,31 +718,28 @@ $('[data-spy="scroll"]').each(function () {
 
           <h2>Usage</h2>
           <p>Enable tabbable tabs via JavaScript (each tab needs to be activated individually):</p>
-{% highlight js linenos %}
-$('#myTab a').click(function (e) {
-  e.preventDefault();
-  $(this).tab('show');
-})
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myTab a&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+  <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">);</span>
+<span class="p">})</span>
+</code></pre></div>
 
           <p>You can activate individual tabs in several ways:</p>
-{% highlight js linenos %}
-$('#myTab a[href="#profile"]').tab('show'); // Select tab by name
-$('#myTab a:first').tab('show'); // Select first tab
-$('#myTab a:last').tab('show'); // Select last tab
-$('#myTab li:eq(2) a').tab('show'); // Select third tab (0-indexed)
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myTab a[href=&quot;#profile&quot;]&#39;</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">);</span> <span class="c1">// Select tab by name</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myTab a:first&#39;</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">);</span> <span class="c1">// Select first tab</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myTab a:last&#39;</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">);</span> <span class="c1">// Select last tab</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myTab li:eq(2) a&#39;</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">);</span> <span class="c1">// Select third tab (0-indexed)</span>
+</code></pre></div>
 
           <h3>Markup</h3>
           <p>You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>data-toggle="tab"</code> or <code>data-toggle="pill"</code> on an element. Adding the <code>nav</code> and <code>nav-tabs</code> classes to the tab <code>ul</code> will apply the Bootstrap tab styling.</p>
-{% highlight html linenos %}
-<ul class="nav nav-tabs">
-  <li><a href="#home" data-toggle="tab">Home</a></li>
-  <li><a href="#profile" data-toggle="tab">Profile</a></li>
-  <li><a href="#messages" data-toggle="tab">Messages</a></li>
-  <li><a href="#settings" data-toggle="tab">Settings</a></li>
-</ul>
-{% endhighlight %}
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav nav-tabs&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#home&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#profile&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#messages&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>Messages<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#settings&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>Settings<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div>
 
           <p>To make tabs fade in, add <code>.fade</code> to each <code>.tab-pane</code>.</p>
 
@@ -689,27 +748,26 @@ $('#myTab li:eq(2) a').tab('show'); // Select third tab (0-indexed)
           <p>
             Activates a tab element and content container. Tab should have either a <code>data-target</code> or an <code>href</code> targeting a container node in the DOM.
           </p>
-{% highlight html linenos %}
-<ul class="nav nav-tabs" id="myTab">
-  <li class="active"><a href="#home">Home</a></li>
-  <li><a href="#profile">Profile</a></li>
-  <li><a href="#messages">Messages</a></li>
-  <li><a href="#settings">Settings</a></li>
-</ul>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav nav-tabs&quot;</span> <span class="na">id=</span><span class="s">&quot;myTab&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#home&quot;</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#profile&quot;</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#messages&quot;</span><span class="nt">&gt;</span>Messages<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#settings&quot;</span><span class="nt">&gt;</span>Settings<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
 
-<div class="tab-content">
-  <div class="tab-pane active" id="home">...</div>
-  <div class="tab-pane" id="profile">...</div>
-  <div class="tab-pane" id="messages">...</div>
-  <div class="tab-pane" id="settings">...</div>
-</div>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-content&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane active&quot;</span> <span class="na">id=</span><span class="s">&quot;home&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;profile&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;messages&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;settings&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-<script>
-  $(function () {
-    $('#myTab a:last').tab('show');
-  })
-</script>
-{% endhighlight %}
+<span class="nt">&lt;script&gt;</span>
+  <span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myTab a:last&#39;</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">);</span>
+  <span class="p">})</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
 
           <h3>Events</h3>
           <table class="table table-bordered table-striped">
@@ -730,12 +788,11 @@ $('#myTab li:eq(2) a').tab('show'); // Select third tab (0-indexed)
              </tr>
             </tbody>
           </table>
-{% highlight js linenos %}
-$('a[data-toggle="tab"]').on('shown', function (e) {
-  e.target // activated tab
-  e.relatedTarget // previous tab
-})
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;a[data-toggle=&quot;tab&quot;]&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;shown&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">e</span><span class="p">.</span><span class="nx">target</span> <span class="c1">// activated tab</span>
+  <span class="nx">e</span><span class="p">.</span><span class="nx">relatedTarget</span> <span class="c1">// previous tab</span>
+<span class="p">})</span>
+</code></pre></div>
         </section>
 
 
@@ -774,9 +831,8 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
           <h2>Usage</h2>
           <p>Trigger the tooltip via JavaScript:</p>
-{% highlight js linenos %}
-$('#example').tooltip(options)
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#example&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+</code></pre></div>
 
           <h3>Options</h3>
           <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-animation=""</code>.</p>
@@ -852,9 +908,8 @@ $('#example').tooltip(options)
           </div>
 
           <h3>Markup</h3>
-{% highlight html linenos %}
-<a href="#" data-toggle="tooltip" title="first tooltip">Hover over me</a>
-{% endhighlight %}
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tooltip&quot;</span> <span class="na">title=</span><span class="s">&quot;first tooltip&quot;</span><span class="nt">&gt;</span>Hover over me<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
 
           <h3>Methods</h3>
 
@@ -863,19 +918,23 @@ $('#example').tooltip(options)
 
           <h4>.tooltip('show')</h4>
           <p>Reveals an element's tooltip.</p>
-          {% highlight js linenos %}$('#element').tooltip('show'){% endhighlight %}
+          <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">)</span>
+</code></pre></div>
 
           <h4>.tooltip('hide')</h4>
           <p>Hides an element's tooltip.</p>
-          {% highlight js linenos %}$('#element').tooltip('hide'){% endhighlight %}
+          <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;hide&#39;</span><span class="p">)</span>
+</code></pre></div>
 
           <h4>.tooltip('toggle')</h4>
           <p>Toggles an element's tooltip.</p>
-          {% highlight js linenos %}$('#element').tooltip('toggle'){% endhighlight %}
+          <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;toggle&#39;</span><span class="p">)</span>
+</code></pre></div>
 
           <h4>.tooltip('destroy')</h4>
           <p>Hides and destroys an element's tooltip.</p>
-          {% highlight js linenos %}$('#element').tooltip('destroy'){% endhighlight %}
+          <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;destroy&#39;</span><span class="p">)</span>
+</code></pre></div>
         </section>
 
 
@@ -950,7 +1009,8 @@ $('#example').tooltip(options)
 
         <h2>Usage</h2>
         <p>Enable popovers via JavaScript:</p>
-        {% highlight js linenos %}$('#example').popover(options){% endhighlight %}
+        <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#example&#39;</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+</code></pre></div>
 
         <h3>Options</h3>
         <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-animation=""</code>.</p>
@@ -1040,19 +1100,23 @@ $('#example').tooltip(options)
 
         <h4>.popover('show')</h4>
         <p>Reveals an elements popover.</p>
-        {% highlight js linenos %}$('#element').popover('show'){% endhighlight %}
+        <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">)</span>
+</code></pre></div>
 
         <h4>.popover('hide')</h4>
         <p>Hides an elements popover.</p>
-        {% highlight js linenos %}$('#element').popover('hide'){% endhighlight %}
+        <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">&#39;hide&#39;</span><span class="p">)</span>
+</code></pre></div>
 
         <h4>.popover('toggle')</h4>
         <p>Toggles an elements popover.</p>
-        {% highlight js linenos %}$('#element').popover('toggle'){% endhighlight %}
+        <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">&#39;toggle&#39;</span><span class="p">)</span>
+</code></pre></div>
 
         <h4>.popover('destroy')</h4>
         <p>Hides and destroys an element's popover.</p>
-        {% highlight js linenos %}$('#element').popover('destroy'){% endhighlight %}
+        <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">&#39;destroy&#39;</span><span class="p">)</span>
+</code></pre></div>
       </section>
 
 
@@ -1091,11 +1155,13 @@ $('#example').tooltip(options)
 
         <h2>Usage</h2>
         <p>Enable dismissal of an alert via JavaScript:</p>
-        {% highlight js linenos %}$(".alert").alert(){% endhighlight %}
+        <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.alert&quot;</span><span class="p">).</span><span class="nx">alert</span><span class="p">()</span>
+</code></pre></div>
 
         <h3>Markup</h3>
         <p>Just add <code>data-dismiss="alert"</code> to your close button to automatically give an alert close functionality.</p>
-        {% highlight html linenos %}<a class="close" data-dismiss="alert" href="#">&times;</a>{% endhighlight %}
+        <div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;close&quot;</span> <span class="na">data-dismiss=</span><span class="s">&quot;alert&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
 
         <h3>Methods</h3>
 
@@ -1104,7 +1170,8 @@ $('#example').tooltip(options)
 
         <h4>.alert('close')</h4>
         <p>Closes an alert.</p>
-        {% highlight js linenos %}$(".alert").alert('close'){% endhighlight %}
+        <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.alert&quot;</span><span class="p">).</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;close&#39;</span><span class="p">)</span>
+</code></pre></div>
 
 
         <h3>Events</h3>
@@ -1127,11 +1194,10 @@ $('#example').tooltip(options)
            </tr>
           </tbody>
         </table>
-{% highlight js linenos %}
-$('#my-alert').bind('closed', function () {
-  // do something…
-})
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#my-alert&#39;</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;closed&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// do something…</span>
+<span class="p">})</span>
+</code></pre></div>
       </section>
 
 
@@ -1153,20 +1219,18 @@ $('#my-alert').bind('closed', function () {
                 Loading state
               </button>
             </div><!-- /example -->
-{% highlight html linenos %}
-<button type="button" id="fat-btn" data-loading-text="Loading..." class="btn btn-primary">
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">id=</span><span class="s">&quot;fat-btn&quot;</span> <span class="na">data-loading-text=</span><span class="s">&quot;Loading...&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>
   Loading state
-</button>
-{% endhighlight %}
+<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
 
             <h4>Single toggle</h4>
             <p>Add <code>data-toggle="button"</code> to activate toggling on a single button.</p>
             <div class="bs-docs-example" style="padding-bottom: 24px;">
               <button type="button" class="btn btn-primary" data-toggle="button">Single toggle</button>
             </div><!-- /example -->
-{% highlight html linenos %}
-<button type="button" class="btn btn-primary" data-toggle="button">Single toggle</button>
-{% endhighlight %}
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;button&quot;</span><span class="nt">&gt;</span>Single toggle<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
 
             <h4>Checkbox</h4>
             <p>Add <code>data-toggle="buttons-checkbox"</code> for checkbox style toggling on btn-group.</p>
@@ -1177,13 +1241,12 @@ $('#my-alert').bind('closed', function () {
                 <button type="button" class="btn btn-primary">Right</button>
               </div>
             </div><!-- /example -->
-{% highlight html linenos %}
-<div class="btn-group" data-toggle="buttons-checkbox">
-  <button type="button" class="btn btn-primary">Left</button>
-  <button type="button" class="btn btn-primary">Middle</button>
-  <button type="button" class="btn btn-primary">Right</button>
-</div>
-{% endhighlight %}
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;buttons-checkbox&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>Left<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>Middle<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>Right<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
 
             <h4>Radio</h4>
             <p>Add <code>data-toggle="buttons-radio"</code> for radio style toggling on btn-group.</p>
@@ -1194,13 +1257,12 @@ $('#my-alert').bind('closed', function () {
                 <button type="button" class="btn btn-primary">Right</button>
               </div>
             </div><!-- /example -->
-{% highlight html linenos %}
-<div class="btn-group" data-toggle="buttons-radio">
-  <button type="button" class="btn btn-primary">Left</button>
-  <button type="button" class="btn btn-primary">Middle</button>
-  <button type="button" class="btn btn-primary">Right</button>
-</div>
-{% endhighlight %}
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;buttons-radio&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>Left<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>Middle<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>Right<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
 
 
             <hr class="bs-docs-separator">
@@ -1208,9 +1270,8 @@ $('#my-alert').bind('closed', function () {
 
             <h2>Usage</h2>
             <p>Enable buttons via JavaScript:</p>
-{% highlight js linenos %}
-$('.nav-tabs').button()
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.nav-tabs&#39;</span><span class="p">).</span><span class="nx">button</span><span class="p">()</span>
+</code></pre></div>
 
             <h3>Markup</h3>
             <p>Data attributes are integral to the button plugin. Check out the example code below for the various markup types.</p>
@@ -1226,16 +1287,14 @@ $('.nav-tabs').button()
               <strong>Heads up!</strong>
               You can enable auto toggling of a button by using the <code>data-toggle</code> attribute.
             </div>
-{% highlight html linenos %}
-<button type="button" class="btn" data-toggle="button">...</button>
-{% endhighlight %}
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;button&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
 
             <h4>$().button('loading')</h4>
             <p>Sets button state to loading - disables button and swaps text to loading text. Loading text should be defined on the button element using the data attribute <code>data-loading-text</code>.
             </p>
-{% highlight html linenos %}
-<button type="button" class="btn" data-loading-text="loading stuff...">...</button>
-{% endhighlight %}
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">data-loading-text=</span><span class="s">&quot;loading stuff...&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
 
             <div class="alert alert-info">
               <strong>Heads up!</strong>
@@ -1247,12 +1306,11 @@ $('.nav-tabs').button()
 
             <h4>$().button(string)</h4>
             <p>Resets button state - swaps text to any data defined text state.</p>
-{% highlight html linenos %}
-<button type="button" class="btn" data-complete-text="finished!" >...</button>
-<script>
-  $('.btn').button('complete')
-</script>
-{% endhighlight %}
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">data-complete-text=</span><span class="s">&quot;finished!&quot;</span> <span class="nt">&gt;</span>...<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.btn&#39;</span><span class="p">).</span><span class="nx">button</span><span class="p">(</span><span class="s1">&#39;complete&#39;</span><span class="p">)</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
           </section>
 
 
@@ -1311,55 +1369,53 @@ $('.nav-tabs').button()
                 </div>
               </div>
             </div><!-- /example -->
-{% highlight html linenos %}
-<div class="accordion" id="accordion2">
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion&quot;</span> <span class="na">id=</span><span class="s">&quot;accordion2&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-group&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-heading&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;accordion-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-parent=</span><span class="s">&quot;#accordion2&quot;</span> <span class="na">href=</span><span class="s">&quot;#collapseOne&quot;</span><span class="nt">&gt;</span>
         Collapsible Group Item #1
-      </a>
-    </div>
-    <div id="collapseOne" class="accordion-body collapse in">
-      <div class="accordion-inner">
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;collapseOne&quot;</span> <span class="na">class=</span><span class="s">&quot;accordion-body collapse in&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-inner&quot;</span><span class="nt">&gt;</span>
         ...
-      </div>
-    </div>
-  </div>
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-group&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-heading&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;accordion-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-parent=</span><span class="s">&quot;#accordion2&quot;</span> <span class="na">href=</span><span class="s">&quot;#collapseTwo&quot;</span><span class="nt">&gt;</span>
         Collapsible Group Item #2
-      </a>
-    </div>
-    <div id="collapseTwo" class="accordion-body collapse">
-      <div class="accordion-inner">
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;collapseTwo&quot;</span> <span class="na">class=</span><span class="s">&quot;accordion-body collapse&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-inner&quot;</span><span class="nt">&gt;</span>
         ...
-      </div>
-    </div>
-  </div>
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-group&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-heading&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;accordion-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-parent=</span><span class="s">&quot;#accordion2&quot;</span> <span class="na">href=</span><span class="s">&quot;#collapseThree&quot;</span><span class="nt">&gt;</span>
         Collapsible Group Item #3
-      </a>
-    </div>
-    <div id="collapseThree" class="accordion-body collapse">
-      <div class="accordion-inner">
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;collapseThree&quot;</span> <span class="na">class=</span><span class="s">&quot;accordion-body collapse&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;accordion-inner&quot;</span><span class="nt">&gt;</span>
         ...
-      </div>
-    </div>
-  </div>
-</div>
-{% endhighlight %}
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
 
             <p>You can also use the plugin without the accordion markup. Make a button toggle the expanding and collapsing of another element.</p>
-{% highlight html linenos %}
-<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-danger&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#demo&quot;</span><span class="nt">&gt;</span>
   simple collapsible
-</button>
+<span class="nt">&lt;/button&gt;</span>
 
-<div id="demo" class="collapse in">...</div>
-{% endhighlight %}
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;demo&quot;</span> <span class="na">class=</span><span class="s">&quot;collapse in&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
 
 
             <hr class="bs-docs-separator">
@@ -1373,9 +1429,8 @@ $('.nav-tabs').button()
 
             <h3>Via JavaScript</h3>
             <p>Enable manually with:</p>
-{% highlight js linenos %}
-$(".collapse").collapse()
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.collapse&quot;</span><span class="p">).</span><span class="nx">collapse</span><span class="p">()</span>
+</code></pre></div>
 
             <h3>Options</h3>
             <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-parent=""</code>.</p>
@@ -1409,11 +1464,10 @@ $(".collapse").collapse()
 
             <h4>.collapse(options)</h4>
             <p>Activates your content as a collapsible element. Accepts an optional options <code>object</code>.
-{% highlight js linenos %}
-$('#myCollapsible').collapse({
-  toggle: false
-})
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCollapsible&#39;</span><span class="p">).</span><span class="nx">collapse</span><span class="p">({</span>
+  <span class="nx">toggle</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">})</span>
+</code></pre></div>
 
             <h4>.collapse('toggle')</h4>
             <p>Toggles a collapsible element to shown or hidden.</p>
@@ -1454,11 +1508,10 @@ $('#myCollapsible').collapse({
                </tr>
               </tbody>
             </table>
-{% highlight js linenos %}
-$('#myCollapsible').on('hidden', function () {
-  // do something…
-})
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCollapsible&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;hidden&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// do something…</span>
+<span class="p">})</span>
+</code></pre></div>
           </section>
 
 
@@ -1510,35 +1563,34 @@ $('#myCollapsible').on('hidden', function () {
                 </a>
               </div>
             </div><!-- /example -->
-{% highlight html linenos %}
-<div id="myCarousel" class="carousel slide">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;myCarousel&quot;</span> <span class="na">class=</span><span class="s">&quot;carousel slide&quot;</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- Indicators --&gt;</span>
+  <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">&quot;carousel-indicators&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">data-target=</span><span class="s">&quot;#myCarousel&quot;</span> <span class="na">data-slide-to=</span><span class="s">&quot;0&quot;</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">data-target=</span><span class="s">&quot;#myCarousel&quot;</span> <span class="na">data-slide-to=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">data-target=</span><span class="s">&quot;#myCarousel&quot;</span> <span class="na">data-slide-to=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ol&gt;</span>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="..." alt="">
-      <div class="carousel-caption">
+  <span class="c">&lt;!-- Wrapper for slides --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;carousel-inner&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;item active&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span> <span class="na">alt=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;carousel-caption&quot;</span><span class="nt">&gt;</span>
         ...
-      </div>
-    </div>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
     ...
-  </div>
+  <span class="nt">&lt;/div&gt;</span>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="control">&lsaquo;</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="control">&rsaquo;</span>
-  </a>
-</div>
-{% endhighlight %}
+  <span class="c">&lt;!-- Controls --&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;left carousel-control&quot;</span> <span class="na">href=</span><span class="s">&quot;#myCarousel&quot;</span> <span class="na">data-slide=</span><span class="s">&quot;prev&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;control&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;lsaquo;</span><span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;right carousel-control&quot;</span> <span class="na">href=</span><span class="s">&quot;#myCarousel&quot;</span> <span class="na">data-slide=</span><span class="s">&quot;next&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;control&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;rsaquo;</span><span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
 
             <div class="alert alert-warning">
               <strong>Heads up!</strong>
@@ -1556,9 +1608,8 @@ $('#myCollapsible').on('hidden', function () {
 
             <h3>Via JavaScript</h3>
             <p>Call carousel manually with:</p>
-{% highlight js linenos %}
-$('.carousel').carousel()
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.carousel&#39;</span><span class="p">).</span><span class="nx">carousel</span><span class="p">()</span>
+</code></pre></div>
 
             <h3>Options</h3>
             <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-interval=""</code>.</p>
@@ -1591,11 +1642,10 @@ $('.carousel').carousel()
 
             <h4>.carousel(options)</h4>
             <p>Initializes the carousel with an optional options <code>object</code> and starts cycling through items.</p>
-{% highlight html linenos %}
-$('.carousel').carousel({
+<div class="highlight"><pre><code class="html">$(&#39;.carousel&#39;).carousel({
   interval: 2000
 })
-{% endhighlight %}
+</code></pre></div>
 
             <h4>.carousel('cycle')</h4>
             <p>Cycles through the carousel items from left to right.</p>
@@ -1649,9 +1699,8 @@ $('.carousel').carousel({
             <div class="bs-docs-example" style="background-color: #f5f5f5;">
               <input type="text" class="span3" style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source='["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]'>
             </div><!-- /example -->
-{% highlight html linenos %}
-<input type="text" data-provide="typeahead">
-{% endhighlight %}
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">data-provide=</span><span class="s">&quot;typeahead&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
 
             <p>You'll want to set <code>autocomplete="off"</code> to prevent default browser menus from appearing over the Bootstrap typeahead dropdown.</p>
 
@@ -1665,9 +1714,8 @@ $('.carousel').carousel({
 
             <h3>Via JavaScript</h3>
             <p>Call the typeahead manually with:</p>
-{% highlight js linenos %}
-$('.typeahead').typeahead()
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.typeahead&#39;</span><span class="p">).</span><span class="nx">typeahead</span><span class="p">()</span>
+</code></pre></div>
 
             <h3>Options</h3>
             <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-source=""</code>.</p>
@@ -1750,9 +1798,8 @@ $('.typeahead').typeahead()
             <h3>Via data attributes</h3>
             <p>To easily add affix behavior to any element, just add <code>data-spy="affix"</code> to the element you want to spy on. Then use offsets to define when to toggle the pinning of an element on and off.</p>
 
-{% highlight html linenos %}
-<div data-spy="affix" data-offset-top="200">...</div>
-{% endhighlight %}
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">data-spy=</span><span class="s">&quot;affix&quot;</span> <span class="na">data-offset-top=</span><span class="s">&quot;200&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
 
             <div class="alert alert-info">
               <strong>Heads up!</strong>
@@ -1761,18 +1808,16 @@ $('.typeahead').typeahead()
 
             <h3>Via JavaScript</h3>
             <p>Call the affix plugin via JavaScript:</p>
-{% highlight js linenos %}
-$('#navbar').affix()
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#navbar&#39;</span><span class="p">).</span><span class="nx">affix</span><span class="p">()</span>
+</code></pre></div>
 
             <h3>Methods</h3>
             <h4>.affix('refresh')</h4>
             <p>When using affix in conjunction with adding or removing of elements from the DOM, you'll want to call the refresh method:</p>
-{% highlight js linenos %}
-$('[data-spy="affix"]').each(function () {
-  $(this).affix('refresh')
-});
-{% endhighlight %}
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[data-spy=&quot;affix&quot;]&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">affix</span><span class="p">(</span><span class="s1">&#39;refresh&#39;</span><span class="p">)</span>
+<span class="p">});</span>
+</code></pre></div>
 
           <h3>Options</h3>
           <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-offset-top="200"</code>.</p>
@@ -1803,3 +1848,72 @@ $('[data-spy="affix"]').each(function () {
     </div><!-- row -->
 
   </div><!-- /.container -->
+
+
+    <!-- Main docs footer (social buttons, copyright, etc). -->
+    <!-- Footer
+================================================== -->
+<footer class="footer">
+  <div class="container">
+
+    <div class="bs-docs-social">
+      <ul class="bs-docs-social-buttons">
+        <li>
+          <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&repo=todc-bootstrap&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+        </li>
+        <li>
+          <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&repo=todc-bootstrap&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+        </li>
+        <li class="follow-btn">
+          <a href="https://twitter.com/twbootstrap" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @twbootstrap</a>
+        </li>
+        <li class="tweet-btn">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://twitter.github.com/bootstrap/" data-count="horizontal" data-via="twbootstrap" data-related="mdo:Creator of Twitter Bootstrap">Tweet</a>
+        </li>
+      </ul>
+    </div>
+
+
+    <p>Forked from <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a> and built with all the love in the world by <a href="https://github.com/todc" target="_blank">todc</a>.</p>
+    <p>Updated to support v3.0.0 by <a href="https://github.com/acmetech" target="_blank">acmetech</a>.</p>
+    <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+    <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+    <ul class="footer-links">
+      <li><a href="http://blog.getbootstrap.com">Blog</a></li>
+      <li class="muted">&middot;</li>
+      <li><a href="https://github.com/twitter/bootstrap/issues?state=open">Issues</a></li>
+      <li class="muted">&middot;</li>
+      <li><a href="https://github.com/twitter/bootstrap/blob/master/CHANGELOG.md">Changelog</a></li>
+    </ul>
+  </div>
+</footer>
+
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/assets/js/jquery.js"></script>
+<script src="/assets/js/bootstrap-transition.js"></script>
+<script src="/assets/js/bootstrap-alert.js"></script>
+<script src="/assets/js/bootstrap-modal.js"></script>
+<script src="/assets/js/bootstrap-dropdown.js"></script>
+<script src="/assets/js/bootstrap-scrollspy.js"></script>
+<script src="/assets/js/bootstrap-tab.js"></script>
+<script src="/assets/js/bootstrap-tooltip.js"></script>
+<script src="/assets/js/bootstrap-popover.js"></script>
+<script src="/assets/js/bootstrap-button.js"></script>
+<script src="/assets/js/bootstrap-collapse.js"></script>
+<script src="/assets/js/bootstrap-carousel.js"></script>
+<script src="/assets/js/bootstrap-typeahead.js"></script>
+<script src="/assets/js/bootstrap-affix.js"></script>
+
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script src="/assets/js/holder/holder.js"></script>
+<script src="/assets/js/select2.min.js"></script>
+
+<script src="/assets/js/application.js"></script>
+
+
+  </body>
+</html>
