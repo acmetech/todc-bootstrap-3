@@ -16,9 +16,11 @@
 <!-- Bootstrap core CSS -->
 <link href="/todc-bootstrap-3/assets/css/bootstrap.css" rel="stylesheet">
 
+
 <!-- Documentation extras -->
 <link href="/todc-bootstrap-3/assets/css/docs.css" rel="stylesheet">
 <link href="/todc-bootstrap-3/assets/css/pygments-manni.css" rel="stylesheet">
+
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -39,19 +41,19 @@
 
     <!-- Place anything custom after this. -->
   </head>
-  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+  <body class="bs-docs-body" data-spy="scroll" data-target=".bs-docs-sidebar">
 
     <!-- Main navbar for all docs pages. -->
     <!-- Navbar
 ================================================== -->
 <div class="navbar navbar navbar-fixed-top">
   <div class="container">
-    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="brand" href="/">Bootstrap</a>
+    <a class="navbar-brand" href="/">Bootstrap</a>
     <div class="nav-collapse collapse">
       <ul class="nav">
         <li >
@@ -105,7 +107,8 @@
           <li><a href="#navbar-main"><i class="glyphicon glyphicon-chevron-right"></i> Main Navbar </a></li>
           <li><a href="#breadcrumbs"><i class="glyphicon glyphicon-chevron-right"></i> Breadcrumbs</a></li>
           <li><a href="#pagination"><i class="glyphicon glyphicon-chevron-right"></i> Pagination</a></li>
-          <li><a href="#counters"><i class="glyphicon glyphicon-chevron-right"></i> Counters</a></li>
+          <li><a href="#labels"><i class="glyphicon glyphicon-chevron-right"></i> Labels</a></li>
+          <li><a href="#badges"><i class="glyphicon glyphicon-chevron-right"></i> Badges</a></li>
           <li><a href="#typography"><i class="glyphicon glyphicon-chevron-right"></i> Typography</a></li>
           <li><a href="#thumbnails"><i class="glyphicon glyphicon-chevron-right"></i> Thumbnails</a></li>
           <li><a href="#alerts"><i class="glyphicon glyphicon-chevron-right"></i> Alerts</a></li>
@@ -943,7 +946,7 @@
           <p>To start, navbars are static (not fixed to the top) and include support for a project name and basic navigation. Place one anywhere within a <code>.container</code>, which sets the width of your site and content.</p>
           <div class="bs-docs-example">
             <div class="navbar">
-              <a class="brand" href="#">Title</a>
+              <a class="navbar-brand" href="#">Title</a>
               <ul class="nav">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">Link</a></li>
@@ -952,7 +955,7 @@
             </div>
           </div><!-- /example -->
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navbar&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -967,10 +970,10 @@
           <p>A simple link to show your brand or project name only requires an anchor tag.</p>
           <div class="bs-docs-example">
             <div class="navbar">
-              <a class="brand" href="#">Title</a>
+              <a class="navbar-brand" href="#">Title</a>
             </div>
           </div><!-- /example -->
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/a&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/a&gt;</span>
 </code></pre></div>
 
           <h3>Nav links</h3>
@@ -1044,7 +1047,7 @@
           <div class="bs-docs-example bs-navbar-top-example">
             <div class="navbar navbar-fixed-top" style="position: absolute;">
               <div class="container" style="width: auto;">
-                <a class="brand" href="#">Title</a>
+                <a class="navbar-brand" href="#">Title</a>
                 <ul class="nav">
                   <li class="active"><a href="#">Home</a></li>
                   <li><a href="#">Link</a></li>
@@ -1063,7 +1066,7 @@
           <div class="bs-docs-example bs-navbar-bottom-example">
             <div class="navbar navbar-fixed-bottom" style="position: absolute;">
               <div class="container" style="width: auto;">
-                <a class="brand" href="#">Title</a>
+                <a class="navbar-brand" href="#">Title</a>
                 <ul class="nav">
                   <li class="active"><a href="#">Home</a></li>
                   <li><a href="#">Link</a></li>
@@ -1082,7 +1085,7 @@
           <div class="bs-docs-example bs-navbar-top-example">
             <div class="navbar navbar-static-top" style="margin: -1px -1px 0;">
               <div class="container" style="width: auto;">
-                <a class="brand" href="#">Title</a>
+                <a class="navbar-brand" href="#">Title</a>
                 <ul class="nav">
                   <li class="active"><a href="#">Home</a></li>
                   <li><a href="#">Link</a></li>
@@ -1098,16 +1101,16 @@
 
 
           <h2>Responsive navbar</h2>
-          <p>To implement a collapsing responsive navbar, wrap your navbar content in a containing div, <code>.nav-collapse.collapse</code>, and add the navbar toggle button, <code>.btn-navbar</code>.</p>
+          <p>To implement a collapsing responsive navbar, wrap your navbar content in a containing div, <code>.nav-collapse.collapse</code>, and add the navbar toggle button, <code>.navbar-toggle</code>.</p>
           <div class="bs-docs-example">
             <div class="navbar">
               <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="#">Title</a>
+                <a class="navbar-brand" href="#">Title</a>
                 <div class="nav-collapse collapse navbar-responsive-collapse">
                   <ul class="nav">
                     <li class="active"><a href="#">Home</a></li>
@@ -1150,15 +1153,15 @@
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navbar&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
 
-    <span class="c">&lt;!-- .btn-navbar is used as the toggle for collapsed navbar content --&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-navbar&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;.navbar-responsive-collapse&quot;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- .navbar-toggle is used as the toggle for collapsed navbar content --&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;navbar-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;.navbar-responsive-collapse&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
     <span class="nt">&lt;/a&gt;</span>
 
     <span class="c">&lt;!-- Be sure to leave the brand out there if you want it shown --&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/a&gt;</span>
 
     <span class="c">&lt;!-- Place everything within .navbar-collapse to hide it until above 768px --&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;nav-collapse collapse navbar-responsive-collapse&quot;</span><span class="nt">&gt;</span>
@@ -1178,12 +1181,12 @@
           <div class="bs-docs-example">
             <div class="navbar navbar-inverse" style="position: static;">
               <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="#">Title</a>
+                <a class="navbar-brand" href="#">Title</a>
                 <div class="nav-collapse collapse navbar-inverse-collapse">
                   <ul class="nav">
                     <li class="active"><a href="#">Home</a></li>
@@ -1244,7 +1247,7 @@
           <p>To start, navbars are static (not fixed to the top) and include support for a project name and basic navigation. Place one anywhere within a <code>.container</code>, which sets the width of your site and content.</p>
           <div class="bs-docs-example">
             <div class="navbar navbar-masthead">
-              <a class="brand" href="#">Title</a>
+              <a class="navbar-brand" href="#">Title</a>
               <form class="navbar-form pull-left">
                 <input type="text" class="span8" placeholder="Search">
                 <button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button>
@@ -1257,7 +1260,7 @@
             </div>
           </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-masthead&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;navbar-form pull-left&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;span3&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Search&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span><span class="nt">&gt;</span>
@@ -1279,10 +1282,10 @@
           <p>A simple link to show your brand or project name only requires an anchor tag.</p>
           <div class="bs-docs-example">
             <div class="navbar navbar-masthead">
-              <a class="brand" href="#">Title</a>
+              <a class="navbar-brand" href="#">Title</a>
             </div>
           </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Project name<span class="nt">&lt;/a&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Project name<span class="nt">&lt;/a&gt;</span>
 </code></pre></div>
 
           <h3>Nav links</h3>
@@ -1400,7 +1403,7 @@
           <div class="bs-docs-example bs-navbar-top-example">
             <div class="navbar navbar-masthead navbar-fixed-top" style="position: absolute;">
               <div class="container" style="width: auto; padding: 0 20px;">
-                <a class="brand" href="#">Title</a>
+                <a class="navbar-brand" href="#">Title</a>
                 <ul class="nav">
                   <li class="active"><a href="#">Home</a></li>
                   <li><a href="#">Link</a></li>
@@ -1419,7 +1422,7 @@
           <div class="bs-docs-example bs-navbar-bottom-example">
             <div class="navbar navbar-masthead navbar-fixed-bottom" style="position: absolute;">
               <div class="container" style="width: auto; padding: 0 20px;">
-                <a class="brand" href="#">Title</a>
+                <a class="navbar-brand" href="#">Title</a>
                 <ul class="nav">
                   <li class="active"><a href="#">Home</a></li>
                   <li><a href="#">Link</a></li>
@@ -1438,7 +1441,7 @@
           <div class="bs-docs-example bs-navbar-top-example">
             <div class="navbar navbar-masthead navbar-static-top" style="margin: -1px -1px 0;">
               <div class="container" style="width: auto; padding: 0 20px;">
-                <a class="brand" href="#">Title</a>
+                <a class="navbar-brand" href="#">Title</a>
                 <ul class="nav">
                   <li class="active"><a href="#">Home</a></li>
                   <li><a href="#">Link</a></li>
@@ -1458,12 +1461,12 @@
           <div class="bs-docs-example">
             <div class="navbar navbar-masthead">
               <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="#">Title</a>
+                <a class="navbar-brand" href="#">Title</a>
                 <div class="nav-collapse collapse navbar-responsive-collapse">
                   <ul class="nav">
                     <li class="active"><a href="#">Home</a></li>
@@ -1507,14 +1510,14 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
 
     <span class="c">&lt;!-- .btn-navbar is used as the toggle for collapsed navbar content --&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-navbar&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;.nav-collapse&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;navbar-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;.nav-collapse&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
     <span class="nt">&lt;/a&gt;</span>
 
     <span class="c">&lt;!-- Be sure to leave the brand out there if you want it shown --&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Project name<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Project name<span class="nt">&lt;/a&gt;</span>
 
     <span class="c">&lt;!-- Everything you want hidden at 940px or less, place within here --&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;nav-collapse collapse&quot;</span><span class="nt">&gt;</span>
@@ -1534,12 +1537,12 @@
           <div class="bs-docs-example">
             <div class="navbar navbar-masthead navbar-inverse" style="position: static;">
               <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="#">Title</a>
+                <a class="navbar-brand" href="#">Title</a>
                 <div class="nav-collapse collapse navbar-inverse-collapse">
                   <ul class="nav">
                     <li class="active"><a href="#">Home</a></li>
@@ -1599,7 +1602,7 @@
           <p>To start, navbars are static (not fixed to the top) and include support for a project name and basic navigation. Place one anywhere within a <code>.container</code>, which sets the width of your site and content.</p>
           <div class="bs-docs-example">
             <div class="navbar navbar-main">
-              <a class="brand" href="#">Title</a>
+              <a class="navbar-brand" href="#">Title</a>
               <ul class="nav">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">Link</a></li>
@@ -1608,7 +1611,7 @@
             </div>
           </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-main&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -1712,10 +1715,10 @@
           <p>A simple link to show your brand or project name only requires an anchor tag.</p>
           <div class="bs-docs-example">
             <div class="navbar navbar-main">
-              <a class="brand" href="#">Title</a>
+              <a class="navbar-brand" href="#">Title</a>
             </div>
           </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Project name<span class="nt">&lt;/a&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Project name<span class="nt">&lt;/a&gt;</span>
 </code></pre></div>
 
           <h3>Nav links</h3>
@@ -1783,8 +1786,8 @@
             <div class="navbar navbar-main">
               <ul class="nav">
                 <li class="dropdown">
-                  <a data-toggle="dropdown" class="brand dropdown-toggle" href="#">Brand <b class="caret"></b></a>
-                  <ul class="brand dropdown-menu">
+                  <a data-toggle="dropdown" class="navbar-brand dropdown-toggle" href="#">Brand <b class="caret"></b></a>
+                  <ul class="navbar-brand dropdown-menu">
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
                     <li><a href="#">Something else here</a></li>
@@ -1849,7 +1852,7 @@
           <div class="bs-docs-example bs-navbar-top-example">
             <div class="navbar navbar-main navbar-fixed-top" style="position: absolute;">
               <div class="container" style="width: auto; padding: 0 20px;">
-                <a class="brand" href="#">Title</a>
+                <a class="navbar-brand" href="#">Title</a>
                 <ul class="nav">
                   <li class="active"><a href="#">Home</a></li>
                   <li><a href="#">Link</a></li>
@@ -1868,7 +1871,7 @@
           <div class="bs-docs-example bs-navbar-bottom-example">
             <div class="navbar navbar-main navbar-fixed-bottom" style="position: absolute;">
               <div class="container" style="width: auto; padding: 0 20px;">
-                <a class="brand" href="#">Title</a>
+                <a class="navbar-brand" href="#">Title</a>
                 <ul class="nav">
                   <li class="active"><a href="#">Home</a></li>
                   <li><a href="#">Link</a></li>
@@ -1887,7 +1890,7 @@
           <div class="bs-docs-example bs-navbar-top-example">
             <div class="navbar navbar-main navbar-static-top" style="margin: -1px -1px 0;">
               <div class="container" style="width: auto;">
-                <a class="brand" href="#">Title</a>
+                <a class="navbar-brand" href="#">Title</a>
                 <ul class="nav">
                   <li class="active"><a href="#">Home</a></li>
                   <li><a href="#">Link</a></li>
@@ -1907,12 +1910,12 @@
           <div class="bs-docs-example">
             <div class="navbar navbar-main">
               <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="#">Title</a>
+                <a class="navbar-brand" href="#">Title</a>
                 <div class="nav-collapse collapse navbar-responsive-collapse">
                   <ul class="nav">
                     <li class="active"><a href="#">Home</a></li>
@@ -1956,14 +1959,14 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
 
     <span class="c">&lt;!-- .btn-navbar is used as the toggle for collapsed navbar content --&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-navbar&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;.nav-collapse&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;navbar-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;.nav-collapse&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
     <span class="nt">&lt;/a&gt;</span>
 
     <span class="c">&lt;!-- Be sure to leave the brand out there if you want it shown --&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Project name<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Project name<span class="nt">&lt;/a&gt;</span>
 
     <span class="c">&lt;!-- Everything you want hidden at 940px or less, place within here --&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;nav-collapse collapse&quot;</span><span class="nt">&gt;</span>
@@ -1983,12 +1986,12 @@
           <div class="bs-docs-example">
             <div class="navbar navbar-main navbar-inverse" style="position: static;">
               <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="#">Title</a>
+                <a class="navbar-brand" href="#">Title</a>
                 <div class="nav-collapse collapse navbar-inverse-collapse">
                   <ul class="nav">
                     <li class="active"><a href="#">Home</a></li>
@@ -2236,43 +2239,120 @@
 
 
 
-        <!-- Counters
+        <!-- Labels
         ================================================== -->
         <section id="counters">
           <div class="page-header">
-            <h1>Counters</h1>
+            <h1>Labels</h1>
           </div>
-          <p class="lead">Easily highlight new or unread items by adding a <code>&lt;span class="counter"&gt;</code> to links, Bootstrap navs, and more.</p>
+          <p class="lead"></p>
+
+          <h3>Example</h3>
+          <div class="bs-docs-example">
+            <h1>Example heading <span class="label">New</span></h1>
+            <h2>Example heading <span class="label">New</span></h2>
+            <h3>Example heading <span class="label">New</span></h3>
+            <h4>Example heading <span class="label">New</span></h4>
+            <h5>Example heading <span class="label">New</span></h5>
+            <h6>Example heading <span class="label">New</span></h6>
+          </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;h3&gt;</span>Example heading <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;label&quot;</span><span class="nt">&gt;</span>New<span class="nt">&lt;/span&gt;&lt;/h3&gt;</span>
+</code></pre></div>
+
+          <h3>Available variations</h3>
+          <p>Add any of the below mentioned modifier classes to change the appearance of a label.</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Labels</th>
+                <th>Markup</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span class="label">Default</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label"&gt;Default&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-success">Success</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-success"&gt;Success&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-warning">Warning</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-warning"&gt;Warning&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-danger">Danger</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-danger"&gt;Danger&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-info">Info</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-info"&gt;Info&lt;/span&gt;</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </section>
+
+
+
+        <!-- Badges
+        ================================================== -->
+        <section id="badges">
+          <div class="page-header">
+            <h1>Badges</h1>
+          </div>
+          <p class="lead">Easily highlight new or unread items by adding a <code>&lt;span class="badge"&gt;</code> to links, Bootstrap navs, and more.</p>
 
           <div class="bs-docs-example">
-            <a href="#">Inbox <span class="counter">42</span></a>
+            <a href="#">Inbox <span class="badge">42</span></a>
           </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Inbox <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;counter&quot;</span><span class="nt">&gt;</span>42<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Inbox <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>42<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
 </code></pre></div>
 
           <h4>Self collapsing</h4>
-          <p>When there are no new or unread items, counters will simply collapse (via CSS's <code>:empty</code> selector) provided no content exists within.</p>
+          <p>When there are no new or unread items, badges will simply collapse (via CSS's <code>:empty</code> selector) provided no content exists within.</p>
 
           <h4>Adapts to active nav states</h4>
-          <p>Built-in styles are included for placing counters in active states in pill and list navigations.</p>
+          <p>Built-in styles are included for placing badges in active states in pill and list navigations.</p>
           <div class="bs-docs-example">
             <ul class="nav nav-pills">
-              <li class="active"><a href="#">Home <span class="counter">42</span></a></li>
+              <li class="active"><a href="#">Home <span class="badge">42</span></a></li>
               <li><a href="#">Profile</a></li>
-              <li><a href="#">Messages <span class="counter">3</span></a></li>
+              <li><a href="#">Messages <span class="badge">3</span></a></li>
             </ul>
             <br>
             <ul class="nav nav-list" style="max-width: 260px;">
               <li class="active">
                 <a href="#">
-                  <span class="counter pull-right">42</span>
+                  <span class="badge pull-right">42</span>
                   Home
                 </a>
               </li>
               <li><a href="#">Profile</a></li>
               <li>
                 <a href="#">
-                  <span class="counter pull-right">3</span>
+                  <span class="badge pull-right">3</span>
                   Messages
                 </a>
               </li>
@@ -2281,7 +2361,7 @@
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav nav-list&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;counter pull-right&quot;</span><span class="nt">&gt;</span>42<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge pull-right&quot;</span><span class="nt">&gt;</span>42<span class="nt">&lt;/span&gt;</span>
       Home
     <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
@@ -2338,7 +2418,7 @@
           <div class="page-header">
             <h1>Thumbnails</h1>
           </div>
-          <p class="lead">Extend Bootstrap's <a href="./css.html#gridSystem">grid system</a> with the thumbnail component to easily display grids of images, videos, text, and more.</p>
+          <p class="lead">Extend Bootstrap's <a href="./css/#gridsystem">grid system</a> with the thumbnail component to easily display grids of images, videos, text, and more.</p>
 
           <h3>Default thumbnails</h3>
           <p>By default, Bootstrap's thumbnails are designed to showcase linked images with minimal required markup.</p>
@@ -2872,7 +2952,7 @@
     <!-- Main docs footer (social buttons, copyright, etc). -->
     <!-- Footer
 ================================================== -->
-<footer class="footer">
+<footer class="bs-docs-footer">
   <div class="container">
 
     <div class="bs-docs-social">

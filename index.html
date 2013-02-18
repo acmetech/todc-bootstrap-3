@@ -16,9 +16,11 @@
 <!-- Bootstrap core CSS -->
 <link href="/todc-bootstrap-3/assets/css/bootstrap.css" rel="stylesheet">
 
+
 <!-- Documentation extras -->
 <link href="/todc-bootstrap-3/assets/css/docs.css" rel="stylesheet">
 <link href="/todc-bootstrap-3/assets/css/pygments-manni.css" rel="stylesheet">
+
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -39,19 +41,19 @@
 
     <!-- Place anything custom after this. -->
   </head>
-  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+  <body class="bs-docs-body" data-spy="scroll" data-target=".bs-docs-sidebar">
 
     <!-- Main navbar for all docs pages. -->
     <!-- Navbar
 ================================================== -->
 <div class="navbar navbar navbar-fixed-top">
   <div class="container">
-    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="brand" href="/">Bootstrap</a>
+    <a class="navbar-brand" href="/">Bootstrap</a>
     <div class="nav-collapse collapse">
       <ul class="nav">
         <li >
@@ -100,7 +102,7 @@
 
 <div class="container">
 
-  <div class="marketing">
+  <div class="bs-docs-marketing">
 
     <h1>Introducing Bootstrap.</h1>
     <p class="marketing-byline">Need reasons to love Bootstrap? Look no further.</p>
@@ -119,12 +121,12 @@
       <div class="span4">
         <img class="marketing-img" src="assets/img/bs-docs-bootstrap-features.png">
         <h2>Packed with features.</h2>
-        <p>A 12-column responsive <a href="./scaffolding.html#gridSystem">grid</a>, dozens of components, <a href="./javascript.html">JavaScript plugins</a>, typography, and form controls.</p>
+        <p>A 12-column responsive <a href="./css/#grid-system">grid</a>, dozens of components, <a href="./javascript/">JavaScript plugins</a>, typography, form controls, and even a <a href="./customize/">web-based Customizer</a> to make Bootstrap your own.</p>
       </div>
     </div>
 
     <h1>Built with Bootstrap.</h1>
-    <p class="marketing-byline">For more sites built with Bootstrap, <a href="./gallery.html">visit the gallery</a> or <a href="./getting-started.html#examples">browse the examples</a>.</p>
+    <p class="marketing-byline">For more sites built with Bootstrap, <a href="./gallery/">visit the gallery</a> or <a href="./getting-started/#examples">browse the examples</a>.</p>
     <div class="row bs-docs-gallery">
       <div class="span3">
         <a class="thumbnail" href="http://delicious.com">
@@ -156,7 +158,7 @@
     <!-- Main docs footer (social buttons, copyright, etc). -->
     <!-- Footer
 ================================================== -->
-<footer class="footer">
+<footer class="bs-docs-footer">
   <div class="container">
 
     <div class="bs-docs-social">

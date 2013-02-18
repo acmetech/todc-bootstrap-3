@@ -16,9 +16,11 @@
 <!-- Bootstrap core CSS -->
 <link href="/todc-bootstrap-3/assets/css/bootstrap.css" rel="stylesheet">
 
+
 <!-- Documentation extras -->
 <link href="/todc-bootstrap-3/assets/css/docs.css" rel="stylesheet">
 <link href="/todc-bootstrap-3/assets/css/pygments-manni.css" rel="stylesheet">
+
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -39,19 +41,19 @@
 
     <!-- Place anything custom after this. -->
   </head>
-  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+  <body class="bs-docs-body" data-spy="scroll" data-target=".bs-docs-sidebar">
 
     <!-- Main navbar for all docs pages. -->
     <!-- Navbar
 ================================================== -->
 <div class="navbar navbar navbar-fixed-top">
   <div class="container">
-    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="brand" href="/">Bootstrap</a>
+    <a class="navbar-brand" href="/">Bootstrap</a>
     <div class="nav-collapse collapse">
       <ul class="nav">
         <li >
@@ -684,7 +686,7 @@
 
           <h2>Example tabs</h2>
           <p>Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus.</p>
-          <div class="bs-docs-example">
+          <div class="bs-docs-example bs-docs-example-tabs">
             <ul id="myTab" class="nav nav-tabs">
               <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
               <li><a href="#profile" data-toggle="tab">Profile</a></li>
@@ -1887,7 +1889,7 @@
     <!-- Main docs footer (social buttons, copyright, etc). -->
     <!-- Footer
 ================================================== -->
-<footer class="footer">
+<footer class="bs-docs-footer">
   <div class="container">
 
     <div class="bs-docs-social">

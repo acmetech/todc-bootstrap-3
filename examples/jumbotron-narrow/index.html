@@ -16,9 +16,7 @@
 <!-- Bootstrap core CSS -->
 <link href="/todc-bootstrap-3/assets/css/bootstrap.css" rel="stylesheet">
 
-<!-- Documentation extras -->
-<link href="/todc-bootstrap-3/assets/css/docs.css" rel="stylesheet">
-<link href="/todc-bootstrap-3/assets/css/pygments-manni.css" rel="stylesheet">
+
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -51,7 +49,7 @@
   }
 
   /* Everything but the jumbotron gets side spacing for mobile-first views */
-  .masthead,
+  .header,
   .marketing,
   .footer {
     padding-left: 15px;
@@ -59,15 +57,22 @@
   }
 
   /* Custom page header */
-  .masthead {
+  .header {
     border-bottom: 1px solid #e5e5e5;
   }
   /* Make the masthead heading the same height as the navigation */
-  .masthead h3 {
+  .header h3 {
     margin-top: 0;
     margin-bottom: 0;
     line-height: 40px;
     padding-bottom: 19px;
+  }
+
+  /* Custom page footer */
+  .footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
   }
 
   /* Custom container */
@@ -82,10 +87,7 @@
   /* Main marketing message and sign up button */
   .jumbotron {
     text-align: center;
-  }
-  .jumbotron h1 {
-    font-size: 72px;
-    line-height: 1;
+    border-bottom: 1px solid #e5e5e5;
   }
   .jumbotron .btn {
     font-size: 21px;
@@ -103,15 +105,19 @@
   /* Responsive: Portrait tablets and up */
   @media screen and (min-width: 768px) {
     /* Remove the padding we set earlier */
-    .masthead,
+    .header,
     .marketing,
     .footer {
       padding-left: 0;
       padding-right: 0;
     }
     /* Space out the masthead */
-    .masthead {
+    .header {
       margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+      border-bottom: 0;
     }
   }
 </style>
@@ -119,7 +125,7 @@
 
 
 <div class="container-narrow">
-  <div class="masthead">
+  <div class="header">
     <ul class="nav nav-pills pull-right">
       <li class="active"><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
@@ -129,7 +135,7 @@
   </div>
 
   <div class="jumbotron">
-    <h1>Super awesome marketing speak!</h1>
+    <h1>Jumbotron heading</h1>
     <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><a class="btn btn-large btn-success" href="#">Sign up today</a></p>
   </div>
@@ -157,8 +163,6 @@
       <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
     </div>
   </div>
-
-  <hr>
 
   <div class="footer">
     <p>&copy; Company 2013</p>
