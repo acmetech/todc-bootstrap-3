@@ -41,6 +41,22 @@ section > ul li {
 
 
 
+/* Navbar
+-------------------------------------------------- */
+
+.bs-docs-navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc; /* IE8 */
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.bs-docs-navbar .nav > .active > a,
+.bs-docs-navbar .nav > .active > a:hover {
+  font-weight: 500;
+  background-color: transparent;
+}
+
+
+
 /* Jumbotrons
 -------------------------------------------------- */
 
@@ -642,6 +658,16 @@ input.focused {
 
 /* Responsive variations
 -------------------------------------------------- */
+
+/* Hide code snippets on mobile devices */
+@media screen and (max-width: 480px) {
+  .bs-docs-example {
+    border-radius: 4px;
+  }
+  .highlight {
+    display: none;
+  }
+}
 
 /* Tablets and up */
 @media screen and (min-width: 768px) {
