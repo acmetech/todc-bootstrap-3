@@ -120,30 +120,30 @@ table {
 .table-bordered colgroup + tbody tr:first-child td:last-child {
   border-top-right-radius: 2px;
 }
-.table-striped tbody > tr:nth-child(odd) > td,
-.table-striped tbody > tr:nth-child(odd) > th {
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
   background-color: #f9f9f9;
 }
-.table-hover tbody tr:hover > td,
-.table-hover tbody tr:hover > th {
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
   background-color: #ffffcc;
 }
-.table tbody tr.success > td {
+.table > tbody > tr.success > td {
   background-color: #dff0d8;
 }
-.table tbody tr.error > td {
+.table > tbody > tr.error > td {
   background-color: #f2dede;
 }
-.table tbody tr.warning > td {
+.table > tbody > tr.warning > td {
   background-color: #f9edbe;
 }
-.table-hover tbody tr.success:hover > td {
+.table-hover > tbody > tr.success:hover > td {
   background-color: #d0e9c6;
 }
-.table-hover tbody tr.error:hover > td {
+.table-hover > tbody > tr.error:hover > td {
   background-color: #ebcccc;
 }
-.table-hover tbody tr.warning:hover > td {
+.table-hover > tbody > tr.warning:hover > td {
   background-color: #f7e7a7;
 }
 legend {
@@ -2708,10 +2708,16 @@ fieldset[disabled] .btn-link:focus {
   border: 1px solid #f0c36d;
   border-radius: 2px;
 }
+.alert hr {
+  border-top-color: #eeb956;
+}
 .alert-success {
   background-color: #dff0d8;
   border-color: #a3d48e;
   color: #468847;
+}
+.alert-success hr {
+  border-top-color: #93cd7c;
 }
 .alert-danger,
 .alert-error {
@@ -2719,10 +2725,17 @@ fieldset[disabled] .btn-link:focus {
   border-color: #d59595;
   color: #b94a48;
 }
+.alert-danger hr,
+.alert-error hr {
+  border-top-color: #ce8383;
+}
 .alert-info {
   background-color: #d9edf7;
   border-color: #85c5e5;
   color: #3a87ad;
+}
+.alert-info hr {
+  border-top-color: #70bbe1;
 }
 .alert-success,
 .alert-danger,
