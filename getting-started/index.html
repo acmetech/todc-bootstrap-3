@@ -211,35 +211,35 @@
         <p class="lead">With a brief intro into the contents out of the way, we can focus on putting Bootstrap to use. To do that, we'll utilize a basic HTML template that includes everything we mentioned in the <a href="./getting-started.html#file-structure">File structure</a>.</p>
         <p>Now, here's a look at a <strong>typical HTML file</strong>:</p>
 
-<div class="highlight"><pre><code class="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Bootstrap 101 Template<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="lineno"> 2</span> <span class="nt">&lt;html&gt;</span>
+<span class="lineno"> 3</span>   <span class="nt">&lt;head&gt;</span>
+<span class="lineno"> 4</span>     <span class="nt">&lt;title&gt;</span>Bootstrap 101 Template<span class="nt">&lt;/title&gt;</span>
+<span class="lineno"> 5</span>     <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 6</span>   <span class="nt">&lt;/head&gt;</span>
+<span class="lineno"> 7</span>   <span class="nt">&lt;body&gt;</span>
+<span class="lineno"> 8</span>     <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
+<span class="lineno"> 9</span>     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="lineno">10</span>   <span class="nt">&lt;/body&gt;</span>
+<span class="lineno">11</span> <span class="nt">&lt;/html&gt;</span>
 </code></pre></div>
 
         <p>To make this <strong>a Bootstrapped template</strong>, just include the appropriate CSS and JS files:</p>
 
-<div class="highlight"><pre><code class="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Bootstrap 101 Template<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!-- Bootstrap --&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;css/bootstrap.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media=</span><span class="s">&quot;screen&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="lineno"> 2</span> <span class="nt">&lt;html&gt;</span>
+<span class="lineno"> 3</span>   <span class="nt">&lt;head&gt;</span>
+<span class="lineno"> 4</span>     <span class="nt">&lt;title&gt;</span>Bootstrap 101 Template<span class="nt">&lt;/title&gt;</span>
+<span class="lineno"> 5</span>     <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 6</span>     <span class="c">&lt;!-- Bootstrap --&gt;</span>
+<span class="lineno"> 7</span>     <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;css/bootstrap.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media=</span><span class="s">&quot;screen&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 8</span>   <span class="nt">&lt;/head&gt;</span>
+<span class="lineno"> 9</span>   <span class="nt">&lt;body&gt;</span>
+<span class="lineno">10</span>     <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
+<span class="lineno">11</span>     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="lineno">12</span>     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="lineno">13</span>   <span class="nt">&lt;/body&gt;</span>
+<span class="lineno">14</span> <span class="nt">&lt;/html&gt;</span>
 </code></pre></div>
 
         <p><strong>And you're set!</strong> With those two files added, you can begin to develop any site or application with Bootstrap.</p>
