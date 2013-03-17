@@ -7,12 +7,7 @@
  * Constructed by Tim O'Donnell (http://github.com/todc)
  */
 body {
-  margin: 0;
   color: #333333;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  font-size: 1.3rem;
-  line-height: 20px;
   background-color: #ffffff;
 }
 body,
@@ -22,6 +17,7 @@ select,
 textarea {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
+  font-size: 1.3rem;
   line-height: 20px;
 }
 a {
@@ -37,8 +33,7 @@ a:focus {
 code,
 pre {
   padding: 0 3px 2px;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 12px;
+  font-size: 12;
   color: #333333;
   border-radius: 0;
 }
@@ -52,7 +47,7 @@ code {
 pre {
   padding: 9.5px;
   margin: 0 0 10px;
-  font-size: 12px;
+  font-size: 12;
   line-height: 20px;
   border-radius: 0;
 }
@@ -128,27 +123,39 @@ table {
 .table-hover > tbody > tr:hover > th {
   background-color: #ffffcc;
 }
+.table > tbody > tr > td.success,
+.table > tbody > tr > th.success,
 .table > tbody > tr.success > td {
   background-color: #dff0d8;
 }
+.table > tbody > tr > td.error,
+.table > tbody > tr > th.error,
 .table > tbody > tr.error > td {
   background-color: #f2dede;
 }
+.table > tbody > tr > td.warning,
+.table > tbody > tr > th.warning,
 .table > tbody > tr.warning > td {
   background-color: #f9edbe;
 }
+.table-hover > tbody > tr > td.success:hover,
+.table-hover > tbody > tr > th.success:hover,
 .table-hover > tbody > tr.success:hover > td {
   background-color: #d0e9c6;
 }
+.table-hover > tbody > tr > td.error:hover,
+.table-hover > tbody > tr > th.error:hover,
 .table-hover > tbody > tr.error:hover > td {
   background-color: #ebcccc;
 }
+.table-hover > tbody > tr > td.warning:hover,
+.table-hover > tbody > tr > th.warning:hover,
 .table-hover > tbody > tr.warning:hover > td {
   background-color: #f7e7a7;
 }
 legend {
   margin-bottom: 20px;
-  font-size: 19.5px;
+  font-size: 19.5;
   line-height: 40px;
   color: #333333;
 }
@@ -170,7 +177,7 @@ input[type="tel"],
 input[type="color"] {
   min-height: 30px;
   padding: 4px 8px;
-  font-size: 13px;
+  font-size: 13;
   background-color: #ffffff;
   border: 1px solid #d9d9d9;
   border-radius: 1px;
@@ -325,7 +332,7 @@ input[type="search"].input-large,
 input[type="tel"].input-large,
 input[type="color"].input-large {
   padding: 9px 14px;
-  font-size: 14px;
+  font-size: 14;
   border-radius: 4px;
 }
 select.input-small,
@@ -346,7 +353,7 @@ input[type="tel"].input-small,
 input[type="color"].input-small {
   min-height: 24px;
   padding: 2px 8px;
-  font-size: 12px;
+  font-size: 12;
   border-radius: 1px;
 }
 input[class*="span"],
@@ -572,7 +579,7 @@ select:focus:required:invalid:focus {
 }
 .input-group-addon {
   padding: 4px 8px;
-  font-size: 13px;
+  font-size: 13;
   line-height: 20px;
   background-color: #eeeeee;
   border: 1px solid #d9d9d9;
@@ -580,11 +587,11 @@ select:focus:required:invalid:focus {
 }
 .input-group-addon.input-small {
   padding: 2px 8px;
-  font-size: 12px;
+  font-size: 12;
 }
 .input-group-addon.input-large {
   padding: 9px 14px;
-  font-size: 14px;
+  font-size: 14;
 }
 .input-group input:first-child,
 .input-group-addon:first-child {
@@ -671,7 +678,7 @@ select:focus:required:invalid:focus {
   margin: 0;
   color: #333333;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 13;
   font-weight: bold;
   line-height: 20px;
   cursor: default;
@@ -766,17 +773,17 @@ fieldset[disabled] .btn:active {
 }
 .btn-large {
   padding: 9px 14px;
-  font-size: 14px;
+  font-size: 14;
   border-radius: 2px;
 }
 .btn-small {
   padding: 2px 8px;
-  font-size: 12px;
+  font-size: 12;
   border-radius: 2px;
 }
 .btn-mini {
   padding: 1px 6px;
-  font-size: 11px;
+  font-size: 11;
   border-radius: 2px;
 }
 .btn .glyphicon {
@@ -1430,7 +1437,7 @@ fieldset[disabled] .btn-link:focus {
   background-color: #4d90fe;
 }
 .nav-list .btn {
-  font-size: 11px;
+  font-size: 11;
 }
 .nav-list .glyphicon {
   font-weight: normal;
@@ -1630,7 +1637,7 @@ fieldset[disabled] .btn-link:focus {
   display: none;
   padding: 0 0 6px;
   margin: 1px 0 0 -15px;
-  font-size: 13px;
+  font-size: 13;
   text-align: left;
   background-color: #fff;
 }
@@ -1994,7 +2001,7 @@ fieldset[disabled] .btn-link:focus {
   z-index: 1028;
 }
 .navbar-main .btn {
-  font-size: 11px;
+  font-size: 11;
 }
 .navbar-main .navbar-brand,
 .navbar-main .navbar-brand .btn {
@@ -2042,7 +2049,7 @@ fieldset[disabled] .btn-link:focus {
 }
 .navbar-main .navbar-brand.dropdown-menu {
   padding: 0 0 6px;
-  font-size: 13px;
+  font-size: 13;
   background-color: #fff;
 }
 .navbar-main .nav > li > .dropdown-menu {
