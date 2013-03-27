@@ -93,12 +93,12 @@
     <!-- Docs nav
     ================================================== -->
     <div class="row">
-      <div class="span3 bs-docs-sidebar">
+      <div class="col-span-3 bs-docs-sidebar">
         <ul class="nav nav-list bs-docs-sidenav">
           <li><a href="#global"><i class="glyphicon glyphicon-chevron-right"></i> Global settings</a></li>
+          <li><a href="#grid"><i class="glyphicon glyphicon-chevron-right"></i> Grid system</a></li>
           <li><a href="#typography"><i class="glyphicon glyphicon-chevron-right"></i> Typography</a></li>
           <li><a href="#code"><i class="glyphicon glyphicon-chevron-right"></i> Code</a></li>
-          <li><a href="#grid"><i class="glyphicon glyphicon-chevron-right"></i> Grid system</a></li>
           <li><a href="#tables"><i class="glyphicon glyphicon-chevron-right"></i> Tables</a></li>
           <li><a href="#forms"><i class="glyphicon glyphicon-chevron-right"></i> Forms</a></li>
           <li><a href="#buttons"><i class="glyphicon glyphicon-chevron-right"></i> Buttons</a></li>
@@ -107,7 +107,7 @@
           <li><a href="#responsive-utilities"><i class="glyphicon glyphicon-chevron-right"></i> Responsive utilities</a></li>
         </ul>
       </div>
-      <div class="span9">
+      <div class="col-span-9">
 
 
 
@@ -147,6 +147,199 @@
 
           <h3>Normalize reset</h3>
           <p>For improved cross-browser rendering, we use <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize</a>, a project by <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> and <a href="http://twitter.com/jon_neal" target="_blank">Jonathan Neal</a>.</p>
+
+        </section>
+
+
+
+        <!-- Grid system
+        ================================================== -->
+        <section id="grid">
+          <div class="page-header">
+            <h1>Grid system</h1>
+          </div>
+          <p class="lead">Bootstrap includes a responsive, percent-based grid system that appropriately scales up to 12 columns as the device or viewport size increases&mdash;in other words, it's mobile first. It includes <a href="#grid-example">predefined classes</a> for this, as well as powerful <a href="#grid-less">mixins for generating semantic layouts</a>.</p>
+
+          <h3 id="grid-example">Grid example</h3>
+          <p>On mobile devices, the grid starts out stacked. Above 768px, it becomes horizontal as media queries kick in to apply <code>float</code>s and <code>width</code>s. To create a basic grid layout, wrap a series of <code>.col-span-*</code> elements within a <code>.row</code>. As this is a 12-column grid, each <code>.span*</code> spans a number of those 12 columns, and should always add up to 12 for each row (or the number of columns in the parent), even at mobile resolutions.</p>
+          <div class="bs-docs-grid">
+            <div class="row show-grid">
+              <div class="col-span-1">1</div>
+              <div class="col-span-1">1</div>
+              <div class="col-span-1">1</div>
+              <div class="col-span-1">1</div>
+              <div class="col-span-1">1</div>
+              <div class="col-span-1">1</div>
+              <div class="col-span-1">1</div>
+              <div class="col-span-1">1</div>
+              <div class="col-span-1">1</div>
+              <div class="col-span-1">1</div>
+              <div class="col-span-1">1</div>
+              <div class="col-span-1">1</div>
+            </div>
+            <div class="row show-grid">
+              <div class="col-span-4">4</div>
+              <div class="col-span-4">4</div>
+              <div class="col-span-4">4</div>
+            </div>
+            <div class="row show-grid">
+              <div class="col-span-6">6</div>
+              <div class="col-span-6">6</div>
+            </div>
+          </div>
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+<span class="lineno"> 3</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+<span class="lineno"> 4</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+<span class="lineno"> 5</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+<span class="lineno"> 6</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+<span class="lineno"> 7</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+<span class="lineno"> 8</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+<span class="lineno"> 9</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">10</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">11</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">12</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">13</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">14</span> <span class="nt">&lt;/div&gt;</span>
+<span class="lineno">15</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">16</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-4&quot;</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">17</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-4&quot;</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">18</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-4&quot;</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">19</span> <span class="nt">&lt;/div&gt;</span>
+<span class="lineno">20</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">21</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-6&quot;</span><span class="nt">&gt;</span>6<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">22</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-6&quot;</span><span class="nt">&gt;</span>6<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">23</span> <span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+          <h3 id="grid-offsetting">Offsetting columns</h3>
+          <p>Move columns to the right using <code>.col-offset-*</code> classes. Each class increases the left margin of a column by a whole column. For example, <code>.col-offset-4</code> moves <code>.col-span-4</code> over four columns.</p>
+          <div class="bs-docs-grid">
+            <div class="row show-grid">
+              <div class="col-span-4">4</div>
+              <div class="col-span-4 col-offset-4">4 offset 4</div>
+            </div><!-- /row -->
+            <div class="row show-grid">
+              <div class="col-span-3 col-offset-3">3 offset 3</div>
+              <div class="col-span-3 col-offset-3">3 offset 3</div>
+            </div><!-- /row -->
+            <div class="row show-grid">
+              <div class="col-span-6 col-offset-6">6 offset 6</div>
+            </div><!-- /row -->
+          </div>
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-4&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">3</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-4 col-offset-4&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">4</span> <span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+
+          <h3 id="grid-nesting">Nesting columns</h3>
+          <p>To nest your content with the default grid, add a new <code>.row</code> and set of <code>.span*</code> columns within an existing <code>.span*</code> column. Nested rows should include a set of columns that add up to 12.</p>
+          <div class="row show-grid">
+            <div class="col-span-9">
+              Level 1: 9 columns
+              <div class="row show-grid">
+                <div class="col-span-6">
+                  Level 2: 6 columns
+                </div>
+                <div class="col-span-6">
+                  Level 2: 6 columns
+                </div>
+              </div>
+            </div>
+          </div>
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-9&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 3</span>     Level 1: 9 columns
+<span class="lineno"> 4</span>     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 5</span>       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-6&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 6</span>         Level 2: 6 columns
+<span class="lineno"> 7</span>       <span class="nt">&lt;/div&gt;</span>
+<span class="lineno"> 8</span>       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-6&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 9</span>         Level 2: 6 columns
+<span class="lineno">10</span>       <span class="nt">&lt;/div&gt;</span>
+<span class="lineno">11</span>     <span class="nt">&lt;/div&gt;</span>
+<span class="lineno">12</span>   <span class="nt">&lt;/div&gt;</span>
+<span class="lineno">13</span> <span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+          <h3 id="grid-column-ordering">Column ordering</h3>
+          <p>Easily change the order of our built-in grid columns with <code>.push*</code> and <code>.pull*</code> modifier classes.</p>
+<div class="row show-grid">
+  <div class="col-span-9 col-push-3">9</div>
+  <div class="col-span-3 col-pull-9">3</div>
+</div>
+
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row show-grid&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-9 col-push-3&quot;</span><span class="nt">&gt;</span>9<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">3</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-3 col-pull-9&quot;</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">4</span> <span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+          <h3 id="grid-less">LESS mixins and variables</h3>
+          <p>In addition to <a href="#grid-example">prebuilt grid classes</a> for fast layouts, Bootstrap includes LESS variables and mixins for quickly generating your own simple, semantic layouts.</p>
+
+          <h4>Variables</h4>
+          <p>Variables determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.</p>
+<div class="highlight"><pre><code class="css"><span class="lineno">1</span> <span class="k">@grid-columns</span><span class="o">:</span>              <span class="nt">12</span><span class="p">;</span>
+<span class="lineno">2</span> <span class="k">@grid-gutter-width</span><span class="o">:</span>         <span class="nt">30px</span><span class="p">;</span>
+<span class="lineno">3</span> <span class="k">@grid-float-breakpoint</span><span class="o">:</span>     <span class="nt">768px</span><span class="p">;</span>
+</code></pre></div>
+
+          <h4>Mixins</h4>
+          <p>Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.</p>
+<div class="highlight"><pre><code class="css"><span class="lineno"> 1</span> <span class="o">//</span> <span class="nt">Creates</span> <span class="nt">a</span> <span class="nt">wrapper</span> <span class="nt">for</span> <span class="nt">a</span> <span class="nt">series</span> <span class="nt">of</span> <span class="nt">columns</span>
+<span class="lineno"> 2</span> <span class="nc">.make-row</span><span class="o">()</span> <span class="p">{</span>
+<span class="lineno"> 3</span>   <span class="o">//</span> <span class="n">Negative</span> <span class="k">margin</span> <span class="n">the</span> <span class="n">row</span> <span class="n">out</span> <span class="n">to</span> <span class="n">align</span> <span class="n">the</span> <span class="k">content</span> <span class="n">of</span> <span class="n">columns</span>
+<span class="lineno"> 4</span>   <span class="k">margin-left</span><span class="o">:</span>  <span class="p">(</span><span class="o">@</span><span class="n">grid</span><span class="o">-</span><span class="n">gutter</span><span class="o">-</span><span class="k">width</span> <span class="o">/</span> <span class="m">-2</span><span class="p">);</span>
+<span class="lineno"> 5</span>   <span class="k">margin-right</span><span class="o">:</span> <span class="p">(</span><span class="o">@</span><span class="n">grid</span><span class="o">-</span><span class="n">gutter</span><span class="o">-</span><span class="k">width</span> <span class="o">/</span> <span class="m">-2</span><span class="p">);</span>
+<span class="lineno"> 6</span>   <span class="o">//</span> <span class="n">Then</span> <span class="k">clear</span> <span class="n">the</span> <span class="n">floated</span> <span class="n">columns</span>
+<span class="lineno"> 7</span>   <span class="o">.</span><span class="n">clear_float</span><span class="p">();</span>
+<span class="lineno"> 8</span> <span class="p">}</span>
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span> <span class="o">//</span> <span class="nt">Generate</span> <span class="nt">the</span> <span class="nt">columns</span>
+<span class="lineno">11</span> <span class="nc">.make-column</span><span class="o">(</span><span class="k">@columns</span><span class="o">)</span> <span class="p">{</span>
+<span class="lineno">12</span>   <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@grid-float-breakpoint</span><span class="o">)</span> <span class="p">{</span>
+<span class="lineno">13</span>     <span class="nt">float</span><span class="o">:</span> <span class="nt">left</span><span class="o">;</span>
+<span class="lineno">14</span>     <span class="o">//</span> <span class="nt">Calculate</span> <span class="nt">width</span> <span class="nt">based</span> <span class="nt">on</span> <span class="nt">number</span> <span class="nt">of</span> <span class="nt">columns</span> <span class="nt">available</span>
+<span class="lineno">15</span>     <span class="nt">width</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">(</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">)</span><span class="p">;</span>
+<span class="lineno">16</span>   <span class="err">}</span>
+<span class="lineno">17</span>   <span class="o">//</span> <span class="nt">Prevent</span> <span class="nt">columns</span> <span class="nt">from</span> <span class="nt">collapsing</span> <span class="nt">when</span> <span class="nt">empty</span>
+<span class="lineno">18</span>   <span class="nt">min-height</span><span class="o">:</span> <span class="nt">1px</span><span class="p">;</span>
+<span class="lineno">19</span>   <span class="o">//</span> <span class="nt">Set</span> <span class="nt">inner</span> <span class="nt">padding</span> <span class="nt">as</span> <span class="nt">gutters</span> <span class="nt">instead</span> <span class="nt">of</span> <span class="nt">margin</span>
+<span class="lineno">20</span>   <span class="nt">padding-left</span><span class="o">:</span>  <span class="o">(</span><span class="k">@grid-gutter-width</span> <span class="o">/</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
+<span class="lineno">21</span>   <span class="nt">padding-right</span><span class="o">:</span> <span class="o">(</span><span class="k">@grid-gutter-width</span> <span class="o">/</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
+<span class="lineno">22</span> <span class="p">}</span>
+<span class="lineno">23</span> 
+<span class="lineno">24</span> <span class="o">//</span> <span class="nt">Generate</span> <span class="nt">the</span> <span class="nt">column</span> <span class="nt">offsets</span>
+<span class="lineno">25</span> <span class="nc">.make-column-offset</span><span class="o">(</span><span class="k">@columns</span><span class="o">)</span> <span class="p">{</span>
+<span class="lineno">26</span>   <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@grid-float-breakpoint</span><span class="o">)</span> <span class="p">{</span>
+<span class="lineno">27</span>     <span class="nt">margin-left</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
+<span class="lineno">28</span>   <span class="err">}</span>
+<span class="lineno">29</span> <span class="err">}</span>
+</code></pre></div>
+
+          <h4>Example usage</h4>
+          <p>You can modify the variables to your own custom values, or just use the mixins with their default values. Here's an example of using the default settings to create a two-column layout with a gap between.</p>
+<div class="highlight"><pre><code class="css"><span class="lineno"> 1</span> <span class="nc">.wrapper</span> <span class="p">{</span>
+<span class="lineno"> 2</span>   <span class="o">.</span><span class="n">make</span><span class="o">-</span><span class="n">row</span><span class="p">();</span>
+<span class="lineno"> 3</span> <span class="p">}</span>
+<span class="lineno"> 4</span> <span class="nc">.content-main</span> <span class="p">{</span>
+<span class="lineno"> 5</span>   <span class="o">.</span><span class="n">make</span><span class="o">-</span><span class="n">column</span><span class="p">(</span><span class="m">8</span><span class="p">);</span>
+<span class="lineno"> 6</span> <span class="p">}</span>
+<span class="lineno"> 7</span> <span class="nc">.content-secondary</span> <span class="p">{</span>
+<span class="lineno"> 8</span>   <span class="o">.</span><span class="n">make</span><span class="o">-</span><span class="n">column</span><span class="p">(</span><span class="m">3</span><span class="p">);</span>
+<span class="lineno"> 9</span>   <span class="o">.</span><span class="n">make</span><span class="o">-</span><span class="n">column</span><span class="o">-</span><span class="n">offset</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
+<span class="lineno">10</span> <span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;wrapper&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;content-main&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">3</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;content-secondary&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">4</span> <span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+
 
         </section>
 
@@ -520,199 +713,6 @@
 
 
 
-        <!-- Grid system
-        ================================================== -->
-        <section id="grid">
-          <div class="page-header">
-            <h1>Grid system</h1>
-          </div>
-          <p class="lead">Bootstrap includes a responsive, percent-based grid system that appropriately scales up to 12 columns as the device or viewport size increases&mdash;in other words, it's mobile first. It includes <a href="#grid-example">predefined classes</a> for this, as well as powerful <a href="#grid-less">mixins for generating semantic layouts</a>.</p>
-
-          <h3 id="grid-example">Grid example</h3>
-          <p>On mobile devices, the grid starts out stacked. Above 768px, it becomes horizontal as media queries kick in to apply <code>float</code>s and <code>width</code>s. To create a basic grid layout, wrap a series of <code>.span*</code> elements within a <code>.row</code>. As this is a 12-column grid, each <code>.span*</code> spans a number of those 12 columns, and should always add up to 12 for each row (or the number of columns in the parent), even at mobile resolutions.</p>
-          <div class="bs-docs-grid">
-            <div class="row show-grid">
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-            </div>
-            <div class="row show-grid">
-              <div class="span4">4</div>
-              <div class="span4">4</div>
-              <div class="span4">4</div>
-            </div>
-            <div class="row show-grid">
-              <div class="span6">6</div>
-              <div class="span6">6</div>
-            </div>
-          </div>
-<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
-<span class="lineno"> 3</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
-<span class="lineno"> 4</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
-<span class="lineno"> 5</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
-<span class="lineno"> 6</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
-<span class="lineno"> 7</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
-<span class="lineno"> 8</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
-<span class="lineno"> 9</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">10</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">11</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">12</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">13</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">14</span> <span class="nt">&lt;/div&gt;</span>
-<span class="lineno">15</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">16</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span4&quot;</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">17</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span4&quot;</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">18</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span4&quot;</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">19</span> <span class="nt">&lt;/div&gt;</span>
-<span class="lineno">20</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">21</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span6&quot;</span><span class="nt">&gt;</span>6<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">22</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span6&quot;</span><span class="nt">&gt;</span>6<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">23</span> <span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
-
-          <h3 id="grid-offsetting">Offsetting columns</h3>
-          <p>Move columns to the right using <code>.offset*</code> classes. Each class increases the left margin of a column by a whole column. For example, <code>.offset4</code> moves <code>.span4</code> over four columns.</p>
-          <div class="bs-docs-grid">
-            <div class="row show-grid">
-              <div class="span4">4</div>
-              <div class="span4 offset4">4 offset 4</div>
-            </div><!-- /row -->
-            <div class="row show-grid">
-              <div class="span3 offset3">3 offset 3</div>
-              <div class="span3 offset3">3 offset 3</div>
-            </div><!-- /row -->
-            <div class="row show-grid">
-              <div class="span6 offset6">6 offset 6</div>
-            </div><!-- /row -->
-          </div>
-<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span4&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">3</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span4 offset4&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">4</span> <span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
-
-
-          <h3 id="grid-nesting">Nesting columns</h3>
-          <p>To nest your content with the default grid, add a new <code>.row</code> and set of <code>.span*</code> columns within an existing <code>.span*</code> column. Nested rows should include a set of columns that add up to 12.</p>
-          <div class="row show-grid">
-            <div class="span9">
-              Level 1: 9 columns
-              <div class="row show-grid">
-                <div class="span6">
-                  Level 2: 6 columns
-                </div>
-                <div class="span6">
-                  Level 2: 6 columns
-                </div>
-              </div>
-            </div>
-          </div>
-<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span9&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 3</span>     Level 1: 9 columns
-<span class="lineno"> 4</span>     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 5</span>       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span6&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 6</span>         Level 2: 6 columns
-<span class="lineno"> 7</span>       <span class="nt">&lt;/div&gt;</span>
-<span class="lineno"> 8</span>       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span6&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 9</span>         Level 2: 6 columns
-<span class="lineno">10</span>       <span class="nt">&lt;/div&gt;</span>
-<span class="lineno">11</span>     <span class="nt">&lt;/div&gt;</span>
-<span class="lineno">12</span>   <span class="nt">&lt;/div&gt;</span>
-<span class="lineno">13</span> <span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
-
-          <h3 id="grid-column-ordering">Column ordering</h3>
-          <p>Easily change the order of our built-in grid columns with <code>.push*</code> and <code>.pull*</code> modifier classes.</p>
-<div class="row show-grid">
-  <div class="span9 push3">9</div>
-  <div class="span3 pull9">3</div>
-</div>
-
-<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row show-grid&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span9 push3&quot;</span><span class="nt">&gt;</span>9<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">3</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span3 pull9&quot;</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">4</span> <span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
-
-          <h3 id="grid-less">LESS mixins and variables</h3>
-          <p>In addition to <a href="#grid-example">prebuilt grid classes</a> for fast layouts, Bootstrap includes LESS variables and mixins for quickly generating your own simple, semantic layouts.</p>
-
-          <h4>Variables</h4>
-          <p>Variables determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.</p>
-<div class="highlight"><pre><code class="css"><span class="lineno">1</span> <span class="k">@grid-columns</span><span class="o">:</span>              <span class="nt">12</span><span class="p">;</span>
-<span class="lineno">2</span> <span class="k">@grid-gutter-width</span><span class="o">:</span>         <span class="nt">30px</span><span class="p">;</span>
-<span class="lineno">3</span> <span class="k">@grid-float-breakpoint</span><span class="o">:</span>     <span class="nt">768px</span><span class="p">;</span>
-</code></pre></div>
-
-          <h4>Mixins</h4>
-          <p>Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.</p>
-<div class="highlight"><pre><code class="css"><span class="lineno"> 1</span> <span class="o">//</span> <span class="nt">Creates</span> <span class="nt">a</span> <span class="nt">wrapper</span> <span class="nt">for</span> <span class="nt">a</span> <span class="nt">series</span> <span class="nt">of</span> <span class="nt">columns</span>
-<span class="lineno"> 2</span> <span class="nc">.make-row</span><span class="o">()</span> <span class="p">{</span>
-<span class="lineno"> 3</span>   <span class="o">//</span> <span class="n">Negative</span> <span class="k">margin</span> <span class="n">the</span> <span class="n">row</span> <span class="n">out</span> <span class="n">to</span> <span class="n">align</span> <span class="n">the</span> <span class="k">content</span> <span class="n">of</span> <span class="n">columns</span>
-<span class="lineno"> 4</span>   <span class="k">margin-left</span><span class="o">:</span>  <span class="p">(</span><span class="o">@</span><span class="n">grid</span><span class="o">-</span><span class="n">gutter</span><span class="o">-</span><span class="k">width</span> <span class="o">/</span> <span class="m">-2</span><span class="p">);</span>
-<span class="lineno"> 5</span>   <span class="k">margin-right</span><span class="o">:</span> <span class="p">(</span><span class="o">@</span><span class="n">grid</span><span class="o">-</span><span class="n">gutter</span><span class="o">-</span><span class="k">width</span> <span class="o">/</span> <span class="m">-2</span><span class="p">);</span>
-<span class="lineno"> 6</span>   <span class="o">//</span> <span class="n">Then</span> <span class="k">clear</span> <span class="n">the</span> <span class="n">floated</span> <span class="n">columns</span>
-<span class="lineno"> 7</span>   <span class="o">.</span><span class="n">clear_float</span><span class="p">();</span>
-<span class="lineno"> 8</span> <span class="p">}</span>
-<span class="lineno"> 9</span> 
-<span class="lineno">10</span> <span class="o">//</span> <span class="nt">Generate</span> <span class="nt">the</span> <span class="nt">columns</span>
-<span class="lineno">11</span> <span class="nc">.make-column</span><span class="o">(</span><span class="k">@columns</span><span class="o">)</span> <span class="p">{</span>
-<span class="lineno">12</span>   <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@grid-float-breakpoint</span><span class="o">)</span> <span class="p">{</span>
-<span class="lineno">13</span>     <span class="nt">float</span><span class="o">:</span> <span class="nt">left</span><span class="o">;</span>
-<span class="lineno">14</span>     <span class="o">//</span> <span class="nt">Calculate</span> <span class="nt">width</span> <span class="nt">based</span> <span class="nt">on</span> <span class="nt">number</span> <span class="nt">of</span> <span class="nt">columns</span> <span class="nt">available</span>
-<span class="lineno">15</span>     <span class="nt">width</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">(</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">)</span><span class="p">;</span>
-<span class="lineno">16</span>   <span class="err">}</span>
-<span class="lineno">17</span>   <span class="o">//</span> <span class="nt">Prevent</span> <span class="nt">columns</span> <span class="nt">from</span> <span class="nt">collapsing</span> <span class="nt">when</span> <span class="nt">empty</span>
-<span class="lineno">18</span>   <span class="nt">min-height</span><span class="o">:</span> <span class="nt">1px</span><span class="p">;</span>
-<span class="lineno">19</span>   <span class="o">//</span> <span class="nt">Set</span> <span class="nt">inner</span> <span class="nt">padding</span> <span class="nt">as</span> <span class="nt">gutters</span> <span class="nt">instead</span> <span class="nt">of</span> <span class="nt">margin</span>
-<span class="lineno">20</span>   <span class="nt">padding-left</span><span class="o">:</span>  <span class="o">(</span><span class="k">@grid-gutter-width</span> <span class="o">/</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
-<span class="lineno">21</span>   <span class="nt">padding-right</span><span class="o">:</span> <span class="o">(</span><span class="k">@grid-gutter-width</span> <span class="o">/</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
-<span class="lineno">22</span> <span class="p">}</span>
-<span class="lineno">23</span> 
-<span class="lineno">24</span> <span class="o">//</span> <span class="nt">Generate</span> <span class="nt">the</span> <span class="nt">column</span> <span class="nt">offsets</span>
-<span class="lineno">25</span> <span class="nc">.make-column-offset</span><span class="o">(</span><span class="k">@columns</span><span class="o">)</span> <span class="p">{</span>
-<span class="lineno">26</span>   <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@grid-float-breakpoint</span><span class="o">)</span> <span class="p">{</span>
-<span class="lineno">27</span>     <span class="nt">margin-left</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
-<span class="lineno">28</span>   <span class="err">}</span>
-<span class="lineno">29</span> <span class="err">}</span>
-</code></pre></div>
-
-          <h4>Example usage</h4>
-          <p>You can modify the variables to your own custom values, or just use the mixins with their default values. Here's an example of using the default settings to create a two-column layout with a gap between.</p>
-<div class="highlight"><pre><code class="css"><span class="lineno"> 1</span> <span class="nc">.wrapper</span> <span class="p">{</span>
-<span class="lineno"> 2</span>   <span class="o">.</span><span class="n">make</span><span class="o">-</span><span class="n">row</span><span class="p">();</span>
-<span class="lineno"> 3</span> <span class="p">}</span>
-<span class="lineno"> 4</span> <span class="nc">.content-main</span> <span class="p">{</span>
-<span class="lineno"> 5</span>   <span class="o">.</span><span class="n">make</span><span class="o">-</span><span class="n">column</span><span class="p">(</span><span class="m">8</span><span class="p">);</span>
-<span class="lineno"> 6</span> <span class="p">}</span>
-<span class="lineno"> 7</span> <span class="nc">.content-secondary</span> <span class="p">{</span>
-<span class="lineno"> 8</span>   <span class="o">.</span><span class="n">make</span><span class="o">-</span><span class="n">column</span><span class="p">(</span><span class="m">3</span><span class="p">);</span>
-<span class="lineno"> 9</span>   <span class="o">.</span><span class="n">make</span><span class="o">-</span><span class="n">column</span><span class="o">-</span><span class="n">offset</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
-<span class="lineno">10</span> <span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;wrapper&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;content-main&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">3</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;content-secondary&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">4</span> <span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
-
-
-
-        </section>
-
-
-
 
 
         <!-- Code
@@ -958,8 +958,8 @@
           <p>Use contextual classes to color table rows.</p>
           <table class="table table-bordered table-striped">
             <colgroup>
-              <col class="span1">
-              <col class="span7">
+              <col class="col-span-1">
+              <col class="col-span-7">
             </colgroup>
             <thead>
               <tr>
@@ -1042,8 +1042,8 @@
           <p>List of supported table HTML elements and how they should be used.</p>
           <table class="table table-bordered table-striped">
             <colgroup>
-              <col class="span1">
-              <col class="span7">
+              <col class="col-span-1">
+              <col class="col-span-7">
             </colgroup>
             <thead>
               <tr>
@@ -1179,8 +1179,8 @@
           <h3>Inline form</h3>
           <p>Add <code>.form-inline</code> for left-aligned labels and inline-block controls for a compact layout.</p>
           <form class="bs-docs-example form-inline">
-            <input type="text" class="span3" placeholder="Email">
-            <input type="password" class="span3" placeholder="Password">
+            <input type="text" class="col-span-3" placeholder="Email">
+            <input type="password" class="col-span-3" placeholder="Password">
             <div class="checkbox">
               <label>
                 <input type="checkbox"> Remember me
@@ -1189,8 +1189,8 @@
             <button type="submit" class="btn">Sign in</button>
           </form><!-- /example -->
 <div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;form-inline&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 2</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;span3&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Email&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 3</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;password&quot;</span> <span class="na">class=</span><span class="s">&quot;span3&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Password&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 2</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;col-span-3&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Email&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 3</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;password&quot;</span> <span class="na">class=</span><span class="s">&quot;col-span-3&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Password&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 4</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 5</span>     <span class="nt">&lt;label&gt;</span>
 <span class="lineno"> 6</span>       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span> Remember me
@@ -1346,7 +1346,7 @@
           <p>Use the default option or specify a <code>multiple="multiple"</code> to show multiple options at once.</p>
           <p><a href="http://todc.github.com/todc-select2" target="_blank">todc-select2</a> is used for Google-themed rendering of select menus.</p>
           <form class="bs-docs-example">
-            <select class="g-select span3">
+            <select class="g-select col-span-3">
               <option value="Apple">Apple</option>
               <option value="Banana">Banana</option>
               <option value="Orange">Orange</option>
@@ -1354,7 +1354,7 @@
               <option value="Peach">Peach</option>
             </select>
             <br><br>
-            <select class="g-select span3" multiple="multiple">
+            <select class="g-select col-span-3" multiple="multiple">
               <option value="Apple">Apple</option>
               <option value="Banana">Banana</option>
               <option value="Orange">Orange</option>
@@ -1396,9 +1396,9 @@
           <p>Style inputs via default browser functionality with <code>:invalid</code>. Specify a <code>type</code>, add the <code>required</code> attribute if the field is not optional, and (if applicable) specify a <code>pattern</code>.</p>
           <p>This is not available in versions of Internet Explorer 7-9 due to lack of support for CSS pseudo selectors.</p>
           <form class="bs-docs-example form-inline">
-            <input class="span3" type="email" placeholder="test@example.com" required>
+            <input class="col-span-3" type="email" placeholder="test@example.com" required>
           </form>
-<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;span3&quot;</span> <span class="na">type=</span><span class="s">&quot;email&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;test@example.com&quot;</span> <span class="na">required</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;col-span-3&quot;</span> <span class="na">type=</span><span class="s">&quot;email&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;test@example.com&quot;</span> <span class="na">required</span><span class="nt">&gt;</span>
 </code></pre></div>
 
           <h3 id="forms-disabled-inputs">Disabled inputs</h3>
@@ -1414,10 +1414,10 @@
           <form class="bs-docs-example form-inline">
             <fieldset disabled>
               <div>
-                <input type="text" class="span4" placeholder="Disabled input">
+                <input type="text" class="col-span-4" placeholder="Disabled input">
               </div>
               <div>
-                <select class="span4 g-select">
+                <select class="col-span-4 g-select">
                   <option>Disabled select</option>
                 </select>
               </div>
@@ -1432,10 +1432,10 @@
 <div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;form-inline&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 2</span>   <span class="nt">&lt;fieldset</span> <span class="na">disabled</span><span class="nt">&gt;</span>
 <span class="lineno"> 3</span>     <span class="nt">&lt;div&gt;</span>
-<span class="lineno"> 4</span>       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;span4&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Disabled input&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 4</span>       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;col-span-4&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Disabled input&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 5</span>     <span class="nt">&lt;/div&gt;</span>
 <span class="lineno"> 6</span>     <span class="nt">&lt;div&gt;</span>
-<span class="lineno"> 7</span>       <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;span4&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 7</span>       <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;col-span-4&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 8</span>         <span class="nt">&lt;option&gt;</span>Disabled select<span class="nt">&lt;/option&gt;</span>
 <span class="lineno"> 9</span>       <span class="nt">&lt;/select&gt;</span>
 <span class="lineno">10</span>     <span class="nt">&lt;/div&gt;</span>
@@ -1506,33 +1506,33 @@
           <p>Add text or buttons before, after, or on both sides of any text-based input. Use <code>.input-group</code> with a <code>.add-on</code> to prepend or append elements to an <code>&lt;input&gt;</code>.</p>
           <p>Avoid using <code>&lt;select&gt;</code> elements here as they cannot be fully styled in WebKit browsers.</p>
           <form class="bs-docs-example">
-            <div class="input-group span9">
+            <div class="input-group col-span-9">
               <span class="input-group-addon">@</span>
               <input type="text" placeholder="Username">
             </div>
             <br>
-            <div class="input-group span6">
+            <div class="input-group col-span-6">
               <input type="text">
               <span class="input-group-addon">.00</span>
             </div>
             <br>
-            <div class="input-group span3">
+            <div class="input-group col-span-3">
               <span class="input-group-addon">$</span>
               <input type="text">
               <span class="input-group-addon">.00</span>
             </div>
           </form>
-<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span9&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-9&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 2</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon&quot;</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
 <span class="lineno"> 3</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Username&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 4</span> <span class="nt">&lt;/div&gt;</span>
 <span class="lineno"> 5</span> 
-<span class="lineno"> 6</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span6&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 6</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-6&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 7</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 8</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon&quot;</span><span class="nt">&gt;</span>.00<span class="nt">&lt;/span&gt;</span>
 <span class="lineno"> 9</span> <span class="nt">&lt;/div&gt;</span>
 <span class="lineno">10</span> 
-<span class="lineno">11</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span3&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">11</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-3&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">12</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon&quot;</span><span class="nt">&gt;</span>$<span class="nt">&lt;/span&gt;</span>
 <span class="lineno">13</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">14</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon&quot;</span><span class="nt">&gt;</span>.00<span class="nt">&lt;/span&gt;</span>
@@ -1542,32 +1542,32 @@
           <h4>Optional sizes</h4>
           <p>Add the relative form sizing classes to the `.input-group-addon`.</p>
           <form class="bs-docs-example">
-            <div class="input-group span9">
+            <div class="input-group col-span-9">
               <span class="input-group-addon input-large">@</span>
               <input type="text" class="input-large" placeholder="Username">
             </div>
             <br>
-            <div class="input-group span9">
+            <div class="input-group col-span-9">
               <span class="input-group-addon">@</span>
               <input type="text" placeholder="Username">
             </div>
             <br>
-            <div class="input-group span9">
+            <div class="input-group col-span-9">
               <span class="input-group-addon input-small">@</span>
               <input type="text" class="input-small" placeholder="Username">
             </div>
           </form>
-<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span9&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-9&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 2</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon input-large&quot;</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
 <span class="lineno"> 3</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input-large&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Username&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 4</span> <span class="nt">&lt;/div&gt;</span>
 <span class="lineno"> 5</span> 
-<span class="lineno"> 6</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span9&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 6</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-9&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 7</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon&quot;</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
 <span class="lineno"> 8</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Username&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 9</span> <span class="nt">&lt;/div&gt;</span>
 <span class="lineno">10</span> 
-<span class="lineno">11</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span9&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">11</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-9&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">12</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon input-small&quot;</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
 <span class="lineno">13</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input-small&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Username&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">14</span> <span class="nt">&lt;/div&gt;</span>
@@ -1576,28 +1576,28 @@
           <h4>Buttons instead of text</h4>
           <p>Buttons in input groups are a bit different and require one extra level of nesting. Instead of <code>.input-group-addon</code>, you'll need to use <code>.input-group-btn</code> to wrap the buttons. This is required due to default browser styles that cannot be overridden.</p>
           <form class="bs-docs-example">
-            <div class="input-group span7">
+            <div class="input-group col-span-7">
               <span class="input-group-btn">
                 <button class="btn" type="button">Go!</button>
               </span>
               <input type="text">
             </div>
             <br>
-            <div class="input-group span7">
+            <div class="input-group col-span-7">
               <input type="text">
               <span class="input-group-btn">
                 <button class="btn" type="button">Go!</button>
               </span>
             </div>
           </form>
-<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span7&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-7&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 2</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-btn&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 3</span>     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span><span class="nt">&gt;</span>Go!<span class="nt">&lt;/button&gt;</span>
 <span class="lineno"> 4</span>   <span class="nt">&lt;/span&gt;</span>
 <span class="lineno"> 5</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 6</span> <span class="nt">&lt;/div&gt;</span>
 <span class="lineno"> 7</span> 
-<span class="lineno"> 8</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span7&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 8</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-7&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 9</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">10</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-btn&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">11</span>     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span><span class="nt">&gt;</span>Go!<span class="nt">&lt;/button&gt;</span>
@@ -1608,7 +1608,7 @@
           <h4>Button dropdowns</h4>
           <p></p>
           <form class="bs-docs-example">
-            <div class="input-group span7">
+            <div class="input-group col-span-7">
               <div class="input-group-btn">
                 <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
                 <ul class="dropdown-menu">
@@ -1622,7 +1622,7 @@
               <input type="text">
             </div><!-- /input-group -->
             <br>
-            <div class="input-group span7">
+            <div class="input-group col-span-7">
               <input type="text">
               <div class="input-group-btn">
                 <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
@@ -1636,7 +1636,7 @@
               </div><!-- /btn-group -->
             </div><!-- /input-group -->
           </form>
-<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span7&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-7&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group-btn&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 3</span>     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Action <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
 <span class="lineno"> 4</span>     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
@@ -1650,7 +1650,7 @@
 <span class="lineno">12</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">13</span> <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /input-group --&gt;</span>
 <span class="lineno">14</span> 
-<span class="lineno">15</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span7&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">15</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-7&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">16</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">17</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group-btn&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">18</span>     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Action <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
@@ -1667,7 +1667,7 @@
 
           <h4>Segmented dropdown groups</h4>
           <form class="bs-docs-example">
-            <div class="input-group span7">
+            <div class="input-group col-span-7">
               <div class="input-group-btn">
                 <button class="btn" tabindex="-1">Action</button>
                 <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
@@ -1686,7 +1686,7 @@
 
             <br>
 
-            <div class="input-group span7">
+            <div class="input-group col-span-7">
               <input type="text">
               <div class="input-group-btn">
                 <button class="btn" tabindex="-1">Action</button>
@@ -1703,14 +1703,14 @@
               </div>
             </div>
           </form>
-<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span7&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-7&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group-btn&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 3</span>     <span class="c">&lt;!-- Button and dropdown menu --&gt;</span>
 <span class="lineno"> 4</span>   <span class="nt">&lt;/div&gt;</span>
 <span class="lineno"> 5</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 6</span> <span class="nt">&lt;/div&gt;</span>
 <span class="lineno"> 7</span> 
-<span class="lineno"> 8</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span7&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 8</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-7&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 9</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">10</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group-btn btn-group&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">11</span>     <span class="c">&lt;!-- Button and dropdown menu --&gt;</span>
@@ -1736,27 +1736,27 @@
 </code></pre></div>
 
           <h4>Column sizing</h4>
-          <p>Use <code>.span1</code> to <code>.span12</code> for setting widths on inputs that match Bootstrap's grid system.</p>
+          <p>Use <code>.col-span-1</code> to <code>.col-span-12</code> for setting widths on inputs that match Bootstrap's grid system.</p>
           <form class="bs-docs-example" style="padding-bottom: 15px;">
             <div class="controls docs-input-sizes">
-              <input class="span1" type="text" placeholder=".span1">
-              <input class="span2" type="text" placeholder=".span2">
-              <input class="span3" type="text" placeholder=".span3">
-              <select class="span1 g-select">
+              <input class="col-span-1" type="text" placeholder=".col-span-1">
+              <input class="col-span-2" type="text" placeholder=".col-span-2">
+              <input class="col-span-3" type="text" placeholder=".col-span-3">
+              <select class="col-span-1 g-select">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
               </select>
-              <select class="span2 g-select">
+              <select class="col-span-2 g-select">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
               </select>
-              <select class="span3 g-select">
+              <select class="col-span-3 g-select">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -1765,16 +1765,16 @@
               </select>
             </div>
           </form>
-<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;span1&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;.span1&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 2</span> <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;span2&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;.span2&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 3</span> <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;span3&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;.span3&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 4</span> <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;span1&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;col-span-1&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;.col-span-1&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 2</span> <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;col-span-2&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;.col-span-2&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 3</span> <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;col-span-3&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;.col-span-3&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 4</span> <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;col-span-1&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 5</span>   ...
 <span class="lineno"> 6</span> <span class="nt">&lt;/select&gt;</span>
-<span class="lineno"> 7</span> <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;span2&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 7</span> <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;col-span-2&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 8</span>   ...
 <span class="lineno"> 9</span> <span class="nt">&lt;/select&gt;</span>
-<span class="lineno">10</span> <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;span3&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">10</span> <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;col-span-3&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">11</span>   ...
 <span class="lineno">12</span> <span class="nt">&lt;/select&gt;</span>
 </code></pre></div>
@@ -1782,26 +1782,26 @@
           <p>If you need multiple inputs on the same line, wrap them in the standard grid markup (with <code>.row</code> and <code>.span*</code> classes). Each input should have it's own column and will expand to fill the available width automatically.</p>
           <form class="bs-docs-example" style="padding-bottom: 15px;">
             <div class="row">
-              <div class="span4">
-                <input type="text" placeholder=".span4">
+              <div class="col-span-4">
+                <input type="text" placeholder=".col-span-4">
               </div>
-              <div class="span4">
-                <input type="text" placeholder=".span4">
+              <div class="col-span-4">
+                <input type="text" placeholder=".col-span-4">
               </div>
-              <div class="span4">
-                <input type="text" placeholder=".span4">
+              <div class="col-span-4">
+                <input type="text" placeholder=".col-span-4">
               </div>
             </div>
           </form>
 <div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span4&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 3</span>     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;.span4&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-4&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 3</span>     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;.col-span-4&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 4</span>   <span class="nt">&lt;/div&gt;</span>
-<span class="lineno"> 5</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span4&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 6</span>     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;.span4&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 5</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-4&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 6</span>     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;.col-span-4&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 7</span>   <span class="nt">&lt;/div&gt;</span>
-<span class="lineno"> 8</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;span4&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 9</span>     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;.span4&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 8</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-4&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 9</span>     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;.col-span-4&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">10</span>   <span class="nt">&lt;/div&gt;</span>
 <span class="lineno">11</span> <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
@@ -2296,7 +2296,7 @@
               <div class="controls">
                 <div class="input-group">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-                  <input class="span2" id="inputIcon" type="text">
+                  <input class="col-span-2" id="inputIcon" type="text">
                 </div>
               </div>
             </div>
@@ -2306,7 +2306,7 @@
 <span class="lineno">3</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;controls&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">4</span>     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">5</span>       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-envelope&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/span&gt;</span>
-<span class="lineno">6</span>       <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;span2&quot;</span> <span class="na">id=</span><span class="s">&quot;inputIcon&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">6</span>       <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;col-span-2&quot;</span> <span class="na">id=</span><span class="s">&quot;inputIcon&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">7</span>     <span class="nt">&lt;/div&gt;</span>
 <span class="lineno">8</span>   <span class="nt">&lt;/div&gt;</span>
 <span class="lineno">9</span> <span class="nt">&lt;/div&gt;</span>
@@ -2421,7 +2421,7 @@
 
 
 
-      </div><!-- /span9 -->
+      </div><!-- /col-span-9 -->
     </div><!-- row -->
 
   </div><!-- /.container -->
