@@ -1621,7 +1621,7 @@
         this.activeTarget = target
 
         $(this.selector)
-          .parents('.active')
+          .parent('.active')
           .removeClass('active')
 
         selector = this.selector
@@ -1629,7 +1629,7 @@
           + this.selector + '[href="' + target + '"]'
 
         active = $(selector)
-          .parents('li')
+          .parent('li')
           .addClass('active')
 
         if (active.parent('.dropdown-menu').length)  {

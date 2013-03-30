@@ -35,12 +35,47 @@
                 <link rel="apple-touch-icon-precomposed" href="/todc-bootstrap-3/assets/ico/apple-touch-icon-57-precomposed.png">
                                <link rel="shortcut icon" href="/todc-bootstrap-3/assets/ico/favicon.png">
 
+
 <link href="/todc-bootstrap-3/assets/css/todc-bootstrap.css" rel="stylesheet"></head>
 <link href="/todc-bootstrap-3/assets/css/select2.css" rel="stylesheet">
 
     <!-- Place anything custom after this. -->
   </head>
-  <body class="bs-docs-home">
+  <body class="bs-docs-body" data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Main navbar for all docs pages. -->
+    <!-- Navbar
+================================================== -->
+<div class="navbar navbar navbar-fixed-top">
+  <div class="container">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/todc-bootstrap-3/">Bootstrap</a>
+    <div class="nav-collapse collapse">
+      <ul class="nav">
+        <li >
+          <a href="/todc-bootstrap-3/">Home</a>
+        </li>
+        <li >
+          <a href="/todc-bootstrap-3/getting-started">Getting started</a>
+        </li>
+        <li >
+          <a href="/todc-bootstrap-3/css">CSS</a>
+        </li>
+        <li >
+          <a href="/todc-bootstrap-3/components">Components</a>
+        </li>
+        <li >
+          <a href="/todc-bootstrap-3/javascript">JavaScript</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 
     <!-- Page content of course! -->
     <div class="bs-docs-jumbotron masthead">
@@ -51,14 +86,13 @@
       <a href="assets/css/todc-bootstrap.css" class="btn btn-success" >
         Download TODC Bootstrap
       </a>
-      <a href="./docs/" class="btn btn-success">View docs</a>
     </p>
     <ul class="masthead-links">
       <li>
         <a href="https://github.com/todc/todc-bootstrap" >GitHub project</a>
       </li>
       <li>
-        <a href="./docs/#examples" >Examples</a>
+        <a href="./getting-started#examples" >Examples</a>
       </li>
       <li>Version 3.0.0</li>
     </ul>
@@ -86,7 +120,7 @@
       <div class="col-span-4">
         <img class="marketing-img" src="assets/img/bs-docs-bootstrap-features.png">
         <h2>Packed with features.</h2>
-        <p>A 12-column responsive <a href="./docs/#grid">grid</a>, dozens of components, <a href="./docs/#js/">JavaScript plugins</a>, typography, form controls, and even a <a href="./customize/">web-based Customizer</a> to make <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a> your own.</p>
+        <p>A 12-column responsive <a href="./css/#grid-system">grid</a>, dozens of components, <a href="./javascript/">JavaScript plugins</a>, typography, form controls, and even a <a href="./customize/">web-based Customizer</a> to make <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a> your own.</p>
       </div>
     </div>
 
@@ -95,7 +129,7 @@
       TODC Bootstrap is a Google styled theme for <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a>.
       <br>
       For more sites built with Bootstrap, <a href="http://expo.getbootstrap.com">visit the Expo</a> or
-      <a href="./docs/#examples">browse the examples</a>.
+      <a href="./getting-started/#examples">browse the examples</a>.
     </p>
     <div class="row bs-docs-gallery">
       <div class="col-span-3">
