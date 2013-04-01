@@ -51,6 +51,7 @@
     <li><a href="#getting-started">Getting started</a></li>
     <li><a href="#whats-included">What's included</a></li>
     <li><a href="#examples">Templates and examples</a></li>
+    <li><a href="#customizing">Customizing Bootstrap</a></li>
 
     <!-- CSS -->
     <li><a class="nav-header" href="#css">CSS</a></li>
@@ -232,7 +233,6 @@
         <li><a href="#progress-stacked">Stacked</a></li>
       </ul>
     </li>
-    <li><a href="#scrollbars">Scrollbars</a></li>
     <li><a href="#media">Media object</a></li>
     <li>
       <a href="#list-group">List group</a>
@@ -256,6 +256,7 @@
       </ul>
     </li>
     <li><a href="#wells">Wells</a></li>
+    <li><a href="#scrollbars">Scrollbars</a></li>
 
     <!-- JavaScript -->
     <li><a class="nav-header" href="#js">JavaScript</a></li>
@@ -282,8 +283,8 @@
     <li><a href="#tabs">Tab</a></li>
     <li><a href="#tooltips">Tooltip</a></li>
     <li><a href="#popovers">Popover</a></li>
-    <li><a href="#alerts">Alert</a></li>
-    <li><a href="#buttons">Button</a></li>
+    <li><a href="#js-alerts">Alert</a></li>
+    <li><a href="#js-buttons">Button</a></li>
     <li><a href="#collapse">Collapse</a></li>
     <li><a href="#carousel">Carousel</a></li>
     <li><a href="#typeahead">Typeahead</a></li>
@@ -408,14 +409,21 @@
           <img src="/todc-bootstrap-3/assets/img/examples/bootstrap-example-starter.png" alt="">
         </a>
         <h4>Starter template</h4>
-        <p>A barebones HTML document with all the Bootstrap CSS and JavaScript included.</p>
+        <p>A barebones HTML page with Bootstrap's CSS and JavaScript included.</p>
       </div>
       <div class="col-span-4">
-        <a class="thumbnail" href="/todc-bootstrap-3/examples/jumbotron/" target="_blank">
+        <a class="thumbnail" href="/examples/grid/" target="_blank">
+          <img src="/assets/img/examples/bootstrap-example-grid.png" alt="">
+        </a>
+        <h4>Basic grid layouts</h4>
+        <p>Simple grid layouts to familiarize you with using the Bootstrap grid system.</p>
+      </div>
+      <div class="col-span-4">
+        <a class="thumbnail" href="/examples/jumbotron/" target="_blank">
           <img src="/todc-bootstrap-3/assets/img/examples/bootstrap-example-marketing.png" alt="">
         </a>
         <h4>Basic marketing site</h4>
-        <p>Featuring a hero unit for a primary message and three supporting elements.</p>
+        <p>Features a jumbotron for primary message and three supporting elements.</p>
       </div>
       <div class="col-span-4">
         <a class="thumbnail" href="/todc-bootstrap-3/examples/jumbotron-narrow/" target="_blank">
@@ -481,7 +489,6 @@
         <h4>Fixed top navbar</h4>
         <p>Basic template for showcasing the fixed navbar variation.</p>
       </div>
-
       <div class="col-span-4">
         <a class="thumbnail" href="/todc-bootstrap-3/examples/navigation/" target="_blank">
           <img src="/todc-bootstrap-3/assets/img/examples/todc-bootstrap-example-navigation.png" alt="">
@@ -490,6 +497,79 @@
         <p></p>
       </div>
     </div>
+  </div>
+
+
+
+
+  <div class="bs-docs-section" id="customizing">
+    <div class="page-header">
+      <h1>Customizing Bootstrap</h1>
+    </div>
+    <p class="lead">Customizing Bootstrap is best accomplished when you treat it as another dependency in your development stack. Doing so ensures future upgrades are as easy as possible while also familiarizing yourself to the intricacies of the framework.</p>
+
+    <p>Once you've downloaded and included Bootstrap's CSS into your templates, you can move on to customizing the included components. To do so, create a new stylesheet (LESS, if you like, or just plain CSS) to house your customizations.</p>
+
+    <div class="bs-docs-sidenote">
+      <p><strong>Compiled or minified?</strong></p>
+      <p>Unless you plan on reading a good chunk of the compiled CSS, go with the minified. It's the same code, just compacted. Less bandwidth is good, especially in production environments.</p>
+    </div>
+
+    <p>From there, include whatever Bootstrap components and HTML content you need to get your template setup. It's best to have a rough idea in mind of modifications to make and content to include, so be sure to spend a brief amount of time on that before moving on.</p>
+
+    <h3>Customizing components</h3>
+    <p>There are varying degrees to customizing components, but most fall into two camps: light customizations and complete visual overhauls. Luckily, there are plenty of examples of both.</p>
+    <p>We define light customizations as mostly surface layer changes, things like a color and font changes to existing Bootstrap components. A great example of this is the the <a href="http://translate.twitter.com">Twitter Translation Center</a> (coded by @mdo). Let's look at how to implement the custom button we wrote for this site, <code>.btn-ttc</code>.</p>
+    <p>Instead of using the provided Bootstrap buttons, which only require just one class to start, <code>.btn</code>, we'll add our own modifier class, <code>.btn-ttc</code>. This will give us a slightly custom look with minimal effort.</p>
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-ttc&quot;</span><span class="nt">&gt;</span>Save changes<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
+
+  <p>In the custom stylesheet, add the following CSS:</p>
+
+<div class="highlight"><pre><code class="css"><span class="lineno"> 1</span> <span class="c">/* Custom button</span>
+<span class="lineno"> 2</span> <span class="c">-------------------------------------------------- */</span>
+<span class="lineno"> 3</span> 
+<span class="lineno"> 4</span> <span class="c">/* Override base .btn styles */</span>
+<span class="lineno"> 5</span> <span class="c">/* Apply text and background changes to three key states: default, hover, and active (click). */</span>
+<span class="lineno"> 6</span> <span class="nc">.btn-ttc</span><span class="o">,</span>
+<span class="lineno"> 7</span> <span class="nc">.btn-ttc</span><span class="nd">:hover</span><span class="o">,</span>
+<span class="lineno"> 8</span> <span class="nc">.btn-ttc</span><span class="nd">:active</span> <span class="p">{</span>
+<span class="lineno"> 9</span>   <span class="k">color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+<span class="lineno">10</span>   <span class="k">text-shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">-1px</span> <span class="m">0</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">25</span><span class="p">);</span>
+<span class="lineno">11</span>   <span class="k">background-color</span><span class="o">:</span> <span class="m">#007da7</span><span class="p">;</span>
+<span class="lineno">12</span> <span class="p">}</span>
+<span class="lineno">13</span> 
+<span class="lineno">14</span> <span class="c">/* Apply the custom-colored gradients */</span>
+<span class="lineno">15</span> <span class="c">/* Note: you&#39;ll need to include all the appropriate gradients for various browsers and standards. */</span>
+<span class="lineno">16</span> <span class="nc">.btn-ttc</span> <span class="p">{</span>
+<span class="lineno">17</span>   <span class="k">background-repeat</span><span class="o">:</span> <span class="k">repeat-x</span><span class="p">;</span>
+<span class="lineno">18</span>   <span class="k">background-image</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="k">top</span><span class="o">,</span> <span class="m">#009ED2</span> <span class="m">0</span><span class="o">%,</span> <span class="m">#007DA7</span> <span class="m">100</span><span class="o">%</span><span class="p">);</span>
+<span class="lineno">19</span>   <span class="o">...</span>
+<span class="lineno">20</span> <span class="p">}</span>
+<span class="lineno">21</span> 
+<span class="lineno">22</span> <span class="c">/* Set the hover state */</span>
+<span class="lineno">23</span> <span class="c">/* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */</span>
+<span class="lineno">24</span> <span class="nc">.btn-ttc</span><span class="nd">:hover</span> <span class="p">{</span>
+<span class="lineno">25</span>   <span class="k">background-position</span><span class="o">:</span> <span class="m">0</span> <span class="m">-15px</span><span class="p">;</span>
+<span class="lineno">26</span> <span class="p">}</span>
+</code></pre></div>
+
+    <p>Customizing Bootstrap components takes time, but should be straightforward. <strong>Look to the source code often and duplicate the selectors you need for your modifications.</strong> Placing them after the Bootstrap source makes for easy overriding without complication. <strong>To recap, here's the basic workflow:</strong></p>
+    <ul>
+      <li>For each element you want to customize, find its code in the compiled Bootstrap CSS. Copy and paste the selector for a component as-is. For instance, to customize the navbar background, just snag <code>.navbar</code>.</li>
+      <li>Add all your custom CSS in a separate stylesheet using the selectors you just copied from the Bootstrap source. No need for prefacing with additional classes or using <code>!important</code> here.</li>
+      <li>Rinse and repeat until you're happy with your customizations.</li>
+    </ul>
+    <p>Going beyond light customizations and into visual overhauls is just as straightforward as the above custom button. For a site like <a href="http://yourkarma.com">Karma</a>, which uses Bootstrap as a CSS reset with heavy modifications, more extensive work is involved, but well worth it in the end.</p>
+
+    <div class="bs-docs-sidenote">
+      <p><strong>Side note:</strong> While not recommended for folks new to Bootstrap, you may use one of two alternate methods for customization. The first is modifying the source .less files (making upgrades super difficult), and the second is mapping source Less code to <a href="http://ruby.bvision.com/blog/please-stop-embedding-bootstrap-classes-in-your-html">your own classes via mixins</a>. For the time being, neither options are documented here.</p>
+    </div>
+
+    <h3>Removing potential bloat</h3>
+    <p>Not all sites and applications need to make use of everything Bootstrap has to offer, especially in production environments where bandwidth literally becomes a financial issue. We encourage folks to remove whatever is unused with the <a href="http://twitter.github.com/bootstrap/customizer/" target="_blank">Bootstrap Customizer</a>.</p>
+    <p>Using the Customizer, simply uncheck any component, feature, or asset you don't need. Hit download and swap out the default Bootstrap files with these newly customized ones. You'll get vanilla Bootstrap, but without the features *you* deem unnecessary. All custom builds include compiled and minified versions, so use whichever works for you.</p>
+
   </div>
 
 
@@ -854,12 +934,12 @@
     <div class="bs-docs-example">
       <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
       <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
-      <p class="text-error">Donec ullamcorper nulla non metus auctor fringilla.</p>
+      <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
       <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
     </div>
 <div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-muted&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
 <span class="lineno">2</span> <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-warning&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
-<span class="lineno">3</span> <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-error&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+<span class="lineno">3</span> <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-danger&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
 <span class="lineno">4</span> <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-success&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
 </code></pre></div>
 
@@ -3642,11 +3722,11 @@
     <div class="bs-docs-example">
       <div class="navbar">
         <div class="container">
-          <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </a>
+          </button>
           <a class="navbar-brand" href="#">Title</a>
           <div class="nav-collapse collapse navbar-responsive-collapse">
             <ul class="nav">
@@ -3691,11 +3771,11 @@
 <span class="lineno"> 2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 3</span> 
 <span class="lineno"> 4</span>     <span class="c">&lt;!-- .navbar-toggle is used as the toggle for collapsed navbar content --&gt;</span>
-<span class="lineno"> 5</span>     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;navbar-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;.navbar-responsive-collapse&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 5</span>     <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;navbar-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;.navbar-responsive-collapse&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 6</span>       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="lineno"> 7</span>       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="lineno"> 8</span>       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-<span class="lineno"> 9</span>     <span class="nt">&lt;/a&gt;</span>
+<span class="lineno"> 9</span>     <span class="nt">&lt;/button&gt;</span>
 <span class="lineno">10</span> 
 <span class="lineno">11</span>     <span class="c">&lt;!-- Be sure to leave the brand out there if you want it shown --&gt;</span>
 <span class="lineno">12</span>     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/a&gt;</span>
@@ -4616,7 +4696,7 @@
     <div class="page-header">
       <h1>Pagination</h1>
     </div>
-    <p class="lead">Provide pagination links for your site or app with the multi-page pagination component, or the simpler <a href="./components.html#pagination-pager">pager alternative</a>.</p>
+    <p class="lead">Provide pagination links for your site or app with the multi-page pagination component, or the simpler <a href="./docs/#pagination-pager">pager alternative</a>.</p>
 
     <h2 id="pagination-default">Standard pagination</h2>
     <p>Simple pagination inspired by Rdio, great for apps and search results. The large block is hard to miss, easily scalable, and provides large click areas.</p>
@@ -4951,7 +5031,7 @@
     <div class="page-header">
       <h1>Thumbnails</h1>
     </div>
-    <p class="lead">Extend Bootstrap's <a href="./css/#gridsystem">grid system</a> with the thumbnail component to easily display grids of images, videos, text, and more.</p>
+    <p class="lead">Extend Bootstrap's <a href="./docs/#grid">grid system</a> with the thumbnail component to easily display grids of images, videos, text, and more.</p>
 
     <h3>Default thumbnails</h3>
     <p>By default, Bootstrap's thumbnails are designed to showcase linked images with minimal required markup.</p>
@@ -5049,7 +5129,7 @@
     <div class="page-header">
       <h1>Alerts</h1>
     </div>
-    <p class="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. For inline dismissal, use the <a href="./javascript.html#alerts">alerts jQuery plugin</a>.</p>
+    <p class="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. For inline dismissal, use the <a href="./docs/#js-alerts">alerts jQuery plugin</a>.</p>
 
     <h3 id="alerts-default">Default alert</h3>
     <p>Wrap any text and an optional dismiss button in <code>.alert</code> for a basic warning alert message. <strong>To ensure proper behavior across all devices</strong>, be sure to use <code>&lt;button&gt;</code> element with the <code>data-dismiss="alert"</code> data attribute.</p>
@@ -5217,41 +5297,6 @@
 </code></pre></div>
   </div>
 
-
-
-
-  <!-- Scrollbars
-  ================================================== -->
-  <div class="bs-docs-section" id="scrollbars">
-    <div class="page-header">
-      <h1>Scrollbars <small>For scrollable content.</small></h1>
-    </div>
-
-    <h2>Examples and markup</h2>
-
-    <h3>Basic</h3>
-    <p>Attach the <code>scrollable</code> class to any container which has its overflow property set.</p>
-    <div class="alert alert-info">
-      <strong>Heads up!</strong> Available only in Chrome and Safari.
-    </div>
-    <div class="bs-docs-example">
-      <div class="scrollable" style="height: 200px; overflow-y: auto;">
-        <h4>Overflowing text to show optional scrollbar</h4>
-        <p>We set a fixed <code>max-height</code> on the <code>.modal-body</code>. Watch it overflow with all this extra lorem ipsum text we've included.</p>
-        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-      </div>
-    </div>
-<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;scrollable&quot;</span> <span class="na">style=</span><span class="s">&quot;height: 300px; overflow-y: auto&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">2</span>   <span class="nt">&lt;h4&gt;</span>Overflowing text to show optional scrollbar<span class="nt">&lt;/h4&gt;</span>
-<span class="lineno">3</span>   ...
-<span class="lineno">4</span> <span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
-  </div>
 
 
 
@@ -5596,6 +5641,10 @@
     <h3 id="panels-alternatives">Contextual alternatives</h3>
     <p>Like other components, easily make a panel more meaningful to a particular context by adding any of the contextual state classes.</p>
     <div class="bs-docs-example">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Panel heading</div>
+        Panel content
+      </div>
       <div class="panel panel-success">
         <div class="panel-heading">Panel heading</div>
         Panel content
@@ -5613,10 +5662,11 @@
         Panel content
       </div>
     </div>
-<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel panel-success&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">2</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel panel-warning&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">3</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel panel-danger&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">4</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel panel-info&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel panel-primary&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">2</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel panel-success&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">3</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel panel-warning&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">4</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel panel-danger&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">5</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel panel-info&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
     <h3 id="panels-list-group">With list groups</h3>
@@ -5637,10 +5687,20 @@
         </ul>
       </div>
     </div>
-<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-heading&quot;</span><span class="nt">&gt;</span>Panel heading<span class="nt">&lt;/div&gt;</span>
-<span class="lineno">3</span>   Panel content
-<span class="lineno">4</span> <span class="nt">&lt;/div&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 2</span>   <span class="c">&lt;!-- Default panel contents --&gt;</span>
+<span class="lineno"> 3</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-heading&quot;</span><span class="nt">&gt;</span>Panel heading<span class="nt">&lt;/div&gt;</span>
+<span class="lineno"> 4</span>   <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+<span class="lineno"> 5</span> 
+<span class="lineno"> 6</span>   <span class="c">&lt;!-- List group --&gt;</span>
+<span class="lineno"> 7</span>   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;list-group list-group-flush&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 8</span>     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Cras justo odio<span class="nt">&lt;/li&gt;</span>
+<span class="lineno"> 9</span>     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Dapibus ac facilisis in<span class="nt">&lt;/li&gt;</span>
+<span class="lineno">10</span>     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Morbi leo risus<span class="nt">&lt;/li&gt;</span>
+<span class="lineno">11</span>     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Porta ac consectetur ac<span class="nt">&lt;/li&gt;</span>
+<span class="lineno">12</span>     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Vestibulum at eros<span class="nt">&lt;/li&gt;</span>
+<span class="lineno">13</span>   <span class="nt">&lt;/ul&gt;</span>
+<span class="lineno">14</span> <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
   </div>
@@ -5684,6 +5744,41 @@
 </code></pre></div>
   </div>
 
+
+
+
+  <!-- Scrollbars
+  ================================================== -->
+  <div class="bs-docs-section" id="scrollbars">
+    <div class="page-header">
+      <h1>Scrollbars <small>For scrollable content.</small></h1>
+    </div>
+
+    <h2>Examples and markup</h2>
+
+    <h3>Basic</h3>
+    <p>Attach the <code>scrollable</code> class to any container which has its overflow property set.</p>
+    <div class="alert alert-info">
+      <strong>Heads up!</strong> Available only in Chrome and Safari.
+    </div>
+    <div class="bs-docs-example">
+      <div class="scrollable" style="height: 200px; overflow-y: auto;">
+        <h4>Overflowing text to show optional scrollbar</h4>
+        <p>We set a fixed <code>max-height</code> on the <code>.modal-body</code>. Watch it overflow with all this extra lorem ipsum text we've included.</p>
+        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+      </div>
+    </div>
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;scrollable&quot;</span> <span class="na">style=</span><span class="s">&quot;height: 300px; overflow-y: auto&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">2</span>   <span class="nt">&lt;h4&gt;</span>Overflowing text to show optional scrollbar<span class="nt">&lt;/h4&gt;</span>
+<span class="lineno">3</span>   ...
+<span class="lineno">4</span> <span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+  </div>
 
 
 
@@ -6700,7 +6795,7 @@
 
       <!-- Alert
       ================================================== -->
-      <section id="alerts">
+      <div class="bs-docs-section" id="js-alerts">
         <div class="page-header">
           <h1>Alert messages <small>bootstrap-alert.js</small></h1>
         </div>
@@ -6775,13 +6870,13 @@
 <span class="lineno">2</span>   <span class="c1">// do something…</span>
 <span class="lineno">3</span> <span class="p">})</span>
 </code></pre></div>
-      </section>
+      </div>
 
 
 
           <!-- Buttons
           ================================================== -->
-          <section id="buttons">
+          <div class="bs-docs-section" id="js-buttons">
             <div class="page-header">
               <h1>Buttons <small>bootstrap-button.js</small></h1>
             </div>
@@ -6912,7 +7007,7 @@
 <span class="lineno">3</span>   <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.btn&#39;</span><span class="p">).</span><span class="nx">button</span><span class="p">(</span><span class="s1">&#39;complete&#39;</span><span class="p">)</span>
 <span class="lineno">4</span> <span class="nt">&lt;/script&gt;</span>
 </code></pre></div>
-          </section>
+          </div>
 
 
 
