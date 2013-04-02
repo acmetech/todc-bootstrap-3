@@ -5430,6 +5430,10 @@
     </div>
     <p class="lead">List groups are a flexible and powerful component for displaying not only simple lists of elements, but complex ones with custom content.</p>
 
+    <div class="bs-docs-sidenote">
+      <p><strong>Side note:</strong> The list group will be styled differently if you use <code>li.list-group-item</code>. This is best illustrated in the <a href="#list-group-basic">Basic list group</a>/<a href="#list-group-basic-alternate">Basic list group alternate</a> and the <a href="#list-group-linked">Linked list group</a>/<a href="#list-group-linked-alternate">Linked list group using list items</a> examples.</p>
+    </div>
+
     <h3 id="list-group-basic">Basic list group</h3>
     <p>The most basic list group is simply an unordered list with list items, and the proper classes. Build upon it with the options that follow, or your own CSS as needed.</p>
     <div class="bs-docs-example">
@@ -5448,6 +5452,26 @@
 <span class="lineno">5</span>   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Porta ac consectetur ac<span class="nt">&lt;/li&gt;</span>
 <span class="lineno">6</span>   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Vestibulum at eros<span class="nt">&lt;/li&gt;</span>
 <span class="lineno">7</span> <span class="nt">&lt;/ul&gt;</span>
+</code></pre></div>
+
+    <h4 id="list-group-basic-alternate">Basic list group alternate</h4>
+    <p>This style matches the default Linked list group.</p>
+    <div class="bs-docs-example">
+      <div class="list-group">
+        <p class="list-group-item">Cras justo odio</p>
+        <p class="list-group-item">Dapibus ac facilisis in</p>
+        <p class="list-group-item">Morbi leo risus</p>
+        <p class="list-group-item">Porta ac consectetur ac</p>
+        <p class="list-group-item">Vestibulum at eros</p>
+      </div>
+    </div>
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;list-group&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">2</span>   <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Cras justo odio<span class="nt">&lt;/p&gt;</span>
+<span class="lineno">3</span>   <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Dapibus ac facilisis in<span class="nt">&lt;/p&gt;</span>
+<span class="lineno">4</span>   <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Morbi leo risus<span class="nt">&lt;/p&gt;</span>
+<span class="lineno">5</span>   <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Porta ac consectetur ac<span class="nt">&lt;/p&gt;</span>
+<span class="lineno">6</span>   <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Vestibulum at eros<span class="nt">&lt;/p&gt;</span>
+<span class="lineno">7</span> <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
     <h3 id="list-group-chevrons">With chevrons</h3>
@@ -5574,7 +5598,7 @@
 <span class="lineno">18</span> <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
-    <h4 id="list-group-linked-li">Linked list group using list items</h4>
+    <h4 id="list-group-linked-alternate">Linked list group using list items</h4>
     <p>Linkify list group items by using list items instead of anchor tags.</p>
     <div class="bs-docs-example">
       <ul class="list-group">
