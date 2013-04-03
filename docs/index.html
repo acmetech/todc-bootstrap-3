@@ -63,6 +63,7 @@
         <li><a href="#grid-offsetting">Offset columns</a></li>
         <li><a href="#grid-nesting">Nested columns</a></li>
         <li><a href="#grid-column-ordering">Column ordering</a></li>
+        <li><a href="#grid-small">Small device grid</a></li>
         <li><a href="#grid-less">LESS mixins and variables</a></li>
       </ul>
     </li>
@@ -564,7 +565,8 @@
     <p>Going beyond light customizations and into visual overhauls is just as straightforward as the above custom button. For a site like <a href="http://yourkarma.com">Karma</a>, which uses Bootstrap as a CSS reset with heavy modifications, more extensive work is involved, but well worth it in the end.</p>
 
     <div class="bs-docs-sidenote">
-      <p><strong>Side note:</strong> While not recommended for folks new to Bootstrap, you may use one of two alternate methods for customization. The first is modifying the source .less files (making upgrades super difficult), and the second is mapping source Less code to <a href="http://ruby.bvision.com/blog/please-stop-embedding-bootstrap-classes-in-your-html">your own classes via mixins</a>. For the time being, neither options are documented here.</p>
+      <p><strong>Alternate customization methods</strong></p>
+      <p>While not recommended for folks new to Bootstrap, you may use one of two alternate methods for customization. The first is modifying the source .less files (making upgrades super difficult), and the second is mapping source LESS code to <a href="http://ruby.bvision.com/blog/please-stop-embedding-bootstrap-classes-in-your-html">your own classes via mixins</a>. For the time being, neither options are documented here.</p>
     </div>
 
     <h3>Removing potential bloat</h3>
@@ -621,6 +623,8 @@
     <p>For improved cross-browser rendering, we use <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize</a>, a project by <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> and <a href="http://twitter.com/jon_neal" target="_blank">Jonathan Neal</a>.</p>
   </div>
 
+
+
   <!-- Grid system
   ================================================== -->
   <div class="bs-docs-section" id="grid">
@@ -630,7 +634,7 @@
     <p class="lead">Bootstrap includes a responsive, percent-based grid system that appropriately scales up to 12 columns as the device or viewport size increases&mdash;in other words, it's mobile first. It includes <a href="#grid-example">predefined classes</a> for this, as well as powerful <a href="#grid-less">mixins for generating semantic layouts</a>.</p>
 
     <h3 id="grid-example">Grid example</h3>
-    <p>On mobile devices, the grid starts out stacked. Above 768px, it becomes horizontal as media queries kick in to apply <code>float</code>s and <code>width</code>s. To create a basic grid layout, wrap a series of <code>.col-span-*</code> elements within a <code>.row</code>. As this is a 12-column grid, each <code>.span*</code> spans a number of those 12 columns, and should always add up to 12 for each row (or the number of columns in the parent), even at mobile resolutions.</p>
+    <p>On mobile devices, the grid starts out stacked. Above 768px, it becomes horizontal as media queries kick in to apply <code>float</code>s and <code>width</code>s. To create a basic grid layout, wrap a series of <code>.col-span-*</code> elements within a <code>.row</code>. As this is a 12-column grid, each <code>.col-span-*</code> spans a number of those 12 columns, and should always add up to 12 for each row (or the number of columns in the parent), even at mobile resolutions.</p>
     <div class="bs-docs-grid">
       <div class="row show-grid">
         <div class="col-span-1">1</div>
@@ -735,15 +739,29 @@
 
     <h3 id="grid-column-ordering">Column ordering</h3>
     <p>Easily change the order of our built-in grid columns with <code>.push*</code> and <code>.pull*</code> modifier classes.</p>
-<div class="row show-grid">
-  <div class="col-span-9 col-push-3">9</div>
-  <div class="col-span-3 col-pull-9">3</div>
-</div>
+    <div class="row show-grid">
+      <div class="col-span-9 col-push-3">9</div>
+      <div class="col-span-3 col-pull-9">3</div>
+    </div>
 
 <div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row show-grid&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-9 col-push-3&quot;</span><span class="nt">&gt;</span>9<span class="nt">&lt;/div&gt;</span>
 <span class="lineno">3</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-3 col-pull-9&quot;</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
 <span class="lineno">4</span> <span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+    <h3 id="grid-small">Small device grid</h3>
+    <p>Use the small device grid classes, like <code>.col-small-span-6</code>, to create columned layouts on phone and tablet devices (anything under 768px). Offsets, pushes, and pulls are not available with the small grid at this time.</p>
+    <div class="row show-grid">
+      <div class="col-span-4 col-small-span-6">4 cols, 6 small cols</div>
+      <div class="col-span-4 col-small-span-6">4 cols, 6 small cols</div>
+      <div class="col-span-4 col-small-span-12">4 cols, 12 small cols</div>
+    </div>
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-4 col-small-span-6&quot;</span><span class="nt">&gt;</span>4 cols, 6 small cols<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">3</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-4 col-small-span-6&quot;</span><span class="nt">&gt;</span>4 cols, 6 small cols<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">4</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-span-4 col-small-span-12&quot;</span><span class="nt">&gt;</span>4 cols, 12 small cols<span class="nt">&lt;/div&gt;</span>
+<span class="lineno">5</span> <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
     <h3 id="grid-less">LESS mixins and variables</h3>
@@ -1420,8 +1438,8 @@
     <p>Use contextual classes to color table rows.</p>
     <table class="table table-bordered table-striped">
       <colgroup>
-        <col class="span1">
-        <col class="span7">
+        <col class="col-span-1">
+        <col class="col-span-7">
       </colgroup>
       <thead>
         <tr>
@@ -1875,12 +1893,12 @@
     <p>Add text or buttons before, after, or on both sides of any text-based input. Use <code>.input-group</code> with a <code>.add-on</code> to prepend or append elements to an <code>&lt;input&gt;</code>.</p>
     <p>Avoid using <code>&lt;select&gt;</code> elements here as they cannot be fully styled in WebKit browsers.</p>
     <form class="bs-docs-example">
-      <div class="input-group span9">
+      <div class="input-group col-span-9">
         <span class="input-group-addon">@</span>
         <input type="text" placeholder="Username">
       </div>
       <br>
-      <div class="input-group span6">
+      <div class="input-group col-span-6">
         <input type="text">
         <span class="input-group-addon">.00</span>
       </div>
@@ -1891,12 +1909,12 @@
         <span class="input-group-addon">.00</span>
       </div>
     </form>
-<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span9&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-9&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 2</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon&quot;</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
 <span class="lineno"> 3</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Username&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 4</span> <span class="nt">&lt;/div&gt;</span>
 <span class="lineno"> 5</span> 
-<span class="lineno"> 6</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span6&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 6</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-6&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 7</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 8</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon&quot;</span><span class="nt">&gt;</span>.00<span class="nt">&lt;/span&gt;</span>
 <span class="lineno"> 9</span> <span class="nt">&lt;/div&gt;</span>
@@ -1911,32 +1929,32 @@
     <h4>Optional sizes</h4>
     <p>Add the relative form sizing classes to the `.input-group-addon`.</p>
     <form class="bs-docs-example">
-      <div class="input-group span9">
+      <div class="input-group col-span-9">
         <span class="input-group-addon input-large">@</span>
         <input type="text" class="input-large" placeholder="Username">
       </div>
       <br>
-      <div class="input-group span9">
+      <div class="input-group col-span-9">
         <span class="input-group-addon">@</span>
         <input type="text" placeholder="Username">
       </div>
       <br>
-      <div class="input-group span9">
+      <div class="input-group col-span-9">
         <span class="input-group-addon input-small">@</span>
         <input type="text" class="input-small" placeholder="Username">
       </div>
     </form>
-<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span9&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-9&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 2</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon input-large&quot;</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
 <span class="lineno"> 3</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input-large&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Username&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 4</span> <span class="nt">&lt;/div&gt;</span>
 <span class="lineno"> 5</span> 
-<span class="lineno"> 6</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span9&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 6</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-9&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 7</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon&quot;</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
 <span class="lineno"> 8</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Username&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 9</span> <span class="nt">&lt;/div&gt;</span>
 <span class="lineno">10</span> 
-<span class="lineno">11</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span9&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">11</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-9&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">12</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon input-small&quot;</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
 <span class="lineno">13</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input-small&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Username&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">14</span> <span class="nt">&lt;/div&gt;</span>
@@ -1945,28 +1963,28 @@
     <h4>Buttons instead of text</h4>
     <p>Buttons in input groups are a bit different and require one extra level of nesting. Instead of <code>.input-group-addon</code>, you'll need to use <code>.input-group-btn</code> to wrap the buttons. This is required due to default browser styles that cannot be overridden.</p>
     <form class="bs-docs-example">
-      <div class="input-group span7">
+      <div class="input-group col-span-7">
         <span class="input-group-btn">
           <button class="btn" type="button">Go!</button>
         </span>
         <input type="text">
       </div>
       <br>
-      <div class="input-group span7">
+      <div class="input-group col-span-7">
         <input type="text">
         <span class="input-group-btn">
           <button class="btn" type="button">Go!</button>
         </span>
       </div>
     </form>
-<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span7&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-7&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 2</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-btn&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 3</span>     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span><span class="nt">&gt;</span>Go!<span class="nt">&lt;/button&gt;</span>
 <span class="lineno"> 4</span>   <span class="nt">&lt;/span&gt;</span>
 <span class="lineno"> 5</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 6</span> <span class="nt">&lt;/div&gt;</span>
 <span class="lineno"> 7</span> 
-<span class="lineno"> 8</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span7&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 8</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-7&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 9</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">10</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-btn&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">11</span>     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span><span class="nt">&gt;</span>Go!<span class="nt">&lt;/button&gt;</span>
@@ -1977,7 +1995,7 @@
     <h4>Button dropdowns</h4>
     <p></p>
     <form class="bs-docs-example">
-      <div class="input-group span7">
+      <div class="input-group col-span-7">
         <div class="input-group-btn">
           <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
           <ul class="dropdown-menu">
@@ -1991,7 +2009,7 @@
         <input type="text">
       </div><!-- /input-group -->
       <br>
-      <div class="input-group span7">
+      <div class="input-group col-span-7">
         <input type="text">
         <div class="input-group-btn">
           <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
@@ -2005,7 +2023,7 @@
         </div><!-- /btn-group -->
       </div><!-- /input-group -->
     </form>
-<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span7&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-7&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group-btn&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 3</span>     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Action <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
 <span class="lineno"> 4</span>     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
@@ -2019,7 +2037,7 @@
 <span class="lineno">12</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">13</span> <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /input-group --&gt;</span>
 <span class="lineno">14</span> 
-<span class="lineno">15</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span7&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">15</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-7&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">16</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">17</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group-btn&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">18</span>     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Action <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
@@ -2036,7 +2054,7 @@
 
     <h4>Segmented dropdown groups</h4>
     <form class="bs-docs-example">
-      <div class="input-group span7">
+      <div class="input-group col-span-7">
         <div class="input-group-btn">
           <button class="btn" tabindex="-1">Action</button>
           <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
@@ -2055,7 +2073,7 @@
 
       <br>
 
-      <div class="input-group span7">
+      <div class="input-group col-span-7">
         <input type="text">
         <div class="input-group-btn">
           <button class="btn" tabindex="-1">Action</button>
@@ -2072,14 +2090,14 @@
         </div>
       </div>
     </form>
-<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span7&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-7&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 2</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group-btn&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 3</span>     <span class="c">&lt;!-- Button and dropdown menu --&gt;</span>
 <span class="lineno"> 4</span>   <span class="nt">&lt;/div&gt;</span>
 <span class="lineno"> 5</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 6</span> <span class="nt">&lt;/div&gt;</span>
 <span class="lineno"> 7</span> 
-<span class="lineno"> 8</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group span7&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 8</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group col-span-7&quot;</span><span class="nt">&gt;</span>
 <span class="lineno"> 9</span>   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">10</span>   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group-btn btn-group&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">11</span>     <span class="c">&lt;!-- Button and dropdown menu --&gt;</span>
@@ -2105,7 +2123,7 @@
 </code></pre></div>
 
     <h4>Column sizing</h4>
-    <p>Use <code>.span1</code> to <code>.span12</code> for setting widths on inputs that match Bootstrap's grid system.</p>
+    <p>Use <code>.col-span-12</code> to <code>.col-span-12</code> for setting widths on inputs that match Bootstrap's grid system.</p>
     <form class="bs-docs-example" style="padding-bottom: 15px;">
       <div class="controls docs-input-sizes">
         <input class="col-span-1" type="text" placeholder=".col-span-1">
@@ -3790,7 +3808,7 @@
 </code></pre></div>
 
     <div class="alert alert-info">
-      <strong>Heads up!</strong> The responsive navbar requires the <a href="./javascript.html#collapse">collapse plugin</a> and <a href="./scaffolding.html#responsive">responsive Bootstrap CSS file</a>.
+      <strong>Heads up!</strong> The responsive navbar requires the <a href="#collapse">collapse plugin</a>.
     </div>
 
 
@@ -5655,8 +5673,35 @@
 
     <h3 id="list-group-sidebar">Sidebar</h3>
     <p>Add an additional class <code>.list-group-sidebar</code> for a sidebar styled list-group.</p>
+    <div class="bs-docs-sidenote">
+      <p><strong>Side note:</strong> <code>.list-group-sidebar</code>.</p>
+    </div>
     <div class="bs-docs-example">
       <div class="list-group list-group-sidebar">
+        <p class="list-group-item list-group-header">Header</p>
+        <p class="list-group-item active"><a href="#">Home</a></p>
+        <p class="list-group-item"><a href="#">Profile</a></p>
+        <p class="list-group-item"><a href="#">Messages</a></p>
+
+        <p class="list-group-item list-group-header">Header</p>
+        <div class="media">
+          <a href="#" class="pull-left"><img data-src="holder.js/32x32/acs" alt="" class="media-object"></a>
+          <div class="media-body">
+            <header>
+              <div class="btn-group pull-right">
+                <a class="btn" href="#">View</a>
+                <a class="btn" href="#">&times;</a>
+              </div>
+              <p>
+                <a href="#">Item 1</a>
+                <br>
+                <small class="muted">
+                  Some text
+                </small>
+              </p>
+            </header>
+          </div>
+        </div>
       </div>
 
       <ul class="list-group list-group-sidebar">
