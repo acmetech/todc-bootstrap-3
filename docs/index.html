@@ -5248,7 +5248,7 @@
     <h3 id="alerts-alternatives">Contextual alternatives</h3>
     <p>Add optional classes to change an alert's connotation.</p>
     <div class="bs-docs-example">
-      <div class="alert alert-error">
+      <div class="alert alert-danger">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         <strong>Oh snap!</strong> Change a few things up and try submitting again.
       </div>
@@ -5261,7 +5261,7 @@
         <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
       </div>
     </div>
-<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-error&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-danger&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 <span class="lineno">2</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-success&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 <span class="lineno">3</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-info&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
@@ -6385,7 +6385,7 @@
           <h2>Example in navbar</h2>
           <p>The ScrollSpy plugin is for automatically updating nav targets based on scroll position. Scroll the area below the navbar and watch the active class change. The dropdown sub items will be highlighted as well.</p>
           <div class="bs-docs-example">
-            <div id="navbarExample" class="navbar navbar-static">
+            <div id="navbar-example" class="navbar navbar-static">
               <div class="navbar-inner">
                 <div class="container" style="width: auto;">
                   <a class="navbar-brand" href="#">Project Name</a>
@@ -6405,7 +6405,7 @@
                 </div>
               </div>
             </div>
-            <div data-spy="scroll" data-target="#navbarExample" data-offset="0" class="scrollspy-example">
+            <div data-spy="scroll" data-target="#navbar-example" data-offset="0" class="scrollspy-example">
               <h4 id="fat">@fat</h4>
               <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
               <h4 id="mdo">@mdo</h4>
@@ -6422,21 +6422,18 @@
           </div><!-- /example -->
 
 
-          <hr class="bs-docs-separator">
-
-
           <h2>Usage</h2>
 
           <h3>Via data attributes</h3>
-          <p>To easily add scrollspy behavior to your topbar navigation, just add <code>data-spy="scroll"</code> to the element you want to spy on (most typically this would be the body) and <code>data-target=".navbar"</code> to select which nav to use. You'll want to use scrollspy with a <code>.nav</code> component.</p>
-<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;body</span> <span class="na">data-spy=</span><span class="s">&quot;scroll&quot;</span> <span class="na">data-target=</span><span class="s">&quot;.navbar&quot;</span><span class="nt">&gt;</span>
+          <p>To easily add scrollspy behavior to your topbar navigation, add <code>data-spy="scroll"</code> to the element you want to spy on (most typically this would be the <code>&lt;body&gt;</code>. Then add the <code>data-target</code> attribute with the ID or class of the parent element of any Bootstrap <code>.nav</code> component.</p>
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;body</span> <span class="na">data-spy=</span><span class="s">&quot;scroll&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#navbar-example&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">2</span>   ...
 <span class="lineno">3</span> <span class="nt">&lt;/body&gt;</span>
 </code></pre></div>
 
           <h3>Via JavaScript</h3>
           <p>Call the scrollspy via JavaScript:</p>
-<div class="highlight"><pre><code class="js"><span class="lineno">1</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.navbar&#39;</span><span class="p">).</span><span class="nx">scrollspy</span><span class="p">()</span>
+<div class="highlight"><pre><code class="js"><span class="lineno">1</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#navbar-example&#39;</span><span class="p">).</span><span class="nx">scrollspy</span><span class="p">()</span>
 </code></pre></div>
 
           <div class="bs-docs-sidenote">
