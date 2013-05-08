@@ -2258,7 +2258,7 @@
     </div>
 
     <h2 id="buttons-options">Button options</h2>
-    <p>Button styles can be applied to anything with the <code>.btn</code> class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.</p>
+    <p>Use any of the available button classes to quickly create a styled button.</p>
     <div class="bs-docs-example">
       <button type="button" class="btn btn-default">Default</button>
       <button type="button" class="btn btn-primary">Primary</button>
@@ -2290,54 +2290,53 @@
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-link&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span>
 </code></pre></div>
 
-
     <h2 id="buttons-sizes">Button sizes</h2>
     <p>Fancy larger or smaller buttons? Add <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code> for additional sizes.</p>
     <div class="bs-docs-example">
       <p>
-        <button type="button" class="btn btn-large btn-primary">Large button</button>
-        <button type="button" class="btn btn-large">Large button</button>
+        <button type="button" class="btn btn-primary btn-large">Large button</button>
+        <button type="button" class="btn btn-default btn-large">Large button</button>
       </p>
       <p>
         <button type="button" class="btn btn-primary">Default button</button>
-        <button type="button" class="btn">Default button</button>
+        <button type="button" class="btn btn-default">Default button</button>
       </p>
       <p>
-        <button type="button" class="btn btn-small btn-primary">Small button</button>
-        <button type="button" class="btn btn-small">Small button</button>
+        <button type="button" class="btn btn-primary btn-small">Small button</button>
+        <button type="button" class="btn btn-default btn-small">Small button</button>
       </p>
       <p>
-        <button type="button" class="btn btn-mini btn-primary">Mini button</button>
-        <button type="button" class="btn btn-mini">Mini button</button>
+        <button type="button" class="btn btn-primary btn-mini">Mini button</button>
+        <button type="button" class="btn btn-default btn-mini">Mini button</button>
       </p>
     </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;p&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-large btn-primary&quot;</span><span class="nt">&gt;</span>Large button<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-large&quot;</span><span class="nt">&gt;</span>Large button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-large&quot;</span><span class="nt">&gt;</span>Large button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-large&quot;</span><span class="nt">&gt;</span>Large button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>Default button<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span><span class="nt">&gt;</span>Default button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span><span class="nt">&gt;</span>Default button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-small btn-primary&quot;</span><span class="nt">&gt;</span>Small button<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-small&quot;</span><span class="nt">&gt;</span>Small button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-small&quot;</span><span class="nt">&gt;</span>Small button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-small&quot;</span><span class="nt">&gt;</span>Small button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-mini btn-primary&quot;</span><span class="nt">&gt;</span>Mini button<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-mini&quot;</span><span class="nt">&gt;</span>Mini button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-mini&quot;</span><span class="nt">&gt;</span>Mini button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-mini&quot;</span><span class="nt">&gt;</span>Mini button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/p&gt;</span>
 </code></pre></div>
 
     <p>Create block level buttons&mdash;those that span the full width of a parent&mdash; by adding <code>.btn-block</code>.</p>
     <div class="bs-docs-example">
       <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
-        <button type="button" class="btn btn-large btn-block btn-primary">Block level button</button>
-        <button type="button" class="btn btn-large btn-block">Block level button</button>
+        <button type="button" class="btn btn-primary btn-large btn-block">Block level button</button>
+        <button type="button" class="btn btn-default btn-large btn-block">Block level button</button>
       </div>
     </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-large btn-block btn-primary&quot;</span><span class="nt">&gt;</span>Block level button<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-large btn-block&quot;</span><span class="nt">&gt;</span>Block level button<span class="nt">&lt;/button&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-large btn-block&quot;</span><span class="nt">&gt;</span>Block level button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-large btn-block&quot;</span><span class="nt">&gt;</span>Block level button<span class="nt">&lt;/button&gt;</span>
 </code></pre></div>
 
 
@@ -2347,11 +2346,11 @@
     <h3>Button element</h3>
     <p>Add the <code>disabled</code> attribute to <code>&lt;button&gt;</code> buttons.</p>
     <p class="bs-docs-example">
-      <button type="button" class="btn btn-large btn-primary" disabled="disabled">Primary button</button>
-      <button type="button" class="btn btn-large" disabled="disabled">Button</button>
+      <button type="button" class="btn btn-primary btn-large" disabled="disabled">Primary button</button>
+      <button type="button" class="btn btn-default btn-large" disabled="disabled">Button</button>
     </p>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-large btn-primary&quot;</span> <span class="na">disabled=</span><span class="s">&quot;disabled&quot;</span><span class="nt">&gt;</span>Primary button<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-large&quot;</span> <span class="na">disabled=</span><span class="s">&quot;disabled&quot;</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-large&quot;</span> <span class="na">disabled=</span><span class="s">&quot;disabled&quot;</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
 </code></pre></div>
 
     <div class="bs-docs-sidenote">
@@ -2362,11 +2361,11 @@
     <h3>Anchor element</h3>
     <p>Add the <code>.disabled</code> class to <code>&lt;a&gt;</code> buttons.</p>
     <p class="bs-docs-example">
-      <a href="#" class="btn btn-large btn-primary disabled">Primary link</a>
-      <a href="#" class="btn btn-large disabled">Link</a>
+      <a href="#" class="btn btn-primary btn-large disabled">Primary link</a>
+      <a href="#" class="btn btn-default btn-large disabled">Link</a>
     </p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-large btn-primary disabled&quot;</span><span class="nt">&gt;</span>Primary link<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-large disabled&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-large disabled&quot;</span><span class="nt">&gt;</span>Primary link<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-large disabled&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
 </code></pre></div>
     <p>
       We use <code>.disabled</code> as a utility class here, similar to the common <code>.active</code> class, so no prefix is required.
@@ -2377,18 +2376,18 @@
     </div>
 
 
-    <h2 id="buttons-tags">One class, multiple tags</h2>
-    <p>Use the <code>.btn</code> class on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+    <h2 id="buttons-tags">Using multiple tags</h2>
+    <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
     <form class="bs-docs-example">
-      <a class="btn" href="">Link</a>
-      <button class="btn" type="submit">Button</button>
-      <input class="btn" type="button" value="Input">
-      <input class="btn" type="submit" value="Submit">
+      <a class="btn btn-default" href="#">Link</a>
+      <button class="btn btn-default" type="submit">Button</button>
+      <input class="btn btn-default" type="button" value="Input">
+      <input class="btn btn-default" type="submit" value="Submit">
     </form>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">value=</span><span class="s">&quot;Input&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">value=</span><span class="s">&quot;Submit&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">value=</span><span class="s">&quot;Input&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">value=</span><span class="s">&quot;Submit&quot;</span><span class="nt">&gt;</span>
 </code></pre></div>
 
     <div class="bs-docs-sidenote">
@@ -2795,19 +2794,19 @@
     <div class="bs-docs-example">
       <div class="btn-toolbar">
         <div class="btn-group">
-          <a class="btn" href="#"><span class="glyphicon glyphicon-align-left"></span></a>
-          <a class="btn" href="#"><span class="glyphicon glyphicon-align-center"></span></a>
-          <a class="btn" href="#"><span class="glyphicon glyphicon-align-right"></span></a>
-          <a class="btn" href="#"><span class="glyphicon glyphicon-align-justify"></span></a>
+          <a class="btn btn-default" href="#"><span class="glyphicon glyphicon-align-left"></span></a>
+          <a class="btn btn-default" href="#"><span class="glyphicon glyphicon-align-center"></span></a>
+          <a class="btn btn-default" href="#"><span class="glyphicon glyphicon-align-right"></span></a>
+          <a class="btn btn-default" href="#"><span class="glyphicon glyphicon-align-justify"></span></a>
         </div>
       </div>
     </div><!-- /bs-docs-example -->
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-toolbar&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-align-left&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-align-center&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-align-right&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-align-justify&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-align-left&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-align-center&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-align-right&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-align-justify&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
@@ -2832,8 +2831,8 @@
       </div>
     </div><!-- /bs-docs-example -->
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-user&quot;</span><span class="nt">&gt;&lt;/span&gt;</span> User<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-primary&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-user&quot;</span><span class="nt">&gt;&lt;/span&gt;</span> User<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-primary dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-pencil&quot;</span><span class="nt">&gt;&lt;/span&gt;</span> Edit<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-trash&quot;</span><span class="nt">&gt;&lt;/span&gt;</span> Delete<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -2846,16 +2845,16 @@
 
     <h5>Large button</h5>
     <div class="bs-docs-example">
-      <a class="btn btn-large" href="#"><span class="glyphicon glyphicon-star"></span> Star</a>
+      <a class="btn btn-default btn-large" href="#"><span class="glyphicon glyphicon-star"></span> Star</a>
     </div><!-- /bs-docs-example -->
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-large&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-star&quot;</span><span class="nt">&gt;&lt;/span&gt;</span> Star<span class="nt">&lt;/a&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-large&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-star&quot;</span><span class="nt">&gt;&lt;/span&gt;</span> Star<span class="nt">&lt;/a&gt;</span>
 </code></pre></div>
 
     <h5>Small button</h5>
     <div class="bs-docs-example">
-      <a class="btn btn-small" href="#"><span class="glyphicon glyphicon-star"></span></a>
+      <a class="btn btn-default btn-small" href="#"><span class="glyphicon glyphicon-star"></span></a>
     </div><!-- /bs-docs-example -->
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-small&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-star&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-small&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-star&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
 </code></pre></div>
 
 
@@ -3064,15 +3063,15 @@
     <p>Wrap a series of buttons with <code>.btn</code> in <code>.btn-group</code>.</p>
     <div class="bs-docs-example">
       <div class="btn-group" style="margin: 9px 0 5px;">
-        <button type="button" class="btn">Left</button>
-        <button type="button" class="btn">Middle</button>
-        <button type="button" class="btn">Right</button>
+        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
       </div>
     </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span><span class="nt">&gt;</span>Left<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span><span class="nt">&gt;</span>Middle<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span><span class="nt">&gt;</span>Right<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span><span class="nt">&gt;</span>Left<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span><span class="nt">&gt;</span>Middle<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span><span class="nt">&gt;</span>Right<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
@@ -3081,18 +3080,18 @@
     <div class="bs-docs-example">
       <div class="btn-toolbar" style="margin: 0;">
         <div class="btn-group">
-          <button type="button" class="btn">1</button>
-          <button type="button" class="btn">2</button>
-          <button type="button" class="btn">3</button>
-          <button type="button" class="btn">4</button>
+          <button type="button" class="btn btn-default">1</button>
+          <button type="button" class="btn btn-default">2</button>
+          <button type="button" class="btn btn-default">3</button>
+          <button type="button" class="btn btn-default">4</button>
         </div>
         <div class="btn-group">
-          <button type="button" class="btn">5</button>
-          <button type="button" class="btn">6</button>
-          <button type="button" class="btn">7</button>
+          <button type="button" class="btn btn-default">5</button>
+          <button type="button" class="btn btn-default">6</button>
+          <button type="button" class="btn btn-default">7</button>
         </div>
         <div class="btn-group">
-          <button type="button" class="btn">8</button>
+          <button type="button" class="btn btn-default">8</button>
         </div>
       </div>
     </div>
@@ -3107,12 +3106,12 @@
     <p>Place buttons groups within button groups when you want dropdown menus mixed with a series of buttons.</p>
     <div class="bs-docs-example">
       <div class="btn-group">
-        <button type="button" class="btn">1</button>
-        <button type="button" class="btn">2</button>
-        <button type="button" class="btn">3</button>
+        <button type="button" class="btn btn-default">1</button>
+        <button type="button" class="btn btn-default">2</button>
+        <button type="button" class="btn btn-default">3</button>
 
         <div class="btn-group">
-          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
             Dropdown
             <span class="caret"></span>
           </button>
@@ -3129,10 +3128,10 @@
     <p>Make a set of buttons appear vertically stacked rather than horizontally.</p>
     <div class="bs-docs-example">
       <div class="btn-group btn-group-vertical">
-        <button type="button" class="btn"><i class="glyphicon glyphicon-align-left"></i></button>
-        <button type="button" class="btn"><i class="glyphicon glyphicon-align-center"></i></button>
-        <button type="button" class="btn"><i class="glyphicon glyphicon-align-right"></i></button>
-        <button type="button" class="btn"><i class="glyphicon glyphicon-align-justify"></i></button>
+        <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-align-left"></i></button>
+        <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-align-center"></i></button>
+        <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-align-right"></i></button>
+        <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-align-justify"></i></button>
       </div>
     </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group btn-group-vertical&quot;</span><span class="nt">&gt;</span>
@@ -3144,9 +3143,9 @@
     <p>Make a group of buttons stretch at the same size to span the entire width of its parent. <strong>This only works with <code>&lt;a&gt;</code> elements</strong> as the <code>&lt;button&gt;</code> doesn't pick up these styles.</p>
     <div class="bs-docs-example">
       <div class="btn-group btn-group-justified">
-        <a href="#" class="btn">Left</a>
-        <a href="#" class="btn">Right</a>
-        <a href="#" class="btn">Middle</a>
+        <a href="#" class="btn btn-default">Left</a>
+        <a href="#" class="btn btn-default">Right</a>
+        <a href="#" class="btn btn-default">Middle</a>
       </div>
     </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group btn-group-justified&quot;</span><span class="nt">&gt;</span>
@@ -3176,7 +3175,7 @@
     <div class="bs-docs-example">
       <div class="btn-toolbar" style="margin-bottom: 10px;">
         <div class="btn-group">
-          <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+          <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
@@ -3229,7 +3228,7 @@
     </div>
 <div class="highlight"><pre><code class="html"><span class="c">&lt;!-- Single button --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
     Action <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
@@ -3247,8 +3246,8 @@
     <div class="bs-docs-example">
       <div class="btn-toolbar" style="margin: 0;">
         <div class="btn-group">
-          <button class="btn">Action</button>
-          <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <button class="btn btn-default">Action</button>
+          <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
@@ -3305,8 +3304,8 @@
     </div>
 <div class="highlight"><pre><code class="html"><span class="c">&lt;!-- Split button --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
@@ -3324,7 +3323,7 @@
     <div class="bs-docs-example">
       <div class="btn-toolbar" style="margin: 0;">
         <div class="btn-group">
-          <button class="btn btn-large dropdown-toggle" type="button" data-toggle="dropdown">
+          <button class="btn btn-default btn-large dropdown-toggle" type="button" data-toggle="dropdown">
             Large button <span class="caret"></span>
           </button>
           <ul class="dropdown-menu">
@@ -3336,7 +3335,7 @@
           </ul>
         </div><!-- /btn-group -->
         <div class="btn-group">
-          <button class="btn btn-small dropdown-toggle" type="button" data-toggle="dropdown">
+          <button class="btn btn-default btn-small dropdown-toggle" type="button" data-toggle="dropdown">
             Small button <span class="caret"></span>
           </button>
           <ul class="dropdown-menu">
@@ -3348,7 +3347,7 @@
           </ul>
         </div><!-- /btn-group -->
         <div class="btn-group">
-          <button class="btn btn-mini dropdown-toggle" type="button" data-toggle="dropdown">
+          <button class="btn btn-default btn-mini dropdown-toggle" type="button" data-toggle="dropdown">
             Mini button <span class="caret"></span>
           </button>
           <ul class="dropdown-menu">
@@ -3363,7 +3362,7 @@
     </div><!-- /example -->
 <div class="highlight"><pre><code class="html"><span class="c">&lt;!-- Large button group --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-large dropdown-toggle&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-large dropdown-toggle&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
     Large button <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
@@ -3373,7 +3372,7 @@
 
 <span class="c">&lt;!-- Small button group --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-small dropdown-toggle&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-small dropdown-toggle&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
     Small button <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
@@ -3383,7 +3382,7 @@
 
 <span class="c">&lt;!-- Mini button group --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-mini dropdown-toggle&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-mini dropdown-toggle&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
     Mini button <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
@@ -3397,8 +3396,8 @@
     <div class="bs-docs-example">
       <div class="btn-toolbar">
         <div class="btn-group dropup">
-          <button class="btn">Dropup</button>
-          <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <button class="btn btn-default">Dropup</button>
+          <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
@@ -3408,8 +3407,8 @@
           </ul>
         </div><!-- /btn-group -->
         <div class="btn-group dropup">
-          <button class="btn primary">Right dropup</button>
-          <button class="btn primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+          <button class="btn btn-primary">Right dropup</button>
+          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
           <ul class="dropdown-menu pull-right">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
@@ -3421,8 +3420,8 @@
       </div>
     </div><!-- /example -->
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group dropup&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span><span class="nt">&gt;</span>Dropup<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span><span class="nt">&gt;</span>Dropup<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
@@ -3701,7 +3700,7 @@
       <div class="navbar">
         <form class="navbar-form pull-left">
           <input type="text" class="input-small" style="width: 200px;">
-          <button type="submit" class="btn btn-small">Submit</button>
+          <button type="submit" class="btn btn-default btn-small">Submit</button>
         </form>
       </div>
 
@@ -3713,7 +3712,7 @@
             <option value="3">3</option>
             <option value="4">4</option>
           </select>
-          <button type="submit" class="btn btn-small">Submit</button>
+          <button type="submit" class="btn btn-default btn-small">Submit</button>
         </form>
       </div>
 
@@ -3721,7 +3720,7 @@
         <form class="navbar-form pull-left">
           <input type="text" class="input-small" style="width: 200px;">
           <input type="checkbox">
-          <button type="submit" class="btn btn-small">Submit</button>
+          <button type="submit" class="btn btn-default btn-small">Submit</button>
         </form>
       </div>
 
@@ -3731,14 +3730,14 @@
           <label class="checkbox-inline">
             <input type="checkbox"> Remember me
           </label>
-          <button type="submit" class="btn btn-small">Submit</button>
+          <button type="submit" class="btn btn-default btn-small">Submit</button>
         </form>
       </div>
 
     </div><!-- /example -->
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;navbar-form pull-left&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input-small&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 200px;&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-small&quot;</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-small&quot;</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/form&gt;</span>
 </code></pre></div>
 
@@ -3747,7 +3746,7 @@
     <div class="bs-docs-example">
       <div class="navbar">
         <a href="#" class="navbar-brand">Brand</a>
-        <button type="button" class="btn btn-small">Submit</button>
+        <button type="button" class="btn btn-default btn-small">Submit</button>
       </div>
     </div>
 
