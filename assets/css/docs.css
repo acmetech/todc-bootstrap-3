@@ -3,6 +3,8 @@
  * Special styles for presenting Bootstrap's documentation and code examples.
  */
 
+
+
 /* Key scaffolding
 -------------------------------------------------- */
 
@@ -247,6 +249,7 @@ body {
 .bs-example > select:last-child,
 .bs-example > textarea:last-child,
 .bs-example > .table:last-child,
+.bs-example > .navbar:last-child
 .bs-example > .jumbotron:last-child,
 .bs-example > .alert:last-child,
 .bs-example > .panel:last-child,
@@ -602,6 +605,7 @@ input:required:invalid {
 }
 .highlight pre {
   padding: 0;
+  margin-top: 0;
   margin-bottom: 0;
   background-color: transparent;
   border: 0;
