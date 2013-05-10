@@ -475,7 +475,7 @@
 
     <!-- Body copy -->
     <h2 id="type-body-copy">Body copy</h2>
-    <p>Bootstrap's global default <code>font-size</code> is <strong>14px</strong>, with a <code>line-height</code> of <strong>20px</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their line-height (10px by default).</p>
+    <p>TODC Bootstrap's global default <code>font-size</code> is <strong>13px</strong>, with a <code>line-height</code> of <strong>1.54</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their line-height (10px by default).</p>
     <div class="bs-example">
       <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
       <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
@@ -1125,7 +1125,7 @@
     </div>
 
     <h2 id="forms-example">Basic example</h2>
-    <p>Individual form controls automatically receive some global styling. By default, inputs are set to <code>width: 100%;</code>.</p>
+    <p>Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements are set to <code>width: 100%;</code> by default.</p>
     <form class="bs-example">
       <fieldset>
         <legend>Legend</legend>
@@ -1137,7 +1137,7 @@
             <input type="checkbox"> Check me out
           </label>
         </div>
-        <button type="submit" class="btn">Submit</button>
+        <button type="submit" class="btn btn-default">Submit</button>
       </fieldset>
     </form><!-- /example -->
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;form&gt;</span>
@@ -1189,23 +1189,17 @@
 </code></pre></div>
 
     <h3 id="forms-horizontal">Horizontal form</h3>
-    <p>Right align labels and float them to the left to make them appear on the same line as controls. Requires the most markup changes from a default form:</p>
-    <ul>
-      <li>Add <code>.form-horizontal</code> to the form</li>
-      <li>Wrap labels and controls in <code>.control-group</code></li>
-      <li>Add <code>.control-label</code> to the label</li>
-      <li>Wrap any associated controls in <code>.controls</code> for proper alignment</li>
-    </ul>
+    <p>Use Bootstrap's predefined grid classes to align labels and groups of form controls in a horizontal layout.</p>
     <form class="bs-example form-horizontal">
-      <div class="control-group">
-        <label class="control-label" for="inputEmail">Email</label>
-        <div class="controls">
+      <div class="row">
+        <label for="inputEmail" class="col col-lg-2 row-label">Email</label>
+        <div class="col col-lg-10">
           <input type="text" id="inputEmail" placeholder="Email">
         </div>
       </div>
-      <div class="control-group">
-        <label class="control-label" for="inputPassword">Password</label>
-        <div class="controls">
+      <div class="row">
+        <label for="" class="col col-lg-2 row-label">Password</label>
+        <div class="col col-lg-10">
           <input type="password" id="inputPassword" placeholder="Password">
           <div class="checkbox">
             <label>
@@ -1213,23 +1207,21 @@
             </label>
           </div>
         </div>
-      </div>
-      <div class="control-group">
-        <div class="controls">
+        <div class="col col-lg-10 col-offset-2">
           <button type="submit" class="btn btn-default">Sign in</button>
         </div>
       </div>
     </form>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;form-horizontal&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;control-group&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label&quot;</span> <span class="na">for=</span><span class="s">&quot;inputEmail&quot;</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;controls&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;inputEmail&quot;</span> <span class="na">class=</span><span class="s">&quot;col col-lg-2 row-label&quot;</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col col-lg-10&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">id=</span><span class="s">&quot;inputEmail&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Email&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;control-group&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label&quot;</span> <span class="na">for=</span><span class="s">&quot;inputPassword&quot;</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;controls&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;&quot;</span> <span class="na">class=</span><span class="s">&quot;col col-lg-2 row-label&quot;</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col col-lg-10&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;password&quot;</span> <span class="na">id=</span><span class="s">&quot;inputPassword&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Password&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;label&gt;</span>
@@ -1237,9 +1229,7 @@
         <span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;control-group&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;controls&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col col-lg-10 col-offset-2&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -1793,22 +1783,12 @@
 </code></pre></div>
 
     <h3 id="forms-help-text">Help text</h3>
-    <p>Inline and block level support for help text that appears around form controls.</p>
-    <h4>Inline help</h4>
-    <form class="bs-example form-inline">
-      <input type="text"> <span class="help-inline">Inline help text</span>
-    </form>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;help-inline&quot;</span><span class="nt">&gt;</span>Inline help text<span class="nt">&lt;/span&gt;</span>
-</code></pre></div>
-
-    <h4>Block help</h4>
-    <form class="bs-example form-inline">
+    <p>Block level help text for form controls.</p>
+    <form class="bs-example">
       <input type="text">
       <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
     </form>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;help-block&quot;</span><span class="nt">&gt;</span>A longer block of help text that breaks onto a new line and may extend beyond one line.<span class="nt">&lt;/span&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;help-block&quot;</span><span class="nt">&gt;</span>A longer block of help text that breaks onto a new line and may extend beyond one line.<span class="nt">&lt;/span&gt;</span>
 </code></pre></div>
 
   </div>
