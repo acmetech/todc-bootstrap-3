@@ -1385,9 +1385,9 @@
     </div>
 
     <form class="bs-example form-inline">
-      <input class="col col-lg-3" type="email" placeholder="test@example.com" required>
+      <input type="email" placeholder="test@example.com" required>
     </form>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;col col-lg-3&quot;</span> <span class="na">type=</span><span class="s">&quot;email&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;test@example.com&quot;</span> <span class="na">required</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;email&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;test@example.com&quot;</span> <span class="na">required</span><span class="nt">&gt;</span>
 </code></pre></div>
 
     <h3 id="forms-disabled-inputs">Disabled inputs</h3>
@@ -2034,54 +2034,56 @@
     <p class="lead">For faster mobile-friendly development, use these utility classes for showing and hiding content by device via media query. Also included are utility classes for toggling content when printed.</p>
 
     <h3>Responsive classes</h3>
-    <table class="table table-bordered table-striped responsive-utilities hidden-phone">
-      <thead>
-        <tr>
-          <th>Class</th>
-          <th>Phones <small>767px and below</small></th>
-          <th>Tablets <small>979px to 768px</small></th>
-          <th>Desktops <small>Default</small></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th><code>.visible-phone</code></th>
-          <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-        </tr>
-        <tr>
-          <th><code>.visible-tablet</code></th>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
-        </tr>
-        <tr>
-          <th><code>.visible-desktop</code></th>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-visible">Visible</td>
-        </tr>
-        <tr>
-          <th><code>.hidden-phone</code></th>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-        </tr>
-        <tr>
-          <th><code>.hidden-tablet</code></th>
-          <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
-          <td class="is-visible">Visible</td>
-        </tr>
-        <tr>
-          <th><code>.hidden-desktop</code></th>
-          <td class="is-visible">Visible</td>
-          <td class="is-visible">Visible</td>
-          <td class="is-hidden">Hidden</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="hidden-sm">
+      <table class="table table-bordered table-striped responsive-utilities">
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Phones <small>767px and below</small></th>
+            <th>Tablets <small>979px to 768px</small></th>
+            <th>Desktops <small>Default</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th><code>.visible-sm</code></th>
+            <td class="is-visible">Visible</td>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-hidden">Hidden</td>
+          </tr>
+          <tr>
+            <th><code>.visible-md</code></th>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-visible">Visible</td>
+            <td class="is-hidden">Hidden</td>
+          </tr>
+          <tr>
+            <th><code>.visible-lg</code></th>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-visible">Visible</td>
+          </tr>
+          <tr>
+            <th><code>.hidden-sm</code></th>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-visible">Visible</td>
+            <td class="is-visible">Visible</td>
+          </tr>
+          <tr>
+            <th><code>.hidden-md</code></th>
+            <td class="is-visible">Visible</td>
+            <td class="is-hidden">Hidden</td>
+            <td class="is-visible">Visible</td>
+          </tr>
+          <tr>
+            <th><code>.hidden-lg</code></th>
+            <td class="is-visible">Visible</td>
+            <td class="is-visible">Visible</td>
+            <td class="is-hidden">Hidden</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <h3>Print classes</h3>
     <table class="table table-bordered table-striped responsive-utilities">
@@ -2114,16 +2116,16 @@
     <h4>Visible on...</h4>
     <p>Green checkmarks indicate that class is visible in your current viewport.</p>
     <ul class="responsive-utilities-test">
-      <li>Phone<span class="visible-phone">&#10004; Phone</span></li>
-      <li>Tablet<span class="visible-tablet">&#10004; Tablet</span></li>
-      <li>Desktop<span class="visible-desktop">&#10004; Desktop</span></li>
+      <li>Phone<span class="visible-sm">&#10004; Phone</span></li>
+      <li>Tablet<span class="visible-md">&#10004; Tablet</span></li>
+      <li>Desktop<span class="visible-lg">&#10004; Desktop</span></li>
     </ul>
     <h4>Hidden on...</h4>
     <p>Here, green checkmarks indicate that class is hidden in your current viewport.</p>
     <ul class="responsive-utilities-test hidden-on">
-      <li>Phone<span class="hidden-phone">&#10004; Phone</span></li>
-      <li>Tablet<span class="hidden-tablet">&#10004; Tablet</span></li>
-      <li>Desktop<span class="hidden-desktop">&#10004; Desktop</span></li>
+      <li>Phone<span class="hidden-sm">&#10004; Phone</span></li>
+      <li>Tablet<span class="hidden-md">&#10004; Tablet</span></li>
+      <li>Desktop<span class="hidden-lg">&#10004; Desktop</span></li>
     </ul>
 
   </div>
