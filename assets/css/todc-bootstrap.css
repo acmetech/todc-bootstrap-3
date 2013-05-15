@@ -46,20 +46,20 @@ code {
   white-space: nowrap;
 }
 pre {
-  padding: 9.5px;
-  margin: 0 0 10px;
+  padding: 9px;
+  margin: 0 0 9.5px;
   font-size: 12px;
   line-height: 1.5381;
   border-radius: 0;
 }
 pre.prettyprint {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 table {
   background-color: transparent;
 }
 .table {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 .table thead > tr > th,
 .table tbody > tr > th,
@@ -165,9 +165,8 @@ table {
   background-color: #f7e7a7;
 }
 legend {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   font-size: 19.5px;
-  line-height: 3.0762;
   color: #333333;
 }
 select,
@@ -186,7 +185,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"] {
-  min-height: 30px;
+  min-height: 29px;
   padding: 4px 8px;
   font-size: 13px;
   line-height: 1.5381;
@@ -363,7 +362,7 @@ input[type="url"].input-small,
 input[type="search"].input-small,
 input[type="tel"].input-small,
 input[type="color"].input-small {
-  min-height: 24px;
+  min-height: 23px;
   padding: 2px 8px;
   font-size: 12px;
   border-radius: 1px;
@@ -623,7 +622,7 @@ select:focus:required:invalid:focus {
   z-index: 2;
 }
 .form-horizontal .control-group {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 .form-horizontal .control-group > .control-label {
   width: 160px;
@@ -1229,11 +1228,6 @@ fieldset[disabled] .btn-link:focus {
   font-size: 12px;
   border-radius: 2px;
 }
-.btn-mini {
-  padding: 1px 6px;
-  font-size: 11px;
-  border-radius: 2px;
-}
 .dropdown-menu {
   padding: 0 0 6px 0;
   margin: 1px 0 0;
@@ -1245,7 +1239,7 @@ fieldset[disabled] .btn-link:focus {
 }
 .dropdown-menu .divider {
   height: 2px;
-  margin: 9px 0;
+  margin: 8.5px 0;
   overflow: hidden;
   background-color: #ebebeb;
   border-bottom: 1px solid #ffffff;
@@ -1394,7 +1388,7 @@ li.list-group-header {
 .list-group .divider {
   background-color: #e5e5e5;
   height: 2px;
-  margin: 9px 0;
+  margin: 8.5px 0;
   overflow: hidden;
   background-color: #ebebeb;
   border-bottom: 1px solid #ffffff;
@@ -1412,6 +1406,12 @@ li.list-group-header {
   border-bottom: 1px solid #e5e5e5;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+.panel-footer {
+  background-color: rgba(243, 243, 243, 0.85);
+  border-top: 1px solid #e5e5e5;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .panel-primary {
   border-color: #4d90fe;
@@ -1610,6 +1610,7 @@ li.list-group-header {
   padding: 5px 15px 3px;
   font-weight: bold;
   color: #999999;
+  border-radius: 2px;
 }
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a:focus {
@@ -1631,7 +1632,7 @@ li.list-group-header {
 .navbar-nav input[class*="span"],
 .navbar-nav select[class*="span"],
 .navbar-nav textarea[class*="span"] {
-  height: 26px;
+  height: 25px;
 }
 .navbar-fixed-top,
 .navbar-fixed-bottom {
@@ -1650,6 +1651,8 @@ li.list-group-header {
 }
 .navbar-text {
   color: #999999;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 .navbar-toggle {
   top: 2px;
@@ -2247,6 +2250,9 @@ li.list-group-header {
   .navbar .nav > li {
     float: left;
   }
+  .navbar .nav > li > a {
+    border-radius: 0;
+  }
   .navbar .nav.pull-right {
     float: right;
   }
@@ -2282,6 +2288,9 @@ li.list-group-header {
   }
   .navbar-masthead .nav > li {
     float: left;
+  }
+  .navbar-masthead .nav > li > a {
+    border-radius: 0;
   }
   .navbar-masthead .nav.pull-right {
     float: right;
@@ -2319,6 +2328,9 @@ li.list-group-header {
   .navbar-toolbar .nav > li {
     float: left;
   }
+  .navbar-toolbar .nav > li > a {
+    border-radius: 0;
+  }
   .navbar-toolbar .nav.pull-right {
     float: right;
   }
@@ -2341,7 +2353,7 @@ li.list-group-header {
   }
 }
 .navbar-btn {
-  margin-top: -1px;
+  margin-top: -0.5px;
 }
 .navbar-link {
   color: #999999;
@@ -2463,7 +2475,7 @@ li.list-group-header {
   border-bottom-color: #fff;
 }
 .breadcrumb {
-  margin: 0 0 20px;
+  margin: 0 0 19px;
   background-color: #f3f3f3;
   background-color: #f1f1f1;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f1f1f1));
@@ -2478,7 +2490,7 @@ li.list-group-header {
   color: #999999;
 }
 .pagination {
-  margin: 20px 0;
+  margin: 19px 0;
   border-radius: 2px;
 }
 .pagination > li > a,
@@ -2550,8 +2562,38 @@ li.list-group-header {
   opacity: 0.3;
   filter: alpha(opacity=30);
 }
+.pagination-large > li > a,
+.pagination-large > li > span {
+  padding: 9px 14px;
+  font-size: 14px;
+}
+.pagination-large > li:first-child > a,
+.pagination-large > li:first-child > span {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.pagination-large > li:last-child > a,
+.pagination-large > li:last-child > span {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.pagination-small > li > a,
+.pagination-small > li > span {
+  padding: 2px 8px;
+  font-size: 12px;
+}
+.pagination-small > li:first-child > a,
+.pagination-small > li:first-child > span {
+  border-bottom-left-radius: 1px;
+  border-top-left-radius: 1px;
+}
+.pagination-small > li:last-child > a,
+.pagination-small > li:last-child > span {
+  border-bottom-right-radius: 1px;
+  border-top-right-radius: 1px;
+}
 .pager {
-  margin: 20px 0;
+  margin: 19px 0;
 }
 .pager li > a,
 .pager li > span {
@@ -2805,8 +2847,8 @@ li.list-group-item.active a > .badge {
   padding: 1px;
   height: 14px;
   font-size: 12px;
-  height: 20px;
-  margin-bottom: 20px;
+  height: 19px;
+  margin-bottom: 19px;
   background-color: transparent;
   background-image: none;
   border-radius: 0;
