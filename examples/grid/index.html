@@ -47,10 +47,15 @@
     padding-right: 15px;
   }
 
+  h4 {
+    margin-top: 25px;
+  }
   .row {
     margin-bottom: 20px;
-    margin-left: -15px;
-    margin-right: -15px;
+  }
+  .row .row {
+    margin-top: 10px;
+    margin-bottom: 0;
   }
   [class*="col-lg-"] {
     padding-top: 15px;
@@ -87,7 +92,20 @@
   </div>
 
   <h4>Full width, single column</h4>
-  <p class="text-muted">No grid classes are necessary for full-width elements.</p>
+  <p class="text-warning">No grid classes are necessary for full-width elements.</p>
+
+  <h4>Two columns with two nested columns</h4>
+  <div class="row">
+    <div class="col col-lg-8">
+      .col .col-lg-8
+      <div class="row">
+        <div class="col col-lg-6">.col .col-lg-6</div>
+        <div class="col col-lg-6">.col .col-lg-6</div>
+      </div>
+    </div>
+    <div class="col col-lg-4">.col .col-lg-4</div>
+  </div>
+
 
 </div> <!-- /container -->
 
@@ -97,24 +115,12 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="/todc-bootstrap-3/assets/js/jquery.js"></script>
-<script src="/todc-bootstrap-3/assets/js/transition.js"></script>
-<script src="/todc-bootstrap-3/assets/js/alert.js"></script>
-<script src="/todc-bootstrap-3/assets/js/modal.js"></script>
-<script src="/todc-bootstrap-3/assets/js/dropdown.js"></script>
-<script src="/todc-bootstrap-3/assets/js/scrollspy.js"></script>
-<script src="/todc-bootstrap-3/assets/js/tab.js"></script>
-<script src="/todc-bootstrap-3/assets/js/tooltip.js"></script>
-<script src="/todc-bootstrap-3/assets/js/popover.js"></script>
-<script src="/todc-bootstrap-3/assets/js/button.js"></script>
-<script src="/todc-bootstrap-3/assets/js/collapse.js"></script>
-<script src="/todc-bootstrap-3/assets/js/carousel.js"></script>
-<script src="/todc-bootstrap-3/assets/js/typeahead.js"></script>
-<script src="/todc-bootstrap-3/assets/js/affix.js"></script>
+<script src="/todc-bootstrap-3/assets/js/bootstrap.js"></script>
 
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 <script src="/todc-bootstrap-3/assets/js/holder/holder.js"></script>
-<script src="/todc-bootstrap-3/assets/js/select2.min.js"></script>
 
+<script src="/todc-bootstrap-3/assets/js/select2.min.js"></script>
 <script src="/todc-bootstrap-3/assets/js/application.js"></script>
 
 
