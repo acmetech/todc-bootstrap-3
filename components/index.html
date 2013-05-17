@@ -197,6 +197,7 @@
     <li><a href="#alerts-default">Default alert</a></li>
     <li><a href="#alerts-block">Block alerts</a></li>
     <li><a href="#alerts-alternatives">Contextual alternatives</a></li>
+    <li><a href="#alerts-links">Links in alerts</a></li>
   </ul>
 </li>
 <li>
@@ -2867,6 +2868,33 @@
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-success&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-info&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
+
+    <h3 id="alerts-links">Links in alerts</h3>
+    <p>Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>
+    <div class="bs-example">
+      <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+      </div>
+      <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+      </div>
+      <div class="alert alert-info">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
+      </div>
+    </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-danger&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;alert-link&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-success&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;alert-link&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-info&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;alert-link&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
   </div>
 
 
@@ -3540,7 +3568,7 @@
       </div>
 
       <!-- Quick back to top -->
-      <a href="#welcome" class="bs-top">
+      <a href="#" class="bs-top">
         Back to top
       </a>
 
@@ -3587,24 +3615,12 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="/todc-bootstrap-3/assets/js/jquery.js"></script>
-<script src="/todc-bootstrap-3/assets/js/transition.js"></script>
-<script src="/todc-bootstrap-3/assets/js/alert.js"></script>
-<script src="/todc-bootstrap-3/assets/js/modal.js"></script>
-<script src="/todc-bootstrap-3/assets/js/dropdown.js"></script>
-<script src="/todc-bootstrap-3/assets/js/scrollspy.js"></script>
-<script src="/todc-bootstrap-3/assets/js/tab.js"></script>
-<script src="/todc-bootstrap-3/assets/js/tooltip.js"></script>
-<script src="/todc-bootstrap-3/assets/js/popover.js"></script>
-<script src="/todc-bootstrap-3/assets/js/button.js"></script>
-<script src="/todc-bootstrap-3/assets/js/collapse.js"></script>
-<script src="/todc-bootstrap-3/assets/js/carousel.js"></script>
-<script src="/todc-bootstrap-3/assets/js/typeahead.js"></script>
-<script src="/todc-bootstrap-3/assets/js/affix.js"></script>
+<script src="/todc-bootstrap-3/assets/js/bootstrap.js"></script>
 
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 <script src="/todc-bootstrap-3/assets/js/holder/holder.js"></script>
-<script src="/todc-bootstrap-3/assets/js/select2.min.js"></script>
 
+<script src="/todc-bootstrap-3/assets/js/select2.min.js"></script>
 <script src="/todc-bootstrap-3/assets/js/application.js"></script>
 
 
