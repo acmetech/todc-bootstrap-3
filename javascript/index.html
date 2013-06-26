@@ -187,7 +187,7 @@
       <h1>Transitions <small>transition.js</small></h1>
     </div>
     <h3>About transitions</h3>
-    <p>For simple transition effects, include transition.js once alongside the other JS files. If you're using the compiled (or minified) bootstrap.js, there is no need to include this&mdash;it's already there.</p>
+    <p>For simple transition effects, include <code>transition.js</code> once alongside the other JS files. If you're using the compiled (or minified) <code>bootstrap.js</code>, there is no need to include this&mdash;it's already there.</p>
     <h3>Use cases</h3>
     <p>A few examples of the transition plugin:</p>
     <ul>
@@ -230,7 +230,7 @@
               <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div><!-- /.modal-content -->
-        </div><!-- /.modal-dalog -->
+        </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
     </div><!-- /example -->
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal fade&quot;</span><span class="nt">&gt;</span>
@@ -248,7 +248,7 @@
         <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>Save changes<span class="nt">&lt;/button&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal-content --&gt;</span>
-  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal-dalog --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal-dialog --&gt;</span>
 <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal --&gt;</span>
 </code></pre></div>
 
@@ -292,7 +292,7 @@
           </div>
 
         </div><!-- /.modal-content -->
-      </div><!-- /.modal-dalog -->
+      </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
     <div class="bs-example" style="padding-bottom: 24px;">
@@ -317,7 +317,7 @@
           <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>Save changes<span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal-content --&gt;</span>
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal-dalog --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal-dialog --&gt;</span>
   <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.modal --&gt;</span>
 </code></pre></div>
 
@@ -369,7 +369,7 @@
          <td>remote</td>
          <td>path</td>
          <td>false</td>
-         <td><p>If a remote url is provided, content will be loaded via jQuery's <code>load</code> method and injected into the <code>.modal-body</code>. If you're using the data api, you may alternatively use the <code>href</code> tag to specify the remote source. An example of this is shown below:</p>
+         <td><p>If a remote URL is provided, content will be loaded via jQuery's <code>load</code> method and injected into the <code>.modal-body</code>. If you're using the data api, you may alternatively use the <code>href</code> tag to specify the remote source. An example of this is shown below:</p>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">&quot;modal&quot;</span> <span class="na">href=</span><span class="s">&quot;remote.html&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#modal&quot;</span><span class="nt">&gt;</span>Click me<span class="nt">&lt;/a&gt;</span>
 </code></pre></div>
        </tr>
@@ -416,7 +416,7 @@
        </tr>
        <tr>
          <td>shown</td>
-         <td>This event is fired when the modal has been made visible to the user (will wait for css transitions to complete).</td>
+         <td>This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete).</td>
        </tr>
        <tr>
          <td>hide</td>
@@ -424,7 +424,7 @@
        </tr>
        <tr>
          <td>hidden</td>
-         <td>This event is fired when the modal has finished being hidden from the user (will wait for css transitions to complete).</td>
+         <td>This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete).</td>
        </tr>
       </tbody>
     </table>
@@ -865,13 +865,13 @@
                <td>animation</td>
                <td>boolean</td>
                <td>true</td>
-               <td>apply a css fade transition to the tooltip</td>
+               <td>apply a CSS fade transition to the tooltip</td>
              </tr>
              <tr>
                <td>html</td>
                <td>boolean</td>
                <td>false</td>
-               <td>Insert html into the tooltip. If false, jquery's <code>text</code> method will be used to insert content into the dom. Use text if you're worried about XSS attacks.</td>
+               <td>Insert HTML into the tooltip. If false, jQuery's <code>text</code> method will be used to insert content into the DOM. Use text if you're worried about XSS attacks.</td>
              </tr>
              <tr>
                <td>placement</td>
@@ -895,7 +895,7 @@
                <td>trigger</td>
                <td>string</td>
                <td>'hover focus'</td>
-               <td>how tooltip is triggered - click | hover | focus | manual. Note you case pass trigger multiple, space seperated, trigger types.</td>
+               <td>how tooltip is triggered - click | hover | focus | manual. Note you case pass trigger multiple, space separated, trigger types.</td>
              </tr>
              <tr>
                <td>delay</td>
@@ -912,7 +912,7 @@
                <td>string | false</td>
                <td>false</td>
                <td>
-                <p>Appends the tooltip to a specific element <code>container: 'body'</code></p>
+                <p>Appends the tooltip to a specific element. Example: <code>container: 'body'</code></p>
                </td>
              </tr>
             </tbody>
@@ -1047,13 +1047,13 @@
               <td>animation</td>
               <td>boolean</td>
               <td>true</td>
-              <td>apply a css fade transition to the tooltip</td>
+              <td>apply a CSS fade transition to the tooltip</td>
             </tr>
             <tr>
               <td>html</td>
               <td>boolean</td>
               <td>false</td>
-              <td>Insert html into the popover. If false, jquery's <code>text</code> method will be used to insert content into the dom. Use text if   you're worried about XSS attacks.</td>
+              <td>Insert HTML into the popover. If false, jQuery's <code>text</code> method will be used to insert content into the DOM. Use text if you're worried about XSS attacks.</td>
             </tr>
             <tr>
               <td>placement</td>
@@ -1209,7 +1209,7 @@
             </tr>
             <tr>
               <td>closed</td>
-              <td>This event is fired when the alert has been closed (will wait for css transitions to complete).</td>
+              <td>This event is fired when the alert has been closed (will wait for CSS transitions to complete).</td>
             </tr>
           </tbody>
         </table>
@@ -1471,7 +1471,7 @@
             <h2>Usage</h2>
 
             <h3>Via data attributes</h3>
-            <p>Just add <code>data-toggle="collapse"</code> and a <code>data-target</code> to element to automatically assign control of a collapsible element. The <code>data-target</code> attribute accepts a css selector to apply the collapse to. Be sure to add the class <code>collapse</code> to the collapsible element. If you'd like it to default open, add the additional class <code>in</code>.</p>
+            <p>Just add <code>data-toggle="collapse"</code> and a <code>data-target</code> to element to automatically assign control of a collapsible element. The <code>data-target</code> attribute accepts a CSS selector to apply the collapse to. Be sure to add the class <code>collapse</code> to the collapsible element. If you'd like it to default open, add the additional class <code>in</code>.</p>
             <p>To add accordion-like group management to a collapsible control, add the data attribute <code>data-parent="#selector"</code>. Refer to the demo to see this in action.</p>
 
             <h3>Via JavaScript</h3>
@@ -1541,7 +1541,7 @@
                </tr>
                <tr>
                  <td>shown</td>
-                 <td>This event is fired when a collapse element has been made visible to the user (will wait for css transitions to complete).</td>
+                 <td>This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete).</td>
                </tr>
                <tr>
                  <td>hide</td>
@@ -1551,7 +1551,7 @@
                </tr>
                <tr>
                  <td>hidden</td>
-                 <td>This event is fired when a collapse element has been hidden from the user (will wait for css transitions to complete).</td>
+                 <td>This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete).</td>
                </tr>
               </tbody>
             </table>
