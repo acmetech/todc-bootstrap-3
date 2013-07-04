@@ -143,13 +143,17 @@
 <li>
   <a href="#navbar-masthead">Masthead</a>
   <ul class="nav">
-    <li><a href="#navbar-masthead-basic">Basic navbar</a></li>
+    <li><a href="#navbar-masthead-basic">Basic masthead</a></li>
     <li><a href="#navbar-masthead-nav">Nav links</a></li>
-    <li><a href="#navbar-masthead-forms">Forms in navbars</a></li>
-    <li><a href="#navbar-masthead-fixed-top">Fixed top navbar</a></li>
-    <li><a href="#navbar-masthead-fixed-bottom">Fixed bottom navbar</a></li>
-    <li><a href="#navbar-masthead-static-top">Static top navbar</a></li>
-    <li><a href="#navbar-masthead-responsive">Responsive navbar</a></li>
+    <li><a href="#navbar-masthead-forms">Forms in mastheads</a></li>
+    <li><a href="#navbar-masthead-buttons">Buttons in mastheads</a></li>
+    <li><a href="#navbar-masthead-text">Text in mastheads</a></li>
+    <li><a href="#navbar-masthead-links">Links in mastheads</a></li>
+    <li><a href="#navbar-masthead-component-alignment">Component alignment</a></li>
+    <li><a href="#navbar-masthead-fixed-top">Fixed top masthead</a></li>
+    <li><a href="#navbar-masthead-fixed-bottom">Fixed bottom masthead</a></li>
+    <li><a href="#navbar-masthead-static-top">Static top masthead</a></li>
+    <li><a href="#navbar-masthead-responsive">Responsive masthead</a></li>
   </ul>
 </li>
 <li>
@@ -158,11 +162,15 @@
     <li><a href="#navbar-toolbar-basic">Basic toolbar</a></li>
     <li><a href="#navbar-toolbar-toolbar">Toolbar</a></li>
     <li><a href="#navbar-toolbar-nav">Nav links</a></li>
-    <li><a href="#navbar-toolbar-forms">Forms in navbars</a></li>
-    <li><a href="#navbar-toolbar-fixed-top">Fixed top navbar</a></li>
-    <li><a href="#navbar-toolbar-fixed-bottom">Fixed bottom navbar</a></li>
-    <li><a href="#navbar-toolbar-static-top">Static top navbar</a></li>
-    <li><a href="#navbar-toolbar-responsive">Responsive navbar</a></li>
+    <li><a href="#navbar-toolbar-forms">Forms in toolbars</a></li>
+    <li><a href="#navbar-toolbar-buttons">Buttons in toolbars</a></li>
+    <li><a href="#navbar-toolbar-text">Text in toolbars</a></li>
+    <li><a href="#navbar-toolbar-links">Links in toolbars</a></li>
+    <li><a href="#navbar-toolbar-component-alignment">Component alignment</a></li>
+    <li><a href="#navbar-toolbar-fixed-top">Fixed top toolbar</a></li>
+    <li><a href="#navbar-toolbar-fixed-bottom">Fixed bottom toolbar</a></li>
+    <li><a href="#navbar-toolbar-static-top">Static top toolbar</a></li>
+    <li><a href="#navbar-toolbar-responsive">Responsive toolbar</a></li>
   </ul>
 </li>
 <li><a href="#breadcrumbs">Breadcrumbs</a></li>
@@ -1324,7 +1332,7 @@
         <a class="navbar-brand" href="#">Title</a>
         <form class="navbar-form pull-left">
           <input type="text" class="col-lg-8" placeholder="Search">
-          <button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+          <button class="btn btn-primary" type="submit">Search</button>
         </form>
         <ul class="nav navbar-nav pull-right">
           <li class="active"><a href="#">Home</a></li>
@@ -1385,20 +1393,91 @@
     <h3 id="navbar-masthead-forms">Forms</h3>
     <p>To properly style and position a form within the navbar, add the appropriate classes as shown below. For a default form, include <code>.navbar-form</code> and either <code>.pull-left</code> or <code>.pull-right</code> to properly align it.</p>
     <div class="bs-example">
+
       <div class="navbar navbar-masthead">
         <form class="navbar-form pull-left">
-          <input type="text" class="col-lg-8">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <input type="text" style="width: 200px;">
+          <button type="submit" class="btn btn-default">Submit</button>
         </form>
       </div>
-    </div>
+
+      <div class="navbar navbar-masthead">
+        <form class="navbar-form pull-left">
+          <select name="" id="" style="width: 200px;">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+
+      <div class="navbar navbar-masthead">
+        <form class="navbar-form pull-left">
+          <input type="text" style="width: 200px;">
+          <input type="checkbox">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+
+      <div class="navbar navbar-masthead">
+        <form class="navbar-form pull-left">
+          <input type="text" style="width: 200px;">
+          <label class="checkbox-inline">
+            <input type="checkbox"> Remember me
+          </label>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+
+    </div><!-- /example -->
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;navbar-form pull-left&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;span2&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 200px;&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-small&quot;</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/form&gt;</span>
 </code></pre></div>
 
-    <h3>Component alignment</h3>
+    <h3 id="navbar-masthead-buttons">Buttons</h3>
+    <p>For buttons not residing in a <code>&lt;form&gt;</code>, add this class to vertically center buttons within a navbar.</p>
+    <div class="bs-example">
+      <div class="navbar navbar-masthead">
+        <a href="#" class="navbar-brand">Brand</a>
+        <button type="button" class="btn btn-default navbar-masthead-btn">Sign in</button>
+      </div>
+    </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default navbar-masthead-btn&quot;</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
+
+    <h3 id="navbar-masthead-text">Text</h3>
+    <p>Wrap strings of text in an element with <code>.navbar-text</code>, usually on a <code>&lt;p&gt;</code> tag for proper leading and color.</p>
+    <div class="bs-example">
+      <div class="navbar navbar-masthead">
+        <a href="#" class="navbar-brand">Brand</a>
+        <p class="navbar-text">Signed in as Mark Otto</p>
+      </div>
+    </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-masthead&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span><span class="nt">&gt;</span>Brand<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;navbar-text&quot;</span><span class="nt">&gt;</span>Signed in as Mark Otto<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+    <h3 id="navbar-masthead-links">Links</h3>
+    <p>For folks using standard links that are not within the regular navbar navigation component, use the <code>.navbar-link</code> class to add the proper colors for the default and inverse navbar options.</p>
+    <div class="bs-example">
+      <div class="navbar navbar-masthead">
+        <a href="#" class="navbar-brand">Brand</a>
+        <p class="navbar-text pull-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
+      </div>
+    </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-masthead&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span><span class="nt">&gt;</span>Brand<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;navbar-text pull-right&quot;</span><span class="nt">&gt;</span>Signed in as <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;navbar-link&quot;</span><span class="nt">&gt;</span>Mark Otto<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+    <h3 id="navbar-masthead-component-alignment">Component alignment</h3>
     <p>Align nav links, search form, or text, use the <code>.pull-left</code> or <code>.pull-right</code> utility classes. Both classes will add a CSS float in the specified direction.</p>
 
     <h3>Using dropdowns</h3>
@@ -1800,20 +1879,91 @@
     <h3 id="navbar-toolbar-forms">Forms</h3>
     <p>To properly style and position a form within the navbar, add the appropriate classes as shown below. For a default form, include <code>.navbar-form</code> and either <code>.pull-left</code> or <code>.pull-right</code> to properly align it.</p>
     <div class="bs-example">
+
       <div class="navbar navbar-toolbar">
         <form class="navbar-form pull-left">
-          <input type="text" class="col-lg-8">
+          <input type="text" style="width: 200px;">
           <button type="submit" class="btn btn-default">Submit</button>
         </form>
       </div>
-    </div>
+
+      <div class="navbar navbar-toolbar">
+        <form class="navbar-form pull-left">
+          <select name="" id="" style="width: 200px;">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+
+      <div class="navbar navbar-toolbar">
+        <form class="navbar-form pull-left">
+          <input type="text" style="width: 200px;">
+          <input type="checkbox">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+
+      <div class="navbar navbar-toolbar">
+        <form class="navbar-form pull-left">
+          <input type="text" style="width: 200px;">
+          <label class="checkbox-inline">
+            <input type="checkbox"> Remember me
+          </label>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+
+    </div><!-- /example -->
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;navbar-form pull-left&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;span2&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 200px;&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-small&quot;</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/form&gt;</span>
 </code></pre></div>
 
-    <h3>Component alignment</h3>
+    <h3 id="navbar-toolbar-buttons">Buttons</h3>
+    <p>For buttons not residing in a <code>&lt;form&gt;</code>, add this class to vertically center buttons within a navbar.</p>
+    <div class="bs-example">
+      <div class="navbar navbar-toolbar">
+        <a href="#" class="navbar-brand">Brand</a>
+        <button type="button" class="btn btn-default navbar-toolbar-btn">Sign in</button>
+      </div>
+    </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default navbar-toolbar-btn&quot;</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
+
+    <h3 id="navbar-toolbar-text">Text</h3>
+    <p>Wrap strings of text in an element with <code>.navbar-text</code>, usually on a <code>&lt;p&gt;</code> tag for proper leading and color.</p>
+    <div class="bs-example">
+      <div class="navbar navbar-toolbar">
+        <a href="#" class="navbar-brand">Brand</a>
+        <p class="navbar-text">Signed in as Mark Otto</p>
+      </div>
+    </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-toolbar&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span><span class="nt">&gt;</span>Brand<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;navbar-text&quot;</span><span class="nt">&gt;</span>Signed in as Mark Otto<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+    <h3 id="navbar-toolbar-links">Links</h3>
+    <p>For folks using standard links that are not within the regular navbar navigation component, use the <code>.navbar-link</code> class to add the proper colors for the default and inverse navbar options.</p>
+    <div class="bs-example">
+      <div class="navbar navbar-toolbar">
+        <a href="#" class="navbar-brand">Brand</a>
+        <p class="navbar-text pull-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
+      </div>
+    </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-toolbar&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span><span class="nt">&gt;</span>Brand<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;navbar-text pull-right&quot;</span><span class="nt">&gt;</span>Signed in as <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;navbar-link&quot;</span><span class="nt">&gt;</span>Mark Otto<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+    <h3 id="navbar-toolbar-component-alignment">Component alignment</h3>
     <p>Align nav links, search form, or text, use the <code>.pull-left</code> or <code>.pull-right</code> utility classes. Both classes will add a CSS float in the specified direction.</p>
 
     <h3>Using dropdowns</h3>
