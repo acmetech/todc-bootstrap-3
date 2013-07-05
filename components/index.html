@@ -2235,7 +2235,7 @@
       <h1>Breadcrumbs <small></small></h1>
     </div>
     <p class="lead">Indicate the current page's location within a navigational hierarchy.</p>
-    <p>Separators are automatically added in CSS through <code>:after</code> and <code>content</code>.</p>
+    <p>Separators are automatically added in CSS through <code>:before</code> and <code>content</code>.</p>
     <div class="bs-example">
       <ul class="breadcrumb">
         <li class="active">Home</li>
@@ -3030,32 +3030,6 @@
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
-    <h3 id="list-group-chevrons">With chevrons</h3>
-    <p>Add Glyphicon chevrons that are automatically moved to the right.</p>
-    <div class="bs-example">
-      <ul class="list-group">
-        <li class="list-group-item">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          Cras justo odio
-        </li>
-        <li class="list-group-item">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          Dapibus ac facilisis in
-        </li>
-        <li class="list-group-item">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          Morbi leo risus
-        </li>
-      </ul>
-    </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;list-group&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-chevron-right&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-    Cras justo odio
-  <span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span>
-</code></pre></div>
-
     <h3 id="list-group-badges">With badges</h3>
     <p>Add the badges component to any list group item and it will automatically be positioned on the right.</p>
     <div class="bs-example">
@@ -3082,74 +3056,34 @@
 <span class="nt">&lt;/ul&gt;</span>
 </code></pre></div>
 
-    <h3 id="list-group-badges-chevrons">With badges and chevrons</h3>
-    <p>Why not both?</p>
-    <div class="bs-example">
-      <ul class="list-group">
-        <li class="list-group-item">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="badge">14</span>
-          Cras justo odio
-        </li>
-        <li class="list-group-item">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="badge">2</span>
-          Dapibus ac facilisis in
-        </li>
-        <li class="list-group-item">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="badge">1</span>
-          Morbi leo risus
-        </li>
-      </ul>
-    </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;list-group&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-chevron-right&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>14<span class="nt">&lt;/span&gt;</span>
-    Cras justo odio
-  <span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span>
-</code></pre></div>
-
     <h3 id="list-group-linked">Linked list group</h3>
     <p>Linkify list group items by using anchor tags instead of list items (that also means a parent <code>&lt;div&gt;</code> instead of an <code>&lt;ul&gt;</code>). No need for individual parents around each element.</p>
     <div class="bs-example">
       <div class="list-group">
         <a href="#" class="list-group-item active">
           Cras justo odio
-          <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
         <a href="#" class="list-group-item">Dapibus ac facilisis in
-          <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
         <a href="#" class="list-group-item">Morbi leo risus
-          <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
         <a href="#" class="list-group-item">Porta ac consectetur ac
-          <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
         <a href="#" class="list-group-item">Vestibulum at eros
-          <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
       </div>
     </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;list-group&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item active&quot;</span><span class="nt">&gt;</span>
     Cras justo odio
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-chevron-right&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Dapibus ac facilisis in
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-chevron-right&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Morbi leo risus
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-chevron-right&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Porta ac consectetur ac
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-chevron-right&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Vestibulum at eros
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-chevron-right&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
@@ -3438,7 +3372,6 @@
   <p>Forked from <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a> and built with all the love in the world by <a href="https://github.com/todc" target="_blank">todc</a>.</p>
   <p>Updated to support v3.0.0 by <a href="https://github.com/acmetech" target="_blank">acmetech</a>.</p>
   <p>Code licensed under <a href="http://www.opensource.org/licenses/mit-license.php" target="_blank">MIT License</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-  <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
   <ul class="footer-links">
     <li><a href="http://blog.getbootstrap.com">Blog</a></li>
     <li class="muted">&middot;</li>
