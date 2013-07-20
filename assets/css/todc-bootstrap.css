@@ -142,6 +142,11 @@ table {
 .table-hover > tbody > tr:hover > th {
   background-color: #ffffcc;
 }
+.table > tbody > tr > td.active,
+.table > tbody > tr > th.active,
+.table > tbody > tr.active > td {
+  background-color: #ffffcc;
+}
 .table > tbody > tr > td.success,
 .table > tbody > tr > th.success,
 .table > tbody > tr.success > td {
@@ -1589,6 +1594,14 @@ input[type="color"].input-small {
   font-size: 12px;
   border-radius: 1px;
 }
+select.input-large {
+  height: 40px;
+  line-height: 40px;
+}
+select.input-small {
+  height: 24px;
+  line-height: 24px;
+}
 .has-warning .help-block,
 .has-warning .control-label {
   color: #333333;
@@ -2454,6 +2467,9 @@ fieldset[disabled] .btn-link:focus {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeee', endColorstr='#ffeeeeee', GradientType=0);
 }
+.dropdown-header {
+  color: #999999;
+}
 .dropdown-submenu {
   position: relative;
 }
@@ -2594,11 +2610,9 @@ li.list-group-item a > .glyphicon + .badge {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
 }
-li.nav-header,
 li.list-group-header {
   padding: 3px 15px;
 }
-.list-group .nav-header,
 .list-group .list-group-header {
   margin-top: 9px;
 }
@@ -2814,19 +2828,16 @@ li.list-group-header {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
-.nav-header {
-  font-size: 11px;
-  line-height: 1.5381;
-  color: #999999;
-}
 .navbar {
   min-height: 28px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: #2d2d2d;
   border: 1px solid #000000;
   border-radius: 2px;
 }
 .navbar-nav > li > a {
-  padding: 5px 15px 3px;
+  padding: 4px 15px;
   font-weight: bold;
   color: #999999;
   border-radius: 2px;
@@ -2853,7 +2864,7 @@ li.list-group-header {
   z-index: 1030;
 }
 .navbar-brand {
-  padding: 4px 15px 4px;
+  padding: 4px 15px;
   font-size: 14px;
   color: #999999;
 }
@@ -2871,8 +2882,10 @@ li.list-group-header {
 .navbar-toggle {
   top: 2px;
   right: 10px;
+  width: 34px;
+  height: 24px;
   padding: 4px 5px;
-  background-color: #444;
+  background-color: transparent;
   background-image: none;
   border: 1px solid #222;
   -webkit-box-shadow: none;
@@ -3193,7 +3206,7 @@ li.list-group-header {
   position: relative;
 }
 .navbar-toolbar .navbar-nav > li > a {
-  padding: 8px 15px 8px;
+  padding: 8px 15px;
   color: #777777;
   text-shadow: none;
 }
