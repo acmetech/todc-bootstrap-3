@@ -197,9 +197,6 @@
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="nt">&gt;</span>
 </code></pre></div>
 
-    <h3 id="overview-responsive-images">Responsive images</h3>
-    <p>We automatically attempt to scale images to appropriate sizes with a global <code>max-width: 100%;</code> on all <code>&lt;img&gt;</code> elements. If you run into problems (e.g., with Google Maps), be sure to disable this property on a per-case basis.</p>
-
     <h3 id="overview-type-links">Typography and links</h3>
     <p>Bootstrap sets basic global display, typography, and link styles. Specifically, we:</p>
     <ul>
@@ -1297,8 +1294,12 @@
     <form class="bs-example">
       <fieldset>
         <legend>Legend</legend>
-        <label for="exampleInput">Label name</label>
-        <input type="text" id="exampleInput" placeholder="Type something…">
+        <label for="exampleInputEmail">Email address</label>
+        <input type="text" id="exampleInputEmail" placeholder="Enter email">
+        <label for="exampleInputPassword">Password</label>
+        <input type="text" id="exampleInputPassword" placeholder="Password">
+        <label for="exampleInputFile">File input</label>
+        <input type="file" id="exampleInputFile">
         <p class="help-block">Example block-level help text here.</p>
         <div class="checkbox">
           <label>
