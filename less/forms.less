@@ -1,0 +1,332 @@
+//
+// Forms
+// --------------------------------------------------
+
+
+// Non-controls
+// -------------------------
+
+legend {
+  margin-bottom: @line-height-computed;
+  font-size: (@font-size-base * 1.5);
+  color: @gray-dark;
+}
+
+// Form controls
+// -------------------------
+
+// Shared size and type resets
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  min-height: @input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  padding: @padding-base-vertical @padding-base-horizontal;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  background-color: @input-bg;
+  border: 1px solid @input-border;
+  border-top-color: darken(@input-border, 10%);
+  border-radius: @input-border-radius;
+  .box-shadow(none);
+  .transition(none);
+
+  // Hover state
+  &:hover {
+    border: 1px solid #b9b9b9;
+    border-top-color: #a0a0a0;
+    .box-shadow(inset 0 1px 2px rgba(0,0,0,0.1));
+  }
+
+  // Focus state
+  &:focus {
+    outline: 0 \9;
+    border-color: @brand-primary;
+    .box-shadow(inset 0 1px 2px rgba(0,0,0,0.3));
+    .transition(none);
+  }
+
+  // Disabled and read-only inputs
+  // Note: HTML5 says that inputs under a fieldset > legend:first-child won't be
+  //   disabled if the fieldset is disabled. Due to implementation difficulty,
+  //   we don't honor that edge case; we style them as disabled anyway.
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    background-color: @input-bg-disabled;
+    border: 1px solid #e5e5e5;
+    &:hover,
+    &:focus,
+    &:active {
+      border: 1px solid #e5e5e5;
+      .box-shadow(none);
+    }
+  }
+  &[readonly] & {
+    border: 1px solid @input-border;
+    &:hover,
+    &:focus,
+    &:active {
+      border: 1px solid @input-border;
+    }
+  }
+}
+
+
+
+
+// Reset appearance properties for textual inputs and textarea
+// Declare width for legacy (can't be on input[type=*] selectors or it's too specific)
+// input,
+// textarea {
+//   width: 210px;
+// }
+
+// Reset height since textareas have rows
+textarea {
+  padding-right: 4px;
+}
+
+
+// CHECKBOXES & RADIOS
+// -------------------
+
+// Google style
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  background: white;
+  border: 1px solid #dcdcdc;
+  border-radius: 1px;
+  .box-sizing(border-box);
+  position: relative;
+
+  // override styles for IE
+  box-sizing: content-box e("\9");
+  width: 16px e("\9");
+  height: 16px e("\9");
+  border-width: 0 e("\9");
+}
+input[type="radio"] {
+  border-radius: 1em;
+  width: 15px;
+  height: 15px;
+}
+input[type="checkbox"]:hover {
+  border-color: #c6c6c6;
+  .box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.1));
+
+  // no box shadow for IE
+  box-shadow: none e("\9");
+}
+input[type="checkbox"]:active,
+input[type="radio"]:active {
+  border-color: #c6c6c6;
+  background-color: #ebebeb;
+  // override the bkgd color for IE
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffffffff', GradientType=0);
+}
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background: #fff;
+}
+input[type="checkbox"]:checked::after {
+  content: url(../img/checkmark.png);
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: -5px;
+}
+input[type="radio"]:checked::after {
+  content: '';
+  display: block;
+  position: relative;
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  background: #666;
+  border-radius: 1em;
+}
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  outline: none;
+  border-color: @brand-primary;
+}
+
+
+
+// INPUT SIZES
+// -----------
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  &.input-large {
+    min-height: @input-height-large;
+    padding: @padding-large-vertical @padding-large-horizontal;
+    font-size: @font-size-large;
+    border-radius: @border-radius-large;
+  }
+  &.input-small {
+    min-height: @input-height-small;
+    padding: @padding-small-vertical @padding-small-horizontal;
+    font-size: @font-size-small;
+    border-radius: @border-radius-small;
+  }
+}
+select {
+  &.input-large {
+    height: @input-height-large;
+    line-height: @input-height-large;
+  }
+  &.input-small {
+    height: @input-height-small;
+    line-height: @input-height-small;
+  }
+}
+
+
+
+// FORM FIELD FEEDBACK STATES
+// --------------------------
+
+// Warning
+.has-warning {
+  .form-field-validation(@state-warning-text, @state-warning-text, @state-warning-bg);
+}
+// Error
+.has-error {
+  .form-field-validation(#dd4b39, #dd4b39, @state-danger-bg);
+}
+// Success
+.has-success {
+  .form-field-validation(@state-success-text, @state-success-text, @state-success-bg);
+}
+
+
+
+
+// Input groups
+// --------------------------------------------------
+
+// Display as table-cell
+// -------------------------
+.input-group-addon,
+.input-group-btn,
+.input-group input {
+  margin: 0;
+  border-radius: 0;
+
+  &:not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+}
+
+// Text input groups
+// -------------------------
+.input-group-addon {
+  padding: @padding-base-vertical @padding-base-horizontal;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  background-color: @gray-lighter;
+  border: 1px solid @input-border;
+  border-top-color: darken(@input-border, 10%);
+  border-radius: @border-radius-base;
+
+  &.input-small {
+    padding: @padding-small-vertical @padding-small-horizontal;
+    font-size: @font-size-small;
+    border-radius: @border-radius-small;
+  }
+  &.input-large {
+    padding: @padding-large-vertical @padding-large-horizontal;
+    font-size: @font-size-large;
+    border-radius: @border-radius-large;
+  }
+}
+
+// Reset rounded corners
+.input-group input:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .dropdown-toggle,
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+  .border-right-radius(0);
+}
+.input-group-addon:first-child {
+  border-right: 0;
+}
+.input-group input:last-child,
+.input-group-addon:last-child,
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .dropdown-toggle,
+.input-group-btn:first-child > .btn:not(:first-child) {
+  .border-left-radius(0);
+}
+.input-group-addon:last-child {
+  border-left: 0;
+}
+
+// Button input groups
+// -------------------------
+
+.input-group-btn > .btn {
+  // Bring the "focus" button to the front
+  &:focus {
+    z-index: 2;
+  }
+}
+
+
+// Horizontal forms
+// --------------------------------------------------
+// Horizontal forms are built on grid classes.
+
+.form-horizontal {
+
+  // Increase spacing between groups
+  .control-group {
+    margin-bottom: @line-height-computed;
+  }
+
+  // Float the labels left
+  .control-group > .control-label {
+    width: (@component-offset-horizontal - 20);
+  }
+
+  // Move over all input controls and content over
+  .control-group > .controls {
+    margin-left: @component-offset-horizontal;
+  }
+
+}
