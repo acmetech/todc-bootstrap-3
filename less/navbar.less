@@ -85,24 +85,23 @@
 
 // Collapsible navbar toggle
 .navbar-toggle {
-  top: 2px;
+  top: floor((@navbar-height - 24) / 2);
   right: 10px;
   width: 34px;
   height: 24px;
   padding: 4px 5px;
-  // .navbar-vertical-align(26px); // Vertically center in navbar
-  // #gradient > .vertical(@start-color: #f5f5f5, @end-color: #f1f1f1);
   background-color: transparent;
   background-image: none;
-  border: 1px solid #222;
+  border: 1px solid @navbar-toggle-border-color;
+  border-radius: @border-radius-base;
   .box-shadow(none);
 
   &:hover,
   &:focus {
-    background-color: #333;
+    background-color: @navbar-toggle-hover-bg;
   }
   .icon-bar {
-    background-color: #fff;
+    background-color: @navbar-toggle-icon-bar-bg;
   }
 }
 
@@ -215,14 +214,14 @@
   // Darken the responsive nav toggle
   .navbar-toggle {
     background-color: transparent;
-    border: 1px solid #ddd;
+    border-color: @navbar-inverse-toggle-border-color;
 
     &:hover,
     &:focus {
-      background-color: #ddd;
+      background-color: @navbar-inverse-toggle-hover-bg;
     }
     .icon-bar {
-      background-color: #ccc;
+      background-color: @navbar-inverse-toggle-icon-bar-bg;
     }
   }
 
@@ -385,16 +384,16 @@
     right: 10px;
     padding: 8px 12px;
     background-color: transparent;
-    border: 1px solid #dcdcdc;
+    border: 1px solid @navbar-masthead-toggle-border-color;
 
     &:hover,
     &:focus {
-      background-color: #e4e4e4;
+      background-color: @navbar-masthead-toggle-hover-bg;
     }
 
     // Bars
     .icon-bar {
-      background-color: #ccc;
+      background-color: @navbar-masthead-toggle-icon-bar-bg;
     }
   }
 
@@ -472,13 +471,13 @@
     // Darken the responsive nav toggle
     .navbar-toggle {
       background-color: transparent;
-      border-color: #222;
+      border-color: @navbar-masthead-inverse-toggle-border-color;
       &:hover,
       &:focus {
-        background-color: #333;
+        background-color: @navbar-masthead-inverse-toggle-hover-bg;
       }
       .icon-bar {
-        background-color: #fff;
+        background-color: @navbar-masthead-inverse-toggle-icon-bar-bg;
       }
     }
 
@@ -684,16 +683,16 @@
     right: 10px;
     padding: 4px 6px;
     background-color: transparent;
-    border: 1px solid #dcdcdc;
+    border: 1px solid @navbar-toolbar-toggle-border-color;
 
     &:hover,
     &:focus {
-      background-color: #e4e4e4;
+      background-color: @navbar-toolbar-toggle-hover-bg;
     }
 
     // Bars
     .icon-bar {
-      background-color: #ccc;
+      background-color: @navbar-toolbar-toggle-icon-bar-bg;
     }
   }
 
@@ -802,13 +801,13 @@
     // Darken the responsive nav toggle
     .navbar-toggle {
       background-color: transparent;
-      border-color: #222;
+      border-color: @navbar-toolbar-inverse-toggle-border-color;
       &:hover,
       &:focus {
-        background-color: #333;
+        background-color: @navbar-toolbar-inverse-toggle-hover-bg;
       }
       .icon-bar {
-        background-color: #fff;
+        background-color: @navbar-toolbar-inverse-toggle-icon-bar-bg;
       }
     }
 
