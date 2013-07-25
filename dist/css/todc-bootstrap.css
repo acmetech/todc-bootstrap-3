@@ -94,7 +94,10 @@ table {
 .table > tfoot > tr > th.active,
 .table > thead > tr.active > td,
 .table > tbody > tr.active > td,
-.table > tfoot > tr.active > td {
+.table > tfoot > tr.active > td,
+.table > thead > tr.active > th,
+.table > tbody > tr.active > th,
+.table > tfoot > tr.active > th {
   background-color: #ffffcc;
 }
 .table > thead > tr > td.success,
@@ -105,7 +108,10 @@ table {
 .table > tfoot > tr > th.success,
 .table > thead > tr.success > td,
 .table > tbody > tr.success > td,
-.table > tfoot > tr.success > td {
+.table > tfoot > tr.success > td,
+.table > thead > tr.success > th,
+.table > tbody > tr.success > th,
+.table > tfoot > tr.success > th {
   background-color: #dff0d8;
 }
 .table > thead > tr > td.danger,
@@ -116,7 +122,10 @@ table {
 .table > tfoot > tr > th.danger,
 .table > thead > tr.danger > td,
 .table > tbody > tr.danger > td,
-.table > tfoot > tr.danger > td {
+.table > tfoot > tr.danger > td,
+.table > thead > tr.danger > th,
+.table > tbody > tr.danger > th,
+.table > tfoot > tr.danger > th {
   background-color: #f2dede;
 }
 .table > thead > tr > td.warning,
@@ -127,7 +136,10 @@ table {
 .table > tfoot > tr > th.warning,
 .table > thead > tr.warning > td,
 .table > tbody > tr.warning > td,
-.table > tfoot > tr.warning > td {
+.table > tfoot > tr.warning > td,
+.table > thead > tr.warning > th,
+.table > tbody > tr.warning > th,
+.table > tfoot > tr.warning > th {
   background-color: #f9edbe;
 }
 .table-hover > tbody > tr > td.success:hover,
@@ -2774,7 +2786,7 @@ li.list-group-header {
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  color: #fff;
+  color: #ffffff;
   background-color: #4d90fe;
 }
 .nav .caret {
@@ -2848,16 +2860,17 @@ li.list-group-header {
   padding: 4px 5px;
   background-color: transparent;
   background-image: none;
-  border: 1px solid #222;
+  border: 1px solid #222222;
+  border-radius: 2px;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 .navbar-toggle:hover,
 .navbar-toggle:focus {
-  background-color: #333;
+  background-color: #333333;
 }
 .navbar-toggle .icon-bar {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .navbar-form {
   margin-top: 1px;
@@ -2936,14 +2949,14 @@ li.list-group-header {
 }
 .navbar-inverse .navbar-toggle {
   background-color: transparent;
-  border: 1px solid #ddd;
+  border-color: #dddddd;
 }
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-  background-color: #ddd;
+  background-color: #dddddd;
 }
 .navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
@@ -3038,7 +3051,7 @@ li.list-group-header {
   background-color: #e4e4e4;
 }
 .navbar-masthead .navbar-toggle .icon-bar {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 .navbar-masthead .navbar-form {
   margin-top: 7px;
@@ -3095,14 +3108,14 @@ li.list-group-header {
 }
 .navbar-masthead.navbar-inverse .navbar-toggle {
   background-color: transparent;
-  border-color: #222;
+  border-color: #222222;
 }
 .navbar-masthead.navbar-inverse .navbar-toggle:hover,
 .navbar-masthead.navbar-inverse .navbar-toggle:focus {
-  background-color: #333;
+  background-color: #333333;
 }
 .navbar-masthead.navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .navbar-masthead.navbar-inverse .navbar-nav > li > a:hover,
 .navbar-masthead.navbar-inverse .navbar-nav > li > a:focus {
@@ -3264,7 +3277,7 @@ li.list-group-header {
   background-color: #e4e4e4;
 }
 .navbar-toolbar .navbar-toggle .icon-bar {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 .navbar-toolbar .navbar-form {
   margin-top: 3px;
@@ -3344,14 +3357,14 @@ li.list-group-header {
 }
 .navbar-toolbar.navbar-inverse .navbar-toggle {
   background-color: transparent;
-  border-color: #222;
+  border-color: #222222;
 }
 .navbar-toolbar.navbar-inverse .navbar-toggle:hover,
 .navbar-toolbar.navbar-inverse .navbar-toggle:focus {
-  background-color: #333;
+  background-color: #333333;
 }
 .navbar-toolbar.navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .navbar-toolbar.navbar-inverse .navbar-nav > li > a:hover,
 .navbar-toolbar.navbar-inverse .navbar-nav > li > a:focus {
