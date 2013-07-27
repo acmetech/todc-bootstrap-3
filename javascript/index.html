@@ -45,7 +45,7 @@
     <!-- Docs master nav -->
     <div class="navbar navbar-fixed-top bs-docs-nav">
   <div class="container">
-    <a href="/todc-bootstrap-3/" class="navbar-brand">TODC Bootstrap</a>
+    <a href="/todc-bootstrap-3/" class="navbar-brand">TODC Bootstrap RC1</a>
     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
@@ -66,13 +66,6 @@
           <a href="/todc-bootstrap-3/javascript">JavaScript</a>
         </li>
       </ul>
-      
-      <ul class="nav navbar-nav pull-right">
-        <li>
-          <a href="http://getbootstrap.com/2.3.2/">Looking for Bootstrap 2.3.2?</a>
-        </li>
-      </ul>
-      
     </div>
   </div>
 </div>
@@ -87,13 +80,24 @@
       </div>
     </div>
 
+    <!-- Callout for the old docs link -->
+    <div class="bs-old-docs">
+  <div class="container">
+    <strong>
+      <a href="/2.3.3/">Looking for Bootstrap 2.3.3 docs?</a>
+    </strong>
+    We've moved it to a new home while we push forward with Bootstrap 3. <a href="http://blog.getbootstrap.com/">Read the blog</a> for details.
+  </div>
+</div>
+
+
     <div class="container bs-docs-container">
       <div class="row">
         <div class="col-lg-3">
           <div class="bs-sidebar">
             <ul class="nav bs-sidenav">
               
-                 <li>
+                <li>
   <a href="#js-overview">Overview</a>
   <ul class="nav">
     <li><a href="#js-individual-compiled">Individual or compiled</a></li>
@@ -111,16 +115,76 @@
     <li><a href="#modals-usage">Usage</a></li>
   </ul>
 </li>
-<li><a href="#dropdowns">Dropdown</a></li>
-<li><a href="#scrollspy">Scrollspy</a></li>
-<li><a href="#tabs">Tab</a></li>
-<li><a href="#tooltips">Tooltip</a></li>
-<li><a href="#popovers">Popover</a></li>
-<li><a href="#js-alerts">Alert</a></li>
-<li><a href="#js-buttons">Button</a></li>
-<li><a href="#collapse">Collapse</a></li>
-<li><a href="#carousel">Carousel</a></li>
-<li><a href="#affix">Affix</a></li>
+<li>
+  <a href="#dropdowns">Dropdown</a>
+  <ul class="nav">
+    <li><a href="#dropdowns-examples">Examples</a></li>
+    <li><a href="#dropdowns-usage">Usage</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#scrollspy">Scrollspy</a>
+  <ul class="nav">
+    <li><a href="#scrollspy-examples">Examples</a></li>
+    <li><a href="#scrollspy-usage">Usage</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#tabs">Tab</a>
+  <ul class="nav">
+    <li><a href="#tabs-examples">Examples</a></li>
+    <li><a href="#tabs-usage">Usage</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#tooltips">Tooltip</a>
+  <ul class="nav">
+    <li><a href="#tooltips-examples">Examples</a></li>
+    <li><a href="#tooltips-usage">Usage</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#popovers">Popover</a>
+  <ul class="nav">
+    <li><a href="#popovers-examples">Examples</a></li>
+    <li><a href="#popovers-usage">Usage</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#alerts">Alert</a>
+  <ul class="nav">
+    <li><a href="#alerts-examples">Examples</a></li>
+    <li><a href="#alerts-usage">Usage</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#buttons">Button</a>
+  <ul class="nav">
+    <li><a href="#buttons-examples">Examples</a></li>
+    <li><a href="#buttons-usage">Usage</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#collapse">Collapse</a>
+  <ul class="nav">
+    <li><a href="#collapse-examples">Examples</a></li>
+    <li><a href="#collapse-usage">Usage</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#carousel">Carousel</a>
+  <ul class="nav">
+    <li><a href="#carousel-examples">Examples</a></li>
+    <li><a href="#carousel-usage">Usage</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#affix">Affix</a>
+  <ul class="nav">
+    <li><a href="#affix-examples">Examples</a></li>
+    <li><a href="#affix-usage">Usage</a></li>
+  </ul>
+</li>
 
               
             </ul>
@@ -458,7 +522,7 @@
           </div>
 
 
-          <h2>Examples</h2>
+          <h2 id="dropdowns-examples">Examples</h2>
           <p>Add dropdown menus to nearly anything with this simple plugin, including the navbar, tabs, and pills.</p>
 
           <h3>Within a navbar</h3>
@@ -552,7 +616,7 @@
           <hr class="bs-docs-separator">
 
 
-          <h2>Usage</h2>
+          <h2 id="dropdowns-usage">Usage</h2>
 
           <h3>Via data attributes</h3>
           <p>Add <code>data-toggle="dropdown"</code> to a link or button to toggle a dropdown.</p>
@@ -597,7 +661,7 @@
           </div>
 
 
-          <h2>Example in navbar</h2>
+          <h2 id="scrollspy-examples">Example in navbar</h2>
           <p>The ScrollSpy plugin is for automatically updating nav targets based on scroll position. Scroll the area below the navbar and watch the active class change. The dropdown sub items will be highlighted as well.</p>
           <div class="bs-example">
             <div id="navbar-example2" class="navbar navbar-static">
@@ -637,7 +701,7 @@
           </div><!-- /example -->
 
 
-          <h2>Usage</h2>
+          <h2 id="scrollspy-examples">Usage</h2>
 
           <h3>Via data attributes</h3>
           <p>To easily add scrollspy behavior to your topbar navigation, add <code>data-spy="scroll"</code> to the element you want to spy on (most typically this would be the <code>&lt;body&gt;</code>. Then add the <code>data-target</code> attribute with the ID or class of the parent element of any Bootstrap <code>.nav</code> component.</p>
@@ -717,7 +781,7 @@
           </div>
 
 
-          <h2>Example tabs</h2>
+          <h2 id="tabs-examples">Example tabs</h2>
           <p>Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus.</p>
           <div class="bs-example bs-example-tabs">
             <ul id="myTab" class="nav nav-tabs">
@@ -751,7 +815,7 @@
           <hr class="bs-docs-separator">
 
 
-          <h2>Usage</h2>
+          <h2 id="tabs-examples">Usage</h2>
           <p>Enable tabbable tabs via JavaScript (each tab needs to be activated individually):</p>
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myTab a&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
@@ -838,7 +902,7 @@
             <h1>Tooltips <small>tooltip.js</small></h1>
           </div>
 
-          <h2>Examples</h2>
+          <h2 id="tooltips-examples">Examples</h2>
           <p>Inspired by the excellent jQuery.tipsy plugin written by Jason Frame; Tooltips are an updated version, which don't rely on images, use CSS3 for animations, and data-attributes for local title storage.</p>
           <p>Hover over the links below to see tooltips:</p>
           <div class="bs-example tooltip-demo">
@@ -864,7 +928,7 @@
           <hr class="bs-docs-separator">
 
 
-          <h2>Usage</h2>
+          <h2 id="tooltips-examples">Usage</h2>
           <p>Trigger the tooltip via JavaScript:</p>
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#example&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
 </code></pre></div>
@@ -981,7 +1045,7 @@
           <h1>Popovers <small>popover.js</small></h1>
         </div>
 
-        <h2>Examples</h2>
+        <h2 id="popovers-examples">Examples</h2>
         <p>Add small overlays of content, like those on the iPad, to any element for housing secondary information. Hover over the button to trigger the popover.</p>
 
         <div class="bs-callout bs-callout-danger">
@@ -1050,7 +1114,7 @@
         <hr class="bs-docs-separator">
 
 
-        <h2>Usage</h2>
+        <h2 id="popovers-examples">Usage</h2>
         <p>Enable popovers via JavaScript:</p>
         <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#example&#39;</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
 </code></pre></div>
@@ -1166,13 +1230,13 @@
 
       <!-- Alert
       ================================================== -->
-      <div class="bs-docs-section" id="js-alerts">
+      <div class="bs-docs-section" id="alerts">
         <div class="page-header">
           <h1>Alert messages <small>alert.js</small></h1>
         </div>
 
 
-        <h2>Example alerts</h2>
+        <h2 id="alerts-examples">Example alerts</h2>
         <p>Add dismiss functionality to all alert messages with this plugin.</p>
         <div class="bs-example">
           <div class="alert fade in">
@@ -1196,7 +1260,7 @@
         <hr class="bs-docs-separator">
 
 
-        <h2>Usage</h2>
+        <h2 id="alerts-examples">Usage</h2>
         <p>Enable dismissal of an alert via JavaScript:</p>
         <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.alert&quot;</span><span class="p">).</span><span class="nx">alert</span><span class="p">()</span>
 </code></pre></div>
@@ -1252,7 +1316,7 @@
               <h1>Buttons <small>button.js</small></h1>
             </div>
 
-            <h2>Example uses</h2>
+            <h2 id="buttons-examples">Example uses</h2>
             <p>Do more with buttons. Control button states or create groups of buttons for more components like toolbars.</p>
 
             <h4>Stateful</h4>
@@ -1335,7 +1399,7 @@
             <hr class="bs-docs-separator">
 
 
-            <h2>Usage</h2>
+            <h2 id="buttons-examples">Usage</h2>
             <p>Enable buttons via JavaScript:</p>
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.nav-tabs&#39;</span><span class="p">).</span><span class="nx">button</span><span class="p">()</span>
 </code></pre></div>
@@ -1397,7 +1461,7 @@
               <p>Collapse requires the <a href="#transitions">transitions plugin</a> to be included in your version of Bootstrap.</p>
             </div>
 
-            <h2>Example accordion</h2>
+            <h2 id="collapse-examples">Example accordion</h2>
             <p>Using the collapse plugin, we built a simple accordion style widget:</p>
 
             <div class="bs-example">
@@ -1492,7 +1556,7 @@
             <hr class="bs-docs-separator">
 
 
-            <h2>Usage</h2>
+            <h2 id="collapse-examples">Usage</h2>
 
             <h3>Via data attributes</h3>
             <p>Just add <code>data-toggle="collapse"</code> and a <code>data-target</code> to element to automatically assign control of a collapsible element. The <code>data-target</code> attribute accepts a CSS selector to apply the collapse to. Be sure to add the class <code>collapse</code> to the collapsible element. If you'd like it to default open, add the additional class <code>in</code>.</p>
@@ -1594,7 +1658,7 @@
               <h1>Carousel <small>carousel.js</small></h1>
             </div>
 
-            <h2>Examples</h2>
+            <h2 id="carousel-examples">Examples</h2>
             <p>The slideshow below shows a generic plugin and component for cycling through elements like a carousel.</p>
             <div class="bs-example">
               <div id="carousel-example-generic" class="carousel slide bs-docs-carousel-example">
@@ -1709,7 +1773,7 @@
             <hr class="bs-docs-separator">
 
 
-            <h2>Usage</h2>
+            <h2 id="carousel-examples">Usage</h2>
 
             <h3>Via data attributes</h3>
             <p>Use data attributes to easily control the position of the carousel. <code>data-slide</code> accepts the keywords <code>prev</code> or <code>next</code>, which alters the slide position relative to its current position. Alternatively, use <code>data-slide-to</code> to pass a raw slide index to the carousel <code>data-slide-to="2"</code>, which shifts the slide position to a particular index beginning with <code>0</code>.</p>
@@ -1806,12 +1870,12 @@
               <h1>Affix <small>affix.js</small></h1>
             </div>
 
-            <h2>Example</h2>
+            <h2 id="affix-examples">Example</h2>
             <p>The subnavigation on the left is a live demo of the affix plugin.</p>
 
             <hr class="bs-docs-separator">
 
-            <h2>Usage</h2>
+            <h2 id="affix-examples">Usage</h2>
 
             <h3>Via data attributes</h3>
             <p>To easily add affix behavior to any element, just add <code>data-spy="affix"</code> to the element you want to spy on. Then use offsets to define when to toggle the pinning of an element on and off.</p>
@@ -1820,22 +1884,25 @@
 </code></pre></div>
 
             <div class="bs-callout bs-callout-warning">
-              <h4>Requires positioning</h4>
-              <p>You must manage the position of a pinned element and the behavior of its immediate parent. Position is controlled by <code>affix</code>, <code>affix-top</code>, and <code>affix-bottom</code>. Remember to check for a potentially collapsed parent when the affix kicks in as it's removing content from the normal flow of the page.</p>
+              <h4>Requires independent styling ;)</h4>
+              <p>
+                Affix toggles between three states/classes: <code>affix</code>, <code>affix-top</code>, and <code>affix-bottom</code>. You must provide the styles for these classes yourself (independent of this plugin).
+                The <code>affix-top</code> class should be in the regular flow of the document. The <code>affix</code> class should be fixed to the page. And <code>affix-bottom</code> should be positioned absolute. Note, <code>affix-bottom</code> is special in that the plugin will place the element with js relative to the <code>offset: { bottom: number }</code> option you've provided.
+              </p>
             </div>
 
             <h3>Via JavaScript</h3>
             <p>Call the affix plugin via JavaScript:</p>
-<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#navbar&#39;</span><span class="p">).</span><span class="nx">affix</span><span class="p">()</span>
+<div class="highlight"><pre><code class="js">  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myAffix&#39;</span><span class="p">).</span><span class="nx">affix</span><span class="p">({</span>
+    <span class="nx">offset</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">top</span><span class="o">:</span> <span class="mi">100</span>
+    <span class="p">,</span> <span class="nx">bottom</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">bottom</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.bs-footer&#39;</span><span class="p">).</span><span class="nx">outerHeight</span><span class="p">(</span><span class="kc">true</span><span class="p">))</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">})</span>
 </code></pre></div>
 
-            <h3>Methods</h3>
-            <h4>.affix('refresh')</h4>
-            <p>When using affix in conjunction with adding or removing of elements from the DOM, you'll want to call the refresh method:</p>
-<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[data-spy=&quot;affix&quot;]&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">affix</span><span class="p">(</span><span class="s1">&#39;refresh&#39;</span><span class="p">)</span>
-<span class="p">});</span>
-</code></pre></div>
 
           <h3>Options</h3>
           <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-offset-top="200"</code>.</p>
@@ -1854,7 +1921,7 @@
                <td>offset</td>
                <td>number | function | object</td>
                <td>10</td>
-               <td>Pixels to offset from screen when calculating position of scroll. If a single number is provided, the offset will be applied in both top and left directions. To listen for a single direction, or multiple unique offsets, just provide an object <code>offset: { x: 10 }</code>. Use a function when you need to dynamically provide an offset (useful for some responsive designs).</td>
+               <td>Pixels to offset from screen when calculating position of scroll. If a single number is provided, the offset will be applied in both top and left directions. To provide a unique, bottom and top offset just provide an object <code>offset: { top: 10 }</code> or <code>offset: { top: 10, bottom: 5 }</code>. Use a function when you need to dynamically calculate an offset.</td>
              </tr>
             </tbody>
           </table>
@@ -1863,12 +1930,12 @@
         </div>
       </div>
 
-      <!-- Quick back to top -->
-      <a href="#" class="bs-top">
-        Back to top
-      </a>
-
     </div>
+
+    <!-- Quick back to top -->
+    <a href="#" class="bs-top">
+      Back to top
+    </a>
 
     <!-- Footer
     ================================================== -->
@@ -1899,7 +1966,7 @@
         <li class="muted">&middot;</li>
         <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Issues</a></li>
         <li class="muted">&middot;</li>
-        <li><a href="https://github.com/twbs/bootstrap/blob/master/CHANGELOG.md">Changelog</a></li>
+        <li><a href="https://github.com/twbs/bootstrap/releases">Releases</a></li>
       </ul>
     </footer>
 
