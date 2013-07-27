@@ -9,18 +9,16 @@
 
 <title>
   
-    JavaScript plugins &middot; TODC Bootstrap
+    JavaScript &middot; TODC Bootstrap
   
 </title>
 
 <!-- Bootstrap core CSS -->
-<link href="/todc-bootstrap-3/dist/css/bootstrap.css" rel="stylesheet">
-
+<link href="../dist/css/bootstrap.css" rel="stylesheet">
 
 <!-- Documentation extras -->
-<link href="/todc-bootstrap-3/assets/css/docs.css" rel="stylesheet">
-<link href="/todc-bootstrap-3/assets/css/pygments-manni.css" rel="stylesheet">
-
+<link href="../assets/css/docs.css" rel="stylesheet">
+<link href="../assets/css/pygments-manni.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -29,14 +27,14 @@
 <![endif]-->
 
 <!-- Favicons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/todc-bootstrap-3/assets/ico/apple-touch-icon-144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/todc-bootstrap-3/assets/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/todc-bootstrap-3/assets/ico/apple-touch-icon-72-precomposed.png">
-                <link rel="apple-touch-icon-precomposed" href="/todc-bootstrap-3/assets/ico/apple-touch-icon-57-precomposed.png">
-                               <link rel="shortcut icon" href="/todc-bootstrap-3/assets/ico/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                               <link rel="shortcut icon" href="../assets/ico/favicon.png">
 
-<link href="/todc-bootstrap-3/dist/css/todc-bootstrap.css" rel="stylesheet"></head>
-<link href="/todc-bootstrap-3/assets/css/select2.css" rel="stylesheet">
+<link href="../dist/css/todc-bootstrap.css" rel="stylesheet"></head>
+<link href="../assets/css/select2.css" rel="stylesheet">
 
     <!-- Place anything custom after this. -->
   </head>
@@ -45,7 +43,7 @@
     <!-- Docs master nav -->
     <div class="navbar navbar-fixed-top bs-docs-nav">
   <div class="container">
-    <a href="/todc-bootstrap-3/" class="navbar-brand">TODC Bootstrap RC1</a>
+    <a href="../" class="navbar-brand">TODC Bootstrap RC1</a>
     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
@@ -54,16 +52,16 @@
     <div class="nav-collapse collapse bs-navbar-collapse">
       <ul class="nav navbar-nav">
         <li>
-          <a href="/todc-bootstrap-3/getting-started">Getting started</a>
+          <a href="../getting-started">Getting started</a>
         </li>
         <li>
-          <a href="/todc-bootstrap-3/css">CSS</a>
+          <a href="../css">CSS</a>
         </li>
         <li>
-          <a href="/todc-bootstrap-3/components">Components</a>
+          <a href="../components">Components</a>
         </li>
         <li class="active">
-          <a href="/todc-bootstrap-3/javascript">JavaScript</a>
+          <a href="../javascript">JavaScript</a>
         </li>
       </ul>
     </div>
@@ -74,9 +72,9 @@
     <!-- Docs page layout -->
     <div class="bs-header">
       <div class="container">
-        <h1>JavaScript plugins</h1>
+        <h1>JavaScript</h1>
         <p>Bring Bootstrap's components to life with over a dozen custom jQuery plugins. Easily include them all, or one by one.</p>
-        
+        <div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/32341/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
       </div>
     </div>
 
@@ -84,7 +82,7 @@
     <div class="bs-old-docs">
   <div class="container">
     <strong>
-      <a href="/2.3.3/">Looking for Bootstrap 2.3.3 docs?</a>
+      <a href="../2.3.2/">Looking for Bootstrap 2.3.2 docs?</a>
     </strong>
     We've moved it to a new home while we push forward with Bootstrap 3. <a href="http://blog.getbootstrap.com/">Read the blog</a> for details.
   </div>
@@ -199,7 +197,7 @@
     </div>
 
     <h3 id="js-individual-compiled">Individual or compiled</h3>
-    <p>Plugins can be included individually (using <code>bootstrap-*.js</code> original files, or all at once (using <code>bootstrap.js</code> or the minified <code>bootstrap.min.js</code>.</p>
+    <p>Plugins can be included individually (using bootstrap's individual <code>*.js</code> files, or all at once (using <code>bootstrap.js</code> or the minified <code>bootstrap.min.js</code>.</p>
 
     <div class="bs-callout bs-callout-danger">
       <h4>Do not attempt to include both.</h4>
@@ -266,16 +264,8 @@
     </div>
     <h3>About transitions</h3>
     <p>For simple transition effects, include <code>transition.js</code> once alongside the other JS files. If you're using the compiled (or minified) <code>bootstrap.js</code>, there is no need to include this&mdash;it's already there.</p>
-    <h3>Use cases</h3>
-    <p>A few examples of the transition plugin:</p>
-    <ul>
-      <li>Sliding or fading in modals</li>
-      <li>Fading out tabs</li>
-      <li>Fading out alerts</li>
-      <li>Sliding carousel panes</li>
-    </ul>
-
-    <!-- Ideas: include docs for .fade.in, .slide.in, etc -->
+    <h3>What's inside</h3>
+    <p>Transition.js is a basic helper for transitionEnd events as well as a css transition emulator. It's used by the other plugins to check for css transition support and to catch hanging transitions.</p>
   </div>
 
 
@@ -413,44 +403,46 @@
 
     <h3>Options</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.</p>
-    <table class="table table-bordered table-striped">
-      <thead>
-       <tr>
-         <th style="width: 100px;">Name</th>
-         <th style="width: 50px;">type</th>
-         <th style="width: 50px;">default</th>
-         <th>description</th>
-       </tr>
-      </thead>
-      <tbody>
-       <tr>
-         <td>backdrop</td>
-         <td>boolean</td>
-         <td>true</td>
-         <td>Includes a modal-backdrop element. Alternatively, specify <code>static</code> for a backdrop which doesn't close the modal on click.</td>
-       </tr>
-       <tr>
-         <td>keyboard</td>
-         <td>boolean</td>
-         <td>true</td>
-         <td>Closes the modal when escape key is pressed</td>
-       </tr>
-       <tr>
-         <td>show</td>
-         <td>boolean</td>
-         <td>true</td>
-         <td>Shows the modal when initialized.</td>
-       </tr>
-       <tr>
-         <td>remote</td>
-         <td>path</td>
-         <td>false</td>
-         <td><p>If a remote URL is provided, content will be loaded via jQuery's <code>load</code> method and injected into the <code>.modal-body</code>. If you're using the data api, you may alternatively use the <code>href</code> tag to specify the remote source. An example of this is shown below:</p>
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped">
+        <thead>
+         <tr>
+           <th style="width: 100px;">Name</th>
+           <th style="width: 50px;">type</th>
+           <th style="width: 50px;">default</th>
+           <th>description</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td>backdrop</td>
+           <td>boolean</td>
+           <td>true</td>
+           <td>Includes a modal-backdrop element. Alternatively, specify <code>static</code> for a backdrop which doesn't close the modal on click.</td>
+         </tr>
+         <tr>
+           <td>keyboard</td>
+           <td>boolean</td>
+           <td>true</td>
+           <td>Closes the modal when escape key is pressed</td>
+         </tr>
+         <tr>
+           <td>show</td>
+           <td>boolean</td>
+           <td>true</td>
+           <td>Shows the modal when initialized.</td>
+         </tr>
+         <tr>
+           <td>remote</td>
+           <td>path</td>
+           <td>false</td>
+           <td><p>If a remote URL is provided, content will be loaded via jQuery's <code>load</code> method and injected into the <code>.modal-body</code>. If you're using the data api, you may alternatively use the <code>href</code> tag to specify the remote source. An example of this is shown below:</p>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">&quot;modal&quot;</span> <span class="na">href=</span><span class="s">&quot;remote.html&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#modal&quot;</span><span class="nt">&gt;</span>Click me<span class="nt">&lt;/a&gt;</span>
 </code></pre></div>
-       </tr>
-      </tbody>
-    </table>
+         </tr>
+        </tbody>
+      </table>
+    </div><!-- /.bs-table-scrollable -->
 
     <h3>Methods</h3>
 
@@ -478,32 +470,34 @@
 
     <h3>Events</h3>
     <p>Bootstrap's modal class exposes a few events for hooking into modal functionality.</p>
-    <table class="table table-bordered table-striped">
-      <thead>
-       <tr>
-         <th style="width: 150px;">Event Type</th>
-         <th>Description</th>
-       </tr>
-      </thead>
-      <tbody>
-       <tr>
-         <td>show</td>
-         <td>This event fires immediately when the <code>show</code> instance method is called.</td>
-       </tr>
-       <tr>
-         <td>shown</td>
-         <td>This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete).</td>
-       </tr>
-       <tr>
-         <td>hide</td>
-         <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
-       </tr>
-       <tr>
-         <td>hidden</td>
-         <td>This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete).</td>
-       </tr>
-      </tbody>
-    </table>
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped">
+        <thead>
+         <tr>
+           <th style="width: 150px;">Event Type</th>
+           <th>Description</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td>show</td>
+           <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+         </tr>
+         <tr>
+           <td>shown</td>
+           <td>This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete).</td>
+         </tr>
+         <tr>
+           <td>hide</td>
+           <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+         </tr>
+         <tr>
+           <td>hidden</td>
+           <td>This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+         </tr>
+        </tbody>
+      </table>
+    </div><!-- /.bs-table-scrollable -->
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;hidden.bs.modal&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something…</span>
 <span class="p">})</span>
@@ -725,40 +719,44 @@
 
     <h3>Options</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-offset=""</code>.</p>
-    <table class="table table-bordered table-striped">
-      <thead>
-       <tr>
-         <th style="width: 100px;">Name</th>
-         <th style="width: 100px;">type</th>
-         <th style="width: 50px;">default</th>
-         <th>description</th>
-       </tr>
-      </thead>
-      <tbody>
-       <tr>
-         <td>offset</td>
-         <td>number</td>
-         <td>10</td>
-         <td>Pixels to offset from top when calculating position of scroll.</td>
-       </tr>
-      </tbody>
-    </table>
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped">
+        <thead>
+         <tr>
+           <th style="width: 100px;">Name</th>
+           <th style="width: 100px;">type</th>
+           <th style="width: 50px;">default</th>
+           <th>description</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td>offset</td>
+           <td>number</td>
+           <td>10</td>
+           <td>Pixels to offset from top when calculating position of scroll.</td>
+         </tr>
+        </tbody>
+      </table>
+    </div><!-- ./bs-table-scrollable -->
 
     <h3>Events</h3>
-    <table class="table table-bordered table-striped">
-      <thead>
-       <tr>
-         <th style="width: 150px;">Event Type</th>
-         <th>Description</th>
-       </tr>
-      </thead>
-      <tbody>
-       <tr>
-         <td>activate</td>
-         <td>This event fires whenever a new item becomes activated by the scrollspy.</td>
-      </tr>
-      </tbody>
-    </table>
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped">
+        <thead>
+         <tr>
+           <th style="width: 150px;">Event Type</th>
+           <th>Description</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td>activate</td>
+           <td>This event fires whenever a new item becomes activated by the scrollspy.</td>
+        </tr>
+        </tbody>
+      </table>
+    </div><!-- ./bs-table-scrollable -->
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myScrollspy&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;activate.bs.scrollspy&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something…</span>
 <span class="p">})</span>
@@ -859,24 +857,26 @@
 </code></pre></div>
 
     <h3>Events</h3>
-    <table class="table table-bordered table-striped">
-      <thead>
-       <tr>
-         <th style="width: 150px;">Event Type</th>
-         <th>Description</th>
-       </tr>
-      </thead>
-      <tbody>
-       <tr>
-         <td>show</td>
-         <td>This event fires on tab show, but before the new tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
-      </tr>
-      <tr>
-         <td>shown</td>
-         <td>This event fires on tab show after a tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
-       </tr>
-      </tbody>
-    </table>
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped">
+        <thead>
+         <tr>
+           <th style="width: 150px;">Event Type</th>
+           <th>Description</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td>show</td>
+           <td>This event fires on tab show, but before the new tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+        </tr>
+        <tr>
+           <td>shown</td>
+           <td>This event fires on tab show after a tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+         </tr>
+        </tbody>
+      </table>
+    </div><!-- /.bs-table-scrollable -->
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;a[data-toggle=&quot;tab&quot;]&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;shown.bs.tab&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">e</span><span class="p">.</span><span class="nx">target</span> <span class="c1">// activated tab</span>
   <span class="nx">e</span><span class="p">.</span><span class="nx">relatedTarget</span> <span class="c1">// previous tab</span>
@@ -924,72 +924,74 @@
 
     <h3>Options</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-animation=""</code>.</p>
-    <table class="table table-bordered table-striped">
-      <thead>
-       <tr>
-         <th style="width: 100px;">Name</th>
-         <th style="width: 100px;">type</th>
-         <th style="width: 50px;">default</th>
-         <th>description</th>
-       </tr>
-      </thead>
-      <tbody>
-       <tr>
-         <td>animation</td>
-         <td>boolean</td>
-         <td>true</td>
-         <td>apply a CSS fade transition to the tooltip</td>
-       </tr>
-       <tr>
-         <td>html</td>
-         <td>boolean</td>
-         <td>false</td>
-         <td>Insert HTML into the tooltip. If false, jQuery's <code>text</code> method will be used to insert content into the DOM. Use text if you're worried about XSS attacks.</td>
-       </tr>
-       <tr>
-         <td>placement</td>
-         <td>string | function</td>
-         <td>'top'</td>
-         <td>how to position the tooltip - top | bottom | left | right | auto. <br> When "auto" is specified, it will dynamically reorient the tooltip. For example, if placment is "auto left", the tooltip will display to the left when possible, otherwise it will display right.</td>
-       </tr>
-       <tr>
-         <td>selector</td>
-         <td>string</td>
-         <td>false</td>
-         <td>If a selector is provided, tooltip objects will be delegated to the specified targets.</td>
-       </tr>
-       <tr>
-         <td>title</td>
-         <td>string | function</td>
-         <td>''</td>
-         <td>default title value if <code>title</code> tag isn't present</td>
-       </tr>
-       <tr>
-         <td>trigger</td>
-         <td>string</td>
-         <td>'hover focus'</td>
-         <td>how tooltip is triggered - click | hover | focus | manual. You may pass multiple triggers; separate them with a space.</td>
-       </tr>
-       <tr>
-         <td>delay</td>
-         <td>number | object</td>
-         <td>0</td>
-         <td>
-          <p>delay showing and hiding the tooltip (ms) - does not apply to manual trigger type</p>
-          <p>If a number is supplied, delay is applied to both hide/show</p>
-          <p>Object structure is: <code>delay: { show: 500, hide: 100 }</code></p>
-         </td>
-       </tr>
-       <tr>
-         <td>container</td>
-         <td>string | false</td>
-         <td>false</td>
-         <td>
-          <p>Appends the tooltip to a specific element. Example: <code>container: 'body'</code></p>
-         </td>
-       </tr>
-      </tbody>
-    </table>
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped">
+        <thead>
+         <tr>
+           <th style="width: 100px;">Name</th>
+           <th style="width: 100px;">type</th>
+           <th style="width: 50px;">default</th>
+           <th>description</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td>animation</td>
+           <td>boolean</td>
+           <td>true</td>
+           <td>apply a CSS fade transition to the tooltip</td>
+         </tr>
+         <tr>
+           <td>html</td>
+           <td>boolean</td>
+           <td>false</td>
+           <td>Insert HTML into the tooltip. If false, jQuery's <code>text</code> method will be used to insert content into the DOM. Use text if you're worried about XSS attacks.</td>
+         </tr>
+         <tr>
+           <td>placement</td>
+           <td>string | function</td>
+           <td>'top'</td>
+           <td>how to position the tooltip - top | bottom | left | right | auto. <br> When "auto" is specified, it will dynamically reorient the tooltip. For example, if placement is "auto left", the tooltip will display to the left when possible, otherwise it will display right.</td>
+         </tr>
+         <tr>
+           <td>selector</td>
+           <td>string</td>
+           <td>false</td>
+           <td>If a selector is provided, tooltip objects will be delegated to the specified targets.</td>
+         </tr>
+         <tr>
+           <td>title</td>
+           <td>string | function</td>
+           <td>''</td>
+           <td>default title value if <code>title</code> tag isn't present</td>
+         </tr>
+         <tr>
+           <td>trigger</td>
+           <td>string</td>
+           <td>'hover focus'</td>
+           <td>how tooltip is triggered - click | hover | focus | manual. You may pass multiple triggers; separate them with a space.</td>
+         </tr>
+         <tr>
+           <td>delay</td>
+           <td>number | object</td>
+           <td>0</td>
+           <td>
+            <p>delay showing and hiding the tooltip (ms) - does not apply to manual trigger type</p>
+            <p>If a number is supplied, delay is applied to both hide/show</p>
+            <p>Object structure is: <code>delay: { show: 500, hide: 100 }</code></p>
+           </td>
+         </tr>
+         <tr>
+           <td>container</td>
+           <td>string | false</td>
+           <td>false</td>
+           <td>
+            <p>Appends the tooltip to a specific element. Example: <code>container: 'body'</code></p>
+           </td>
+         </tr>
+        </tbody>
+      </table>
+    </div><!-- /.bs-table-scrollable -->
     <div class="bs-callout bs-callout-info">
       <h4>Data attributes for individual tooltips</h4>
       <p>Options for individual tooltips can alternatively be specified through the use of data attributes, as explained above.</p>
@@ -1023,9 +1025,41 @@
     <p>Hides and destroys an element's tooltip.</p>
     <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;destroy&#39;</span><span class="p">)</span>
 </code></pre></div>
+
+    <h3>Events</h3>
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped">
+        <thead>
+         <tr>
+           <th style="width: 150px;">Event Type</th>
+           <th>Description</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td>show</td>
+           <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+         </tr>
+         <tr>
+           <td>shown</td>
+           <td>This event is fired when the tooltip has been made visible to the user (will wait for CSS transitions to complete).</td>
+         </tr>
+         <tr>
+           <td>hide</td>
+           <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+         </tr>
+         <tr>
+           <td>hidden</td>
+           <td>This event is fired when the tooltip has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+         </tr>
+        </tbody>
+      </table>
+    </div><!-- /.bs-table-scrollable -->
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myTooltip&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;hidden.bs.tooltip&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="c1">// do something…</span>
+<span class="p">})</span>
+</code></pre></div>
   </div>
-
-
 
   <!-- Popovers
   ================================================== -->
@@ -1035,7 +1069,7 @@
     </div>
 
     <h2 id="popovers-examples">Examples</h2>
-    <p>Add small overlays of content, like those on the iPad, to any element for housing secondary information. Hover over the button to trigger the popover.</p>
+    <p>Add small overlays of content, like those on the iPad, to any element for housing secondary information.</p>
 
     <div class="bs-callout bs-callout-danger">
       <h4>Plugin dependency</h4>
@@ -1115,78 +1149,80 @@
 
     <h3>Options</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-animation=""</code>.</p>
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th style="width: 100px;">Name</th>
-          <th style="width: 100px;">type</th>
-          <th style="width: 50px;">default</th>
-          <th>description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>animation</td>
-          <td>boolean</td>
-          <td>true</td>
-          <td>apply a CSS fade transition to the tooltip</td>
-        </tr>
-        <tr>
-          <td>html</td>
-          <td>boolean</td>
-          <td>false</td>
-          <td>Insert HTML into the popover. If false, jQuery's <code>text</code> method will be used to insert content into the DOM. Use text if you're worried about XSS attacks.</td>
-        </tr>
-        <tr>
-          <td>placement</td>
-          <td>string | function</td>
-          <td>'right'</td>
-          <td>how to position the popover - top | bottom | left | right | auto.<br> When "auto" is specified, it will dynamically reorient the popover. For example, if placment is "auto left", the tooltip will display to the left when possible, otherwise it will display right.</td>
-        </tr>
-        <tr>
-          <td>selector</td>
-          <td>string</td>
-          <td>false</td>
-          <td>if a selector is provided, tooltip objects will be delegated to the specified targets if a selector is provided, tooltip objects will be delegated to the specified targets. in practice, this is used to enable dynamic HTML content to have popovers added. See <a href="https://github.com/twbs/bootstrap/issues/4215">this</a> and <a href="http://jsfiddle.net/KPeKS/4/">an informative example</a>.</td>
-        </tr>
-        <tr>
-          <td>trigger</td>
-          <td>string</td>
-          <td>'click'</td>
-          <td>how popover is triggered - click | hover | focus | manual</td>
-        </tr>
-        <tr>
-          <td>title</td>
-          <td>string | function</td>
-          <td>''</td>
-          <td>default title value if <code>title</code> attribute isn't present</td>
-        </tr>
-        <tr>
-          <td>content</td>
-          <td>string | function</td>
-          <td>''</td>
-          <td>default content value if <code>data-content</code> attribute isn't present</td>
-        </tr>
-        <tr>
-          <td>delay</td>
-          <td>number | object</td>
-          <td>0</td>
-          <td>
-           <p>delay showing and hiding the popover (ms) - does not apply to manual trigger type</p>
-           <p>If a number is supplied, delay is applied to both hide/show</p>
-           <p>Object structure is: <code>delay: { show: 500, hide: 100 }</code></p>
-          </td>
-        </tr>
-        <tr>
-          <td>container</td>
-          <td>string | false</td>
-          <td>false</td>
-          <td>
-           <p>Appends the popover to a specific element. Example: <code>container: 'body'</code></p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th style="width: 100px;">Name</th>
+            <th style="width: 100px;">type</th>
+            <th style="width: 50px;">default</th>
+            <th>description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>animation</td>
+            <td>boolean</td>
+            <td>true</td>
+            <td>apply a CSS fade transition to the tooltip</td>
+          </tr>
+          <tr>
+            <td>html</td>
+            <td>boolean</td>
+            <td>false</td>
+            <td>Insert HTML into the popover. If false, jQuery's <code>text</code> method will be used to insert content into the DOM. Use text if you're worried about XSS attacks.</td>
+          </tr>
+          <tr>
+            <td>placement</td>
+            <td>string | function</td>
+            <td>'right'</td>
+            <td>how to position the popover - top | bottom | left | right | auto.<br> When "auto" is specified, it will dynamically reorient the popover. For example, if placement is "auto left", the tooltip will display to the left when possible, otherwise it will display right.</td>
+          </tr>
+          <tr>
+            <td>selector</td>
+            <td>string</td>
+            <td>false</td>
+            <td>if a selector is provided, tooltip objects will be delegated to the specified targets if a selector is provided, tooltip objects will be delegated to the specified targets. in practice, this is used to enable dynamic HTML content to have popovers added. See <a href="https://github.com/twbs/bootstrap/issues/4215">this</a> and <a href="http://jsfiddle.net/KPeKS/4/">an informative example</a>.</td>
+          </tr>
+          <tr>
+            <td>trigger</td>
+            <td>string</td>
+            <td>'click'</td>
+            <td>how popover is triggered - click | hover | focus | manual</td>
+          </tr>
+          <tr>
+            <td>title</td>
+            <td>string | function</td>
+            <td>''</td>
+            <td>default title value if <code>title</code> attribute isn't present</td>
+          </tr>
+          <tr>
+            <td>content</td>
+            <td>string | function</td>
+            <td>''</td>
+            <td>default content value if <code>data-content</code> attribute isn't present</td>
+          </tr>
+          <tr>
+            <td>delay</td>
+            <td>number | object</td>
+            <td>0</td>
+            <td>
+             <p>delay showing and hiding the popover (ms) - does not apply to manual trigger type</p>
+             <p>If a number is supplied, delay is applied to both hide/show</p>
+             <p>Object structure is: <code>delay: { show: 500, hide: 100 }</code></p>
+            </td>
+          </tr>
+          <tr>
+            <td>container</td>
+            <td>string | false</td>
+            <td>false</td>
+            <td>
+             <p>Appends the popover to a specific element. Example: <code>container: 'body'</code></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!-- /.bs-table-scrollable -->
     <div class="bs-callout bs-callout-info">
       <h4>Data attributes for individual popovers</h4>
       <p>Options for individual popovers can alternatively be specified through the use of data attributes, as explained above.</p>
@@ -1218,9 +1254,40 @@
     <p>Hides and destroys an element's popover.</p>
     <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">&#39;destroy&#39;</span><span class="p">)</span>
 </code></pre></div>
+    <h3>Events</h3>
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped">
+        <thead>
+         <tr>
+           <th style="width: 150px;">Event Type</th>
+           <th>Description</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td>show</td>
+           <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+         </tr>
+         <tr>
+           <td>shown</td>
+           <td>This event is fired when the popover has been made visible to the user (will wait for CSS transitions to complete).</td>
+         </tr>
+         <tr>
+           <td>hide</td>
+           <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+         </tr>
+         <tr>
+           <td>hidden</td>
+           <td>This event is fired when the popover has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+         </tr>
+        </tbody>
+      </table>
+    </div><!-- /.bs-table-scrollable -->
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myPopover&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;hidden.bs.popover&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// do something…</span>
+<span class="p">})</span>
+</code></pre></div>
   </div>
-
-
 
   <!-- Alert
   ================================================== -->
@@ -1274,24 +1341,26 @@
 
     <h3>Events</h3>
     <p>Bootstrap's alert class exposes a few events for hooking into alert functionality.</p>
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th style="width: 150px;">Event Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>close</td>
-          <td>This event fires immediately when the <code>close</code> instance method is called.</td>
-        </tr>
-        <tr>
-          <td>closed</td>
-          <td>This event is fired when the alert has been closed (will wait for CSS transitions to complete).</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th style="width: 150px;">Event Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>close</td>
+            <td>This event fires immediately when the <code>close</code> instance method is called.</td>
+          </tr>
+          <tr>
+            <td>closed</td>
+            <td>This event is fired when the alert has been closed (will wait for CSS transitions to complete).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!-- /.bs-table-scrollable -->
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#my-alert&#39;</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;closed.bs.alert&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something…</span>
 <span class="p">})</span>
@@ -1554,31 +1623,32 @@
 
     <h3>Options</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-parent=""</code>.</p>
-    <table class="table table-bordered table-striped">
-      <thead>
-       <tr>
-         <th style="width: 100px;">Name</th>
-         <th style="width: 50px;">type</th>
-         <th style="width: 50px;">default</th>
-         <th>description</th>
-       </tr>
-      </thead>
-      <tbody>
-       <tr>
-         <td>parent</td>
-         <td>selector</td>
-         <td>false</td>
-         <td>If selector then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior)</td>
-       </tr>
-       <tr>
-         <td>toggle</td>
-         <td>boolean</td>
-         <td>true</td>
-         <td>Toggles the collapsible element on invocation</td>
-       </tr>
-      </tbody>
-    </table>
-
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped">
+        <thead>
+         <tr>
+           <th style="width: 100px;">Name</th>
+           <th style="width: 50px;">type</th>
+           <th style="width: 50px;">default</th>
+           <th>description</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td>parent</td>
+           <td>selector</td>
+           <td>false</td>
+           <td>If selector then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior)</td>
+         </tr>
+         <tr>
+           <td>toggle</td>
+           <td>boolean</td>
+           <td>true</td>
+           <td>Toggles the collapsible element on invocation</td>
+         </tr>
+        </tbody>
+      </table>
+    </div><!-- /.bs-table-scrollable -->
 
     <h3>Methods</h3>
 
@@ -1600,34 +1670,36 @@
 
     <h3>Events</h3>
     <p>Bootstrap's collapse class exposes a few events for hooking into collapse functionality.</p>
-    <table class="table table-bordered table-striped">
-      <thead>
-       <tr>
-         <th style="width: 150px;">Event Type</th>
-         <th>Description</th>
-       </tr>
-      </thead>
-      <tbody>
-       <tr>
-         <td>show</td>
-         <td>This event fires immediately when the <code>show</code> instance method is called.</td>
-       </tr>
-       <tr>
-         <td>shown</td>
-         <td>This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete).</td>
-       </tr>
-       <tr>
-         <td>hide</td>
-         <td>
-          This event is fired immediately when the <code>hide</code> method has been called.
-         </td>
-       </tr>
-       <tr>
-         <td>hidden</td>
-         <td>This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete).</td>
-       </tr>
-      </tbody>
-    </table>
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped">
+        <thead>
+         <tr>
+           <th style="width: 150px;">Event Type</th>
+           <th>Description</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td>show</td>
+           <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+         </tr>
+         <tr>
+           <td>shown</td>
+           <td>This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete).</td>
+         </tr>
+         <tr>
+           <td>hide</td>
+           <td>
+            This event is fired immediately when the <code>hide</code> method has been called.
+           </td>
+         </tr>
+         <tr>
+           <td>hidden</td>
+           <td>This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete).</td>
+         </tr>
+        </tbody>
+      </table>
+    </div><!-- /.bs-table-scrollable -->
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCollapsible&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;hidden.bs.collapse&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something…</span>
 <span class="p">})</span>
@@ -1701,7 +1773,7 @@
 </code></pre></div>
 <div class="bs-callout bs-callout-info">
   <h4>Glyphicon Alternative</h4>
-  <p>With <a href="/css/#glyphicons">Glyphicons</a> available, you may choose to style the left and right toggle buttons with <code>.glyphicon .glyphicon-chevron-left</code> and <code>.glyphicon .glyphicon-chevron-right</code>.</p>
+  <p>With <a href="http://glyphicons.getbootstrap.com">Glyphicons</a> available, you may choose to style the left and right toggle buttons with <code>.glyphicon .glyphicon-chevron-left</code> and <code>.glyphicon .glyphicon-chevron-right</code>.</p>
 </div>
 
     <h3>Optional captions</h3>
@@ -1766,30 +1838,32 @@
 
     <h3>Options</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-interval=""</code>.</p>
-    <table class="table table-bordered table-striped">
-      <thead>
-       <tr>
-         <th style="width: 100px;">Name</th>
-         <th style="width: 50px;">type</th>
-         <th style="width: 50px;">default</th>
-         <th>description</th>
-       </tr>
-      </thead>
-      <tbody>
-       <tr>
-         <td>interval</td>
-         <td>number</td>
-         <td>5000</td>
-         <td>The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.</td>
-       </tr>
-       <tr>
-         <td>pause</td>
-         <td>string</td>
-         <td>"hover"</td>
-         <td>Pauses the cycling of the carousel on mouseenter and resumes the cycling of the carousel on mouseleave.</td>
-       </tr>
-      </tbody>
-    </table>
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped">
+        <thead>
+         <tr>
+           <th style="width: 100px;">Name</th>
+           <th style="width: 50px;">type</th>
+           <th style="width: 50px;">default</th>
+           <th>description</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td>interval</td>
+           <td>number</td>
+           <td>5000</td>
+           <td>The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.</td>
+         </tr>
+         <tr>
+           <td>pause</td>
+           <td>string</td>
+           <td>"hover"</td>
+           <td>Pauses the cycling of the carousel on mouseenter and resumes the cycling of the carousel on mouseleave.</td>
+         </tr>
+        </tbody>
+      </table>
+    </div><!-- /.bs-table-scrollable -->
 
     <h3>Methods</h3>
 
@@ -1818,24 +1892,26 @@
 
     <h3>Events</h3>
     <p>Bootstrap's carousel class exposes two events for hooking into carousel functionality.</p>
-    <table class="table table-bordered table-striped">
-      <thead>
-       <tr>
-         <th style="width: 150px;">Event Type</th>
-         <th>Description</th>
-       </tr>
-      </thead>
-      <tbody>
-       <tr>
-         <td>slide</td>
-         <td>This event fires immediately when the <code>slide</code> instance method is invoked.</td>
-       </tr>
-       <tr>
-         <td>slid</td>
-         <td>This event is fired when the carousel has completed its slide transition.</td>
-       </tr>
-      </tbody>
-    </table>
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped">
+        <thead>
+         <tr>
+           <th style="width: 150px;">Event Type</th>
+           <th>Description</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td>slide</td>
+           <td>This event fires immediately when the <code>slide</code> instance method is invoked.</td>
+         </tr>
+         <tr>
+           <td>slid</td>
+           <td>This event is fired when the carousel has completed its slide transition.</td>
+         </tr>
+        </tbody>
+      </table>
+    </div><!-- /.bs-table-scrollable -->
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCarousel&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;slide.bs.carousel&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something…</span>
 <span class="p">})</span>
@@ -1888,24 +1964,27 @@
     <h3>Options</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-offset-top="200"</code>.</p>
 
-    <table class="table table-bordered table-striped">
-      <thead>
-       <tr>
-         <th style="width: 100px;">Name</th>
-         <th style="width: 100px;">type</th>
-         <th style="width: 50px;">default</th>
-         <th>description</th>
-       </tr>
-      </thead>
-      <tbody>
-       <tr>
-         <td>offset</td>
-         <td>number | function | object</td>
-         <td>10</td>
-         <td>Pixels to offset from screen when calculating position of scroll. If a single number is provided, the offset will be applied in both top and left directions. To provide a unique, bottom and top offset just provide an object <code>offset: { top: 10 }</code> or <code>offset: { top: 10, bottom: 5 }</code>. Use a function when you need to dynamically calculate an offset.</td>
-       </tr>
-      </tbody>
-    </table>
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped">
+        <thead>
+         <tr>
+           <th style="width: 100px;">Name</th>
+           <th style="width: 100px;">type</th>
+           <th style="width: 50px;">default</th>
+           <th>description</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td>offset</td>
+           <td>number | function | object</td>
+           <td>10</td>
+           <td>Pixels to offset from screen when calculating position of scroll. If a single number is provided, the offset will be applied in both top and left directions. To provide a unique, bottom and top offset just provide an object <code>offset: { top: 10 }</code> or <code>offset: { top: 10, bottom: 5 }</code>. Use a function when you need to dynamically calculate an offset.</td>
+         </tr>
+        </tbody>
+      </table>
+    </div><!-- /.bs-table-scrollable -->
+
   </div>
 
         </div>
@@ -1957,14 +2036,14 @@
     <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="/todc-bootstrap-3/assets/js/jquery.js"></script>
-<script src="/todc-bootstrap-3/dist/js/bootstrap.js"></script>
+<script src="../assets/js/jquery.js"></script>
+<script src="../dist/js/bootstrap.js"></script>
 
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-<script src="/todc-bootstrap-3/assets/js/holder.js"></script>
+<script src="../assets/js/holder.js"></script>
 
-<script src="/todc-bootstrap-3/assets/js/select2.min.js"></script>
-<script src="/todc-bootstrap-3/assets/js/application.js"></script>
+<script src="../assets/js/select2.min.js"></script>
+<script src="../assets/js/application.js"></script>
 
 
   </body>
