@@ -26,6 +26,13 @@ body {
   border-color: #ac2d1e;
 }
 
+/* Temp CSS until RC2 */
+.bs-customize-placeholder {
+  margin-bottom: -100px;
+  padding: 80px 30px;
+  text-align: center;
+  background-color: #f5f5f5;
+}
 
 
 /* Top nav and header
@@ -66,6 +73,10 @@ body {
 .bs-old-docs strong {
   color: #555;
 }
+.bs-docs-home .bs-old-docs {
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+}
 
 
 /* Homepage masthead
@@ -73,16 +84,12 @@ body {
 
 .bs-masthead {
   position: relative;
-  margin-bottom: 20px;
   padding: 30px 15px;
   text-align: center;
 }
 .bs-masthead h1 {
   font-size: 50px;
   line-height: 1;
-}
-.bs-masthead .bs-social {
-  margin-top: 80px;
 }
 
 /* Download button */
@@ -94,11 +101,16 @@ body {
 }
 
 /* Textual links */
+.bs-social {
+  margin-top: 30px;
+  text-align: center;
+}
 .bs-masthead-links {
   margin-top: 20px;
   margin-bottom: 20px;
   padding-left: 0;
   list-style: none;
+  text-align: center;
 }
 .bs-masthead-links li {
   display: inline;
@@ -119,13 +131,21 @@ body {
 .bs-customizer label {
   margin-top: 10px;
   font-weight: 500;
-  color: #555;
+  color: #444;
+}
+.bs-customizer h2 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding-top: 30px;
 }
 .bs-customizer h4 {
   margin-top: 15px;
 }
 .bs-customizer input[type="text"] {
   background-color: #fafafa;
+}
+.bs-customizer .help-block {
+  font-size: 12px;
 }
 
 .bs-customize-download {
@@ -211,8 +231,8 @@ body {
 .bs-sidenav {
   margin-top: 30px;
   margin-bottom: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top:    5px;
+  padding-bottom: 5px;
   text-shadow: 0 1px 0 #fff;
   background-color: #f5f5f5;
   box-shadow: inset -1px 0 0 #e5e5e5;
@@ -222,7 +242,7 @@ body {
 .bs-sidebar .nav > li > a {
   display: block;
   color: #666;
-  padding: 4px 20px;
+  padding: 5px 20px;
 }
 .bs-sidebar .nav > li > a:hover,
 .bs-sidebar .nav > li > a:focus {
@@ -232,7 +252,7 @@ body {
 .bs-sidebar .nav > .active > a,
 .bs-sidebar .nav > .active:hover > a,
 .bs-sidebar .nav > .active:focus > a {
-  font-weight: 500;
+  font-weight: bold;
   color: #dd4b39;
   background-color: transparent;
   border-right: 1px solid #dd4b39;
@@ -241,14 +261,14 @@ body {
 /* Nav: second level (shown on .active) */
 .bs-sidebar .nav .nav {
   display: none;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 .bs-sidebar .nav > .active > ul {
   display: block;
 }
 .bs-sidebar .nav .nav > li > a {
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top:    3px;
+  padding-bottom: 3px;
   padding-left: 30px;
   font-size: 90%;
 }
@@ -738,7 +758,6 @@ input.focused {
     right:  15px;
     bottom: 15px;
   }
-
   .bs-header {
     font-size: 21px;
     text-align: left;
@@ -794,12 +813,22 @@ input.focused {
 @media screen and (min-width: 992px) {
 
   /* Widen the fixed sidebar */
+  .bs-sidebar.affix,
+  .bs-sidebar.affix-bottom {
+    width: 213px;
+  }
   .bs-sidebar.affix {
     position: fixed; /* Undo the static from mobile-first approach */
     top: 50px;
-    width: 213px;
   }
-
+  .bs-sidebar.affix-bottom {
+    position: absolute; /* Undo the static from mobile-first approach */
+  }
+  .bs-sidebar.affix-bottom .bs-sidenav,
+  .bs-sidebar.affix .bs-sidenav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   .bs-header h1,
   .bs-header p {
     margin-right: 380px;
@@ -819,6 +848,7 @@ input.focused {
 @media screen and (min-width: 1200px) {
 
   /* Widen the fixed sidebar again */
+  .bs-sidebar.affix-bottom,
   .bs-sidebar.affix {
     width: 270px;
   }
