@@ -22,8 +22,8 @@
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
-  <script src="/assets/js/html5shiv.js"></script>
-  <script src="/assets/js/respond.min.js"></script>
+  <script src="../assets/js/html5shiv.js"></script>
+  <script src="../assets/js/respond.min.js"></script>
 <![endif]-->
 
 <!-- Favicons -->
@@ -201,6 +201,11 @@
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="nt">&gt;</span>
 </code></pre></div>
 
+    <h3 id="overview-responsive-images">Responsive images</h3>
+    <p>Images in Bootstrap 3 can be made responsive-friendly via the addition of the <code>.img-responsive</code> class. This applies <code>max-width: 100%;</code> and <code>height: auto;</code> to the image so that it scales nicely to the parent element.</p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span> <span class="na">class=</span><span class="s">&quot;img-responsive&quot;</span> <span class="na">alt=</span><span class="s">&quot;Reponsive image&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+
     <h3 id="overview-type-links">Typography and links</h3>
     <p>Bootstrap sets basic global display, typography, and link styles. Specifically, we:</p>
     <ul>
@@ -209,13 +214,13 @@
       <li>Use the <code>@font-family-base</code>, <code>@font-size-base</code>, and <code>@line-height-base</code> attributes as our typographic base</li>
       <li>Set the global link color via <code>@link-color</code> and apply link underlines only on <code>:hover</code></li>
     </ul>
-    <p>These styles can be found within <strong>scaffolding.less</strong>.</p>
+    <p>These styles can be found within <code>scaffolding.less</code>.</p>
 
     <h3 id="overview-normalize">Normalize reset</h3>
     <p>For improved cross-browser rendering, we use <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize</a>, a project by <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> and <a href="http://twitter.com/jon_neal" target="_blank">Jonathan Neal</a>.</p>
 
     <h3 id="overview-container">Centering with container</h3>
-    <p>Easily center a page's contents by wrapping its contents in a container. Containers set <code>max-width</code> at various media query breakpoints to match our grid system.</p>
+    <p>Easily center a page's contents by wrapping its contents in a <code>.container</code>. Containers set <code>max-width</code> at various media query breakpoints to match our grid system.</p>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
   ...
 <span class="nt">&lt;/div&gt;</span>
@@ -254,16 +259,20 @@
           <tr>
             <th></th>
             <th>
-              Tiny grid
+              Tiny devices
               <small>Phones (&lt;480px)</small>
             </th>
             <th>
-              Small grid
+              Small devices
               <small>Tablets (&lt;768px)</small>
             </th>
             <th>
-              Medium-large grid
-              <small>Desktops (&gt;768px)</small>
+              Medium devices
+              <small>Desktops (&gt;992px)</small>
+            </th>
+            <th>
+              Large devices
+              <small>Desktops (&gt;1200px)</small>
             </th>
           </tr>
         </thead>
@@ -271,31 +280,49 @@
           <tr>
             <th>Grid behavior</th>
             <td>Horizontal at all times</td>
-            <td colspan="2">Collapsed to start, horizontal above breakpoints</td>
+            <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
+          </tr>
+          <tr>
+            <th>Max container width</th>
+            <td>None (auto)</td>
+            <td>728px</td>
+            <td>940px</td>
+            <td>1170px</td>
           </tr>
           <tr>
             <th>Class prefix</th>
             <td><code>.col-</code></td>
             <td><code>.col-sm-</code></td>
-            <td><code>.col-lg-</code></td>
+            <td colspan="2"><code>.col-lg-</code></td>
           </tr>
           <tr>
             <th># of columns</th>
-            <td colspan="3">12</td>
+            <td colspan="4">12</td>
+          </tr>
+          <tr>
+            <th>Max column width</th>
+            <td>Auto</td>
+            <td>~60px</td>
+            <td>~78px</td>
+            <td>~98px</td>
+          </tr>
+          <tr>
+            <th>Gutter width</th>
+            <td colspan="4">30px (15px on each side of a column)</td>
           </tr>
           <tr>
             <th>Nestable</th>
-            <td colspan="3">Yes</td>
+            <td colspan="4">Yes</td>
           </tr>
           <tr>
             <th>Offsets</th>
             <td colspan="2" class="text-muted">N/A</td>
-            <td>Yes</td>
+            <td colspan="2">Yes</td>
           </tr>
           <tr>
             <th>Column ordering</th>
             <td class="text-muted">N/A</td>
-            <td colspan="2">Yes</td>
+            <td colspan="3">Yes</td>
           </tr>
         </tbody>
       </table>
@@ -346,7 +373,7 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-lg-1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-lg-1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row show-grid&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-lg-8&quot;</span><span class="nt">&gt;</span>8<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-lg-4&quot;</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -497,7 +524,7 @@
       <div class="col-lg-3 col-pull-9">3</div>
     </div>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row show-grid&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-lg-9 col-push-3&quot;</span><span class="nt">&gt;</span>9<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-lg-3 col-pull-9&quot;</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -764,7 +791,7 @@
     <p>For quoting blocks of content from another source within your document.</p>
 
     <h3>Default blockquote</h3>
-    <p>Wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes we recommend a <code>&lt;p&gt;</code>.</p>
+    <p>Wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes, we recommend a <code>&lt;p&gt;</code>.</p>
     <div class="bs-example">
       <blockquote>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -776,7 +803,7 @@
 </code></pre></div>
 
     <h3>Blockquote options</h3>
-    <p>Style and content changes for simple variations on a standard blockquote.</p>
+    <p>Style and content changes for simple variations on a standard <code>&lt;blockquote&gt;</code>.</p>
 
     <h4>Naming a source</h4>
     <p>Add <code>&lt;small&gt;</code> tag for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
@@ -964,7 +991,7 @@
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;pre&gt;</span><span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span>Sample text here...<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span><span class="nt">&lt;/pre&gt;</span>
 </code></pre></div>
 
-    <p>You may optionally add the <code>.pre-scrollable</code> class which will set a max-height of 350px and provide a y-axis scrollbar.</p>
+    <p>You may optionally add the <code>.pre-scrollable</code> class, which will set a max-height of 350px and provide a y-axis scrollbar.</p>
   </div>
 
 
@@ -1023,7 +1050,7 @@
     <p>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.</p>
     <div class="bs-callout bs-callout-danger">
       <h4>Cross-browser compatibility</h4>
-      <p>Striped tables are styled via the <code>:nth-child</code> CSS selector, which is not available in IE8.</p>
+      <p>Striped tables are styled via the <code>:nth-child</code> CSS selector, which is not available in Internet Explorer 8.</p>
     </div>
     <div class="bs-example">
       <table class="table table-striped">
@@ -1434,7 +1461,7 @@
     <p>Examples of standard form controls supported in an example form layout.</p>
 
     <h3>Inputs</h3>
-    <p>Most common form control, text-based input fields. Includes support for all HTML5 types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color.</p>
+    <p>Most common form control, text-based input fields. Includes support for all HTML5 types: <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, and <code>color</code>.</p>
     <div class="bs-callout bs-callout-danger">
       <h4>Type declaration required</h4>
       <p>Inputs will only be fully styled if their <code>type</code> is properly declared.</p>
@@ -1521,7 +1548,7 @@
 </code></pre></div>
 
     <h3>Selects</h3>
-    <p>Use the default option or specify a <code>multiple="multiple"</code> to show multiple options at once.</p>
+    <p>Use the default option, or add <code>multiple</code> to show multiple options at once.</p>
     <div class="bs-callout bs-callout-warning">
       <h4>Plugin dependency</h4>
       <p><a href="http://todc.github.com/todc-select2" target="_blank">todc-select2</a> is used for Google-themed rendering of select menus.</p>
@@ -1535,7 +1562,7 @@
         <option value="Peach">Peach</option>
       </select>
       <br>
-      <select multiple="multiple" class="form-control">
+      <select multiple class="form-control">
         <option value="Apple">Apple</option>
         <option value="Banana">Banana</option>
         <option value="Orange">Orange</option>
@@ -1551,7 +1578,7 @@
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;Peach&quot;</span><span class="nt">&gt;</span>Peach<span class="nt">&lt;/option&gt;</span>
 <span class="nt">&lt;/select&gt;</span>
 
-<span class="nt">&lt;select</span> <span class="na">multiple=</span><span class="s">&quot;multiple&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;select</span> <span class="na">multiple</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;Apple&quot;</span><span class="nt">&gt;</span>Apple<span class="nt">&lt;/option&gt;</span>
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;Banana&quot;</span><span class="nt">&gt;</span>Banana<span class="nt">&lt;/option&gt;</span>
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;Orange&quot;</span><span class="nt">&gt;</span>Orange<span class="nt">&lt;/option&gt;</span>
@@ -1657,9 +1684,9 @@
 
 
     <h2 id="forms-control-sizes">Control sizing</h2>
-    <p>Use relative sizing classes like <code>.input-large</code> or match your inputs to the grid column sizes using <code>.col-lg-*</code> classes.</p>
+    <p>Set heights using classes like <code>.input-large</code>, and set widths using grid column classes like <code>.col-lg-*</code>.</p>
 
-    <h3>Relative sizing</h3>
+    <h3>Height sizing</h3>
     <p>Create larger or smaller form controls that match button sizes.</p>
     <form class="bs-example bs-example-control-sizing">
       <div class="controls docs-input-sizes">
@@ -1890,6 +1917,11 @@
 <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span> <span class="na">class=</span><span class="s">&quot;img-circle&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span> <span class="na">class=</span><span class="s">&quot;img-thumbnail&quot;</span><span class="nt">&gt;</span>
 </code></pre></div>
+
+    <div class="bs-callout bs-callout-warning">
+      <h4>Responsive images</h4>
+      <p>Looking for how to make images more responsive? <a href="../css#overview-responsive-images">Check out the responsive images section</a> up top.</p>
+    </div>
 
   </div>
 
