@@ -27,6 +27,20 @@ body {
   border-color: #ac2d1e;
 }
 
+/* Homepage button */
+.btn-outline {
+  color: #fff;
+  background-color: transparent;
+  border-color: #bdd4f9;
+}
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active {
+  color: #1154c0;
+  background-color: #fff;
+  border-color: #fff;
+}
+
 /* Temp CSS until RC2 */
 .bs-customize-placeholder {
   margin-bottom: -100px;
@@ -40,14 +54,14 @@ body {
 -------------------------------------------------- */
 
 .bs-docs-nav {
-  background-color: #dd4b39 !important;
-  border-color: #ac2d1e !important;
+  background-color: #1154c0 !important;
+  border-color: #1154c0 !important;
 }
 .bs-docs-nav .navbar-brand {
   color: #fff;
 }
 .bs-docs-nav .navbar-nav > li > a {
-  color: #ffd9da;
+  color: #bdd4f9;
 }
 .bs-docs-nav .navbar-nav > li > a:hover {
   color: #fff;
@@ -55,7 +69,7 @@ body {
 .bs-docs-nav .navbar-nav > .active > a,
 .bs-docs-nav .navbar-nav > .active > a:hover {
   color: #fff;
-  background-color: #ac2d1e !important;
+  background-color: #0b357a !important;
 }
 .bs-docs-nav .navbar-toggle {
   border-color: #d33725 !important;
@@ -76,8 +90,21 @@ body {
   color: #555;
 }
 .bs-docs-home .bs-old-docs {
+  padding-top: 0;
+  padding-bottom: 0;
   text-align: center;
-  border-top: 1px solid #e5e5e5;
+  color: inherit;
+  background-color: transparent;
+  border-color: transparent;
+}
+.bs-docs-home .bs-old-docs a {
+  color: #fff;
+}
+
+/* Homepage */
+.bs-docs-home {
+  color: #bdd4f9;
+  background-color: #1154c0;
 }
 
 
@@ -92,10 +119,11 @@ body {
 .bs-masthead h1 {
   font-size: 50px;
   line-height: 1;
+  color: #fff;
 }
 
 /* Download button */
-.bs-masthead .btn-bs {
+.bs-masthead .btn-outline {
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 18px 24px;
@@ -120,6 +148,9 @@ body {
 }
 .bs-masthead-links li + li {
   margin-left: 20px;
+}
+.bs-masthead-links a {
+  color: #fff;
 }
 
 
@@ -168,7 +199,7 @@ body {
   border-bottom: 1px solid #e5e5e5;
 }
 .bs-header h1 {
-  color: #dd4b39;
+  color: #1154c0;
 }
 .bs-header p {
   font-weight: 300;
@@ -248,15 +279,16 @@ body {
 .bs-sidebar .nav > li > a:hover,
 .bs-sidebar .nav > li > a:focus {
   text-decoration: none;
+  background-color: #ecf2fd;
   border-right: 1px solid #d5d5d5;
 }
 .bs-sidebar .nav > .active > a,
 .bs-sidebar .nav > .active:hover > a,
 .bs-sidebar .nav > .active:focus > a {
   font-weight: bold;
-  color: #dd4b39;
+  color: #1154c0;
   background-color: transparent;
-  border-right: 1px solid #dd4b39;
+  border-right: 1px solid #1154c0;
 }
 
 /* Nav: second level (shown on .active) */
@@ -796,8 +828,8 @@ input.focused {
 
   /* Tweak display of docs jumbotrons */
   .bs-masthead {
-    padding-top:    100px;
-    padding-bottom: 100px;
+    padding-top:    140px;
+    padding-bottom: 140px;
   }
   .bs-masthead h1 {
     font-size: 100px;
