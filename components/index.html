@@ -215,7 +215,13 @@
     <li><a href="#type-components-page-header">Page header</a></li>
   </ul>
 </li>
-<li><a href="#thumbnails">Thumbnails</a></li>
+<li>
+  <a href="#thumbnails">Thumbnails</a>
+  <ul class="nav">
+    <li><a href="#thumbnails-default">Default thumbnails</a></li>
+    <li><a href="#thumbnails-custom-content">Custom content</a></li>
+  </ul>
+</li>
 <li>
   <a href="#alerts">Alerts</a>
   <ul class="nav">
@@ -234,7 +240,13 @@
     <li><a href="#progress-stacked">Stacked</a></li>
   </ul>
 </li>
-<li><a href="#media">Media object</a></li>
+<li>
+  <a href="#media">Media object</a>
+  <ul class="nav">
+    <li><a href="#media-default">Default media</a></li>
+    <li><a href="#media-list">Media list</a></li>
+  </ul>
+</li>
 <li>
   <a href="#list-group">List group</a>
   <ul class="nav">
@@ -2909,7 +2921,7 @@
     </div>
     <p class="lead">Extend Bootstrap's <a href="../css/#grid">grid system</a> with the thumbnail component to easily display grids of images, videos, text, and more.</p>
 
-    <h3>Default thumbnails</h3>
+    <h3 id="thumbnails-default">Default thumbnails</h3>
     <p>By default, Bootstrap's thumbnails are designed to showcase linked images with minimal required markup.</p>
     <div class="bs-example">
       <div class="row">
@@ -2945,7 +2957,7 @@
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
-    <h3>Custom content thumbnails</h3>
+    <h3 id="thumbnails-custom-content">Custom content thumbnails</h3>
     <p>With a bit of extra markup, it's possible to add any kind of HTML content like headings, paragraphs, or buttons into thumbnails.</p>
     <div class="bs-example">
       <div class="row">
@@ -3204,7 +3216,7 @@
     </div>
     <p class="lead">Abstract object styles for building various types of components (like blog comments, Tweets, etc) that feature a left- or right-aligned image alongside textual content.</p>
 
-    <h3>Default example</h3>
+    <h3 id="media-default">Default media</h3>
     <p>The default media allow to float a media object (images, video, audio) to the left or right of a content block.</p>
     <div class="bs-example">
       <div class="media">
@@ -3246,7 +3258,7 @@
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
-    <h3>Media list</h3>
+    <h3 id="media-list">Media list</h3>
     <p>With a bit of extra markup, you can use media inside list (useful for comment threads or articles lists).</p>
     <div class="bs-example">
       <ul class="media-list">
