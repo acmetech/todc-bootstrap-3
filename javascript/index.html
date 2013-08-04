@@ -200,7 +200,7 @@
     </div>
 
     <h3 id="js-individual-compiled">Individual or compiled</h3>
-    <p>Plugins can be included individually (using bootstrap's individual <code>*.js</code> files, or all at once (using <code>bootstrap.js</code> or the minified <code>bootstrap.min.js</code>.</p>
+    <p>Plugins can be included individually (using Bootstrap's individual <code>*.js</code> files, or all at once (using <code>bootstrap.js</code> or the minified <code>bootstrap.min.js</code>.</p>
 
     <div class="bs-callout bs-callout-danger">
       <h4>Do not attempt to include both.</h4>
@@ -213,7 +213,7 @@
     </div>
 
     <h3 id="js-data-attrs">Data attributes</h3>
-    <p>You can use all Bootstrap plugins purely through the markup API without writing a single line of JavaScript. This is Bootstrap's first class API and should be your first consideration when using a plugin.</p>
+    <p>You can use all Bootstrap plugins purely through the markup API without writing a single line of JavaScript. This is Bootstrap's first-class API and should be your first consideration when using a plugin.</p>
 
     <p>That said, in some situations it may be desirable to turn this functionality off. Therefore, we also provide the ability to disable the data attribute API by unbinding all events on the document namespaced with <code>data-api</code>. This looks like this:
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">&#39;.data-api&#39;</span><span class="p">)</span>
@@ -239,12 +239,12 @@
     <h3 id="js-noconflict">No conflict</h3>
     <p>Sometimes it is necessary to use Bootstrap plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call <code>.noConflict</code> on the plugin you wish to revert the value of.</p>
 <div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">bootstrapButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">()</span> <span class="c1">// return $.fn.button to previously assigned value</span>
-<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapBtn</span> <span class="o">=</span> <span class="nx">bootstrapButton</span>            <span class="c1">// give $().bootstrapBtn the bootstrap functionality</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapBtn</span> <span class="o">=</span> <span class="nx">bootstrapButton</span>            <span class="c1">// give $().bootstrapBtn the Bootstrap functionality</span>
 </code></pre></div>
 
     <h3 id="js-events">Events</h3>
     <p>Bootstrap provides custom events for most plugin's unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and its past participle form (ex. <code>shown</code>) is trigger on the completion of an action.</p>
-    <p>As of 3.0.0, all bootstrap events are namespaced.</p>
+    <p>As of 3.0.0, all Bootstrap events are namespaced.</p>
     <p>All infinitive events provide <code>preventDefault</code> functionality. This provides the ability to stop the execution of an action before it starts.</p>
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;show.bs.modal&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span> <span class="c1">// stops modal from being shown</span>
@@ -367,10 +367,10 @@
     </div><!-- /.modal -->
 
     <div class="bs-example" style="padding-bottom: 24px;">
-      <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">Launch demo modal</a>
+      <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Launch demo modal</a>
     </div><!-- /example -->
 <div class="highlight"><pre><code class="html">  <span class="c">&lt;!-- Button trigger modal --&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">&quot;modal&quot;</span> <span class="na">href=</span><span class="s">&quot;#myModal&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-large&quot;</span><span class="nt">&gt;</span>Launch demo modal<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">&quot;modal&quot;</span> <span class="na">href=</span><span class="s">&quot;#myModal&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-lg&quot;</span><span class="nt">&gt;</span>Launch demo modal<span class="nt">&lt;/a&gt;</span>
 
   <span class="c">&lt;!-- Modal --&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;modal fade&quot;</span> <span class="na">id=</span><span class="s">&quot;myModal&quot;</span><span class="nt">&gt;</span>
@@ -639,7 +639,7 @@
 
     <h3>Methods</h3>
     <h4>$().dropdown('toggle')</h4>
-    <p>A programmatic api for toggling menus for a given navbar or tabbed navigation.</p>
+    <p>Toggles the dropdown menu of a given navbar or tabbed navigation.</p>
   </div>
 
 
@@ -1123,7 +1123,7 @@
 
     <h3>Live demo</h3>
     <div class="bs-example" style="padding-bottom: 24px;">
-      <a href="#" class="btn btn-large btn-danger" data-toggle="popover" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">Click to toggle popover</a>
+      <a href="#" class="btn btn-lg btn-danger" data-toggle="popover" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">Click to toggle popover</a>
     </div>
 
     <h4>Four directions</h4>
