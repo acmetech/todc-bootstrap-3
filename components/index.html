@@ -315,7 +315,7 @@
 </code></pre></div>
 
     <h3 id="dropdowns-headers">Dropdown headers</h3>
-    <p>Add a header to break up label sections of actions in any dropdown menu.</p>
+    <p>Add a header to label sections of actions in any dropdown menu.</p>
     <div class="bs-example">
       <div class="dropdown clearfix">
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
@@ -504,12 +504,11 @@
 </code></pre></div>
 
     <h3 id="btn-groups-nested">Nested button groups</h3>
-    <p>Place buttons groups within button groups when you want dropdown menus mixed with a series of buttons.</p>
+    <p>Place a <code>.btn-group</code> within another <code>.btn-group</code> when you want dropdown menus mixed with a series of buttons.</p>
     <div class="bs-example">
       <div class="btn-group">
         <button type="button" class="btn btn-default">1</button>
         <button type="button" class="btn btn-default">2</button>
-        <button type="button" class="btn btn-default">3</button>
 
         <div class="btn-group">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -519,11 +518,26 @@
           <ul class="dropdown-menu">
             <li><a href="#">Dropdown link</a></li>
             <li><a href="#">Dropdown link</a></li>
-            <li><a href="#">Dropdown link</a></li>
-           </ul>
+          </ul>
         </div>
       </div>
     </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span><span class="nt">&gt;</span>2<span class="nt">&lt;/button&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
+      Dropdown
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Dropdown link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Dropdown link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
 
     <h3 id="btn-groups-vertical">Vertical button groups</h3>
     <p>Make a set of buttons appear vertically stacked rather than horizontally.</p>
@@ -578,7 +592,7 @@
     </div>
 
     <h3 id="btn-dropdowns-single">Single button dropdowns</h3>
-    <p>Turn a button into dropdown toggle with some basic markup changes.</p>
+    <p>Turn a button into a dropdown toggle with some basic markup changes.</p>
     <div class="bs-example">
       <div class="btn-toolbar" style="margin-bottom: 10px;">
         <div class="btn-group">
@@ -730,7 +744,7 @@
     <div class="bs-example">
       <div class="btn-toolbar" style="margin: 0;">
         <div class="btn-group">
-          <button class="btn btn-default btn-large dropdown-toggle" type="button" data-toggle="dropdown">
+          <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
             Large button <span class="caret"></span>
           </button>
           <ul class="dropdown-menu">
@@ -742,8 +756,20 @@
           </ul>
         </div><!-- /btn-group -->
         <div class="btn-group">
-          <button class="btn btn-default btn-small dropdown-toggle" type="button" data-toggle="dropdown">
+          <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
             Small button <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+            Extra small button <span class="caret"></span>
           </button>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
@@ -757,7 +783,7 @@
     </div><!-- /example -->
 <div class="highlight"><pre><code class="html"><span class="c">&lt;!-- Large button group --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-large dropdown-toggle&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-lg dropdown-toggle&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
     Large button <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
@@ -767,13 +793,22 @@
 
 <span class="c">&lt;!-- Small button group --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-small dropdown-toggle&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-sm dropdown-toggle&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
     Small button <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
     ...
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Extra small button group --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-xs dropdown-toggle&quot;</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
+    Extra small button <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
@@ -877,8 +912,8 @@
     <p>Add the relative form sizing classes to the <code>.input-group-addon</code>.</p>
     <form class="bs-example bs-example-form">
       <div class="input-group">
-        <span class="input-group-addon input-large">@</span>
-        <input type="text" class="form-control input-large" placeholder="Username">
+        <span class="input-group-addon input-lg">@</span>
+        <input type="text" class="form-control input-lg" placeholder="Username">
       </div>
       <br>
       <div class="input-group">
@@ -887,13 +922,13 @@
       </div>
       <br>
       <div class="input-group">
-        <span class="input-group-addon input-small">@</span>
-        <input type="text" class="form-control input-small" placeholder="Username">
+        <span class="input-group-addon input-sm">@</span>
+        <input type="text" class="form-control input-sm" placeholder="Username">
       </div>
     </form>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon input-large&quot;</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control input-large&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Username&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon input-lg&quot;</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control input-lg&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Username&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group&quot;</span><span class="nt">&gt;</span>
@@ -902,8 +937,8 @@
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon input-small&quot;</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control input-small&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Username&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon input-sm&quot;</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control input-sm&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Username&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
@@ -2683,10 +2718,10 @@
 
 
     <h3>Sizes</h3>
-    <p>Fancy larger or smaller pagination? Add <code>.pagination-large</code> or <code>.pagination-small</code>  for additional sizes.</p>
+    <p>Fancy larger or smaller pagination? Add <code>.pagination-lg</code> or <code>.pagination-sm</code> for additional sizes.</p>
     <div class="bs-example">
       <div>
-        <ul class="pagination pagination-large">
+        <ul class="pagination pagination-lg">
           <li><a href="#">&laquo;</a></li>
           <li><a href="#">1</a></li>
           <li><a href="#">2</a></li>
@@ -2708,7 +2743,7 @@
         </ul>
       </div>
       <div>
-        <ul class="pagination pagination-small">
+        <ul class="pagination pagination-sm">
           <li><a href="#">&laquo;</a></li>
           <li><a href="#">1</a></li>
           <li><a href="#">2</a></li>
@@ -2719,9 +2754,9 @@
         </ul>
       </div>
     </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;pagination pagination-large&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/ul&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;pagination pagination-lg&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;pagination pagination&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/ul&gt;</span>
-<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;pagination pagination-small&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;pagination pagination-sm&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/ul&gt;</span>
 </code></pre></div>
 
 
@@ -2888,13 +2923,13 @@
       <div class="jumbotron">
         <h1>Hello, world!</h1>
         <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <p><a class="btn btn-primary btn-large">Learn more</a></p>
+        <p><a class="btn btn-primary btn-lg">Learn more</a></p>
       </div>
     </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;jumbotron&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
   <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-large&quot;</span><span class="nt">&gt;</span>Learn more<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-lg&quot;</span><span class="nt">&gt;</span>Learn more<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
@@ -3660,19 +3695,19 @@
     <h3>Optional classes</h3>
     <p>Control padding and rounded corners with two optional modifier classes.</p>
     <div class="bs-example">
-      <div class="well well-large">
+      <div class="well well-lg">
         Look, I'm in a well!
       </div>
     </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;well well-large&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;well well-lg&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
     <div class="bs-example">
-      <div class="well well-small">
+      <div class="well well-sm">
         Look, I'm in a well!
       </div>
     </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;well well-small&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;well well-sm&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
   </div>
 
