@@ -157,6 +157,7 @@
     <li><a href="#forms-inline">Inline variation</a></li>
     <li><a href="#forms-horizontal">Horizontal variation</a></li>
     <li><a href="#forms-controls">Supported controls</a></li>
+    <li><a href="#forms-controls-static">Static form control</a></li>
     <li><a href="#forms-control-states">Control states</a></li>
     <li><a href="#forms-control-sizes">Control sizing</a></li>
     <li><a href="#forms-help-text">Help text</a></li>
@@ -204,7 +205,7 @@
 
     <h3 id="overview-responsive-images">Responsive images</h3>
     <p>Images in Bootstrap 3 can be made responsive-friendly via the addition of the <code>.img-responsive</code> class. This applies <code>max-width: 100%;</code> and <code>height: auto;</code> to the image so that it scales nicely to the parent element.</p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span> <span class="na">class=</span><span class="s">&quot;img-responsive&quot;</span> <span class="na">alt=</span><span class="s">&quot;Reponsive image&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span> <span class="na">class=</span><span class="s">&quot;img-responsive&quot;</span> <span class="na">alt=</span><span class="s">&quot;Responsive image&quot;</span><span class="nt">&gt;</span>
 </code></pre></div>
 
     <h3 id="overview-type-links">Typography and links</h3>
@@ -947,7 +948,7 @@
 </code></pre></div>
 
     <h4>Horizontal description</h4>
-    <p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side.</p>
+    <p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side. Starts off stacked like default <code>&lt;dl&gt;</code>s, but when the navbar expands, so do these.</p>
     <div class="bs-example">
       <dl class="dl-horizontal">
         <dt>Description lists</dt>
@@ -1387,10 +1388,7 @@
 </code></pre></div>
 
 
-    <h2>Optional layouts</h2>
-    <p>Included with Bootstrap are optional form layouts for common use cases.</p>
-
-    <h3 id="forms-inline">Inline form</h3>
+    <h3 id="forms-inline">Inline form</h2>
     <p>Add <code>.form-inline</code> for left-aligned and inline-block controls for a compact layout.</p>
     <div class="bs-callout bs-callout-danger">
       <h4>Requires custom widths</h4>
@@ -1418,7 +1416,7 @@
 <span class="nt">&lt;/form&gt;</span>
 </code></pre></div>
 
-    <h3 id="forms-horizontal">Horizontal form</h3>
+    <h2 id="forms-horizontal">Horizontal form</h2>
     <p>Use Bootstrap's predefined grid classes to align labels and groups of form controls in a horizontal layout by adding <code>.form-horizontal</code> to the form. Doing so changes <code>.form-group</code>s to behave as grid rows, so no need for <code>.row</code>.</p>
     <form class="bs-example form-horizontal">
       <div class="form-group">
@@ -1612,6 +1610,38 @@
 </code></pre></div>
 
 
+    <h2 id="forms-controls-static">Static text in horizontal forms</h2>
+    <p>When you need to place regular, static text next to a form label within a horizontal form, use the <code>.form-control-static</code> class on a <code>&lt;p&gt;</code>.</p>
+    <form class="bs-example form-horizontal">
+      <div class="form-group">
+        <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+        <div class="col-lg-10">
+          <p class="form-control-static">email@example.com</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+        <div class="col-lg-10">
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+      </div>
+    </form>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;form-horizontal&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;inputEmail2&quot;</span> <span class="na">class=</span><span class="s">&quot;col-lg-2 control-label&quot;</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-lg-10&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;form-control-static&quot;</span><span class="nt">&gt;</span>email@example.com<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;inputPassword2&quot;</span> <span class="na">class=</span><span class="s">&quot;col-lg-2 control-label&quot;</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-lg-10&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;password&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id=</span><span class="s">&quot;inputPassword2&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Password&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div>
+
 
     <h2 id="forms-control-states">Form control states</h2>
     <p>Provide feedback to users or visitors with basic feedback states on form controls and labels.</p>
@@ -1770,9 +1800,9 @@
     <p>Block level help text for form controls.</p>
     <form class="bs-example">
       <input type="text" class="form-control">
-      <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+      <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
     </form>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;help-block&quot;</span><span class="nt">&gt;</span>A longer block of help text that breaks onto a new line and may extend beyond one line.<span class="nt">&lt;/span&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;help-block&quot;</span><span class="nt">&gt;</span>A block of help text that breaks onto a new line and may extend beyond one line.<span class="nt">&lt;/span&gt;</span>
 </code></pre></div>
 
   </div>
