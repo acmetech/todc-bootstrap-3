@@ -1116,7 +1116,6 @@ fieldset[disabled] .btn-link:focus {
 .input-group-addon {
   padding: 5px 8px;
   font-size: 13px;
-  line-height: 1.4;
   background-color: #eeeeee;
   border: 1px solid #d9d9d9;
   border-top-color: #c0c0c0;
@@ -1125,13 +1124,11 @@ fieldset[disabled] .btn-link:focus {
 .input-group-addon.input-sm {
   padding: 3px 8px;
   font-size: 12px;
-  line-height: 1.5;
   border-radius: 1px;
 }
 .input-group-addon.input-lg {
   padding: 9px 14px;
   font-size: 14px;
-  line-height: 1.3;
   border-radius: 4px;
 }
 .input-group-addon input[type="radio"],
@@ -1607,6 +1604,11 @@ li.list-group-header {
 .navbar-fixed-bottom {
   z-index: 1030;
 }
+@media (max-width: 768px) {
+  .nav-collapse-scrollable {
+    margin-bottom: 4px;
+  }
+}
 .navbar-brand {
   padding: 4px 15px;
   font-size: 14px;
@@ -1840,6 +1842,11 @@ li.list-group-header {
 .navbar-masthead.navbar-fixed-top,
 .navbar-masthead.navbar-fixed-bottom {
   z-index: 1029;
+}
+@media (max-width: 768px) {
+  .nav-collapse-scrollable {
+    margin-bottom: 12px;
+  }
 }
 .navbar-masthead .btn {
   padding: 5px 8px;
@@ -2102,6 +2109,11 @@ li.list-group-header {
 .navbar-toolbar.navbar-fixed-top,
 .navbar-toolbar.navbar-fixed-bottom {
   z-index: 1028;
+}
+@media (max-width: 768px) {
+  .nav-collapse-scrollable {
+    margin-bottom: 8px;
+  }
 }
 .navbar-toolbar .btn {
   font-size: 11px;
@@ -2815,12 +2827,12 @@ a.thumbnail:focus {
 }
 a.list-group-item.active > .badge,
 li.list-group-item.active a > .badge {
-  color: #fff;
+  color: #ffffff;
   background-color: #dd4b39;
 }
 .nav-pills > .active > a > .badge {
   color: #1155cc;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .progress {
   border: 1px solid #999;
