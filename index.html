@@ -39,11 +39,13 @@
     <!-- Place anything custom after this. -->
   </head>
   <body class="bs-docs-home">
+    <a class="sr-only" href="#content">Skip navigation</a>
 
     <!-- Docs master nav -->
-    <div class="navbar navbar-fixed-top bs-docs-nav">
+    <div class="navbar navbar-fixed-top bs-docs-nav" role="navigation">
   <div class="container">
     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
@@ -73,14 +75,14 @@
 
 
     <!-- Page content of course! -->
-    <div class="bs-masthead">
+    <div class="bs-masthead" id="content" role="main">
   <div class="container">
     <h1>TODC Bootstrap 3</h1>
     <p class="lead">A Google-styled theme for Bootstrap.</p>
-    <p><strong>Heads up!</strong> Until the final v3 is released, downloads may be behind the development branch and Bower package.</p>
     <p>
-      <a href="https://github.com/todc/todc-bootstrap/releases/download/v3.0.0-rc1/bs-v3.0.0-rc1-dist.zip" class="btn btn-outline btn-lg">Download TODC Bootstrap</a>
+      <a href="https://github.com/todc/todc-bootstrap/archive/v3.0.0-rc1.zip" class="btn btn-outline btn-lg">Download latest TODC Bootstrap 3</a>
     </p>
+    <p><strong>Heads up!</strong> Downloads are pulled directly from the latest commited code on GitHub, and as a result our docs may at times be out of sync.</p>
   </div>
 </div>
 
@@ -96,14 +98,14 @@
 </div>
 
 
-    <div class="container">
+    <div class="container" role="contentinfo">
       <div class="bs-social">
   <ul class="bs-social-buttons">
     <li>
-      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&repo=todc-bootstrap&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&repo=todc-bootstrap&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px" title="Star on GitHub"></iframe>
     </li>
     <li>
-      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&repo=todc-bootstrap&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&repo=todc-bootstrap&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px" title="Fork on GitHub"></iframe>
     </li>
     <li class="follow-btn">
       <a href="https://twitter.com/twbootstrap" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @twbootstrap</a>
