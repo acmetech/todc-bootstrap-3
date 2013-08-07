@@ -39,11 +39,13 @@
     <!-- Place anything custom after this. -->
   </head>
   <body>
+    <a class="sr-only" href="#content">Skip navigation</a>
 
     <!-- Docs master nav -->
-    <div class="navbar navbar-fixed-top bs-docs-nav">
+    <div class="navbar navbar-fixed-top bs-docs-nav" role="navigation">
   <div class="container">
     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
@@ -73,7 +75,7 @@
 
 
     <!-- Docs page layout -->
-    <div class="bs-header">
+    <div class="bs-header" id="content" role="banner">
       <div class="container">
         <h1>CSS</h1>
         <p>Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system.</p>
@@ -96,7 +98,7 @@
     <div class="container bs-docs-container">
       <div class="row">
         <div class="col-lg-3">
-          <div class="bs-sidebar">
+          <div class="bs-sidebar" role="complementary">
             <ul class="nav bs-sidenav">
               
                 <li>
@@ -180,7 +182,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-9">
+        <div class="col-lg-9" role="main">
             <!-- Global Bootstrap settings
   ================================================== -->
   <div class="bs-docs-section">
@@ -550,32 +552,69 @@
     <h4>Mixins</h4>
     <p>Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.</p>
 <div class="highlight"><pre><code class="css"><span class="o">//</span> <span class="nt">Creates</span> <span class="nt">a</span> <span class="nt">wrapper</span> <span class="nt">for</span> <span class="nt">a</span> <span class="nt">series</span> <span class="nt">of</span> <span class="nt">columns</span>
-<span class="nc">.make-row</span><span class="o">()</span> <span class="p">{</span>
-  <span class="o">//</span> <span class="n">Negative</span> <span class="k">margin</span> <span class="n">the</span> <span class="n">row</span> <span class="n">out</span> <span class="n">to</span> <span class="n">align</span> <span class="n">the</span> <span class="k">content</span> <span class="n">of</span> <span class="n">columns</span>
-  <span class="k">margin-left</span><span class="o">:</span>  <span class="p">(</span><span class="o">@</span><span class="n">grid</span><span class="o">-</span><span class="n">gutter</span><span class="o">-</span><span class="k">width</span> <span class="o">/</span> <span class="m">-2</span><span class="p">);</span>
-  <span class="k">margin-right</span><span class="o">:</span> <span class="p">(</span><span class="o">@</span><span class="n">grid</span><span class="o">-</span><span class="n">gutter</span><span class="o">-</span><span class="k">width</span> <span class="o">/</span> <span class="m">-2</span><span class="p">);</span>
-  <span class="o">//</span> <span class="n">Then</span> <span class="k">clear</span> <span class="n">the</span> <span class="n">floated</span> <span class="n">columns</span>
-  <span class="o">.</span><span class="n">clearfix</span><span class="p">();</span>
+<span class="nc">.make-row</span><span class="o">(</span><span class="k">@gutter</span><span class="o">:</span> <span class="k">@grid-gutter-width</span><span class="o">)</span> <span class="p">{</span>
+  <span class="o">//</span> <span class="nt">Then</span> <span class="nt">clear</span> <span class="nt">the</span> <span class="nt">floated</span> <span class="nt">columns</span>
+  <span class="nc">.clearfix</span><span class="o">();</span>
+
+  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-small</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nt">margin-left</span><span class="o">:</span>  <span class="o">(</span><span class="k">@gutter</span> <span class="o">/</span> <span class="nt">-2</span><span class="o">)</span><span class="p">;</span>
+    <span class="nt">margin-right</span><span class="o">:</span> <span class="o">(</span><span class="k">@gutter</span> <span class="o">/</span> <span class="nt">-2</span><span class="o">)</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="o">//</span> <span class="nt">Negative</span> <span class="nt">margin</span> <span class="nt">nested</span> <span class="nt">rows</span> <span class="nt">out</span> <span class="nt">to</span> <span class="nt">align</span> <span class="nt">the</span> <span class="nt">content</span> <span class="nt">of</span> <span class="nt">columns</span>
+  <span class="nc">.row</span> <span class="p">{</span>
+    <span class="nt">margin-left</span><span class="o">:</span>  <span class="o">(</span><span class="k">@gutter</span> <span class="o">/</span> <span class="nt">-2</span><span class="o">)</span><span class="p">;</span>
+    <span class="nt">margin-right</span><span class="o">:</span> <span class="o">(</span><span class="k">@gutter</span> <span class="o">/</span> <span class="nt">-2</span><span class="o">)</span><span class="p">;</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="o">//</span> <span class="nt">Generate</span> <span class="nt">the</span> <span class="nt">columns</span>
-<span class="nc">.make-column</span><span class="o">(</span><span class="k">@columns</span><span class="o">)</span> <span class="p">{</span>
+<span class="nc">.make-column</span><span class="o">(</span><span class="k">@columns</span><span class="p">;</span> <span class="k">@gutter</span><span class="o">:</span> <span class="k">@grid-gutter-width</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nt">position</span><span class="o">:</span> <span class="nt">relative</span><span class="o">;</span>
+  <span class="o">//</span> <span class="nt">Prevent</span> <span class="nt">columns</span> <span class="nt">from</span> <span class="nt">collapsing</span> <span class="nt">when</span> <span class="nt">empty</span>
+  <span class="nt">min-height</span><span class="o">:</span> <span class="nt">1px</span><span class="o">;</span>
+  <span class="o">//</span> <span class="nt">Inner</span> <span class="nt">gutter</span> <span class="nt">via</span> <span class="nt">padding</span>
+  <span class="nt">padding-left</span><span class="o">:</span>  <span class="o">(</span><span class="k">@gutter</span> <span class="o">/</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
+  <span class="nt">padding-right</span><span class="o">:</span> <span class="o">(</span><span class="k">@gutter</span> <span class="o">/</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
+
+  <span class="o">//</span> <span class="nt">Calculate</span> <span class="nt">width</span> <span class="nt">based</span> <span class="nt">on</span> <span class="nt">number</span> <span class="nt">of</span> <span class="nt">columns</span> <span class="nt">available</span>
   <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@grid-float-breakpoint</span><span class="o">)</span> <span class="p">{</span>
     <span class="nt">float</span><span class="o">:</span> <span class="nt">left</span><span class="o">;</span>
-    <span class="o">//</span> <span class="nt">Calculate</span> <span class="nt">width</span> <span class="nt">based</span> <span class="nt">on</span> <span class="nt">number</span> <span class="nt">of</span> <span class="nt">columns</span> <span class="nt">available</span>
-    <span class="nt">width</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">(</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">)</span><span class="p">;</span>
+    <span class="nt">width</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
   <span class="err">}</span>
-  <span class="o">//</span> <span class="nt">Prevent</span> <span class="nt">columns</span> <span class="nt">from</span> <span class="nt">collapsing</span> <span class="nt">when</span> <span class="nt">empty</span>
-  <span class="nt">min-height</span><span class="o">:</span> <span class="nt">1px</span><span class="p">;</span>
-  <span class="o">//</span> <span class="nt">Set</span> <span class="nt">inner</span> <span class="nt">padding</span> <span class="nt">as</span> <span class="nt">gutters</span> <span class="nt">instead</span> <span class="nt">of</span> <span class="nt">margin</span>
-  <span class="nt">padding-left</span><span class="o">:</span>  <span class="o">(</span><span class="k">@grid-gutter-width</span> <span class="o">/</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
-  <span class="nt">padding-right</span><span class="o">:</span> <span class="o">(</span><span class="k">@grid-gutter-width</span> <span class="o">/</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="err">}</span>
 
 <span class="o">//</span> <span class="nt">Generate</span> <span class="nt">the</span> <span class="nt">column</span> <span class="nt">offsets</span>
 <span class="nc">.make-column-offset</span><span class="o">(</span><span class="k">@columns</span><span class="o">)</span> <span class="p">{</span>
   <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@grid-float-breakpoint</span><span class="o">)</span> <span class="p">{</span>
     <span class="nt">margin-left</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+<span class="nc">.make-column-push</span><span class="o">(</span><span class="k">@columns</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@grid-float-breakpoint</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nt">left</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+<span class="nc">.make-column-pull</span><span class="o">(</span><span class="k">@columns</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@grid-float-breakpoint</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nt">right</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+
+<span class="o">//</span> <span class="nt">Generate</span> <span class="nt">the</span> <span class="nt">small</span> <span class="nt">columns</span>
+<span class="nc">.make-small-column</span><span class="o">(</span><span class="k">@columns</span><span class="p">;</span> <span class="k">@gutter</span><span class="o">:</span> <span class="k">@grid-gutter-width</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nt">position</span><span class="o">:</span> <span class="nt">relative</span><span class="o">;</span>
+  <span class="nt">float</span><span class="o">:</span> <span class="nt">left</span><span class="o">;</span>
+  <span class="o">//</span> <span class="nt">Prevent</span> <span class="nt">columns</span> <span class="nt">from</span> <span class="nt">collapsing</span> <span class="nt">when</span> <span class="nt">empty</span>
+  <span class="nt">min-height</span><span class="o">:</span> <span class="nt">1px</span><span class="o">;</span>
+  <span class="o">//</span> <span class="nt">Inner</span> <span class="nt">gutter</span> <span class="nt">via</span> <span class="nt">padding</span>
+  <span class="nt">padding-left</span><span class="o">:</span>  <span class="o">(</span><span class="k">@gutter</span> <span class="o">/</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
+  <span class="nt">padding-right</span><span class="o">:</span> <span class="o">(</span><span class="k">@gutter</span> <span class="o">/</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
+  <span class="k">@max-width</span><span class="o">:</span> <span class="o">(</span><span class="k">@grid-float-breakpoint</span> <span class="nt">-</span> <span class="nt">1</span><span class="o">)</span><span class="p">;</span>
+
+  <span class="o">//</span> <span class="nt">Calculate</span> <span class="nt">width</span> <span class="nt">based</span> <span class="nt">on</span> <span class="nt">number</span> <span class="nt">of</span> <span class="nt">columns</span> <span class="nt">available</span>
+  <span class="k">@media</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="k">@max-width</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nt">width</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
   <span class="err">}</span>
 <span class="err">}</span>
 </code></pre></div>
@@ -1388,15 +1427,21 @@
 </code></pre></div>
 
 
-    <h3 id="forms-inline">Inline form</h2>
+    <h3 id="forms-inline">Inline form</h3>
     <p>Add <code>.form-inline</code> for left-aligned and inline-block controls for a compact layout.</p>
     <div class="bs-callout bs-callout-danger">
       <h4>Requires custom widths</h4>
       <p>Inputs, selects, and textareas are 100% wide by default in Bootstrap. To use the inline form, you'll have to set a width on the form controls used within.</p>
     </div>
+    <div class="bs-callout bs-callout-danger">
+      <h4>Always add labels</h4>
+      <p>Screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms, you can hide the labels using the <code>.sr-only</code> class.</p>
+    </div>
     <form class="bs-example form-inline">
-      <input type="text" class="form-control" placeholder="Email">
-      <input type="password" class="form-control" placeholder="Password">
+      <label class="sr-only" for="exampleInputEmail">Email address</label>
+      <input type="text" class="form-control" id="exampleInputEmail" placeholder="Enter email">
+      <label class="sr-only" for="exampleInputPassword">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
       <div class="checkbox">
         <label>
           <input type="checkbox"> Remember me
@@ -1405,8 +1450,10 @@
       <button type="submit" class="btn btn-default">Sign in</button>
     </form><!-- /example -->
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;form-inline&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Email&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;password&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Password&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span> <span class="na">for=</span><span class="s">&quot;exampleInputEmail&quot;</span><span class="nt">&gt;</span>Email address<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id=</span><span class="s">&quot;exampleInputEmail&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Enter email&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span> <span class="na">for=</span><span class="s">&quot;exampleInputPassword&quot;</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;password&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id=</span><span class="s">&quot;exampleInputPassword&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Password&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span> Remember me
@@ -2055,6 +2102,11 @@
   <span class="o">.</span><span class="n">clearfix</span><span class="p">();</span>
 <span class="p">}</span>
 </code></pre></div>
+
+    <h3>.sr-only</h3>
+    <p>Hide an element to all users <em>except</em> screen readers. Necessary for following <a href="../getting-started#accessibility">accessibility best practices</a>.</p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span> <span class="na">href=</span><span class="s">&quot;#content&quot;</span><span class="nt">&gt;</span>Skip to content<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
   </div>
 
   <!-- Responsive utilities
@@ -2189,14 +2241,14 @@
 
     <!-- Footer
     ================================================== -->
-    <footer class="bs-footer">
+    <footer class="bs-footer" role="contentinfo">
       <div class="bs-social">
   <ul class="bs-social-buttons">
     <li>
-      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&repo=todc-bootstrap&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&repo=todc-bootstrap&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px" title="Star on GitHub"></iframe>
     </li>
     <li>
-      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&repo=todc-bootstrap&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&repo=todc-bootstrap&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px" title="Fork on GitHub"></iframe>
     </li>
     <li class="follow-btn">
       <a href="https://twitter.com/twbootstrap" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @twbootstrap</a>
