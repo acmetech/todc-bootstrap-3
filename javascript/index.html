@@ -42,7 +42,7 @@
     <a class="sr-only" href="#content">Skip navigation</a>
 
     <!-- Docs master nav -->
-    <div class="navbar navbar-fixed-top bs-docs-nav" role="navigation">
+    <header class="navbar navbar-fixed-top bs-docs-nav" role="banner">
   <div class="container">
     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
       <span class="sr-only">Toggle navigation</span>
@@ -51,7 +51,7 @@
       <span class="icon-bar"></span>
     </button>
     <a href="../" class="navbar-brand">TODC Bootstrap RC1</a>
-    <div class="nav-collapse collapse bs-navbar-collapse">
+    <nav class="nav-collapse collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li>
           <a href="../getting-started">Getting started</a>
@@ -69,13 +69,13 @@
           <a href="../customize">Customize</a>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
-</div>
+</header>
 
 
     <!-- Docs page layout -->
-    <div class="bs-header" id="content" role="banner">
+    <div class="bs-header" id="content">
       <div class="container">
         <h1>JavaScript</h1>
         <p>Bring Bootstrap's components to life with over a dozen custom jQuery plugins. Easily include them all, or one by one.</p>
@@ -194,7 +194,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-9" role="main">
+        <main class="col-lg-9" role="main">
             <!-- Overview
   ================================================== -->
   <div class="bs-docs-section">
@@ -453,7 +453,7 @@
            <td>remote</td>
            <td>path</td>
            <td>false</td>
-           <td><p>If a remote URL is provided, content will be loaded via jQuery's <code>load</code> method and injected into the <code>.modal-body</code>. If you're using the data api, you may alternatively use the <code>href</code> attribute to specify the remote source. An example of this is shown below:</p>
+           <td><p>If a remote URL is provided, content will be loaded via jQuery's <code>load</code> method and injected into the root of the modal element. If you're using the data api, you may alternatively use the <code>href</code> attribute to specify the remote source. An example of this is shown below:</p>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">&quot;modal&quot;</span> <span class="na">href=</span><span class="s">&quot;remote.html&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#modal&quot;</span><span class="nt">&gt;</span>Click me<span class="nt">&lt;/a&gt;</span>
 </code></pre></div>
          </tr>
@@ -497,19 +497,19 @@
         </thead>
         <tbody>
          <tr>
-           <td>show</td>
+           <td>show.bs.modal</td>
            <td>This event fires immediately when the <code>show</code> instance method is called.</td>
          </tr>
          <tr>
-           <td>shown</td>
+           <td>shown.bs.modal</td>
            <td>This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete).</td>
          </tr>
          <tr>
-           <td>hide</td>
+           <td>hide.bs.modal</td>
            <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
          </tr>
          <tr>
-           <td>hidden</td>
+           <td>hidden.bs.modal</td>
            <td>This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete).</td>
          </tr>
         </tbody>
@@ -535,7 +535,7 @@
 
     <h3>Within a navbar</h3>
     <div class="bs-example">
-      <div id="navbar-example" class="navbar navbar-static" role="navigation">
+      <nav id="navbar-example" class="navbar navbar-static" role="navigation">
         <div class="container" style="width: auto;">
           <a class="navbar-brand" href="#">Project Name</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-js-navbar-collapse">
@@ -545,7 +545,7 @@
             <span class="icon-bar"></span>
           </button>
           <div class="nav-collapse collapse bs-js-navbar-collapse">
-            <ul class="nav navbar-nav" role="navigation">
+            <ul class="nav navbar-nav">
               <li class="dropdown">
                 <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
@@ -581,7 +581,7 @@
             </ul>
           </div><!-- /.nav-collapse -->
         </div><!-- /.container -->
-      </div> <!-- /navbar-example -->
+      </nav> <!-- /navbar-example -->
     </div> <!-- /example -->
 
     <h3>Within tabs</h3>
@@ -670,7 +670,7 @@
     <h2 id="scrollspy-examples">Example in navbar</h2>
     <p>The ScrollSpy plugin is for automatically updating nav targets based on scroll position. Scroll the area below the navbar and watch the active class change. The dropdown sub items will be highlighted as well.</p>
     <div class="bs-example">
-      <div id="navbar-example2" class="navbar navbar-static" role="navigation">
+      <nav id="navbar-example2" class="navbar navbar-static" role="navigation">
         <div class="navbar-inner">
           <div class="container" style="width: auto;">
             <a class="navbar-brand" href="#">Project Name</a>
@@ -689,7 +689,7 @@
             </ul>
           </div>
         </div>
-      </div>
+      </nav>
       <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example">
         <h4 id="fat">@fat</h4>
         <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
@@ -769,7 +769,7 @@
         </thead>
         <tbody>
          <tr>
-           <td>activate</td>
+           <td>activate.bs.scrollspy</td>
            <td>This event fires whenever a new item becomes activated by the scrollspy.</td>
         </tr>
         </tbody>
@@ -885,11 +885,11 @@
         </thead>
         <tbody>
          <tr>
-           <td>show</td>
+           <td>show.bs.tab</td>
            <td>This event fires on tab show, but before the new tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
         </tr>
         <tr>
-           <td>shown</td>
+           <td>shown.bs.tab</td>
            <td>This event fires on tab show after a tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
          </tr>
         </tbody>
@@ -1055,19 +1055,19 @@
         </thead>
         <tbody>
          <tr>
-           <td>show</td>
+           <td>show.bs.tooltip</td>
            <td>This event fires immediately when the <code>show</code> instance method is called.</td>
          </tr>
          <tr>
-           <td>shown</td>
+           <td>shown.bs.tooltip</td>
            <td>This event is fired when the tooltip has been made visible to the user (will wait for CSS transitions to complete).</td>
          </tr>
          <tr>
-           <td>hide</td>
+           <td>hide.bs.tooltip</td>
            <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
          </tr>
          <tr>
-           <td>hidden</td>
+           <td>hidden.bs.tooltip</td>
            <td>This event is fired when the tooltip has finished being hidden from the user (will wait for CSS transitions to complete).</td>
          </tr>
         </tbody>
@@ -1283,19 +1283,19 @@
         </thead>
         <tbody>
          <tr>
-           <td>show</td>
+           <td>show.bs.popover</td>
            <td>This event fires immediately when the <code>show</code> instance method is called.</td>
          </tr>
          <tr>
-           <td>shown</td>
+           <td>shown.bs.popover</td>
            <td>This event is fired when the popover has been made visible to the user (will wait for CSS transitions to complete).</td>
          </tr>
          <tr>
-           <td>hide</td>
+           <td>hide.bs.popover</td>
            <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
          </tr>
          <tr>
-           <td>hidden</td>
+           <td>hidden.bs.popover</td>
            <td>This event is fired when the popover has finished being hidden from the user (will wait for CSS transitions to complete).</td>
          </tr>
         </tbody>
@@ -1369,11 +1369,11 @@
         </thead>
         <tbody>
           <tr>
-            <td>close</td>
+            <td>close.bs.alert</td>
             <td>This event fires immediately when the <code>close</code> instance method is called.</td>
           </tr>
           <tr>
-            <td>closed</td>
+            <td>closed.bs.alert</td>
             <td>This event is fired when the alert has been closed (will wait for CSS transitions to complete).</td>
           </tr>
         </tbody>
@@ -1698,21 +1698,21 @@
         </thead>
         <tbody>
          <tr>
-           <td>show</td>
+           <td>show.bs.collapse</td>
            <td>This event fires immediately when the <code>show</code> instance method is called.</td>
          </tr>
          <tr>
-           <td>shown</td>
+           <td>shown.bs.collapse</td>
            <td>This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete).</td>
          </tr>
          <tr>
-           <td>hide</td>
+           <td>hide.bs.collapse</td>
            <td>
             This event is fired immediately when the <code>hide</code> method has been called.
            </td>
          </tr>
          <tr>
-           <td>hidden</td>
+           <td>hidden.bs.collapse</td>
            <td>This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete).</td>
          </tr>
         </tbody>
@@ -1883,6 +1883,12 @@
            <td>"hover"</td>
            <td>Pauses the cycling of the carousel on mouseenter and resumes the cycling of the carousel on mouseleave.</td>
          </tr>
+         <tr>
+           <td>wrap</td>
+           <td>boolean</td>
+           <td>true</td>
+           <td>Whether the carousel should cycle continuously or have hard stops.</td>
+         </tr>
         </tbody>
       </table>
     </div><!-- /.bs-table-scrollable -->
@@ -1924,11 +1930,11 @@
         </thead>
         <tbody>
          <tr>
-           <td>slide</td>
+           <td>slide.bs.carousel</td>
            <td>This event fires immediately when the <code>slide</code> instance method is invoked.</td>
          </tr>
          <tr>
-           <td>slid</td>
+           <td>slid.bs.carousel</td>
            <td>This event is fired when the carousel has completed its slide transition.</td>
          </tr>
         </tbody>
@@ -2009,7 +2015,7 @@
 
   </div>
 
-        </div>
+        </main>
       </div>
 
     </div>
