@@ -42,7 +42,7 @@
     <a class="sr-only" href="#content">Skip navigation</a>
 
     <!-- Docs master nav -->
-    <div class="navbar navbar-fixed-top bs-docs-nav" role="navigation">
+    <header class="navbar navbar-fixed-top bs-docs-nav" role="banner">
   <div class="container">
     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
       <span class="sr-only">Toggle navigation</span>
@@ -51,7 +51,7 @@
       <span class="icon-bar"></span>
     </button>
     <a href="../" class="navbar-brand">TODC Bootstrap RC1</a>
-    <div class="nav-collapse collapse bs-navbar-collapse">
+    <nav class="nav-collapse collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li class="active">
           <a href="../getting-started">Getting started</a>
@@ -69,13 +69,13 @@
           <a href="../customize">Customize</a>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
-</div>
+</header>
 
 
     <!-- Docs page layout -->
-    <div class="bs-header" id="content" role="banner">
+    <div class="bs-header" id="content">
       <div class="container">
         <h1>Getting started</h1>
         <p>An overview of Bootstrap, how to download and use, basic templates and examples, and more.</p>
@@ -134,7 +134,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-9" role="main">
+        <main class="col-lg-9" role="main">
             <!-- Getting started
   ================================================== -->
   <div class="bs-docs-section">
@@ -239,8 +239,8 @@
   <span class="nt">&lt;body&gt;</span>
     <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
 
-    <span class="c">&lt;!-- JavaScript plugins (requires jQuery) --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="c">&lt;!-- jQuery (necessary for Bootstrap&#39;s JavaScript plugins) --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//code.jquery.com/jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
     <span class="c">&lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;</span>
     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 
@@ -491,7 +491,7 @@
 
   </div>
 
-        </div>
+        </main>
       </div>
 
     </div>
