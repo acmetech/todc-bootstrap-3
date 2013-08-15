@@ -1074,8 +1074,7 @@ fieldset[disabled] .btn-link:focus {
   line-height: 1.3;
   border-radius: 2px;
 }
-.btn-sm,
-.btn-xs {
+.btn-sm {
   padding: 3px 8px;
   font-size: 12px;
   line-height: 1.5;
@@ -1085,6 +1084,25 @@ fieldset[disabled] .btn-link:focus {
   padding: 2px 6px;
   font-size: 11px;
   line-height: 14px;
+  border-radius: 2px;
+}
+.input-group-lg > .form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn {
+  height: 38px;
+  padding: 9px 14px;
+  font-size: 14px;
+  line-height: 1.3;
+  border-radius: 4px;
+}
+.input-group-sm > .form-control,
+.input-group-sm > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn {
+  height: 26px;
+  padding: 3px 8px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 1px;
 }
 .input-group-addon,
 .input-group-btn,
@@ -1275,6 +1293,10 @@ a.list-group-item,
 li.list-group-item > a {
   color: #222222;
 }
+a.list-group-item .list-group-item-heading,
+li.list-group-item > a .list-group-item-heading {
+  color: #333333;
+}
 a.list-group-item:hover,
 li.list-group-item > a:hover,
 a.list-group-item:focus,
@@ -1292,32 +1314,32 @@ li.list-group-item > a {
   margin-left: -15px;
   margin-right: -15px;
 }
-a.list-group-item.active,
 li.list-group-item.active > a {
-  font-weight: bold;
+  padding-left: 12px;
+}
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
   color: #dd4b39;
+  font-weight: bold;
   background-color: transparent;
   border-color: #e5e5e5;
   border-left: 3px solid #dd4b39;
 }
-a.list-group-item.active:hover,
-li.list-group-item.active > a:hover {
-  background-color: #eeeeee;
-}
-a.list-group-item.active .list-group-item-heading,
-li.list-group-item.active > a .list-group-item-heading {
+.list-group-item.active .list-group-item-heading,
+.list-group-item.active:hover .list-group-item-heading,
+.list-group-item.active:focus .list-group-item-heading {
   color: inherit;
 }
-a.list-group-item.active .list-group-item-text,
-li.list-group-item.active > a .list-group-item-text {
-  color: #888888;
+.list-group-item.active .list-group-item-text,
+.list-group-item.active:hover .list-group-item-text,
+.list-group-item.active:focus .list-group-item-text {
   font-weight: normal;
+  color: #888888;
 }
-li.list-group-item.active > a {
-  padding-left: 12px;
-}
-li.list-group-item a > .badge {
-  float: right;
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  background-color: #eeeeee;
 }
 .list-group-header {
   display: block;
@@ -2451,6 +2473,24 @@ li.list-group-header {
 .btn-toolbar > .btn + .btn-group,
 .btn-toolbar > .btn-group + .btn-group {
   margin-left: 16px;
+}
+.btn-group-xs > .btn {
+  padding: 2px 6px;
+  font-size: 11px;
+  line-height: 14px;
+  border-radius: 2px;
+}
+.btn-group-sm > .btn {
+  padding: 3px 8px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 2px;
+}
+.btn-group-lg > .btn {
+  padding: 9px 14px;
+  font-size: 14px;
+  line-height: 1.3;
+  border-radius: 2px;
 }
 .btn-group > .btn + .dropdown-toggle {
   -webkit-box-shadow: none;
