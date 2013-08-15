@@ -50,7 +50,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a href="../" class="navbar-brand">TODC Bootstrap RC1</a>
+    <a href="../" class="navbar-brand">TODC Bootstrap RC2</a>
     <nav class="nav-collapse collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li>
@@ -116,6 +116,8 @@
   <ul class="nav">
     <li><a href="#btn-groups-single">Basic button group</a></li>
     <li><a href="#btn-groups-toolbar">Button toolbar</a></li>
+    <li><a href="#btn-groups-sizing">Button group sizing</a></li>
+    <li><a href="#btn-groups-nested">Nested button groups</a></li>
     <li><a href="#btn-groups-vertical">Vertical variation</a></li>
     <li><a href="#btn-groups-justified">Justified link buttons</a></li>
   </ul>
@@ -510,6 +512,38 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+    <h3 id="btn-groups-sizing">Button group sizing</h3>
+    <p>Instead of applying button sizing classes to every button in a group, just add <code>.btn-group-*</code> to the <code>.btn-group</code>.</p>
+    <div class="bs-example">
+      <div class="btn-group btn-group-lg">
+        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
+      </div>
+      <div class="btn-group btn-group-sm">
+        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
+      </div>
+      <div class="btn-group btn-group-xs">
+        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
+      </div>
+    </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-toolbar&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group btn-group-lg&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group btn-group-sm&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group btn-group-xs&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
@@ -919,11 +953,11 @@
 </code></pre></div>
 
     <h2 id="input-groups-sizes">Optional sizes</h2>
-    <p>Add the relative form sizing classes to the <code>.input-group-addon</code>.</p>
+    <p>Add the relative form sizing classes to the <code>.input-group</code> itself and contents within will automatically resize—no need for repeating the form control size classes on each element.</p>
     <form class="bs-example bs-example-form" role="form">
-      <div class="input-group">
-        <span class="input-group-addon input-lg">@</span>
-        <input type="text" class="form-control input-lg" placeholder="Username">
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon">@</span>
+        <input type="text" class="form-control" placeholder="Username">
       </div>
       <br>
       <div class="input-group">
@@ -931,13 +965,13 @@
         <input type="text" class="form-control" placeholder="Username">
       </div>
       <br>
-      <div class="input-group">
-        <span class="input-group-addon input-sm">@</span>
-        <input type="text" class="form-control input-sm" placeholder="Username">
+      <div class="input-group input-group-sm">
+        <span class="input-group-addon">@</span>
+        <input type="text" class="form-control" placeholder="Username">
       </div>
     </form>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon input-lg&quot;</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group input-group-lg&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon&quot;</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control input-lg&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Username&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
@@ -946,9 +980,9 @@
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Username&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon input-sm&quot;</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control input-sm&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Username&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group input-group-sm&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-group-addon&quot;</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Username&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
@@ -1628,8 +1662,8 @@
                 </ul>
               </li>
             </ul>
-            <form class="navbar-form pull-left" action="" role="form">
-              <input type="text" class="form-control col-lg-8" placeholder="Search" role="search">
+            <form class="navbar-form pull-left" action="." role="search">
+              <input type="text" class="form-control col-lg-8" placeholder="Search">
             </form>
             <ul class="nav navbar-nav pull-right">
               <li><a href="#">Link</a></li>
@@ -1697,8 +1731,8 @@
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
             </ul>
-            <form class="navbar-form pull-left" action="" role="form">
-              <input type="text" class="form-control col-lg-8" placeholder="Search" role="search">
+            <form class="navbar-form pull-left" action="." role="search">
+              <input type="text" class="form-control col-lg-8" placeholder="Search">
             </form>
           </div><!-- /.nav-collapse -->
         </div><!-- /.container -->
@@ -1746,8 +1780,8 @@
                 </ul>
               </li>
             </ul>
-            <form class="navbar-form pull-left" action="" role="form">
-              <input type="text" class="form-control col-lg-8" placeholder="Search" role="search">
+            <form class="navbar-form pull-left" action="." role="search">
+              <input type="text" class="form-control col-lg-8" placeholder="Search">
             </form>
             <ul class="nav navbar-nav pull-right">
               <li><a href="#">Link</a></li>
@@ -1787,8 +1821,8 @@
     <div class="bs-example">
       <nav class="navbar navbar-masthead" role="navigation">
         <a class="navbar-brand" href="#">Title</a>
-        <form class="navbar-form pull-left" role="form">
-          <input type="text" class="form-control col-lg-8" placeholder="Search" role="search">
+        <form class="navbar-form pull-left" action="" role="search">
+          <input type="text" class="form-control col-lg-8" placeholder="Search">
           <button class="btn btn-primary" type="submit">Search</button>
         </form>
         <ul class="nav navbar-nav pull-right">
@@ -2076,8 +2110,8 @@
                 </ul>
               </li>
             </ul>
-            <form class="navbar-form pull-left" action="" role="form">
-              <input type="text" class="form-control col-lg-8" placeholder="Search" role="search">
+            <form class="navbar-form pull-left" action="" role="search">
+              <input type="text" class="form-control col-lg-8" placeholder="Search">
             </form>
             <ul class="nav navbar-nav pull-right">
               <li><a href="#">Link</a></li>
@@ -2148,8 +2182,8 @@
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
             </ul>
-            <form class="navbar-form pull-left" action="" role="form">
-              <input type="text" class="form-control col-lg-8" placeholder="Search" role="search">
+            <form class="navbar-form pull-left" action="" role="search">
+              <input type="text" class="form-control col-lg-8" placeholder="Search">
             </form>
           </div><!-- /.nav-collapse -->
         </div><!-- /.container -->
@@ -2198,8 +2232,8 @@
                 </ul>
               </li>
             </ul>
-            <form class="navbar-form pull-left" action="" role="form">
-              <input type="text" class="form-control col-lg-8" placeholder="Search" role="search">
+            <form class="navbar-form pull-left" action="" role="search">
+              <input type="text" class="form-control col-lg-8" placeholder="Search">
             </form>
             <ul class="nav navbar-nav pull-right">
               <li><a href="#">Link</a></li>
@@ -2622,8 +2656,8 @@
                 </ul>
               </li>
             </ul>
-            <form class="navbar-form pull-left" action="" role="form">
-              <input type="text" class="form-control col-lg-8" placeholder="Search" role="search">
+            <form class="navbar-form pull-left" action="" role="search">
+              <input type="text" class="form-control col-lg-8" placeholder="Search">
             </form>
             <ul class="nav navbar-nav pull-right">
               <li><a href="#">Link</a></li>
@@ -2693,8 +2727,8 @@
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
             </ul>
-            <form class="navbar-form pull-left" action="" role="form">
-              <input type="text" class="form-control col-lg-8" placeholder="Search" role="search">
+            <form class="navbar-form pull-left" action="" role="search">
+              <input type="text" class="form-control col-lg-8" placeholder="Search">
             </form>
           </div><!-- /.nav-collapse -->
         </div><!-- /.container -->
@@ -2742,8 +2776,8 @@
                 </ul>
               </li>
             </ul>
-            <form class="navbar-form pull-left" action="" role="form">
-              <input type="text" class="form-control col-lg-8" placeholder="Search" role="search">
+            <form class="navbar-form pull-left" action="" role="search">
+              <input type="text" class="form-control col-lg-8" placeholder="Search">
             </form>
             <ul class="nav navbar-nav pull-right">
               <li><a href="#">Link</a></li>
@@ -3109,22 +3143,22 @@
       <div class="row">
         <div class="col-lg-3">
           <a href="#" class="thumbnail">
-            <img data-src="holder.js/100%x180" alt="">
+            <img data-src="holder.js/100%x180" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
           </a>
         </div>
         <div class="col-lg-3">
           <a href="#" class="thumbnail">
-            <img data-src="holder.js/100%x180" alt="">
+            <img data-src="holder.js/100%x180" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
           </a>
         </div>
         <div class="col-lg-3">
           <a href="#" class="thumbnail">
-            <img data-src="holder.js/100%x180" alt="">
+            <img data-src="holder.js/100%x180" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
           </a>
         </div>
         <div class="col-lg-3">
           <a href="#" class="thumbnail">
-            <img data-src="holder.js/100%x180" alt="">
+            <img data-src="holder.js/100%x180" alt="Generic placeholder thumbnail" src="data:image/png;base64,">
           </a>
         </div>
       </div>
@@ -3132,7 +3166,7 @@
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-lg-3&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;thumbnail&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">data-src=</span><span class="s">&quot;holder.js/100%x180&quot;</span> <span class="na">alt=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">data-src=</span><span class="s">&quot;holder.js/100%x180&quot;</span> <span class="na">alt=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   ...
@@ -3427,7 +3461,7 @@
     <div class="bs-example">
       <div class="media">
         <a class="pull-left" href="#">
-          <img class="media-object" data-src="holder.js/64x64">
+          <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
         </a>
         <div class="media-body">
           <h4 class="media-heading">Media heading</h4>
@@ -3436,14 +3470,14 @@
       </div>
       <div class="media">
         <a class="pull-left" href="#">
-          <img class="media-object" data-src="holder.js/64x64">
+          <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
         </a>
         <div class="media-body">
           <h4 class="media-heading">Media heading</h4>
           Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
           <div class="media">
             <a class="pull-left" href="#">
-              <img class="media-object" data-src="holder.js/64x64">
+              <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
             </a>
             <div class="media-body">
               <h4 class="media-heading">Media heading</h4>
@@ -3455,7 +3489,7 @@
     </div><!-- /.bs-example -->
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;media&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;media-object&quot;</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;media-object&quot;</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span> <span class="na">alt=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;media-body&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;media-heading&quot;</span><span class="nt">&gt;</span>Media heading<span class="nt">&lt;/h4&gt;</span>
@@ -3470,7 +3504,7 @@
       <ul class="media-list">
         <li class="media">
           <a class="pull-left" href="#">
-            <img class="media-object" data-src="holder.js/64x64">
+            <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
           </a>
           <div class="media-body">
             <h4 class="media-heading">Media heading</h4>
@@ -3478,7 +3512,7 @@
             <!-- Nested media object -->
             <div class="media">
               <a class="pull-left" href="#">
-                <img class="media-object" data-src="holder.js/64x64">
+                <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
               </a>
               <div class="media-body">
                 <h4 class="media-heading">Nested media heading</h4>
@@ -3486,7 +3520,7 @@
                 <!-- Nested media object -->
                 <div class="media">
                   <a class="pull-left" href="#">
-                    <img class="media-object" data-src="holder.js/64x64">
+                    <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
                   </a>
                   <div class="media-body">
                     <h4 class="media-heading">Nested media heading</h4>
@@ -3498,7 +3532,7 @@
             <!-- Nested media object -->
             <div class="media">
               <a class="pull-left" href="#">
-                <img class="media-object" data-src="holder.js/64x64">
+                <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
               </a>
               <div class="media-body">
                 <h4 class="media-heading">Nested media heading</h4>
@@ -3509,7 +3543,7 @@
         </li>
         <li class="media">
           <a class="pull-right" href="#">
-            <img class="media-object" data-src="holder.js/64x64">
+            <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image" src="data:image/png;base64,">
           </a>
           <div class="media-body">
             <h4 class="media-heading">Media heading</h4>
@@ -3521,7 +3555,7 @@
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;media-list&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;media&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;media-object&quot;</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;media-object&quot;</span> <span class="na">src=</span><span class="s">&quot;...&quot;</span> <span class="na">alt=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;media-body&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;media-heading&quot;</span><span class="nt">&gt;</span>Media heading<span class="nt">&lt;/h4&gt;</span>
@@ -3622,28 +3656,20 @@
         <a href="#" class="list-group-item active">
           Cras justo odio
         </a>
-        <a href="#" class="list-group-item">Dapibus ac facilisis in
-        </a>
-        <a href="#" class="list-group-item">Morbi leo risus
-        </a>
-        <a href="#" class="list-group-item">Porta ac consectetur ac
-        </a>
-        <a href="#" class="list-group-item">Vestibulum at eros
-        </a>
+        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+        <a href="#" class="list-group-item">Morbi leo risus</a>
+        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+        <a href="#" class="list-group-item">Vestibulum at eros</a>
       </div>
     </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;list-group&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item active&quot;</span><span class="nt">&gt;</span>
     Cras justo odio
   <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Dapibus ac facilisis in
-  <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Morbi leo risus
-  <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Porta ac consectetur ac
-  <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Vestibulum at eros
-  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Dapibus ac facilisis in<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Morbi leo risus<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Porta ac consectetur ac<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Vestibulum at eros<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
@@ -3930,10 +3956,10 @@
       <div class="bs-social">
   <ul class="bs-social-buttons">
     <li>
-      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&repo=todc-bootstrap&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px" title="Star on GitHub"></iframe>
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&amp;repo=todc-bootstrap&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20" title="Star on GitHub"></iframe>
     </li>
     <li>
-      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&repo=todc-bootstrap&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px" title="Fork on GitHub"></iframe>
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&amp;repo=todc-bootstrap&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102" height="20" title="Fork on GitHub"></iframe>
     </li>
     <li class="follow-btn">
       <a href="https://twitter.com/twbootstrap" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @twbootstrap</a>
