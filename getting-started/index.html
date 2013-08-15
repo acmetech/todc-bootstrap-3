@@ -50,7 +50,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a href="../" class="navbar-brand">TODC Bootstrap RC1</a>
+    <a href="../" class="navbar-brand">TODC Bootstrap RC2</a>
     <nav class="nav-collapse collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li class="active">
@@ -305,6 +305,14 @@
 <span class="p">}</span>
 </code></pre></div>
     <p>For more information and usage guidelines, read <a href="http://timkadlec.com/2013/01/windows-phone-8-and-device-width/">Windows Phone 8 and Device-Width</a>.</p>
+
+    <h3>Safari percent rounding</h3>
+    <p>In the latest Safari for Mac, its rendering engine has a little trouble with the long decimal places of our <code>.col-*-1</code> grid classes, meaning if you have 12 individual columns you'll notice they come up short compared to other rows of columns. There's not much we can do here (<a href="https://github.com/twbs/bootstrap/issues/9282">see #9282</a>) but you do have some options:</p>
+    <ul>
+      <li>Add <code>.pull-right</code> to your last grid column to get the hard-right alignment</li>
+      <li>Tweak your percentages manually to get the perfect rounding for Safari (more difficult than the first option)</li>
+    </ul>
+    <p>We'll keep an eye on this though and update our code if we have an easy solution.</p>
   </div>
 
 
@@ -502,10 +510,10 @@
       <div class="bs-social">
   <ul class="bs-social-buttons">
     <li>
-      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&repo=todc-bootstrap&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px" title="Star on GitHub"></iframe>
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&amp;repo=todc-bootstrap&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20" title="Star on GitHub"></iframe>
     </li>
     <li>
-      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&repo=todc-bootstrap&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px" title="Fork on GitHub"></iframe>
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&amp;repo=todc-bootstrap&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102" height="20" title="Fork on GitHub"></iframe>
     </li>
     <li class="follow-btn">
       <a href="https://twitter.com/twbootstrap" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @twbootstrap</a>
