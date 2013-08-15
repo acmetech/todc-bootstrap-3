@@ -150,8 +150,8 @@
 
     <h3>Download compiled CSS and JS</h3>
     <p class="lead">The fastest way to get started is to get the compiled and minified versions of our CSS and JavaScript. No documentation or original source files are included.</p>
-    <p><a class="btn btn-lg btn-primary" href="https://github.com/todc/todc-bootstrap/releases/download/v3.0.0-rc1/todc-bs-v3.0.0-rc1-dist.zip">Download TODC Bootstrap</a></p>
-    <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com/bs-v3.0.0-rc1-dist.zip" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);">Download Bootstrap</a></p>
+    <p><a class="btn btn-lg btn-primary" href="https://github.com/todc/todc-bootstrap/releases/download/v3.0.0-rc.2/todc-bs-v3.0.0-rc.2-dist.zip">Download TODC Bootstrap</a></p>
+    <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com/bs-v3.0.0-rc.2-dist.zip" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);">Download Bootstrap</a></p>
 
     <h3 id="download-options">More download options</h3>
     <div class="bs-docs-dl-options">
@@ -178,10 +178,10 @@
     <h3 id="download-cdn">Use the Bootstrap CDN</h3>
     <p>The folks over at <a href="https://www.netdna.com/">NetDNA</a> have graciously provided CDN support for Bootstrap's CSS and JavaScript. To use, swap your local instances for the <a href="http://www.bootstrapcdn.com/">Bootstrap CDN</a> links listed below.</p>
 <div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="c">&lt;!-- Latest compiled and minified CSS --&gt;</span>
-<span class="lineno">2</span> <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">2</span> <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/css/bootstrap.min.css&quot;</span><span class="nt">&gt;</span>
 <span class="lineno">3</span> 
 <span class="lineno">4</span> <span class="c">&lt;!-- Latest compiled and minified JavaScript --&gt;</span>
-<span class="lineno">5</span> <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="lineno">5</span> <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 </code></pre></div>
 
     <div class="bs-callout bs-callout-warning" id="callout-less-compilation">
@@ -313,6 +313,9 @@
       <li>Tweak your percentages manually to get the perfect rounding for Safari (more difficult than the first option)</li>
     </ul>
     <p>We'll keep an eye on this though and update our code if we have an easy solution.</p>
+
+    <h3>Modals and mobile devices</h3>
+    <p>Support for <code>overflow: hidden</code> on the <code>&lt;body&gt;</code> element is quite limited in iOS and Android. To that end, when you scroll past the top or bottom of a modal in either of those devices' browsers, the <code>&lt;body&gt;</code> content will begin to scroll.</p>
   </div>
 
 
