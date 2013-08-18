@@ -117,6 +117,9 @@
   <a href="#template">Basic template</a>
 </li>
 <li>
+  <a href="#disable-responsive">Disabling responsiveness</a>
+</li>
+<li>
   <a href="#browsers">Browser support</a>
 </li>
 <li>
@@ -254,6 +257,66 @@
 
     <h3>Looking for more example templates?</h3>
     <p>Check out the new <a href="https://github.com/twbs/bootstrap-examples">Examples repository on GitHub</a>, or <a href="http://examples.getbootstrap.com">view them in your browser</a>. Included are over a dozen example templates for building with and extending Bootstrap.</p>
+  </div>
+
+
+
+  <!-- Template
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="disable-responsive">Disabling responsiveness</h1>
+    </div>
+    <p class="lead">Don't want your site or application to be scale on different device? With a little bit of work, you can disable the responsive features of Bootstrap so that mobile users see your full desktop-version site.</p>
+
+    <h3>Steps to disable responsive views</h3>
+    <p>To disable responsive features, follow these steps. See it in action in the modified template below.</p>
+    <ol>
+      <li>Remove (or just don't add) the viewport <code>&lt;meta&gt;</code> mentioned in <a href="../css/#overview-mobile">the CSS docs</a></li>
+      <li>Force a single <code>max-width</code> on the <code>.container</code> (e.g., <code>.container { max-width: 940px; }</code>). Be sure that this comes after the default Bootstrap CSS; otherwise, you'll need <code>!important</code>.</li>
+      <li>For grid layouts, make use of <code>.col-xs-*</code> classes in addition to or in place of the medium/large ones. Don't worry, the extra-small device grid scales up to all resolutions, so you're set there.</li>
+    </ol>
+    <p>You'll still need respond.js for IE8 (since our media queries are still there and need to be picked up). This just disables the "mobile site" of Bootstrap.</p>
+
+    <h3>Bootstrap template with disabled responsive</h3>
+    <p>We've taken the above steps and applied them to a basic template here. Note the steps above are called out in comments here, e.g. <code>&lt;-- 1. --&gt;</code>.</p>
+<div class="highlight"><pre><code class="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Disabling responsiveness in Bootstrap<span class="nt">&lt;/title&gt;</span>
+
+    <span class="c">&lt;!-- 1. Note there is no meta tag here --&gt;</span>
+
+    <span class="c">&lt;!-- Load default Bootstrap --&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;css/bootstrap.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media=</span><span class="s">&quot;screen&quot;</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- 2. Add our custom CSS to set the container&#39;s fixed width --&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+      <span class="nc">.container</span> <span class="p">{</span> <span class="k">max-width</span><span class="o">:</span> <span class="m">940px</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+
+    <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
+
+    <span class="c">&lt;!-- 3. When using grid columns, use the `.col-xs-*` classes --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-4&quot;</span><span class="nt">&gt;</span>One third<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-4&quot;</span><span class="nt">&gt;</span>One third<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-4&quot;</span><span class="nt">&gt;</span>One third<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="c">&lt;!-- jQuery (necessary for Bootstrap&#39;s JavaScript plugins) --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//code.jquery.com/jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+    <span class="c">&lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+    <span class="c">&lt;!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;js/respond.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
   </div>
 
 
