@@ -125,6 +125,7 @@
     <li><a href="#grid-example-basic">Ex: Stacked-to-horizonal</a></li>
     <li><a href="#grid-example-mixed">Ex: Mobile-desktop</a></li>
     <li><a href="#grid-example-mixed-complete">Ex: Mobile, tablet, desktop</a></li>
+    <li><a href="#grid-responsive-clearing">Responsive column clearing</a></li>
     <li><a href="#grid-offsetting">Offset columns</a></li>
     <li><a href="#grid-nesting">Nested columns</a></li>
     <li><a href="#grid-column-ordering">Column ordering</a></li>
@@ -269,7 +270,7 @@
 <span class="c">/* Small devices (tablets, 768px and up) */</span>
 <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-tablet</span><span class="o">)</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
 
-<span class="c">/* Medium devices (tablets, 992px and up) */</span>
+<span class="c">/* Medium devices (desktops, 992px and up) */</span>
 <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-desktop</span><span class="o">)</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
 
 <span class="c">/* Large devices (large desktops, 1200px and up) */</span>
@@ -295,7 +296,7 @@
             </th>
             <th>
               Small devices
-              <small>Tablets (&gt;768px)</small>
+              <small>Tablets (&ge;768px)</small>
             </th>
             <th>
               Medium devices
@@ -494,6 +495,20 @@
       <p>We dive into more grid layouts in a separate page, free of chrome and documentation to better show you the power of the grid.</p>
       <p><a class="btn btn-danger" target="_blank" href="http://examples.getbootstrap.com/grid/">More grid examples</a></p>
     </div>
+
+    <h3 id="grid-responsive-clearing">Responsive column clearing</h3>
+    <p>With the four tiers of grids available you're bound to run into issues where, at certain breakpoints, your columns don't clear quite right as one is taller than the other. To fix that, use a combination of a <code>.clearfix</code> and our <a href="../css#responsive-utilities">responsive utility classes</a>.</p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-6 col-sm-3&quot;</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-6 col-sm-3&quot;</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
+
+  <span class="c">&lt;!-- Add the extra clearfix for only the required viewport --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;clearfix visible-xs&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-6 col-sm-3&quot;</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-6 col-sm-3&quot;</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
 
     <h3 id="grid-offsetting">Offsetting columns</h3>
     <p>Move columns to the right using <code>.col-md-offset-*</code> classes. These classes increase the left margin of a column by <code>*</code> columns. For example, <code>.col-md-offset-4</code> moves <code>.col-md-4</code> over four columns.</p>
@@ -2230,7 +2245,7 @@
             </th>
             <th>
               Small devices
-              <small>Tablets (&gt;768px)</small>
+              <small>Tablets (&ge;768px)</small>
             </th>
             <th>
               Medium devices
@@ -2242,15 +2257,7 @@
             </th>
           </tr>
         </thead>
-<!--         <thead>
-          <tr>
-            <th>Class</th>
-            <th>Small devices <small>Up to 768px</small></th>
-            <th>Medium devices <small>768px to 991px</small></th>
-            <th>Large devices <small>992px and up</small></th>
-          </tr>
-        </thead>
- -->        <tbody>
+        <tbody>
           <tr>
             <th><code>.visible-xs</code></th>
             <td class="is-visible">Visible</td>
@@ -2354,6 +2361,7 @@
         <span class="hidden-sm">Small</span>
         <span class="visible-sm">&#10004; Visible on small</span>
       </div>
+      <div class="clearfix visible-xs"></div>
       <div class="col-xs-6 col-sm-3">
         <span class="hidden-md">Medium</span>
         <span class="visible-md">&#10004; Visible on medium</span>
@@ -2374,6 +2382,7 @@
         <span class="visible-sm">Small</span>
         <span class="hidden-sm">&#10004; Hidden on small</span>
       </div>
+      <div class="clearfix visible-xs"></div>
       <div class="col-xs-6 col-sm-3">
         <span class="visible-md">Medium</span>
         <span class="hidden-md">&#10004; Hidden on medium</span>
