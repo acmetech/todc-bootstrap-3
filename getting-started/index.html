@@ -44,14 +44,16 @@
     <!-- Docs master nav -->
     <header class="navbar navbar-fixed-top bs-docs-nav" role="banner">
   <div class="container">
-    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a href="../" class="navbar-brand">TODC Bootstrap RC2</a>
-    <nav class="nav-collapse collapse bs-navbar-collapse" role="navigation">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../" class="navbar-brand">Bootstrap 3 RC2</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li class="active">
           <a href="../getting-started">Getting started</a>
@@ -98,7 +100,7 @@
     <div class="container bs-docs-container">
       <div class="row">
         <div class="col-md-3">
-          <aside class="bs-sidebar" role="complementary">
+          <div class="bs-sidebar hidden-print" role="complementary">
             <ul class="nav bs-sidenav">
               
                 <li>
@@ -132,9 +134,9 @@
 
               
             </ul>
-          </aside>
+          </div>
         </div>
-        <main class="col-md-9" role="main">
+        <div class="col-md-9" role="main">
             <!-- Getting started
   ================================================== -->
   <div class="bs-docs-section">
@@ -280,7 +282,7 @@
     <p>In addition, <strong>Internet Explorer 8 requires the use of <a href="https://github.com/scottjehl/Respond">respond.js</a> to enable media query support.</strong></p>
 
     <h3>IE Compatibility modes</h3>
-    <p>Bootstrap is not supported in the old Internet Explorer compatibility modes. To be sure you're using the latest rendering mode for IE, consider including the appropriate <code>meta</code> tag in your pages.</p>
+    <p>Bootstrap is not supported in the old Internet Explorer compatibility modes. To be sure you're using the latest rendering mode for IE, consider including the appropriate <code>meta</code> tag in your pages:</p>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content=</span><span class="s">&quot;IE=edge&quot;</span><span class="nt">&gt;</span>
 </code></pre></div>
     <p>See <a href="http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge">this StackOverflow question</a> for more information.</p>
@@ -502,7 +504,7 @@
 
   </div>
 
-        </main>
+        </div>
       </div>
 
     </div>
