@@ -558,7 +558,8 @@ textarea.input-lg {
 .btn-default:hover,
 .btn-default:focus,
 .btn-default:active,
-.btn-default.active {
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
   color: #333333;
   border: 1px solid #cfcfcf;
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#f5f5f5), to(#e4e4e4));
@@ -572,7 +573,8 @@ textarea.input-lg {
   background-color: #e4e4e4 \9;
 }
 .btn-default:active,
-.btn-default.active {
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
   border: 1px solid #c3c3c3;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#f5f5f5), to(#d8d8d8));
@@ -686,7 +688,8 @@ fieldset[disabled] .btn-default:active {
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
-.btn-primary.active {
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
   color: #ffffff;
   border: 1px solid #196aeb;
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#4d90fe), to(#3078eb));
@@ -700,7 +703,8 @@ fieldset[disabled] .btn-default:active {
   background-color: #3078eb \9;
 }
 .btn-primary:active,
-.btn-primary.active {
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
   border: 1px solid #135fd7;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#4d90fe), to(#1969e8));
@@ -766,7 +770,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-danger:hover,
 .btn-danger:focus,
 .btn-danger:active,
-.btn-danger.active {
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger {
   color: #ffffff;
   border: 1px solid #b12d26;
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#dd4b39), to(#c13e2c));
@@ -780,7 +785,8 @@ fieldset[disabled] .btn-primary.active {
   background-color: #c13e2c \9;
 }
 .btn-danger:active,
-.btn-danger.active {
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger {
   border: 1px solid #9c2721;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#dd4b39), to(#ad3727));
@@ -846,7 +852,8 @@ fieldset[disabled] .btn-danger.active {
 .btn-warning:hover,
 .btn-warning:focus,
 .btn-warning:active,
-.btn-warning.active {
+.btn-warning.active,
+.open .dropdown-toggle.btn-warning {
   color: #ffffff;
   border: 1px solid #f9980f;
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#fbb450), to(#f99e1e));
@@ -860,7 +867,8 @@ fieldset[disabled] .btn-danger.active {
   background-color: #f99e1e \9;
 }
 .btn-warning:active,
-.btn-warning.active {
+.btn-warning.active,
+.open .dropdown-toggle.btn-warning {
   border: 1px solid #e98b06;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#fbb450), to(#f89306));
@@ -926,7 +934,8 @@ fieldset[disabled] .btn-warning.active {
 .btn-success:hover,
 .btn-success:focus,
 .btn-success:active,
-.btn-success.active {
+.btn-success.active,
+.open .dropdown-toggle.btn-success {
   color: #ffffff;
   border: 1px solid #2e863e;
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#35aa47), to(#2f973f));
@@ -940,7 +949,8 @@ fieldset[disabled] .btn-warning.active {
   background-color: #2f973f \9;
 }
 .btn-success:active,
-.btn-success.active {
+.btn-success.active,
+.open .dropdown-toggle.btn-success {
   border: 1px solid #287335;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#35aa47), to(#298337));
@@ -1006,7 +1016,8 @@ fieldset[disabled] .btn-success.active {
 .btn-info:hover,
 .btn-info:focus,
 .btn-info:active,
-.btn-info.active {
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
   color: #ffffff;
   border: 1px solid #31b0d5;
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#5bc0de), to(#46b8da));
@@ -1020,7 +1031,8 @@ fieldset[disabled] .btn-success.active {
   background-color: #46b8da \9;
 }
 .btn-info:active,
-.btn-info.active {
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
   border: 1px solid #28a1c5;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#5bc0de), to(#31b0d5));
@@ -1580,9 +1592,9 @@ li.list-group-header {
 .nav > li.disabled > a:focus {
   color: #999999;
 }
-.nav.open > a,
-.nav.open > a:hover,
-.nav.open > a:focus {
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
   background-color: #1155cc;
   border-color: #1155cc;
 }
@@ -1743,10 +1755,15 @@ li.list-group-header {
     padding-bottom: 0;
     overflow: visible !important;
   }
+  .navbar-collapse.in {
+    overflow-y: visible;
+  }
+}
+.navbar-static-top {
+  border-width: 0 0 1px;
 }
 @media (min-width: 768px) {
   .navbar-static-top {
-    border-width: 0 0 1px;
     border-radius: 0;
   }
 }
@@ -1818,10 +1835,7 @@ li.list-group-header {
   }
 }
 .navbar-nav {
-  padding-top: 2px;
-  padding-bottom: 2px;
-  margin-left: -15px;
-  margin-right: -15px;
+  margin: 2px -15px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -1887,8 +1901,6 @@ li.list-group-header {
   .navbar-nav {
     float: left;
     margin: 0;
-    padding-top: 0;
-    padding-bottom: 0;
   }
   .navbar-nav > li {
     float: left;
@@ -1998,6 +2010,12 @@ li.list-group-header {
   color: #999999;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+@media (min-width: 768px) {
+  .navbar-text {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 }
 .navbar-link {
   color: #999999;
@@ -2890,9 +2908,9 @@ li.list-group-header {
   border-top-right-radius: 2px;
 }
 .pagination > li > a:hover,
+.pagination > li > span:hover,
 .pagination > li > a:focus,
-.pagination > .active > a,
-.pagination > .active > span {
+.pagination > li > span:focus {
   background-color: #f5f5f5;
   border-color: #c6c6c6;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -2911,7 +2929,11 @@ li.list-group-header {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .pagination > .active > a,
-.pagination > .active > span {
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
   color: #4d90fe;
   -webkit-box-shadow: none;
   box-shadow: none;
