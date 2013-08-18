@@ -57,6 +57,9 @@ body {
   background-color: #4e599e !important;
   border-color: #4e599e !important;
 }
+.bs-docs-nav .navbar-collapse {
+  border-color: #4e599e;
+}
 .bs-docs-nav .navbar-brand {
   color: #fff;
 }
@@ -365,7 +368,7 @@ body {
 .bs-example {
   position: relative;
   padding: 45px 15px 15px;
-  margin: 0 -15px -1px;
+  margin: 0 -15px 15px;
   background-color: #fafafa;
   box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
   border-color: #e5e5e5 #eee #eee;
@@ -386,11 +389,10 @@ body {
 }
 
 /* Tweak display of the examples */
-.bs-example + .prettyprint,
 .bs-example + .highlight {
-  margin-top: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  margin: -15px -15px 15px;
+  border-radius: 0;
+  border-width: 0 0 1px;
 }
 
 /* Tweak content of examples for optimum awesome */
@@ -433,6 +435,12 @@ body {
 .bs-example-type h5,
 .bs-example-type h6 {
   margin: 0;
+}
+
+/* Buttons */
+.bs-example > .btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* Forms */
@@ -551,19 +559,6 @@ body {
 }
 
 
-
-/* Example templates
--------------------------------------------------- */
-
-.bs-examples h4 {
-  margin-bottom: 5px;
-}
-.bs-examples p {
-  margin-bottom: 20px;
-}
-
-
-
 /* Responsive docs
 -------------------------------------------------- */
 
@@ -597,6 +592,10 @@ body {
     border-bottom: 0;
   }
 }
+.bs-table-scrollable .highlight pre {
+  white-space: normal;
+}
+
 
 /* Related: responsive utilities tables */
 .table code {
@@ -718,7 +717,7 @@ body {
 -------------------------------------------------- */
 
 /* Pseudo :focus state for showing how it looks in the docs */
-input.focused {
+#focusedInput {
   border: 1px solid #4d90fe !important;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3) !important;
      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3) !important;
@@ -800,6 +799,15 @@ input.focused {
     border-radius: 4px 4px 0 0;
     box-shadow: none;
   }
+  .bs-example + .prettyprint,
+  .bs-example + .highlight {
+    margin-top: -1px;
+    margin-left: 0;
+    margin-right: 0;
+    border-width: 1px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
 
   .carbonad {
     margin: 0 !important;
@@ -809,10 +817,6 @@ input.focused {
 
   /* Show the docs nav */
   .bs-sidebar {
-    display: block;
-  }
-  /* Show the hidden subnavs when space allows it */
-  .bs-sidebar .nav > .active > ul {
     display: block;
   }
 
@@ -839,24 +843,6 @@ input.focused {
 
 /* Tablets/desktops and up */
 @media screen and (min-width: 992px) {
-
-  /* Widen the fixed sidebar */
-  .bs-sidebar.affix,
-  .bs-sidebar.affix-bottom {
-    width: 213px;
-  }
-  .bs-sidebar.affix {
-    position: fixed; /* Undo the static from mobile-first approach */
-    top: 50px;
-  }
-  .bs-sidebar.affix-bottom {
-    position: absolute; /* Undo the static from mobile-first approach */
-  }
-  .bs-sidebar.affix-bottom .bs-sidenav,
-  .bs-sidebar.affix .bs-sidenav {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
   .bs-header h1,
   .bs-header p {
     margin-right: 380px;
@@ -868,6 +854,28 @@ input.focused {
     padding: 15px !important;
     width: 330px !important;
     min-height: 132px;
+  }
+
+  /* Show the hidden subnavs when space allows it */
+  .bs-sidebar .nav > .active > ul {
+    display: block;
+  }
+  /* Widen the fixed sidebar */
+  .bs-sidebar.affix,
+  .bs-sidebar.affix-bottom {
+    width: 213px;
+  }
+  .bs-sidebar.affix {
+    position: fixed; /* Undo the static from mobile-first approach */
+    top: 80px;
+  }
+  .bs-sidebar.affix-bottom {
+    position: absolute; /* Undo the static from mobile-first approach */
+  }
+  .bs-sidebar.affix-bottom .bs-sidenav,
+  .bs-sidebar.affix .bs-sidenav {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
