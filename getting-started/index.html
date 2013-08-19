@@ -261,7 +261,12 @@
 </code></pre></div>
 
   <!-- Template
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
       <h1 id="examples">Examples</h1>
+    </div>
+    <p class="lead">Build on the basic template above with Bootstrap's many components. Check out some of the more advanced tips for how to customize and build on top of them.</p>
 
     <div class="row bs-examples">
       <div class="col-xs-6 col-md-4">
@@ -401,7 +406,7 @@
     <p>To disable responsive features, follow these steps. See it in action in the modified template below.</p>
     <ol>
       <li>Remove (or just don't add) the viewport <code>&lt;meta&gt;</code> mentioned in <a href="../css/#overview-mobile">the CSS docs</a></li>
-      <li>Force a single <code>max-width</code> on the <code>.container</code> (e.g., <code>.container { max-width: 940px; }</code>). Be sure that this comes after the default Bootstrap CSS; otherwise, you'll need <code>!important</code>.</li>
+      <li>Remove the <code>max-width</code> on the <code>.container</code> for all grid tiers with <code>max-width: none !important;</code> and set a regular width like <code>width: 970px;</code>. Be sure that this comes after the default Bootstrap CSS. You can optionally avoid the <code>!important</code> with media queries or some selector-fu.</li>
       <li>For grid layouts, make use of <code>.col-xs-*</code> classes in addition to or in place of the medium/large ones. Don't worry, the extra-small device grid scales up to all resolutions, so you're set there.</li>
     </ol>
     <p>You'll still need respond.js for IE8 (since our media queries are still there and need to be picked up). This just disables the "mobile site" of Bootstrap.</p>
@@ -420,7 +425,10 @@
 
     <span class="c">&lt;!-- 2. Add our custom CSS to set the container&#39;s fixed width --&gt;</span>
     <span class="nt">&lt;style&gt;</span>
-      <span class="nc">.container</span> <span class="p">{</span> <span class="k">max-width</span><span class="o">:</span> <span class="m">940px</span><span class="p">;</span> <span class="p">}</span>
+      <span class="nc">.container</span> <span class="p">{</span>
+        <span class="k">max-width</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
+        <span class="k">width</span><span class="o">:</span> <span class="m">970px</span><span class="p">;</span>
+      <span class="p">}</span>
     <span class="nt">&lt;/style&gt;</span>
   <span class="nt">&lt;/head&gt;</span>
   <span class="nt">&lt;body&gt;</span>
@@ -509,6 +517,8 @@
 
     <h3>Modals and mobile devices</h3>
     <p>Support for <code>overflow: hidden</code> on the <code>&lt;body&gt;</code> element is quite limited in iOS and Android. To that end, when you scroll past the top or bottom of a modal in either of those devices' browsers, the <code>&lt;body&gt;</code> content will begin to scroll.</p>
+    <h4>Virtual keyboards</h4>
+    <p>Also, note that if you're using inputs in your modal – iOS has a rendering bug which doesn't update the position of fixed elements when the virtual keyboard is triggered. There are a few work arounds for this, including transforming your elements to <code>position: absolute</code> or invoking a timer on focus to try to correct the positioning manually. This is not handled by Bootstrap, so it is up to you to decide which solution is best for your application.</p>
 
     <h3>Browser zooming</h3>
     <p>Page zooming inevitably presents rendering artifacts in some components, both in Bootstrap and the rest of the web. Depending on the issue, we may be able to fix it (search first and then open an issue if need be). However, we tend to ignore these as they often have no direct solution other than hacky workarounds.</p>
