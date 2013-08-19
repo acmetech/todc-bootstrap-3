@@ -1440,7 +1440,7 @@ li.list-group-header {
   border-top-left-radius: 0;
 }
 .panel-title {
-  font-size: 16.25px;
+  font-size: 16px;
 }
 .panel-footer {
   background-color: rgba(243, 243, 243, 0.85);
@@ -1720,13 +1720,12 @@ li.list-group-header {
   }
 }
 .navbar-collapse {
+  max-height: 340px;
+  overflow-x: visible;
   padding-right: 15px;
   padding-left: 15px;
   border-top: 1px solid #1b1b1b;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  max-height: 340px;
-  overflow-x: visible;
-  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 .navbar-collapse:before,
@@ -1740,6 +1739,9 @@ li.list-group-header {
 }
 .navbar-collapse:after {
   clear: both;
+}
+.navbar-collapse.in {
+  overflow-y: auto;
 }
 @media (min-width: 768px) {
   .navbar-collapse {
