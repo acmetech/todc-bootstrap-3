@@ -837,10 +837,10 @@
         <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
         <li><a href="#profile" data-toggle="tab">Profile</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#dropdown1" data-toggle="tab">@fat</a></li>
-            <li><a href="#dropdown2" data-toggle="tab">@mdo</a></li>
+          <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+            <li><a href="#dropdown1" tabindex="-1" data-toggle="tab">@fat</a></li>
+            <li><a href="#dropdown2" tabindex="-1" data-toggle="tab">@mdo</a></li>
           </ul>
         </li>
       </ul>
@@ -1275,7 +1275,7 @@
             <td>string | false</td>
             <td>false</td>
             <td>
-             <p>Appends the popover to a specific element. Example: <code>container: 'body'</code></p>
+             <p>Appends the popover to a specific element. Example: <code>container: 'body'</code>. This option is particularly useful in that it allows you to position the popover in the flow of the document near the triggering element - which will prevent the popover from floating away from the triggering element during a window resize.</p>
             </td>
           </tr>
         </tbody>
@@ -1583,11 +1583,11 @@
       <div class="panel-group" id="accordion">
         <div class="panel">
           <div class="panel-heading">
-            <h3 class="panel-title">
+            <h4 class="panel-title">
               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                 Collapsible Group Item #1
               </a>
-            </h3>
+            </h4>
           </div>
           <div id="collapseOne" class="panel-collapse collapse in">
             <div class="panel-body">
@@ -1597,11 +1597,11 @@
         </div>
         <div class="panel">
           <div class="panel-heading">
-            <h3 class="panel-title">
+            <h4 class="panel-title">
               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                 Collapsible Group Item #2
               </a>
-            </h3>
+            </h4>
           </div>
           <div id="collapseTwo" class="panel-collapse collapse">
             <div class="panel-body">
@@ -1611,11 +1611,11 @@
         </div>
         <div class="panel">
           <div class="panel-heading">
-            <h3 class="panel-title">
+            <h4 class="panel-title">
               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
                 Collapsible Group Item #3
               </a>
-            </h3>
+            </h4>
           </div>
           <div id="collapseThree" class="panel-collapse collapse">
             <div class="panel-body">
@@ -1628,11 +1628,11 @@
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-group&quot;</span> <span class="na">id=</span><span class="s">&quot;accordion&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-heading&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">&quot;panel-title&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;panel-title&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;accordion-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-parent=</span><span class="s">&quot;#accordion&quot;</span> <span class="na">href=</span><span class="s">&quot;#collapseOne&quot;</span><span class="nt">&gt;</span>
           Collapsible Group Item #1
         <span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/h3&gt;</span>
+      <span class="nt">&lt;/h4&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;collapseOne&quot;</span> <span class="na">class=</span><span class="s">&quot;panel-collapse collapse in&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-body&quot;</span><span class="nt">&gt;</span>
@@ -1642,11 +1642,11 @@
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-heading&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">&quot;panel-title&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;panel-title&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;accordion-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-parent=</span><span class="s">&quot;#accordion&quot;</span> <span class="na">href=</span><span class="s">&quot;#collapseTwo&quot;</span><span class="nt">&gt;</span>
           Collapsible Group Item #2
         <span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/h3&gt;</span>
+      <span class="nt">&lt;/h4&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;collapseTwo&quot;</span> <span class="na">class=</span><span class="s">&quot;panel-collapse collapse&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-body&quot;</span><span class="nt">&gt;</span>
@@ -1656,11 +1656,11 @@
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-heading&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">&quot;panel-title&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;panel-title&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;accordion-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-parent=</span><span class="s">&quot;#accordion&quot;</span> <span class="na">href=</span><span class="s">&quot;#collapseThree&quot;</span><span class="nt">&gt;</span>
           Collapsible Group Item #3
         <span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/h3&gt;</span>
+      <span class="nt">&lt;/h4&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;collapseThree&quot;</span> <span class="na">class=</span><span class="s">&quot;panel-collapse collapse&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-body&quot;</span><span class="nt">&gt;</span>
@@ -2059,7 +2059,7 @@
            <td>offset</td>
            <td>number | function | object</td>
            <td>10</td>
-           <td>Pixels to offset from screen when calculating position of scroll. If a single number is provided, the offset will be applied in both top and left directions. To provide a unique, bottom and top offset just provide an object <code>offset: { top: 10 }</code> or <code>offset: { top: 10, bottom: 5 }</code>. Use a function when you need to dynamically calculate an offset.</td>
+           <td>Pixels to offset from screen when calculating position of scroll. If a single number is provided, the offset will be applied in both top and bottom directions. To provide a unique, bottom and top offset just provide an object <code>offset: { top: 10 }</code> or <code>offset: { top: 10, bottom: 5 }</code>. Use a function when you need to dynamically calculate an offset.</td>
          </tr>
         </tbody>
       </table>
