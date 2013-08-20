@@ -236,8 +236,7 @@
 <li>
   <a href="#alerts">Alerts</a>
   <ul class="nav">
-    <li><a href="#alerts-default">Default alert</a></li>
-    <li><a href="#alerts-alternatives">Contextual alternatives</a></li>
+    <li><a href="#alerts-examples">Examples</a></li>
     <li><a href="#alerts-dismissable">Dismissable alerts</a></li>
     <li><a href="#alerts-links">Links in alerts</a></li>
   </ul>
@@ -285,46 +284,7 @@
           </div>
         </div>
         <div class="col-md-9" role="main">
-          <style>
-/* Icons
--------------------------------------------------- */
-
-.bs-glyphicons {
-  padding-left: 0;
-  padding-bottom: 1px;
-  margin-bottom: 20px;
-  list-style: none;
-  overflow: hidden;
-}
-.bs-glyphicons li {
-  float: left;
-  width: 25%;
-  height: 115px;
-  padding: 10px;
-  margin: 0 -1px -1px 0;
-  font-size: 12px;
-  line-height: 1.4;
-  text-align: center;
-  border: 1px solid #ddd;
-}
-.bs-glyphicons .glyphicon {
-  display: block;
-  margin: 5px auto 10px;
-  font-size: 24px;
-}
-.bs-glyphicons li:hover {
-  background-color: rgba(86,61,124,.1);
-}
-
-@media (min-width: 768px) {
-  .bs-glyphicons li {
-    width: 12.5%;
-  }
-}
-</style>
-
-
-  <!-- Glyphicons
+            <!-- Glyphicons
   ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
@@ -1768,7 +1728,7 @@
     </div>
 
     <div class="bs-example">
-      <nav class="navbar" role="navigation">
+      <nav class="navbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -1817,7 +1777,7 @@
         </div><!-- /.navbar-collapse -->
       </nav>
     </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-default&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
   <span class="c">&lt;!-- Brand and toggle get grouped for better mobile display --&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navbar-header&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;navbar-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;.navbar-ex1-collapse&quot;</span><span class="nt">&gt;</span>
@@ -1881,7 +1841,7 @@
     <h2 id="navbar-buttons">Buttons</h2>
     <p>For buttons not residing in a <code>&lt;form&gt;</code>, add this class to vertically center buttons within a navbar.</p>
     <div class="bs-example">
-      <nav class="navbar" role="navigation">
+      <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex2-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -1903,7 +1863,7 @@
     <h2 id="navbar-text">Text</h2>
     <p>Wrap strings of text in an element with <code>.navbar-text</code>, usually on a <code>&lt;p&gt;</code> tag for proper leading and color.</p>
     <div class="bs-example">
-      <nav class="navbar" role="navigation">
+      <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex3-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -1925,7 +1885,7 @@
     <h2 id="navbar-links">Non-nav links</h2>
     <p>For folks using standard links that are not within the regular navbar navigation component, use the <code>.navbar-link</code> class to add the proper colors for the default and inverse navbar options.</p>
     <div class="bs-example">
-      <nav class="navbar" role="navigation">
+      <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex4-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -1952,7 +1912,7 @@
     <h2 id="navbar-fixed-top">Fixed to top</h2>
     <p>Add <code>.navbar-fixed-top</code>.</p>
     <div class="bs-example bs-navbar-top-example">
-      <nav class="navbar navbar-fixed-top" role="navigation">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex5-collapse">
@@ -1974,7 +1934,7 @@
         </div><!-- /.navbar-collapse -->
       </nav>
     </div><!-- /example -->
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-fixed-top&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-default navbar-fixed-top&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
   ...
 <span class="nt">&lt;/nav&gt;</span>
 </code></pre></div>
@@ -1991,7 +1951,7 @@
     <h2 id="navbar-fixed-bottom">Fixed to bottom</h2>
     <p>Add <code>.navbar-fixed-bottom</code> instead.</p>
     <div class="bs-example bs-navbar-bottom-example">
-      <nav class="navbar navbar-fixed-bottom" role="navigation">
+      <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex6-collapse">
@@ -2013,7 +1973,7 @@
         </div><!-- /.navbar-collapse -->
       </nav>
     </div><!-- /example -->
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-fixed-bottom&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-default navbar-fixed-bottom&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
   ...
 <span class="nt">&lt;/nav&gt;</span>
 </code></pre></div>
@@ -2030,7 +1990,7 @@
     <h2 id="navbar-static-top">Static top</h2>
     <p>Create a full-width navbar that scrolls away with the page by adding <code>.navbar-static-top</code>. Unlike the <code>.navbar-fixed-*</code> classes, you do not need to change any padding on the <code>body</code>.</p>
     <div class="bs-example bs-navbar-top-example">
-      <nav class="navbar navbar-static-top" role="navigation">
+      <nav class="navbar navbar-default navbar-static-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex7-collapse">
@@ -2052,7 +2012,7 @@
         </div><!-- /.navbar-collapse -->
       </nav>
     </div><!-- /example -->
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-static-top&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-default navbar-static-top&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
   ...
 <span class="nt">&lt;/nav&gt;</span>
 </code></pre></div>
@@ -3530,21 +3490,14 @@
     </div>
     <p class="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. For inline dismissal, use the <a href="../javascript/#js-alerts">alerts jQuery plugin</a>.</p>
 
-    <h2 id="alerts-default">Default alert</h2>
-    <p>Wrap any text and an optional dismiss button in <code>.alert</code> for a basic warning alert message.</p>
+    <h2 id="alerts-examples">Examples</h2>
+    <p>Wrap any text and an optional dismiss button in <code>.alert</code> and one of the four contextual classes (e.g., <code>.alert-success</code>) for basic alert messages.</p>
 
-    <div class="bs-example">
-      <div class="alert">
-        <strong>Warning!</strong> Best check yo self, you're not looking too good.
-      </div>
+    <div class="bs-callout bs-callout-info">
+      <h4>No default class</h4>
+      <p>Alerts don't have default classes, only base and modifier classes. A default gray alert doesn't make too much sense, so you're required to specify a type via contextual class. Choose from success, info, warning, or danger.</p>
     </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;strong&gt;</span>Warning!<span class="nt">&lt;/strong&gt;</span> Best check yo self, you&#39;re not looking too good.
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
 
-    <h2 id="alerts-alternatives">Contextual alternatives</h2>
-    <p>Add optional classes to change an alert's connotation.</p>
     <div class="bs-example">
       <div class="alert alert-success">
         <strong>Well done!</strong> You successfully read this important alert message.
@@ -3552,12 +3505,16 @@
       <div class="alert alert-info">
         <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
       </div>
+      <div class="alert alert-warning">
+        <strong>Warning!</strong> Best check yo self, you're not looking too good.
+      </div>
       <div class="alert alert-danger">
         <strong>Oh snap!</strong> Change a few things up and try submitting again.
       </div>
     </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-success&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-info&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-warning&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-danger&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
@@ -3583,23 +3540,29 @@
     <h2 id="alerts-links">Links in alerts</h2>
     <p>Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>
     <div class="bs-example">
-      <div class="alert alert-danger">
-        <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
-      </div>
       <div class="alert alert-success">
         <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
       </div>
       <div class="alert alert-info">
         <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
       </div>
+      <div class="alert alert-warning">
+        <strong>Warning!</strong> Best check yo self, you're <a href="#" class="alert-link">not looking too good</a>.
+      </div>
+      <div class="alert alert-danger">
+        <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+      </div>
     </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-danger&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;alert-link&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-success&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-success&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;alert-link&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-info&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;alert-link&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-warning&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;alert-link&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-danger&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;alert-link&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
@@ -4035,13 +3998,13 @@
     <h3 id="panels-basic">Basic example</h3>
     <p>By default, all the <code>.panel</code> does is apply some basic border and padding to contain some content.</p>
     <div class="bs-example">
-      <div class="panel">
+      <div class="panel panel-default">
         <div class="panel-body">
           Basic panel example
         </div>
       </div>
     </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel panel-default&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-body&quot;</span><span class="nt">&gt;</span>
     Basic panel example
   <span class="nt">&lt;/div&gt;</span>
@@ -4051,13 +4014,13 @@
     <h3 id="panels-heading">Panel with heading</h3>
     <p>Easily add a heading container to your panel with <code>.panel-heading</code>. You may also include any <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> with a <code>.panel-title</code> class to add a pre-styled heading.</p>
     <div class="bs-example">
-      <div class="panel">
+      <div class="panel panel-default">
         <div class="panel-heading">Panel heading without title</div>
         <div class="panel-body">
           Panel content
         </div>
       </div>
-      <div class="panel">
+      <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">Panel title</h3>
         </div>
@@ -4066,14 +4029,14 @@
         </div>
       </div>
     </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel panel-default&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-heading&quot;</span><span class="nt">&gt;</span>Panel heading without title<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-body&quot;</span><span class="nt">&gt;</span>
     Panel content
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel panel-default&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-heading&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">&quot;panel-title&quot;</span><span class="nt">&gt;</span>Panel title<span class="nt">&lt;/h3&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -4086,14 +4049,14 @@
     <h3 id="panels-footer">Panel with footer</h3>
     <p>Wrap buttons or secondary text in <code>.panel-footer</code>. Note that panel footers <strong>do not</strong> inherit colors and borders when using contextual variations as they are not meant to be in the foreground.</p>
     <div class="bs-example">
-      <div class="panel">
+      <div class="panel panel-default">
         <div class="panel-body">
           Panel content
         </div>
         <div class="panel-footer">Panel footer</div>
       </div>
     </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel panel-default&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-body&quot;</span><span class="nt">&gt;</span>
     Panel content
   <span class="nt">&lt;/div&gt;</span>
@@ -4155,7 +4118,7 @@
     <h3 id="panels-tables">With tables</h3>
     <p>Add any non-bordered <code>.table</code> within a panel for a seamless design. If there is a <code>.panel-body</code>, we add an extra border to the top of the table for separation.</p>
     <div class="bs-example">
-      <div class="panel">
+      <div class="panel panel-default">
         <!-- Default panel contents -->
         <div class="panel-heading">Panel heading</div>
         <div class="panel-body">
@@ -4195,7 +4158,7 @@
         </table>
       </div>
     </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel panel-default&quot;</span><span class="nt">&gt;</span>
   <span class="c">&lt;!-- Default panel contents --&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-heading&quot;</span><span class="nt">&gt;</span>Panel heading<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-body&quot;</span><span class="nt">&gt;</span>
@@ -4211,7 +4174,7 @@
 
     <p>If there is no panel body, the component moves from panel header to table without interruption.</p>
     <div class="bs-example">
-      <div class="panel">
+      <div class="panel panel-default">
         <!-- Default panel contents -->
         <div class="panel-heading">Panel heading</div>
 
@@ -4248,7 +4211,7 @@
         </table>
       </div>
     </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel panel-default&quot;</span><span class="nt">&gt;</span>
   <span class="c">&lt;!-- Default panel contents --&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-heading&quot;</span><span class="nt">&gt;</span>Panel heading<span class="nt">&lt;/div&gt;</span>
 
@@ -4264,7 +4227,7 @@
     <h3 id="panels-list-group">With list groups</h3>
     <p>Easily include full-width <a href="#list-group">list groups</a> within any panel.</p>
     <div class="bs-example">
-      <div class="panel">
+      <div class="panel panel-default">
         <!-- Default panel contents -->
         <div class="panel-heading">Panel heading</div>
         <div class="panel-body">
@@ -4281,7 +4244,7 @@
         </ul>
       </div>
     </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel panel-default&quot;</span><span class="nt">&gt;</span>
   <span class="c">&lt;!-- Default panel contents --&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-heading&quot;</span><span class="nt">&gt;</span>Panel heading<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-body&quot;</span><span class="nt">&gt;</span>
@@ -4385,7 +4348,8 @@
     <!-- Footer
     ================================================== -->
     <footer class="bs-footer" role="contentinfo">
-      <div class="bs-social">
+      <div class="container">
+        <div class="bs-social">
   <ul class="bs-social-buttons">
     <li>
       <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&amp;repo=todc-bootstrap&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20" title="Star on GitHub"></iframe>
@@ -4403,20 +4367,25 @@
 </div>
 
 
-      <p>Forked from <a href="http://twbs.github.com/bootstrap/" target="_blank">Bootstrap</a> and built with all the love in the world by <a href="https://github.com/todc" target="_blank">todc</a>.</p>
-      <p>Updated to support v3.0.0 by <a href="https://github.com/acmetech" target="_blank">acmetech</a>.</p>
-      <p>Code licensed under <a href="http://www.opensource.org/licenses/mit-license.php" target="_blank">MIT License</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-      <ul class="footer-links">
-        <li><a href="https://github.com/todc/todc-bootstrap/issues?state=open">Issues</a></li>
-        <li class="muted">&middot;</li>
-        <li><a href="https://github.com/todc/todc-bootstrap/releases">Releases</a></li>
-        <li class="muted">&middot;</li>
-        <li><a href="http://blog.getbootstrap.com">Bootstrap Blog</a></li>
-        <li class="muted">&middot;</li>
-        <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Bootstrap Issues</a></li>
-        <li class="muted">&middot;</li>
-        <li><a href="https://github.com/twbs/bootstrap/releases">Bootstrap Releases</a></li>
-      </ul>
+        <p>Forked from <a href="http://twbs.github.com/bootstrap/" target="_blank">Bootstrap</a> and built with all the love in the world by <a href="https://github.com/todc" target="_blank">todc</a>.</p>
+        <p>Updated to support v3.0.0 by <a href="https://github.com/acmetech" target="_blank">acmetech</a>.</p>
+        <p>Code licensed under <a href="http://www.opensource.org/licenses/mit-license.php" target="_blank">MIT License</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <ul class="footer-links">
+          <li><a href="../2.3.2/">2.3.2 docs</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/todc/todc-bootstrap/issues?state=open">Issues</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/todc/todc-bootstrap/releases">Releases</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="http://getbootstrap.com2.3.2/">Bootstrap 2.3.2 docs</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="http://blog.getbootstrap.com">Bootstrap Blog</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Bootstrap Issues</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/twbs/bootstrap/releases">Bootstrap Releases</a></li>
+        </ul>
+      </div>
     </footer>
 
     <!-- JS and analytics only. -->
