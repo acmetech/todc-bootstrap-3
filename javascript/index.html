@@ -422,7 +422,7 @@
 
     <h3>Options</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.</p>
-    <div class="bs-table-scrollable">
+    <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
@@ -461,7 +461,7 @@
          </tr>
         </tbody>
       </table>
-    </div><!-- /.bs-table-scrollable -->
+    </div><!-- /.table-responsive -->
 
     <h3>Methods</h3>
 
@@ -489,7 +489,7 @@
 
     <h3>Events</h3>
     <p>Bootstrap's modal class exposes a few events for hooking into modal functionality.</p>
-    <div class="bs-table-scrollable">
+    <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
@@ -516,7 +516,7 @@
          </tr>
         </tbody>
       </table>
-    </div><!-- /.bs-table-scrollable -->
+    </div><!-- /.table-responsive -->
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;hidden.bs.modal&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something…</span>
 <span class="p">})</span>
@@ -537,7 +537,7 @@
 
     <h3>Within a navbar</h3>
     <div class="bs-example">
-      <nav id="navbar-example" class="navbar navbar-static" role="navigation">
+      <nav id="navbar-example" class="navbar navbar-default navbar-static" role="navigation">
         <div class="navbar-header">
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-js-navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -659,7 +659,7 @@
     <p>Toggles the dropdown menu of a given navbar or tabbed navigation.</p>
 
     <h3>Events</h3>
-    <div class="bs-table-scrollable">
+    <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
@@ -686,7 +686,7 @@
           </tr>
         </tbody>
       </table>
-    </div><!-- ./bs-table-scrollable -->
+    </div><!-- ./bs-table-responsive -->
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myDropdown&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;show.bs.dropdown&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something…</span>
 <span class="p">})</span>
@@ -704,7 +704,7 @@
     <h2 id="scrollspy-examples">Example in navbar</h2>
     <p>The ScrollSpy plugin is for automatically updating nav targets based on scroll position. Scroll the area below the navbar and watch the active class change. The dropdown sub items will be highlighted as well.</p>
     <div class="bs-example">
-      <nav id="navbar-example2" class="navbar navbar-static" role="navigation">
+      <nav id="navbar-example2" class="navbar navbar-default navbar-static" role="navigation">
         <div class="navbar-header">
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-js-navbar-scrollspy">
             <span class="sr-only">Toggle navigation</span>
@@ -777,7 +777,7 @@
 
     <h3>Options</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-offset=""</code>.</p>
-    <div class="bs-table-scrollable">
+    <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
@@ -796,10 +796,10 @@
          </tr>
         </tbody>
       </table>
-    </div><!-- ./bs-table-scrollable -->
+    </div><!-- ./bs-table-responsive -->
 
     <h3>Events</h3>
-    <div class="bs-table-scrollable">
+    <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
@@ -814,7 +814,7 @@
         </tr>
         </tbody>
       </table>
-    </div><!-- ./bs-table-scrollable -->
+    </div><!-- ./bs-table-responsive -->
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myScrollspy&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;activate.bs.scrollspy&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something…</span>
 <span class="p">})</span>
@@ -915,7 +915,7 @@
 </code></pre></div>
 
     <h3>Events</h3>
-    <div class="bs-table-scrollable">
+    <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
@@ -934,7 +934,7 @@
          </tr>
         </tbody>
       </table>
-    </div><!-- /.bs-table-scrollable -->
+    </div><!-- /.table-responsive -->
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;a[data-toggle=&quot;tab&quot;]&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;shown.bs.tab&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">e</span><span class="p">.</span><span class="nx">target</span> <span class="c1">// activated tab</span>
   <span class="nx">e</span><span class="p">.</span><span class="nx">relatedTarget</span> <span class="c1">// previous tab</span>
@@ -982,7 +982,7 @@
 
     <h3>Options</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-animation=""</code>.</p>
-    <div class="bs-table-scrollable">
+    <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
@@ -1049,7 +1049,7 @@
          </tr>
         </tbody>
       </table>
-    </div><!-- /.bs-table-scrollable -->
+    </div><!-- /.table-responsive -->
     <div class="bs-callout bs-callout-info">
       <h4>Data attributes for individual tooltips</h4>
       <p>Options for individual tooltips can alternatively be specified through the use of data attributes, as explained above.</p>
@@ -1085,7 +1085,7 @@
 </code></pre></div>
 
     <h3>Events</h3>
-    <div class="bs-table-scrollable">
+    <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
@@ -1112,7 +1112,7 @@
          </tr>
         </tbody>
       </table>
-    </div><!-- /.bs-table-scrollable -->
+    </div><!-- /.table-responsive -->
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myTooltip&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;hidden.bs.tooltip&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something…</span>
 <span class="p">})</span>
@@ -1207,7 +1207,7 @@
 
     <h3>Options</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-animation=""</code>.</p>
-    <div class="bs-table-scrollable">
+    <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
@@ -1280,7 +1280,7 @@
           </tr>
         </tbody>
       </table>
-    </div><!-- /.bs-table-scrollable -->
+    </div><!-- /.table-responsive -->
     <div class="bs-callout bs-callout-info">
       <h4>Data attributes for individual popovers</h4>
       <p>Options for individual popovers can alternatively be specified through the use of data attributes, as explained above.</p>
@@ -1313,7 +1313,7 @@
     <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">&#39;destroy&#39;</span><span class="p">)</span>
 </code></pre></div>
     <h3>Events</h3>
-    <div class="bs-table-scrollable">
+    <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
@@ -1340,7 +1340,7 @@
          </tr>
         </tbody>
       </table>
-    </div><!-- /.bs-table-scrollable -->
+    </div><!-- /.table-responsive -->
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myPopover&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;hidden.bs.popover&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something…</span>
 <span class="p">})</span>
@@ -1358,7 +1358,7 @@
     <h2 id="alerts-examples">Example alerts</h2>
     <p>Add dismiss functionality to all alert messages with this plugin.</p>
     <div class="bs-example">
-      <div class="alert fade in">
+      <div class="alert alert-warning fade in">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
       </div>
@@ -1399,7 +1399,7 @@
 
     <h3>Events</h3>
     <p>Bootstrap's alert class exposes a few events for hooking into alert functionality.</p>
-    <div class="bs-table-scrollable">
+    <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
@@ -1418,7 +1418,7 @@
           </tr>
         </tbody>
       </table>
-    </div><!-- /.bs-table-scrollable -->
+    </div><!-- /.table-responsive -->
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#my-alert&#39;</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;closed.bs.alert&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something…</span>
 <span class="p">})</span>
@@ -1693,7 +1693,7 @@
 
     <h3>Options</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-parent=""</code>.</p>
-    <div class="bs-table-scrollable">
+    <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
@@ -1718,7 +1718,7 @@
          </tr>
         </tbody>
       </table>
-    </div><!-- /.bs-table-scrollable -->
+    </div><!-- /.table-responsive -->
 
     <h3>Methods</h3>
 
@@ -1740,7 +1740,7 @@
 
     <h3>Events</h3>
     <p>Bootstrap's collapse class exposes a few events for hooking into collapse functionality.</p>
-    <div class="bs-table-scrollable">
+    <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
@@ -1769,7 +1769,7 @@
          </tr>
         </tbody>
       </table>
-    </div><!-- /.bs-table-scrollable -->
+    </div><!-- /.table-responsive -->
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCollapsible&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;hidden.bs.collapse&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something…</span>
 <span class="p">})</span>
@@ -1912,7 +1912,7 @@
 
     <h3>Options</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-interval=""</code>.</p>
-    <div class="bs-table-scrollable">
+    <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
@@ -1943,7 +1943,7 @@
          </tr>
         </tbody>
       </table>
-    </div><!-- /.bs-table-scrollable -->
+    </div><!-- /.table-responsive -->
 
     <h3>Methods</h3>
 
@@ -1972,7 +1972,7 @@
 
     <h3>Events</h3>
     <p>Bootstrap's carousel class exposes two events for hooking into carousel functionality.</p>
-    <div class="bs-table-scrollable">
+    <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
@@ -1991,7 +1991,7 @@
          </tr>
         </tbody>
       </table>
-    </div><!-- /.bs-table-scrollable -->
+    </div><!-- /.table-responsive -->
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCarousel&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;slide.bs.carousel&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something…</span>
 <span class="p">})</span>
@@ -2044,7 +2044,7 @@
     <h3>Options</h3>
     <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-offset-top="200"</code>.</p>
 
-    <div class="bs-table-scrollable">
+    <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
@@ -2063,7 +2063,7 @@
          </tr>
         </tbody>
       </table>
-    </div><!-- /.bs-table-scrollable -->
+    </div><!-- /.table-responsive -->
 
   </div>
 
@@ -2075,7 +2075,8 @@
     <!-- Footer
     ================================================== -->
     <footer class="bs-footer" role="contentinfo">
-      <div class="bs-social">
+      <div class="container">
+        <div class="bs-social">
   <ul class="bs-social-buttons">
     <li>
       <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&amp;repo=todc-bootstrap&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20" title="Star on GitHub"></iframe>
@@ -2093,20 +2094,25 @@
 </div>
 
 
-      <p>Forked from <a href="http://twbs.github.com/bootstrap/" target="_blank">Bootstrap</a> and built with all the love in the world by <a href="https://github.com/todc" target="_blank">todc</a>.</p>
-      <p>Updated to support v3.0.0 by <a href="https://github.com/acmetech" target="_blank">acmetech</a>.</p>
-      <p>Code licensed under <a href="http://www.opensource.org/licenses/mit-license.php" target="_blank">MIT License</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-      <ul class="footer-links">
-        <li><a href="https://github.com/todc/todc-bootstrap/issues?state=open">Issues</a></li>
-        <li class="muted">&middot;</li>
-        <li><a href="https://github.com/todc/todc-bootstrap/releases">Releases</a></li>
-        <li class="muted">&middot;</li>
-        <li><a href="http://blog.getbootstrap.com">Bootstrap Blog</a></li>
-        <li class="muted">&middot;</li>
-        <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Bootstrap Issues</a></li>
-        <li class="muted">&middot;</li>
-        <li><a href="https://github.com/twbs/bootstrap/releases">Bootstrap Releases</a></li>
-      </ul>
+        <p>Forked from <a href="http://twbs.github.com/bootstrap/" target="_blank">Bootstrap</a> and built with all the love in the world by <a href="https://github.com/todc" target="_blank">todc</a>.</p>
+        <p>Updated to support v3.0.0 by <a href="https://github.com/acmetech" target="_blank">acmetech</a>.</p>
+        <p>Code licensed under <a href="http://www.opensource.org/licenses/mit-license.php" target="_blank">MIT License</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <ul class="footer-links">
+          <li><a href="../2.3.2/">2.3.2 docs</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/todc/todc-bootstrap/issues?state=open">Issues</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/todc/todc-bootstrap/releases">Releases</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="http://getbootstrap.com2.3.2/">Bootstrap 2.3.2 docs</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="http://blog.getbootstrap.com">Bootstrap Blog</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Bootstrap Issues</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/twbs/bootstrap/releases">Bootstrap Releases</a></li>
+        </ul>
+      </div>
     </footer>
 
     <!-- JS and analytics only. -->
