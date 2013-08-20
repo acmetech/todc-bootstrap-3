@@ -51,7 +51,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="../" class="navbar-brand">Bootstrap 3 RC2</a>
+      <a href="../" class="navbar-brand">Bootstrap</a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
@@ -90,7 +90,7 @@
     <div class="bs-old-docs">
   <div class="container">
     <strong>
-      <a href="../2.3.2/">Looking for Bootstrap 2.3.2 docs?</a>
+      <a href="http://getbootstrap.com/2.3.2/">Looking for Bootstrap 2.3.2 docs?</a>
     </strong>
     We've moved it to a new home while we push forward with Bootstrap 3. <a href="http://blog.getbootstrap.com/">Read the blog</a> for details.
   </div>
@@ -196,14 +196,14 @@
 
     <h3 id="download-cdn">Bootstrap CDN</h3>
     <p>The folks over at <a href="https://www.netdna.com/">NetDNA</a> have graciously provided CDN support for Bootstrap's CSS and JavaScript. To use, swap your local instances for the <a href="http://www.bootstrapcdn.com/">Bootstrap CDN</a> links listed below.</p>
-<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="c">&lt;!-- Latest compiled and minified CSS --&gt;</span>
-<span class="lineno">2</span> <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">3</span> 
-<span class="lineno">4</span> <span class="c">&lt;!-- Optional theme --&gt;</span>
-<span class="lineno">5</span> <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">6</span> 
-<span class="lineno">7</span> <span class="c">&lt;!-- Latest compiled and minified JavaScript --&gt;</span>
-<span class="lineno">8</span> <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- Latest compiled and minified CSS --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css&quot;</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- Optional theme --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css&quot;</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- Latest compiled and minified JavaScript --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 </code></pre></div>
 
     <div class="bs-callout bs-callout-warning" id="callout-less-compilation">
@@ -432,52 +432,16 @@
     <ol>
       <li>Remove (or just don't add) the viewport <code>&lt;meta&gt;</code> mentioned in <a href="../css/#overview-mobile">the CSS docs</a></li>
       <li>Remove the <code>max-width</code> on the <code>.container</code> for all grid tiers with <code>max-width: none !important;</code> and set a regular width like <code>width: 970px;</code>. Be sure that this comes after the default Bootstrap CSS. You can optionally avoid the <code>!important</code> with media queries or some selector-fu.</li>
+      <li>If using navbars, undo all the navbar collapsing and expanding behavior (this is too much to show here, so peep the example).</li>
       <li>For grid layouts, make use of <code>.col-xs-*</code> classes in addition to or in place of the medium/large ones. Don't worry, the extra-small device grid scales up to all resolutions, so you're set there.</li>
     </ol>
-    <p>You'll still need respond.js for IE8 (since our media queries are still there and need to be picked up). This just disables the "mobile site" of Bootstrap.</p>
+    <p>You'll still need Respond.js for IE8 (since our media queries are still there and need to be picked up). This just disables the "mobile site" of Bootstrap.</p>
 
     <h3>Bootstrap template with disabled responsive</h3>
-    <p>We've taken the above steps and applied them to a basic template here. Note the steps above are called out in comments here, e.g. <code>&lt;-- 1. --&gt;</code>.</p>
-<div class="highlight"><pre><code class="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Disabling responsiveness in Bootstrap<span class="nt">&lt;/title&gt;</span>
-
-    <span class="c">&lt;!-- 1. Note there is no meta tag here --&gt;</span>
-
-    <span class="c">&lt;!-- Load default Bootstrap --&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;css/bootstrap.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media=</span><span class="s">&quot;screen&quot;</span><span class="nt">&gt;</span>
-
-    <span class="c">&lt;!-- 2. Add our custom CSS to set the container&#39;s fixed width --&gt;</span>
-    <span class="nt">&lt;style&gt;</span>
-      <span class="nc">.container</span> <span class="p">{</span>
-        <span class="k">max-width</span><span class="o">:</span> <span class="k">none</span> <span class="cp">!important</span><span class="p">;</span>
-        <span class="k">width</span><span class="o">:</span> <span class="m">970px</span><span class="p">;</span>
-      <span class="p">}</span>
-    <span class="nt">&lt;/style&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-
-    <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
-
-    <span class="c">&lt;!-- 3. When using grid columns, use the `.col-xs-*` classes --&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-4&quot;</span><span class="nt">&gt;</span>One third<span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-4&quot;</span><span class="nt">&gt;</span>One third<span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-4&quot;</span><span class="nt">&gt;</span>One third<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="c">&lt;!-- jQuery (necessary for Bootstrap&#39;s JavaScript plugins) --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//code.jquery.com/jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-
-    <span class="c">&lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-
-    <span class="c">&lt;!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;js/respond.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+    <p>We've taken the above steps and applied them to an example. Read it's source code to see the specific changes called out.</p>
+    <p>
+      <a href="../examples/non-responsive/" class="btn btn-primary">View non-responsive example</a>
+    </p>
   </div>
 
 
@@ -488,7 +452,7 @@
     <div class="page-header">
       <h1 id="migration">Migrating from 2.x to 3.0</h1>
     </div>
-    <p class="lead">We've put together a helpful guide that outlines some of the key changes from Bootstrap 2.x to 3.0.</p>
+    <p class="lead">Folks looking to upgrade to v3 should use this section as a general upgrade guide. We've outlined some of the major changes and provided tables that highlight key changes. For an overview, <a href="http://blog.getbootstrap.com/2013/08/19/bootstrap-3-released/">read the announcement blog post</a>.</p>
 
 
     <h2 id="migration-classes">Major class changes</h2>
@@ -782,25 +746,21 @@
       </table>
     </div><!-- /.table-responsive -->
 
-    <h3 id="migration-notes">Additional notes</h3>
-    <p>We've made many underlying changes in v3 that are not immediately apparent without closer inspection. Base classes, key styles, and behaviors have been adjusted for flexibility and our mobile first approach.</p>
-    <ul>
-      <li><code>.input-*</code> are 100% width. Wrap inputs inside <code>&lt;div class="col-*"&gt;&lt;/div&gt;</code> to control input widths.</li>
-      <li><code>.badge</code> no longer has contextual (-success,-primary,etc..) classes</li>
-      <li><code>.btn</code> must also use <code>.btn-default</code> to get the "default" button</li>
-      <li><code>.container</code> and <code>.row</code> are now fluid (percentage-based)</li>
-      <li>Images are not responsive by default. Use <code>.img-responsive</code> for fluid <code>&lt;img&gt;</code> size</li>
-      <li>The icons, now <code>.glyphicon</code> are in a separate CSS file.</li>
-      <li>Include <code>.glyphicon</code> base class in all icons (e.g. <code>.glyphicon .glyphicon-asterisk</code>).</li>
-      <li>Typeahead has been dropped, in favor of using <a href="http://twitter.github.io/typeahead.js/">Twitter Typeahead</a>.</li>
-      <li>Modal markup has changed <code>.modal-header</code> <code>.modal-body</code> <code>.modal-footer</code> now get wrapped in <code>.modal-content</code> and <code>.modal-dialog</code></li>
-      <li>Events are namespaced. For example, to handle the modal "show" event, use <code>'show.bs.modal'</code>. For tabs "shown" use <code>'shown.bs.tab'</code>, etc..</li>
-    </ul>
 
-     <div class="bs-callout bs-callout-info">
-       <h4>More Tools &amp; Examples</h4>
-       <p>You may also find this <a href="https://github.com/iatek/bootstrap-3-upgrade">upgrade tool</a> and collection of <a href="http://bootply.com/tagged/bootstrap-3">code snippets at Bootply</a> useful for migrating to Bootstrap 3.</p>
-     </div>
+    <h2 id="migration-notes">Additional notes</h2>
+    <p>We've made many underlying changes in v3 that are not immediately apparent. Base classes, key styles, and behaviors have been adjusted for flexibility and our mobile first approach.</p>
+    <ul>
+      <li>Text-based form controls are now 100% wide. Wrap inputs inside <code>&lt;div class="col-*"&gt;&lt;/div&gt;</code> to control input widths.</li>
+      <li><code>.badge</code> no longer has contextual (-success,-primary,etc..) classes.</li>
+      <li><code>.btn</code> must also use <code>.btn-default</code> to get the "default" button.</li>
+      <li><code>.container</code> and <code>.row</code> are now fluid (percentage-based).</li>
+      <li>Images are no longer responsive by default. Use <code>.img-responsive</code> for fluid <code>&lt;img&gt;</code> size.</li>
+      <li>The icons, now <code>.glyphicon</code>, are now font based. They also require a base and icon class (e.g. <code>.glyphicon .glyphicon-asterisk</code>).</li>
+      <li>Typeahead has been dropped, in favor of using <a href="http://twitter.github.io/typeahead.js/">Twitter Typeahead</a>.</li>
+      <li>Modal markup has changed significantly. The <code>.modal-header</code>, <code>.modal-body</code>, and <code>.modal-footer</code> sections now get wrapped in <code>.modal-content</code> and <code>.modal-dialog</code> for improved mobile styling and behavior.</li>
+      <li>JavaScript events are namespaced. For example, to handle the modal "show" event, use <code>'show.bs.modal'</code>. For tabs "shown" use <code>'shown.bs.tab'</code>, etc..</li>
+    </ul>
+    <p>For more information on upgrades and code snippets from the community check out <a href="http://bootply.com/">Bootply</a>.</p>
   </div>
 
 
@@ -881,7 +841,7 @@
     <div class="page-header">
       <h1 id="third-parties">Third party support</h1>
     </div>
-    <p class="lead">While we don't officially support any third party plugins or add-ons, we do offer some helpful advice to help avoid potential issues in your projects.</p>
+    <p class="lead">While we don't officially support any third party plugins or add-ons, we do offer some useful advice to help avoid potential issues in your projects.</p>
 
     <h3>Google Maps</h3>
     <p>If you're using Google Maps on a Bootstrapped project, you might run into some display problems due to our use of <code>* { box-sizing: border-box; }</code>. Previously, you may have also ran into issues with the use of <code>max-width</code> on images. The following snippet should avoid all those problems.</p>
