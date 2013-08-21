@@ -2404,7 +2404,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a href="#" class="navbar-brand dropdown-toggle" data-toggle="dropdown">Brand <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Separated link</a></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -2453,7 +2460,14 @@
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
     <span class="nt">&lt;/button&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Brand<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;navbar-brand dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Brand <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/b&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Separated link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>One more separated link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 
   <span class="c">&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;</span>
@@ -2494,21 +2508,21 @@
 <span class="nt">&lt;/nav&gt;</span>
 </code></pre></div>
 
-<div class="bs-callout bs-callout-danger">
-  <h4>Plugin dependency</h4>
-  <p>The responsive toolbar requires the <a href="../javascript/#collapse">collapse plugin</a> to be included in your version of Bootstrap.</p>
-</div>
+    <div class="bs-callout bs-callout-danger">
+      <h4>Plugin dependency</h4>
+      <p>The responsive toolbar requires the <a href="../javascript/#collapse">collapse plugin</a> to be included in your version of Bootstrap.</p>
+    </div>
 
-<div class="bs-callout bs-callout-warning">
-  <h4>Make toolbars accessible</h4>
-  <p>Be sure to add a <code>role="navigation"</code> to every toolbar to help with accessibility.</p>
-</div>
+    <div class="bs-callout bs-callout-warning">
+      <h4>Make toolbars accessible</h4>
+      <p>Be sure to add a <code>role="navigation"</code> to every toolbar to help with accessibility.</p>
+    </div>
 
 
     <h2 id="navbar-toolbar-toolbar">Toolbar</h2>
     <p>Combine sets of <code>&lt;div class="btn-group"&gt;</code> into a <code>&lt;div class="btn-toolbar"&gt;</code> to create a toolbar.</p>
     <div class="bs-example">
-      <nav class="navbar navbar-toolbar" role="navigation">
+      <nav class="navbar navbar-toolbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-toolbar-ex1-collapse">
@@ -2517,7 +2531,6 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
