@@ -1,2 +1,6 @@
 bootstrap/
 .DS_Store
+
+# grunt-html-validation
+validation-status.json
+validation-report.json
