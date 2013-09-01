@@ -76,16 +76,19 @@ table {
 .table {
   margin-bottom: 18px;
 }
-.table thead > tr > th,
-.table tbody > tr > th,
-.table tfoot > tr > th,
-.table thead > tr > td,
-.table tbody > tr > td,
-.table tfoot > tr > td {
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
   line-height: 1.4;
   border-top: 1px solid #dddddd;
 }
-.table tbody + tbody {
+.table > thead > tr > th {
+  border-bottom: 2px solid #dddddd;
+}
+.table > tbody + tbody {
   border-top: 2px solid #dddddd;
 }
 .table .table {
@@ -1457,6 +1460,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .input-group-addon {
   padding: 5px 8px;
   font-size: 13px;
+  color: #555555;
   border: 1px solid #d9d9d9;
   border-top-color: #c0c0c0;
   border-radius: 2px;
@@ -2845,6 +2849,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#fff1f1f1', GradientType=0);
   border-radius: 2px;
+}
+.breadcrumb > li + li:before {
+  content: "/\00a0";
 }
 .pagination {
   margin: 18px 0;
