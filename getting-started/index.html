@@ -106,7 +106,7 @@
                 <li>
   <a href="#download">Download Bootstrap</a>
   <ul class="nav">
-    <li><a href="#download-source">Download source</a></li>
+    <li><a href="#download-compiled">Compiled CSS, JS, and fonts</a></li>
     <li><a href="#download-additional">Additional downloads</a></li>
     <li><a href="#download-cdn">Bootstrap CDN</a></li>
   </ul>
@@ -161,29 +161,23 @@
     </div>
     <p class="lead">Bootstrap has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
 
-    <h3 id="download-source">Download latest full source</h3>
-    <div class="bs-callout bs-callout-danger">
-      <h4>TODC Bootstrap does not currently provide a compiled/zipped package.</h4>
-      <p>The <strong>Download TODC Bootstrap</strong> button will download the todc-bootstrap stylesheet.</p>
-    </div>
-
-    <h3>Download compiled CSS and JS</h3>
-    <p>The fastest way to get TODC Bootstrap is to download the precompiled and minified versions of our CSS, JavaScript, and fonts. No documentation or original source code files are included.</p>
-    <p><a class="btn btn-lg btn-primary" href="https://github.com/todc/todc-bootstrap/releases/download/v3.0.0/todc-bootstrap-3.0.0-dist.zip" role="button">Download TODC Bootstrap</a></p>
+    <h3 id="download-compiled">Compiled CSS, JS, and fonts</h3>
+    <p>The fastest way to get Bootstrap is to download the precompiled and minified versions of our CSS, JavaScript, and fonts. No documentation or original source code files are included.</p>
+    <p><a class="btn btn-lg btn-primary" href="https://github.com/todc/todc-bootstrap/releases/download/v3.0.0/todc-bootstrap-3.0.0-dist.zip" role="button">Download precompiled TODC Bootstrap</a></p>
     <p><a class="btn btn-lg btn-primary" href="https://github.com/twbs/bootstrap/releases/download/v3.0.0/bootstrap-3.0.0-dist.zip" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);" role="button">Download precompiled Bootstrap</a></p>
 
     <h3 id="download-additional">Additional downloads</h3>
     <div class="bs-docs-dl-options">
       <h4>
-        <a href="https://github.com/todc/todc-bootstrap/archive/v3.0.0.zip">Download latest TODC Bootstrap source code</a>
+        <a href="https://github.com/todc/todc-bootstrap/archive/v3.0.0.zip">Download TODC Bootstrap source code</a>
         <br>
-        <a href="https://github.com/twbs/bootstrap/archive/v3.0.0.zip" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);">Download source code</a>
+        <a href="https://github.com/twbs/bootstrap/archive/v3.0.0.zip" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);">Download Bootstrsp source code</a>
       </h4>
       <p>Get the latest TODC Bootstrap CSS and JavaScript source code by downloading it directly from GitHub.</p>
       <h4>
         <a href="https://github.com/todc/todc-bootstrap">Clone or fork TODC Bootstrap via GitHub</a>
         <br>
-        <a href="https://github.com/twbs/bootstrap" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'GitHub project']);">Clone or fork via GitHub</a>
+        <a href="https://github.com/twbs/bootstrap" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'GitHub project']);">Clone or fork Bootstrap via GitHub</a>
       </h4>
       <p>Visit us on GitHub to clone or fork the TODC Bootstrap project.</p>
       <h4>
@@ -290,7 +284,7 @@
     <div class="page-header">
       <h1 id="examples">Examples</h1>
     </div>
-    <p class="lead">Build on the basic template above with Bootstrap's many components. Check out some of the more advanced tips for how to customize and build on top of them.</p>
+    <p class="lead">Build on the basic template above with Bootstrap's many components. See also <a href="#customizing">Customizing Bootstrap</a> for tips on maintaining your own Bootstrap variants.</p>
 
     <div class="row bs-examples">
       <div class="col-xs-6 col-md-4">
@@ -424,20 +418,24 @@
     <div class="page-header">
       <h1 id="disable-responsive">Disabling responsiveness</h1>
     </div>
-    <p class="lead">Don't want your site or application to be scaled on different devices? With a little bit of work, you can disable the responsive features of Bootstrap so that mobile users see your full desktop-version site. Read below or check out <a href="../examples/non-responsive/">the non-responsive example</a>.</p>
+    <p class="lead">Bootstrap automatically adapts your pages for various screen sizes.
+	Here's how to disable this feature so your page works like in <a href="../examples/non-responsive/">this non-responsive example</a>.</p>
 
-    <h3>Steps to disable responsive views</h3>
-    <p>To disable responsive features, follow these steps. See it in action in the modified template below.</p>
+    <h3>Steps to disable page responsiveness</h3>
     <ol>
-      <li>Remove (or just don't add) the viewport <code>&lt;meta&gt;</code> mentioned in <a href="../css/#overview-mobile">the CSS docs</a></li>
-      <li>Remove the <code>max-width</code> on the <code>.container</code> for all grid tiers with <code>max-width: none !important;</code> and set a regular width like <code>width: 970px;</code>. Be sure that this comes after the default Bootstrap CSS. You can optionally avoid the <code>!important</code> with media queries or some selector-fu.</li>
-      <li>If using navbars, undo all the navbar collapsing and expanding behavior (this is too much to show here, so peep the example).</li>
-      <li>For grid layouts, make use of <code>.col-xs-*</code> classes in addition to or in place of the medium/large ones. Don't worry, the extra-small device grid scales up to all resolutions, so you're set there.</li>
+      <li>Omit the viewport <code>&lt;meta&gt;</code> mentioned in <a href="../css/#overview-mobile">the CSS docs</a></li>
+      <li>Remove the <code>max-width</code> on the <code>.container</code> for all grids with <code>max-width: none !important;</code> and set a regular
+          width, for example <code>width: 970px;</code>. Be sure that this comes after the default Bootstrap CSS.
+          You can optionally avoid the <code>!important</code> with media queries or some selector-fu.</li>
+      <li>If using navbars, remove all navbar collapsing and expanding behavior.</li>
+      <li>For grid layouts, use <code>.col-xs-*</code> classes in addition to, or in place of, the medium/large ones.
+	      Don't worry, the extra-small device grid scales to all resolutions.</li>
     </ol>
-    <p>You'll still need Respond.js for IE8 (since our media queries are still there and need to be picked up). This just disables the "mobile site" of Bootstrap.</p>
+    <p>You'll still need Respond.js for IE8 (since our media queries are still there and need to be processed).
+	   This disables the "mobile site" aspects of Bootstrap.</p>
 
-    <h3>Bootstrap template with disabled responsive</h3>
-    <p>We've taken the above steps and applied them to an example. Read it's source code to see the specific changes called out.</p>
+    <h3>Bootstrap template with responsiveness disabled</h3>
+    <p>We've applied these steps to an example. Read its source code to see the specific changes implemented.</p>
     <p>
       <a href="../examples/non-responsive/" class="btn btn-primary">View non-responsive example</a>
     </p>
@@ -913,15 +911,49 @@
     <p class="lead">While we don't officially support any third party plugins or add-ons, we do offer some useful advice to help avoid potential issues in your projects.</p>
 
     <h3>Box-sizing</h3>
-    <p>Certain third party tools—such as Google Maps—have trouble working out of the box with Bootstrap due to our use of <code>* { box-sizing: border-box; }</code>. Use the following snippet to override it when necessary.</p>
-<div class="highlight"><pre><code class="css"><span class="c">/* Box-sizing reset</span>
+    <p>Some third party software, including Google Maps and Google Custom Search Engine, conflict with Bootstrap due to <code>* { box-sizing: border-box; }</code>, a rule which makes it so <code>padding</code> does not affect the final computed width of an element. Learn more about <a href="http://css-tricks.com/box-sizing/">box model and sizing at CSS Tricks</a>.</p>
+    <p>Depending on the context, you may override as-needed (Option 1) or reset the box-sizing for entire regions (Option 2).</p>
+<div class="highlight"><pre><code class="css"><span class="c">/* Box-sizing resets</span>
 <span class="c"> *</span>
-<span class="c"> * Wrap your third party code in a `.reset-box-sizing` to override Bootstrap&#39;s</span>
-<span class="c"> * global `box-sizing` changes.</span>
+<span class="c"> * Reset individual elements or override regions to avoid conflicts due to</span>
+<span class="c"> * global box model settings of Bootstrap. Two options—individual overrides and</span>
+<span class="c"> * region resets—are available as plain CSS and Less.</span>
 <span class="c"> */</span>
 
+<span class="c">/* Option 1A: Override a single element&#39;s box model via CSS */</span>
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+     <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+          <span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Option 1B: Override a single element&#39;s box model via Bootstrap Less mixin */</span>
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="o">.</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="p">(</span><span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c">/* Option 2A: Reset an entire region via CSS */</span>
 <span class="nc">.reset-box-sizing</span><span class="o">,</span>
-<span class="nc">.reset-box-sizing</span> <span class="o">*</span> <span class="p">{</span> <span class="o">.</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="p">(</span><span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">);</span> <span class="p">}</span>
+<span class="nc">.reset-box-sizing</span> <span class="o">*,</span>
+<span class="nc">.reset-box-sizing</span> <span class="o">*</span><span class="nd">:before</span><span class="o">,</span>
+<span class="nc">.reset-box-sizing</span> <span class="o">*</span><span class="nd">:after</span> <span class="p">{</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+     <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+          <span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Option 2B: Reset an entire region via custom Less mixin */</span>
+<span class="nc">.reset-box-sizing</span> <span class="p">{</span>
+  <span class="o">&amp;,</span>
+  <span class="o">*,</span>
+  <span class="o">*:</span><span class="n">before</span><span class="o">,</span>
+  <span class="o">*:</span><span class="n">after</span> <span class="err">{</span>
+    <span class="o">.</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="p">(</span><span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="err">}</span>
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="o">.</span><span class="n">reset</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="p">();</span>
+<span class="p">}</span>
 </code></pre></div>
   </div>
 
