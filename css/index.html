@@ -361,6 +361,7 @@
         </tbody>
       </table>
     </div>
+    <p>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, applying any <code>.col-md-</code> class to an element will not only affect its styling on medium devices but also on large devices if a <code>.col-lg-</code> class is not present.</p>
 
     <h3 id="grid-example-basic">Example: Stacked-to-horizontal</h3>
     <p>Using a single set of <code>.col-md-*</code> grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices.</p>
@@ -464,26 +465,26 @@
     <div class="bs-docs-grid">
       <div class="row show-grid">
         <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
-        <div class="col-xs-6 col-sm-6 col-md-4">.col-xs-6 .col-sm-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
       </div>
       <div class="row show-grid">
-        <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
-        <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
+        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
         <!-- Optional: clear the XS cols if their content doesn't match in height -->
         <div class="clearfix visible-xs"></div>
-        <div class="col-xs-6 col-sm-4 col-md-4">.col-xs-6 .col-sm-4 .col-md-4</div>
+        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
       </div>
     </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-12 col-sm-6 col-md-8&quot;</span><span class="nt">&gt;</span>.col-xs-12 .col-sm-6 .col-md-8<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-6 col-sm-6 col-md-4&quot;</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-6 col-md-4&quot;</span><span class="nt">&gt;</span>.col-xs-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-6 col-sm-4 col-md-4&quot;</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-4 .col-md-4<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-6 col-sm-4 col-md-4&quot;</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-4 .col-md-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-6 col-sm-4&quot;</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-6 col-sm-4&quot;</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
   <span class="c">&lt;!-- Optional: clear the XS cols if their content doesn&#39;t match in height --&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;clearfix visible-xs&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-6 col-sm-4 col-md-4&quot;</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-4 .col-md-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-xs-6 col-sm-4&quot;</span><span class="nt">&gt;</span>.col-xs-6 .col-sm-4<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
