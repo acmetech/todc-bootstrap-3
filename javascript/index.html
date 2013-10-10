@@ -23,7 +23,7 @@
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
-  <script src="../docs-assets/js/html5shiv.js"></script>
+  <script src="//oss.maxcdn.com/libs/html5shiv/3.6.2/html5shiv.js"></script>
   <script src="../docs-assets/js/respond.min.js"></script>
 <![endif]-->
 
@@ -430,7 +430,7 @@
         <tbody>
          <tr>
            <td>backdrop</td>
-           <td>boolean</td>
+           <td>boolean or the string <code>'static'</code></td>
            <td>true</td>
            <td>Includes a modal-backdrop element. Alternatively, specify <code>static</code> for a backdrop which doesn't close the modal on click.</td>
          </tr>
@@ -1822,7 +1822,7 @@
     <h2 id="carousel-examples">Examples</h2>
     <p>The slideshow below shows a generic plugin and component for cycling through elements like a carousel.</p>
     <div class="bs-example">
-      <div id="carousel-example-generic" class="carousel slide bs-docs-carousel-example">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
           <li data-target="#carousel-example-generic" data-slide-to="1"></li>
@@ -1847,7 +1847,7 @@
         </a>
       </div>
     </div><!-- /example -->
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;carousel-example-generic&quot;</span> <span class="na">class=</span><span class="s">&quot;carousel slide&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;carousel-example-generic&quot;</span> <span class="na">class=</span><span class="s">&quot;carousel slide&quot;</span> <span class="na">data-ride=</span><span class="s">&quot;carousel&quot;</span><span class="nt">&gt;</span>
   <span class="c">&lt;!-- Indicators --&gt;</span>
   <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">&quot;carousel-indicators&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">data-target=</span><span class="s">&quot;#carousel-example-generic&quot;</span> <span class="na">data-slide-to=</span><span class="s">&quot;0&quot;</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;/li&gt;</span>
@@ -1883,7 +1883,7 @@
     <h3>Optional captions</h3>
     <p>Add captions to your slides easily with the <code>.carousel-caption</code> element within any <code>.item</code>. Place just about any optional HTML within there and it will be automatically aligned and formatted.</p>
     <div class="bs-example">
-      <div id="carousel-example-captions" class="carousel slide bs-docs-carousel-example">
+      <div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carousel-example-captions" data-slide-to="0" class="active"></li>
           <li data-target="#carousel-example-captions" data-slide-to="1"></li>
@@ -2156,7 +2156,7 @@
     <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="../docs-assets/js/jquery.js"></script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="../dist/js/bootstrap.js"></script>
 
 <script src="http://platform.twitter.com/widgets.js"></script>
