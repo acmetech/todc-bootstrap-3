@@ -23,7 +23,7 @@
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
-  <script src="../docs-assets/js/html5shiv.js"></script>
+  <script src="//oss.maxcdn.com/libs/html5shiv/3.6.2/html5shiv.js"></script>
   <script src="../docs-assets/js/respond.min.js"></script>
 <![endif]-->
 
@@ -601,7 +601,7 @@
   <span class="o">//</span> <span class="nt">Then</span> <span class="nt">clear</span> <span class="nt">the</span> <span class="nt">floated</span> <span class="nt">columns</span>
   <span class="nc">.clearfix</span><span class="o">();</span>
 
-  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-small</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-sm-min</span><span class="o">)</span> <span class="p">{</span>
     <span class="nt">margin-left</span><span class="o">:</span>  <span class="o">(</span><span class="k">@gutter</span> <span class="o">/</span> <span class="nt">-2</span><span class="o">)</span><span class="p">;</span>
     <span class="nt">margin-right</span><span class="o">:</span> <span class="o">(</span><span class="k">@gutter</span> <span class="o">/</span> <span class="nt">-2</span><span class="o">)</span><span class="p">;</span>
   <span class="p">}</span>
@@ -639,7 +639,7 @@
   <span class="nt">padding-right</span><span class="o">:</span> <span class="o">(</span><span class="k">@gutter</span> <span class="o">/</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
 
   <span class="o">//</span> <span class="nt">Calculate</span> <span class="nt">width</span> <span class="nt">based</span> <span class="nt">on</span> <span class="nt">number</span> <span class="nt">of</span> <span class="nt">columns</span> <span class="nt">available</span>
-  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-small</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-sm-min</span><span class="o">)</span> <span class="p">{</span>
     <span class="nt">float</span><span class="o">:</span> <span class="nt">left</span><span class="o">;</span>
     <span class="nt">width</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
   <span class="err">}</span>
@@ -647,17 +647,17 @@
 
 <span class="o">//</span> <span class="nt">Generate</span> <span class="nt">the</span> <span class="nt">small</span> <span class="nt">column</span> <span class="nt">offsets</span>
 <span class="nc">.make-sm-column-offset</span><span class="o">(</span><span class="k">@columns</span><span class="o">)</span> <span class="p">{</span>
-  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-small</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-sm-min</span><span class="o">)</span> <span class="p">{</span>
     <span class="nt">margin-left</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
   <span class="err">}</span>
 <span class="err">}</span>
 <span class="nc">.make-sm-column-push</span><span class="o">(</span><span class="k">@columns</span><span class="o">)</span> <span class="p">{</span>
-  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-small</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-sm-min</span><span class="o">)</span> <span class="p">{</span>
     <span class="nt">left</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
   <span class="err">}</span>
 <span class="err">}</span>
 <span class="nc">.make-sm-column-pull</span><span class="o">(</span><span class="k">@columns</span><span class="o">)</span> <span class="p">{</span>
-  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-small</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-sm-min</span><span class="o">)</span> <span class="p">{</span>
     <span class="nt">right</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
   <span class="err">}</span>
 <span class="err">}</span>
@@ -672,7 +672,7 @@
   <span class="nt">padding-right</span><span class="o">:</span> <span class="o">(</span><span class="k">@gutter</span> <span class="o">/</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
 
   <span class="o">//</span> <span class="nt">Calculate</span> <span class="nt">width</span> <span class="nt">based</span> <span class="nt">on</span> <span class="nt">number</span> <span class="nt">of</span> <span class="nt">columns</span> <span class="nt">available</span>
-  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-medium</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-md-min</span><span class="o">)</span> <span class="p">{</span>
     <span class="nt">float</span><span class="o">:</span> <span class="nt">left</span><span class="o">;</span>
     <span class="nt">width</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
   <span class="err">}</span>
@@ -680,17 +680,17 @@
 
 <span class="o">//</span> <span class="nt">Generate</span> <span class="nt">the</span> <span class="nt">medium</span> <span class="nt">column</span> <span class="nt">offsets</span>
 <span class="nc">.make-md-column-offset</span><span class="o">(</span><span class="k">@columns</span><span class="o">)</span> <span class="p">{</span>
-  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-medium</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-md-min</span><span class="o">)</span> <span class="p">{</span>
     <span class="nt">margin-left</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
   <span class="err">}</span>
 <span class="err">}</span>
 <span class="nc">.make-md-column-push</span><span class="o">(</span><span class="k">@columns</span><span class="o">)</span> <span class="p">{</span>
-  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-medium</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-md-min</span><span class="o">)</span> <span class="p">{</span>
     <span class="nt">left</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
   <span class="err">}</span>
 <span class="err">}</span>
 <span class="nc">.make-md-column-pull</span><span class="o">(</span><span class="k">@columns</span><span class="o">)</span> <span class="p">{</span>
-  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-medium</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-md-min</span><span class="o">)</span> <span class="p">{</span>
     <span class="nt">right</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
   <span class="err">}</span>
 <span class="err">}</span>
@@ -705,7 +705,7 @@
   <span class="nt">padding-right</span><span class="o">:</span> <span class="o">(</span><span class="k">@gutter</span> <span class="o">/</span> <span class="nt">2</span><span class="o">)</span><span class="p">;</span>
 
   <span class="o">//</span> <span class="nt">Calculate</span> <span class="nt">width</span> <span class="nt">based</span> <span class="nt">on</span> <span class="nt">number</span> <span class="nt">of</span> <span class="nt">columns</span> <span class="nt">available</span>
-  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-large</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-lg-min</span><span class="o">)</span> <span class="p">{</span>
     <span class="nt">float</span><span class="o">:</span> <span class="nt">left</span><span class="o">;</span>
     <span class="nt">width</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
   <span class="err">}</span>
@@ -713,17 +713,17 @@
 
 <span class="o">//</span> <span class="nt">Generate</span> <span class="nt">the</span> <span class="nt">large</span> <span class="nt">column</span> <span class="nt">offsets</span>
 <span class="nc">.make-lg-column-offset</span><span class="o">(</span><span class="k">@columns</span><span class="o">)</span> <span class="p">{</span>
-  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-large</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-lg-min</span><span class="o">)</span> <span class="p">{</span>
     <span class="nt">margin-left</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
   <span class="err">}</span>
 <span class="err">}</span>
 <span class="nc">.make-lg-column-push</span><span class="o">(</span><span class="k">@columns</span><span class="o">)</span> <span class="p">{</span>
-  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-large</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-lg-min</span><span class="o">)</span> <span class="p">{</span>
     <span class="nt">left</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
   <span class="err">}</span>
 <span class="err">}</span>
 <span class="nc">.make-lg-column-pull</span><span class="o">(</span><span class="k">@columns</span><span class="o">)</span> <span class="p">{</span>
-  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-large</span><span class="o">)</span> <span class="p">{</span>
+  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="k">@screen-lg-min</span><span class="o">)</span> <span class="p">{</span>
     <span class="nt">right</span><span class="o">:</span> <span class="nt">percentage</span><span class="o">((</span><span class="k">@columns</span> <span class="o">/</span> <span class="k">@grid-columns</span><span class="o">))</span><span class="p">;</span>
   <span class="err">}</span>
 <span class="err">}</span>
@@ -762,7 +762,7 @@
 
     <!-- Headings -->
     <h2 id="type-headings">Headings</h2>
-    <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are available.</p>
+    <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
     <div class="bs-example bs-example-type">
       <table class="table">
         <tbody>
@@ -2706,52 +2706,52 @@
     </div>
 
     <h3>Hidden on...</h3>
-    <p>Here, green checkmarks indicate the element <strong>is hidden</strong> in your current viewport.</p>
+    <p>Here, green checkmarks also indicate the element <strong>is hidden</strong> in your current viewport.</p>
     <div class="row responsive-utilities-test hidden-on">
       <div class="col-xs-6 col-sm-3">
-        <span class="visible-xs">Extra small</span>
-        <span class="hidden-xs">&#10004; Hidden on x-small</span>
+        <span class="hidden-xs">Extra small</span>
+        <span class="visible-xs">&#10004; Hidden on x-small</span>
       </div>
       <div class="col-xs-6 col-sm-3">
-        <span class="visible-sm">Small</span>
-        <span class="hidden-sm">&#10004; Hidden on small</span>
+        <span class="hidden-sm">Small</span>
+        <span class="visible-sm">&#10004; Hidden on small</span>
       </div>
       <div class="clearfix visible-xs"></div>
       <div class="col-xs-6 col-sm-3">
-        <span class="visible-md">Medium</span>
-        <span class="hidden-md">&#10004; Hidden on medium</span>
+        <span class="hidden-md">Medium</span>
+        <span class="visible-md">&#10004; Hidden on medium</span>
       </div>
       <div class="col-xs-6 col-sm-3">
-        <span class="visible-lg">Large</span>
-        <span class="hidden-lg">&#10004; Hidden on large</span>
+        <span class="hidden-lg">Large</span>
+        <span class="visible-lg">&#10004; Hidden on large</span>
       </div>
     </div>
     <div class="row responsive-utilities-test hidden-on">
       <div class="col-xs-6 col-sm-6">
-        <span class="visible-xs visible-sm">Extra small and small</span>
-        <span class="hidden-xs hidden-sm">&#10004; Hidden on x-small and small</span>
+        <span class="hidden-xs hidden-sm">Extra small and small</span>
+        <span class="visible-xs visible-sm">&#10004; Hidden on x-small and small</span>
       </div>
       <div class="col-xs-6 col-sm-6">
-        <span class="visible-md visible-lg">Medium and large</span>
-        <span class="hidden-md hidden-lg">&#10004; Hidden on medium and large</span>
-      </div>
-      <div class="clearfix visible-xs"></div>
-      <div class="col-xs-6 col-sm-6">
-        <span class="visible-xs visible-md">Extra small and medium</span>
-        <span class="hidden-xs hidden-md">&#10004; Hidden on x-small and medium</span>
-      </div>
-      <div class="col-xs-6 col-sm-6">
-        <span class="visible-sm visible-lg">Small and large</span>
-        <span class="hidden-sm hidden-lg">&#10004; Hidden on small and large</span>
+        <span class="hidden-md hidden-lg">Medium and large</span>
+        <span class="visible-md visible-lg">&#10004; Hidden on medium and large</span>
       </div>
       <div class="clearfix visible-xs"></div>
       <div class="col-xs-6 col-sm-6">
-        <span class="visible-xs visible-lg">Extra small and large</span>
-        <span class="hidden-xs hidden-lg">&#10004; Hidden on x-small and large</span>
+        <span class="hidden-xs hidden-md">Extra small and medium</span>
+        <span class="visible-xs visible-md">&#10004; Hidden on x-small and medium</span>
       </div>
       <div class="col-xs-6 col-sm-6">
-        <span class="visible-sm visible-md">Small and medium</span>
-        <span class="hidden-sm hidden-md">&#10004; Hidden on small and medium</span>
+        <span class="hidden-sm hidden-lg">Small and large</span>
+        <span class="visible-sm visible-lg">&#10004; Hidden on small and large</span>
+      </div>
+      <div class="clearfix visible-xs"></div>
+      <div class="col-xs-6 col-sm-6">
+        <span class="hidden-xs hidden-lg">Extra small and large</span>
+        <span class="visible-xs visible-lg">&#10004; Hidden on x-small and large</span>
+      </div>
+      <div class="col-xs-6 col-sm-6">
+        <span class="hidden-sm hidden-md">Small and medium</span>
+        <span class="visible-sm visible-md">&#10004; Hidden on small and medium</span>
       </div>
     </div>
 
@@ -2811,7 +2811,7 @@
     <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="../docs-assets/js/jquery.js"></script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="../dist/js/bootstrap.js"></script>
 
 <script src="http://platform.twitter.com/widgets.js"></script>
