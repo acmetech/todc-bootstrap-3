@@ -15,7 +15,7 @@
 </title>
 
 <!-- Bootstrap core CSS -->
-<link href="../dist/css/bootstrap.css" rel="stylesheet">
+<link href="../dist/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Documentation extras -->
 <link href="../docs-assets/css/docs.css" rel="stylesheet">
@@ -24,14 +24,14 @@
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.6.2/html5shiv.js"></script>
-  <script src="../docs-assets/js/respond.min.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
 
 <!-- Favicons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../docs-assets/ico/apple-touch-icon-144-precomposed.png">
                                <link rel="shortcut icon" href="../docs-assets/ico/favicon.png">
 
-<link href="../dist/css/todc-bootstrap.css" rel="stylesheet">
+<link href="../dist/css/todc-bootstrap.min.css" rel="stylesheet">
 <link href="../docs-assets/css/select2.css" rel="stylesheet">
 
   </head>
@@ -66,6 +66,11 @@
         </li>
         <li>
           <a href="../customize">Customize</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="../about">About</a>
         </li>
       </ul>
     </nav>
@@ -1274,6 +1279,11 @@
       <h4>Tooltips &amp; popovers in input groups require special setting</h4>
       <p>When using tooltips or popovers on elements within an <code>.input-group</code>, you'll have to specify the option <code>container: 'body'</code> to avoid unwanted side effects (such as the element growing wider and/or losing its rounded corners when the tooltip or popover is triggered).</p>
     </div>
+    <div class="bs-callout bs-callout-info">
+      <h4>Don't mix with form groups</h4>
+      <p>Do not apply input group classes directly to form groups. An input group is an isolated component.</p>
+    </div>
+
 
     <h2 id="input-groups-basic">Basic example</h2>
     <form class="bs-example bs-example-form" role="form">
