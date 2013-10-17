@@ -2496,15 +2496,15 @@
 <span class="nt">&lt;/nav&gt;</span>
 </code></pre></div>
 
-<div class="bs-callout bs-callout-danger">
-  <h4>Plugin dependency</h4>
-  <p>The responsive navbar requires the <a href="../javascript/#collapse">collapse plugin</a> to be included in your version of Bootstrap.</p>
-</div>
+    <div class="bs-callout bs-callout-danger">
+      <h4>Plugin dependency</h4>
+      <p>The responsive navbar requires the <a href="../javascript/#collapse">collapse plugin</a> to be included in your version of Bootstrap.</p>
+    </div>
 
-<div class="bs-callout bs-callout-warning">
-  <h4>Make navbars accessible</h4>
-  <p>Be sure to add a <code>role="navigation"</code> to every navbar to help with accessibility.</p>
-</div>
+    <div class="bs-callout bs-callout-warning">
+      <h4>Make navbars accessible</h4>
+      <p>Be sure to add a <code>role="navigation"</code> to every navbar to help with accessibility.</p>
+    </div>
 
 
     <h2 id="navbar-forms">Forms</h2>
@@ -2539,14 +2539,14 @@
 <span class="nt">&lt;/form&gt;</span>
 </code></pre></div>
 
-<div class="bs-callout bs-callout-danger">
-  <h4>Always add labels</h4>
-  <p>Screen readers will have trouble with your forms if you don't include a label for every input. For these inline navbar forms, you can hide the labels using the <code>.sr-only</code> class.</p>
-</div>
+    <div class="bs-callout bs-callout-danger">
+      <h4>Always add labels</h4>
+      <p>Screen readers will have trouble with your forms if you don't include a label for every input. For these inline navbar forms, you can hide the labels using the <code>.sr-only</code> class.</p>
+    </div>
 
 
     <h2 id="navbar-buttons">Buttons</h2>
-    <p>For buttons not residing in a <code>&lt;form&gt;</code>, add this class to vertically center buttons within a navbar.</p>
+    <p>Add the <code>.navbar-btn</code> class to <code>&lt;button&gt;</code> elements not residing in a <code>&lt;form&gt;</code> to vertically center them in the navbar.</p>
     <div class="bs-example">
       <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
@@ -2566,6 +2566,10 @@
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default navbar-btn&quot;</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
 </code></pre></div>
 
+    <div class="bs-callout bs-callout-warning">
+      <h4>Context-specific usage</h4>
+      <p>Like the standard <a href="../css#buttons">button classes</a>, <code>.navbar-btn</code> can be used on <code>&lt;a&gt;</code> and <code>&lt;input&gt;</code> elements. However, neither <code>.navbar-btn</code> nor the standard button classes should be used on <code>&lt;a&gt;</code> elements within <code>.navbar-nav</code>.</p>
+    </div>
 
     <h2 id="navbar-text">Text</h2>
     <p>Wrap strings of text in an element with <code>.navbar-text</code>, usually on a <code>&lt;p&gt;</code> tag for proper leading and color.</p>
@@ -2880,15 +2884,15 @@
 <span class="nt">&lt;/nav&gt;</span>
 </code></pre></div>
 
-<div class="bs-callout bs-callout-danger">
-  <h4>Plugin dependency</h4>
-  <p>The responsive masthead requires the <a href="../javascript/#collapse">collapse plugin</a> to be included in your version of Bootstrap.</p>
-</div>
+    <div class="bs-callout bs-callout-danger">
+      <h4>Plugin dependency</h4>
+      <p>The responsive masthead requires the <a href="../javascript/#collapse">collapse plugin</a> to be included in your version of Bootstrap.</p>
+    </div>
 
-<div class="bs-callout bs-callout-warning">
-  <h4>Make mastheads accessible</h4>
-  <p>Be sure to add a <code>role="navigation"</code> to every masthead to help with accessibility.</p>
-</div>
+    <div class="bs-callout bs-callout-warning">
+      <h4>Make mastheads accessible</h4>
+      <p>Be sure to add a <code>role="navigation"</code> to every masthead to help with accessibility.</p>
+    </div>
 
 
     <h2 id="navbar-masthead-forms">Forms</h2>
@@ -2925,7 +2929,7 @@
 
 
     <h2 id="navbar-masthead-buttons">Buttons</h2>
-    <p>For buttons not residing in a <code>&lt;form&gt;</code>, add this class to vertically center buttons within a navbar.</p>
+    <p>Add the <code>.navbar-btn</code> class to <code>&lt;button&gt;</code> elements not residing in a <code>&lt;form&gt;</code> to vertically center them in the masthead.</p>
     <div class="bs-example">
       <nav class="navbar navbar-masthead navbar-default" role="navigation">
         <div class="navbar-header">
@@ -3422,7 +3426,7 @@
 
 
     <h2 id="navbar-toolbar-buttons">Buttons</h2>
-    <p>For buttons not residing in a <code>&lt;form&gt;</code>, add this class to vertically center buttons within a navbar.</p>
+    <p>Add the <code>.navbar-btn</code> class to <code>&lt;button&gt;</code> elements not residing in a <code>&lt;form&gt;</code> to vertically center them in the toolbar.</p>
     <div class="bs-example">
       <nav class="navbar navbar-toolbar navbar-default" role="navigation">
         <div class="navbar-header">
