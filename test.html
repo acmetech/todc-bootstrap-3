@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>New List Group</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- TODC Bootstrap core CSS -->
+  <link href="../dist/css/todc-bootstrap.min.css" rel="stylesheet">
+
+  <style type="text/css" media="screen">
+    .list-group {
+      width: 300px;
+    }
+
+    .list-group-item > .dropdown-toggle {
+      display: inline-block;
+      padding-right: 6px;
+      padding-left: 6px;
+      visibility: hidden;
+    }
+    .list-group-item:hover > a.dropdown-toggle,
+    .list-group-item.open > a.dropdown-toggle,
+    .collapse-caret.dropdown-toggle {
+      visibility: visible;
+    }
+    .in.dropdown-menu {
+      display: block;
+      border: medium none;
+      border-radius: 0 0 0 0;
+      box-shadow: none;
+      float: none;
+      margin: 0;
+      padding-top: 0;
+      position: static;
+    }
+    .in.dropdown-menu > li > a {
+      padding: 5px 25px;
+      margin-left: -5px;
+      position: relative;
+      line-height: 1.4;
+    }
+
+
+    /* Right facing caret */
+    .collapse-caret.collapsed:before {
+      /*content: ' ';*/
+      /*position: absolute;*/
+      left: 6px;
+      top: 9px;
+      /*width: 0;*/
+      /*height: 0;*/
+      /*vertical-align: middle;*/
+      border-top: 4px solid transparent;
+      border-right: 0 dotted;
+      border-bottom: 4px solid transparent;
+      border-left: 4px solid #000000;
+    }
+/*    .collapse-caret.collapsed {
+      display: inline-block;
+      width: 17px;
+      height: 28px;
+      margin-left: -2px;
+      position: absolute;
+    }*/
+    /* Bottom facing caret */
+    .collapse-caret:before {
+      content: ' ';
+      position: absolute;
+      left: 5px;
+      top: 11px;
+      width: 0;
+      height: 0;
+      /*vertical-align: middle;*/
+      border-top: 4px solid #000000;
+      border-right: 4px solid transparent;
+      border-bottom: 0 dotted;
+      border-left: 4px solid transparent;
+    }
+    .collapse-caret {
+      display: inline-block;
+      width: 17px;
+      height: 28px;
+      margin-left: -2px;
+      position: absolute;
+      left: 10px;
+      z-index: 1;
+    }
+    .collapse-caret:hover {
+      background-color: #eeeeee;
+    }
+
+    .collapse-submenu > .collapse-caret {
+      margin-left: 5px;
+    }
+    .collapse-submenu > .dropdown-menu {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <ul class="list-group">
+    <li class="list-group-header">List header</li>
+    <li class="list-group-item active"><a href="#">Home</a></li>
+    <li class="list-group-item"><a href="#">Library</a></li>
+    <li class="list-group-item"><a href="#">Applications</a></li>
+    <li class="list-group-header">Another list header</li>
+    <li class="list-group-item">
+      <a href="#" class="dropdown-toggle pull-right" data-toggle="dropdown" class="dropdown-toggle"><span class="caret"></span></a>
+      <ul role="menu" class="dropdown-menu pull-right">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+      </ul>
+
+      <span class="collapse-caret collapsed dropdown-toggle" data-toggle="collapse" data-target="#profile"></span>
+      <a href="#">
+        Profile
+      </a>
+    </li>
+    <li class="list-group-item">
+      <ul role="menu" id="profile" class="dropdown-menu collapse">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+      </ul>
+    </li>
+    <li class="list-group-item">
+      <a href="#" class="dropdown-toggle pull-right" data-toggle="dropdown" class="dropdown-toggle"><span class="caret"></span></a>
+      <ul role="menu" class="dropdown-menu pull-right">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+      </ul>
+
+      <span class="collapse-caret collapsed dropdown-toggle" data-toggle="collapse" data-target="#settings"></span>
+      <a href="#">
+        Settings
+      </a>
+    </li>
+    <li class="list-group-item">
+      <ul role="menu" id="settings" class="dropdown-menu collapse">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li class="collapse-submenu">
+          <span class="collapse-caret collapsed" data-toggle="collapse" data-target="#sub-settings" class="dropdown-toggle"></span>
+          <a href="#">
+            Separated link
+          </a>
+          <ul role="menu" id="sub-settings" class="dropdown-menu collapse">
+            <li><a href="#">Action</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="divider"></li>
+    <li class="list-group-item"><a href="#">Help</a></li>
+  </ul>
+
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="../dist/js/bootstrap.js"></script>
+</body>
+</html>
