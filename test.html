@@ -31,7 +31,8 @@
     .collapse-caret.dropdown-toggle {
       visibility: visible;
     }
-    .in.dropdown-menu {
+    .list-group-collapse > .dropdown-menu,
+    .collapse-submenu .dropdown-menu {
       display: block;
       border: medium none;
       border-radius: 0 0 0 0;
@@ -41,13 +42,17 @@
       padding-top: 0;
       position: static;
     }
-    .in.dropdown-menu > li > a {
+    .list-group-collapse > .dropdown-menu > li > a,
+    .collapse-submenu .dropdown-menu > li > a {
       padding: 5px 25px;
-      margin-left: -5px;
+      margin-left: 10px;
       position: relative;
       line-height: 1.4;
     }
 
+    .collapse-submenu .dropdown-menu > li > a {
+      margin-left: 20px;
+    }
 
     /* Right facing caret */
     .collapse-caret.collapsed:before {
@@ -128,8 +133,8 @@
         Profile
       </a>
     </li>
-    <li class="list-group-item">
-      <ul role="menu" id="profile" class="dropdown-menu collapse">
+    <li class="list-group-collapse collapse" id="profile">
+      <ul role="menu" class="dropdown-menu collapse">
         <li><a href="#">Action</a></li>
         <li><a href="#">Another action</a></li>
         <li><a href="#">Something else here</a></li>
@@ -150,8 +155,8 @@
         Settings
       </a>
     </li>
-    <li class="list-group-item">
-      <ul role="menu" id="settings" class="dropdown-menu collapse">
+    <li class="list-group-collapse collapse" id="settings">
+      <ul role="menu" class="dropdown-menu">
         <li><a href="#">Action</a></li>
         <li><a href="#">Another action</a></li>
         <li><a href="#">Something else here</a></li>
@@ -161,15 +166,20 @@
           <a href="#">
             Separated link
           </a>
-          <ul role="menu" id="sub-settings" class="dropdown-menu collapse">
-            <li><a href="#">Action</a></li>
-          </ul>
+          <div class="collapse" id="sub-settings">
+            <ul role="menu" class="dropdown-menu">
+              <li><a href="#">Action 1</a></li>
+              <li><a href="#">Action 2</a></li>
+              <li><a href="#">Action 3</a></li>
+            </ul>
+          </div>
         </li>
       </ul>
     </li>
     <li class="divider"></li>
     <li class="list-group-item"><a href="#">Help</a></li>
   </ul>
+
 
 
   <!-- Bootstrap core JavaScript
