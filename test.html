@@ -31,8 +31,7 @@
     .collapse-caret.dropdown-toggle {
       visibility: visible;
     }
-    .list-group-collapse > .dropdown-menu,
-    .collapse-submenu .dropdown-menu {
+    .list-group-collapse > .dropdown-menu {
       display: block;
       border: medium none;
       border-radius: 0 0 0 0;
@@ -42,16 +41,15 @@
       padding-top: 0;
       position: static;
     }
-    .list-group-collapse > .dropdown-menu > li > a,
-    .collapse-submenu .dropdown-menu > li > a {
-      padding: 5px 25px;
-      margin-left: 10px;
+    .list-group-collapse > .dropdown-menu > li > a {
+      padding: 5px 20px;
+      margin-left: 15px;
       position: relative;
       line-height: 1.4;
     }
 
     .collapse-submenu .dropdown-menu > li > a {
-      margin-left: 20px;
+      padding-left: 25px;
     }
 
     /* Right facing caret */
@@ -166,7 +164,7 @@
           <a href="#">
             Separated link
           </a>
-          <div class="collapse" id="sub-settings">
+          <div class="list-group-collapse collapse" id="sub-settings">
             <ul role="menu" class="dropdown-menu">
               <li><a href="#">Action 1</a></li>
               <li><a href="#">Action 2</a></li>
