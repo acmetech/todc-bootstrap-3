@@ -1,9 +1,9 @@
 $(document).ready(function() {
+  $('.list-group-item > .dropdown').hide()
+
   $('.list-group-item > .dropdown').on('hidden.bs.dropdown', function () {
     $(this).hide()
   })
-
-  $('.list-group-item > .dropdown').hide()
 
   $('li.list-group-item a, .list-group-item > .dropdown').on('mouseenter', function(event) {
     if ( !$(this).is($('.dropdown.open')) ) {

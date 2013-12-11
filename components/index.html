@@ -4833,11 +4833,11 @@
 
 <p>In order to properly emulate the Gooogle navigation found in Gmail this javascript is needed.</p>
 <div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.list-group-item &gt; .dropdown&#39;</span><span class="p">).</span><span class="nx">hide</span><span class="p">()</span>
+
   <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.list-group-item &gt; .dropdown&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;hidden.bs.dropdown&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">hide</span><span class="p">()</span>
   <span class="p">})</span>
-
-  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.list-group-item &gt; .dropdown&#39;</span><span class="p">).</span><span class="nx">hide</span><span class="p">()</span>
 
   <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;li.list-group-item a, .list-group-item &gt; .dropdown&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;mouseenter&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">is</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.dropdown.open&#39;</span><span class="p">))</span> <span class="p">)</span> <span class="p">{</span>
