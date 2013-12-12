@@ -4121,3 +4121,18 @@ li.list-group-header {
   border-bottom: 1px solid #ebebeb;
   border-radius: 0;
 }
+.list-group-item > .dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.list-group-item a:hover + .dropdown {
+    display: block;
+}
+.list-group-item > .dropdown.open {
+    display: block;
+}
+.list-group-item > .dropdown.open > .dropdown-toggle {
+    background-color: #eee;
+}

@@ -9,9 +9,9 @@
 <meta name="author" content="">
 
 <title>
-  
+
     Components &middot; TODC Bootstrap
-  
+
 </title>
 
 <!-- Bootstrap core CSS -->
@@ -32,7 +32,7 @@
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../docs-assets/ico/apple-touch-icon-144-precomposed.png">
                                <link rel="shortcut icon" href="../docs-assets/ico/favicon.png">
 
-<link href="../dist/css/todc-bootstrap.min.css" rel="stylesheet">
+<link href="../dist/css/todc-bootstrap.css" rel="stylesheet">
 <link href="../docs-assets/css/select2.css" rel="stylesheet">
 
   </head>
@@ -98,7 +98,7 @@
         <div class="col-md-3">
           <div class="bs-sidebar hidden-print" role="complementary">
             <ul class="nav bs-sidenav">
-              
+
                 <li>
   <a href="#glyphicons">Glyphicons</a>
   <ul class="nav">
@@ -270,7 +270,7 @@
 <li><a href="#wells">Wells</a></li>
 <li><a href="#scrollbars">Scrollbars</a></li>
 
-              
+
             </ul>
           </div>
         </div>
@@ -4605,17 +4605,6 @@
         <li class="list-group-item"><a href="#">Applications</a></li>
         <li class="list-group-header">Another list header</li>
         <li class="list-group-item">
-          <div class="dropdown pull-right">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-            <ul role="menu" class="dropdown-menu pull-right">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </div>
-
           <span class="collapse-caret collapsed dropdown-toggle" data-toggle="collapse" data-target="#profile"></span>
           <a href="#">Profile</a>
 
@@ -4634,30 +4623,40 @@
                 </div>
 
                 <a href="#">Action</a>
+                <div class="dropdown pull-right">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                  <ul role="menu" class="dropdown-menu pull-right">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </div>
         </li>
         <li class="list-group-item">
           <div class="dropdown pull-right">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-            <ul role="menu" class="dropdown-menu pull-right">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </div>
-
           <span class="collapse-caret collapsed dropdown-toggle" data-toggle="collapse" data-target="#settings"></span>
           <a href="#">
             Settings
           </a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+          <ul role="menu" class="dropdown-menu pull-right">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
 
           <div id="settings" class="collapse">
             <ul role="menu" class="collapse-menu">
               <li class="list-group-item">
+                <a href="#">Action</a>
                 <div class="dropdown pull-right">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
                   <ul role="menu" class="dropdown-menu pull-right">
@@ -4668,29 +4667,28 @@
                     <li><a href="#">Separated link</a></li>
                   </ul>
                 </div>
-
-                <a href="#">Action</a>
               </li>
               <li class="divider"></li>
               <li class="list-group-item">
-                <div class="dropdown pull-right">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-                  <ul role="menu" class="dropdown-menu pull-right">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </div>
-
                 <span class="dropdown-toggle collapse-caret collapsed" data-toggle="collapse" data-target="#sub-settings"></span>
                 <a href="#">
                   Separated link
                 </a>
+                <div class="dropdown pull-right">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                  <ul role="menu" class="dropdown-menu pull-right">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+
                 <div class="collapse" id="sub-settings">
                   <ul role="menu" class="collapse-menu">
                     <li class="list-group-item">
+                      <a href="#">Action 1</a>
                       <div class="dropdown pull-right">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
                         <ul role="menu" class="dropdown-menu pull-right">
@@ -4701,8 +4699,6 @@
                           <li><a href="#">Separated link</a></li>
                         </ul>
                       </div>
-
-                      <a href="#">Action 1</a>
                     </li>
                   </ul>
                 </div>
@@ -4829,32 +4825,6 @@
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;divider&quot;</span><span class="nt">&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Help<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span>
-</code></pre></div>
-
-<p>In order to properly emulate the Gooogle navigation found in Gmail this javascript is needed.</p>
-<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.list-group-item &gt; .dropdown&#39;</span><span class="p">).</span><span class="nx">hide</span><span class="p">()</span>
-
-  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.list-group-item &gt; .dropdown&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;hidden.bs.dropdown&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">hide</span><span class="p">()</span>
-  <span class="p">})</span>
-
-  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;li.list-group-item a, .list-group-item &gt; .dropdown&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;mouseenter&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">is</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.dropdown.open&#39;</span><span class="p">))</span> <span class="p">)</span> <span class="p">{</span>
-      <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">children</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;background-color&#39;</span><span class="p">,</span> <span class="s1">&#39;#eee&#39;</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">children</span><span class="p">(</span><span class="s1">&#39;.dropdown&#39;</span><span class="p">).</span><span class="nx">show</span><span class="p">()</span>
-  <span class="p">})</span>
-
-  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;li.list-group-item a, .list-group-item &gt; .dropdown&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;mouseleave&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">children</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">).</span><span class="nx">removeAttr</span><span class="p">(</span><span class="s1">&#39;style&#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="p">(</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">children</span><span class="p">(</span><span class="s1">&#39;.dropdown&#39;</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">&#39;open&#39;</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
-      <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">children</span><span class="p">(</span><span class="s1">&#39;.dropdown&#39;</span><span class="p">).</span><span class="nx">not</span><span class="p">(</span><span class="s1">&#39;.open&#39;</span><span class="p">).</span><span class="nx">hide</span><span class="p">()</span>
-      <span class="k">return</span>
-    <span class="p">}</span>
-    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">children</span><span class="p">(</span><span class="s1">&#39;.dropdown&#39;</span><span class="p">).</span><span class="nx">hide</span><span class="p">()</span>
-  <span class="p">})</span>
-<span class="p">})</span>
 </code></pre></div>
 
     <h3 id="list-group-custom-content">Custom content</h3>
