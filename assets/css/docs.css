@@ -1,3 +1,4 @@
+/*csslint ids: false, overqualified-elements: false*/
 /*!
  * Copyright 2014 Twitter, Inc.
  *
@@ -78,6 +79,9 @@ body {
   color: #777;
   text-align: center;
   border-top: 1px solid #e5e5e5;
+}
+.footer-links:nth-of-type(1) {
+  margin-bottom: -10px;
 }
 .footer-links {
   margin: 10px 0;
@@ -173,9 +177,12 @@ body {
 }
 
 /* Links to project-level content like the repo, Expo, etc */
+.bs-masthead-links:nth-of-type(1) {
+  margin-bottom: 0;
+}
 .bs-masthead-links {
-  margin-top: 20px;
-  margin-bottom: 40px;
+  /*margin-top: 20px;*/
+  /*margin-bottom: 40px;*/
   padding: 0 15px;
   list-style: none;
   text-align: center;
@@ -917,7 +924,7 @@ h1[id] {
   word-wrap: break-word; /* Help out IE10+ with class names */
 }
 .bs-glyphicons li:hover {
-  background-color: rgba(238, 238, 238, 1);
+  background-color: rgb(238, 238, 238);
 }
 
 @media (min-width: 768px) {
