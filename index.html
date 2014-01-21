@@ -4,24 +4,26 @@
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="TODC Bootstrap, a Google styled theme for Bootstrap.">
 <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development, bootstrap theme, bootstrap google theme, google theme">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 
 <title>
-
+  
     TODC Bootstrap
-
+  
 </title>
 
 <!-- Bootstrap core CSS -->
-<link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- TODC Bootstrap core CSS -->
+<link href="../dist/css/todc-bootstrap.min.css" rel="stylesheet">
 
 <!-- Documentation extras -->
-<link href="./assets/css/docs.css" rel="stylesheet">
-<link href="./assets/css/pygments-manni.css" rel="stylesheet">
-<!--[if lt IE 9]><script src="./assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<link href="../assets/css/pack.min.css" rel="stylesheet">
+<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -30,11 +32,8 @@
 <![endif]-->
 
 <!-- Favicons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png">
-                               <link rel="shortcut icon" href="./assets/ico/favicon.ico">
-
-<link href="./dist/css/todc-bootstrap.min.css" rel="stylesheet">
-<link href="./assets/css/select2.css" rel="stylesheet">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+                               <link rel="shortcut icon" href="../assets/ico/favicon.ico">
 
   </head>
   <body class="bs-docs-home">
@@ -50,24 +49,24 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="./" class="navbar-brand">TODC Bootstrap</a>
+      <a href="../" class="navbar-brand">TODC Bootstrap</a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li>
-          <a href="./getting-started">Getting started</a>
+          <a href="../getting-started">Getting started</a>
         </li>
         <li>
-          <a href="./css">CSS</a>
+          <a href="../css">CSS</a>
         </li>
         <li>
-          <a href="./components">Components</a>
+          <a href="../components">Components</a>
         </li>
         <li>
-          <a href="./javascript">JavaScript</a>
+          <a href="../javascript">JavaScript</a>
         </li>
         <li>
-          <a href="./customize">Customize</a>
+          <a href="../customize">Customize</a>
         </li>
       </ul>
     </nav>
@@ -80,16 +79,29 @@
   <div class="container">
     <h1>TODC Bootstrap</h1>
     <p class="lead">A Google-styled theme for Bootstrap.</p>
-    <p>
+    <p class="lead">
+      <a href="getting-started#download" class="btn btn-outline-inverse btn-lg">Download TODC Bootstrap</a>
+    </p>
+<!--     <p>
       <a href="https://github.com/todc/todc-bootstrap/releases/download/v3.1.0-3.1.0/todc-bootstrap-3.1.0-3.1.0-dist.zip" class="btn btn-outline-inverse btn-lg btn-danger">Download TODC Bootstrap</a>
       <a href="https://github.com/todc/todc-bootstrap/archive/v3.1.0-3.1.0.zip" class="btn btn-outline-inverse btn-lg btn-primary">Download source</a>
-    </p>
+    </p> -->
   </div>
 </main>
 
+<div class="bs-featurette">
+  <div class="container">
+    <p class="lead">TODC Bootstrap is open source. It's hosted, developed, and maintained on GitHub.</p>
+    <a href="https://github.com/todc/todc-bootstrap" class="btn btn-outline btn-lg">View the GitHub project</a>
+  </div>
+</div>
 
-    <footer class="container" role="contentinfo">
-      <div class="bs-social">
+
+    <!-- Footer
+================================================== -->
+<footer class="bs-footer" role="contentinfo">
+  <div class="container">
+    <div class="bs-social">
   <ul class="bs-social-buttons">
     <li>
       <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=todc&amp;repo=todc-bootstrap&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub"></iframe>
@@ -101,39 +113,50 @@
 </div>
 
 
-      <ul class="bs-masthead-links">
-        <li>Currently v3.1.0-3.1.0</li>
-        <li><a href="./2.3.2/">2.3.2 docs</a></li>
-        <li><a href="https://github.com/todc/todc-bootstrap">GitHub project</a></li>
-        <li><a href="./getting-started/#examples">Examples</a></li>
-        <li><a href="https://github.com/todc/todc-bootstrap/issues?state=open">Issues</a></li>
-        <li><a href="https://github.com/todc/todc-bootstrap/releases">Releases</a></li>
-        </li>
-      </ul>
-      <ul class="bs-masthead-links">
-        <li>Bootstrap v3.1.0</li>
-        <li><a href="http://getbootstrap.com/2.3.2/">Bootstrap 2.3.2 docs</a></li>
-        <li><a href="https://github.com/twbs/bootstrap">GitHub project</a></li>
-        <li><a href="http://getbootstrap.com/getting-started/#examples">Examples</a></li>
-        <li><a href="http://expo.getbootstrap.com">Expo</a></li>
-        <li><a href="http://blog.getbootstrap.com">Blog</a></li>
-        <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Issues</a></li>
-        <li><a href="https://github.com/twbs/bootstrap/releases">Releases</a></li>
-      </ul>
-    </footer>
+    <p>Forked from <a href="http://twbs.github.com/bootstrap/" target="_blank">Bootstrap</a> and built with all the love in the world by <a href="https://github.com/todc" target="_blank">todc</a>.</p>
+    <p>Maintained with the help of <a href="https://github.com/todc/todc-bootstrap/graphs/contributors">our contributors</a>.</p>
+    <p>Code licensed under <a href="http://www.opensource.org/licenses/mit-license.php" target="_blank">MIT License</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+    <ul class="footer-links muted">
+      <li>Currently v3.1.0-3.1.0</li>
+      <li>&middot;</li>
+      <li><a href="https://github.com/todc/todc-bootstrap">GitHub</a></li>
+      <li>&middot;</li>
+      <li><a href="../getting-started/#examples">Examples</a></li>
+      <li>&middot;</li>
+      <li><a href="../2.3.2/">v2.3.2 docs</a></li>
+      <li>&middot;</li>
+      <li><a href="https://github.com/todc/todc-bootstrap/issues?state=open">Issues</a></li>
+      <li>&middot;</li>
+      <li><a href="https://github.com/todc/todc-bootstrap/releases">Releases</a></li>
+    </ul>
+    <ul class="footer-links muted">
+      <li>Bootstrap v3.1.0</li>
+      <li>&middot;</li>
+      <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
+      <li>&middot;</li>
+      <li><a href="http://getbootstrap.com/getting-started/#examples">Examples</a></li>
+      <li>&middot;</li>
+      <li><a href="http://getbootstrap.com/2.3.2/">v2.3.2 docs</a></li>
+      <li>&middot;</li>
+      <li><a href="http://getbootstrap.com/about/">About</a></li>
+      <li>&middot;</li>
+      <li><a href="http://expo.getbootstrap.com">Expo</a></li>
+      <li>&middot;</li>
+      <li><a href="http://blog.getbootstrap.com">Blog</a></li>
+      <li>&middot;</li>
+      <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Issues</a></li>
+      <li>&middot;</li>
+      <li><a href="https://github.com/twbs/bootstrap/releases">Releases</a></li>
+    </ul>
+  </div>
+</footer>
 
-    <!-- JS and analytics only. -->
-    <!-- Bootstrap core JavaScript
+<!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="./dist/js/bootstrap.min.js"></script>
-
-<script src="./assets/js/holder.js"></script>
-
-<script src="./assets/js/select2.min.js"></script>
-<script src="./assets/js/application.js"></script>
-
+<script src="../dist/js/bootstrap.min.js"></script>
+<script src="../assets/js/docs.min.js"></script>
 
 
 
@@ -145,7 +168,6 @@
     return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
   }(document, "script", "twitter-wjs"));
 </script>
-
 
   </body>
 </html>
