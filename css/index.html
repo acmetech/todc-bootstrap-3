@@ -22,7 +22,7 @@
 <link href="../dist/css/todc-bootstrap.min.css" rel="stylesheet">
 
 <!-- Documentation extras -->
-<link href="../assets/css/pack.min.css" rel="stylesheet">
+<link href="../assets/css/docs.min.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -2997,7 +2997,8 @@
 </code></pre></div>
 
   <h3 id="less-mixins-box-shadow">Box (Drop) shadows</h3>
-  <p>If your target audience is using the latest and greatest browsers and devices, be sure to just use the <code>box-shadow</code> property on its own. If you need support for older Android (pre-v4) and iOS devices (pre-iOS 5), use the mixin to pick up the required <code>-webkit</code> prefix.</p>
+  <p>If your target audience is using the latest and greatest browsers and devices, be sure to just use the <code>box-shadow</code> property on its own. If you need support for older Android (pre-v4) and iOS devices (pre-iOS 5), use the <strong>deprecated</strong> mixin to pick up the required <code>-webkit</code> prefix.</p>
+  <p>The mixin is <strong>deprecated</strong> as of v3.1.0, since Bootstrap doesn't officially support the outdated platforms that don't support the standard property. To preserve backwards-compatibility, Bootstrap will continue to use the mixin internally until Bootstrap v4.</p>
   <p>Be sure to use <code>rgba()</code> colors in your box shadows so they blend as seamlessly as possible with backgrounds.</p>
 <div class="highlight"><pre><code class="css"><span class="nc">.box-shadow</span><span class="o">(</span><span class="k">@shadow</span><span class="o">:</span> <span class="nt">0</span> <span class="nt">1px</span> <span class="nt">3px</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span><span class="nt">0</span><span class="o">,</span><span class="nt">0</span><span class="o">,</span><span class="nc">.25</span><span class="o">))</span> <span class="p">{</span>
   <span class="nt">-webkit-box-shadow</span><span class="o">:</span> <span class="k">@shadow</span><span class="p">;</span> <span class="o">//</span> <span class="nt">iOS</span> <span class="o">&lt;</span><span class="nt">4</span><span class="nc">.3</span> <span class="o">&amp;</span> <span class="nt">Android</span> <span class="o">&lt;</span><span class="nt">4</span><span class="nc">.1</span>
@@ -3432,7 +3433,7 @@
     <p>Maintained with the help of <a href="https://github.com/todc/todc-bootstrap/graphs/contributors">our contributors</a>.</p>
     <p>Code licensed under <a href="http://www.opensource.org/licenses/mit-license.php" target="_blank">MIT License</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
     <ul class="footer-links muted">
-      <li>Currently v3.1.0-3.1.0</li>
+      <li>Currently v3.1.0-3.2.0</li>
       <li>&middot;</li>
       <li><a href="https://github.com/todc/todc-bootstrap">GitHub</a></li>
       <li>&middot;</li>

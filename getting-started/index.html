@@ -22,7 +22,7 @@
 <link href="../dist/css/todc-bootstrap.min.css" rel="stylesheet">
 
 <!-- Documentation extras -->
-<link href="../assets/css/pack.min.css" rel="stylesheet">
+<link href="../assets/css/docs.min.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -108,12 +108,12 @@
     <div class="col-sm-4">
       <h3 id="download-bootstrap">TODC Bootstrap</h3>
       <p>Compiled and minified CSS, JavaScript, and fonts. No docs or original source files are included.</p>
-      <a href="https://github.com/todc/todc-bootstrap/releases/download/v3.1.0-3.1.0/todc-bootstrap-3.1.0-3.1.0-dist.zip" class="btn btn-lg btn-outline" role="button">Download TODC Bootstrap</a>
+      <a href="https://github.com/todc/todc-bootstrap/releases/download/v3.1.0-3.2.0/todc-bootstrap-3.1.0-3.2.0-dist.zip" class="btn btn-lg btn-outline" role="button">Download TODC Bootstrap</a>
     </div>
     <div class="col-sm-4">
       <h3 id="download-source">Source code</h3>
       <p>Source Less, JavaScript, and font files, along with our docs. <strong>Requires a Less compiler and <a href="https://github.com/todc/todc-bootstrap#compiling-css-and-javascript">some setup.</a></strong></p>
-      <a href="https://github.com/todc/todc-bootstrap/archive/v3.1.0-3.1.0.zip" class="btn btn-lg btn-outline" role="button">Download source</a>
+      <a href="https://github.com/todc/todc-bootstrap/archive/v3.1.0-3.2.0.zip" class="btn btn-lg btn-outline" role="button">Download source</a>
     </div>
     <div class="col-sm-4">
     </div>
@@ -168,7 +168,7 @@
 
   <div class="bs-callout bs-callout-warning" id="jquery-required">
     <h4>jQuery required</h4>
-    <p>Please note that <strong>all JavaScript plugins require jQuery</strong> to be included, as shown in the <a href="#template">starter template</a>. <a href="https://github.com/todc/todc-bootstrap/blob/v3.1.0-3.1.0/bower.json">Consult our <code>bower.json</code></a> to see which versions of jQuery are supported.</p>
+    <p>Please note that <strong>all JavaScript plugins require jQuery</strong> to be included, as shown in the <a href="#template">starter template</a>. <a href="https://github.com/todc/todc-bootstrap/blob/v3.1.0-3.2.0/bower.json">Consult our <code>bower.json</code></a> to see which versions of jQuery are supported.</p>
   </div>
 
   <h2 id="whats-included-precompiled">Precompiled TODC Bootstrap</h2>
@@ -638,7 +638,7 @@ Copy any changes made here over to the README too. -->
   <p>Internet Explorer 10 doesn't differentiate <strong>device width</strong> from <strong>viewport width</strong>, and thus doesn't properly apply the media queries in Bootstrap's CSS. Normally you'd just add a quick snippet of CSS to fix this:</p>
 <div class="highlight"><pre><code class="css"><span class="k">@-ms-viewport</span>       <span class="p">{</span> <span class="nt">width</span><span class="o">:</span> <span class="nt">device-width</span><span class="o">;</span> <span class="p">}</span>
 </code></pre></div>
-  <p>However, this doesn't work as it causes Windows Phone 8 devices to show a mostly desktop view instead of narrow "phone" view. To address this, you'll need to <strong>include the following CSS and JavaScript to work around the bug until Microsoft issues a fix</strong>.</p>
+  <p>However, this doesn't work for devices running Windows Phone 8 versions older than <a href="http://blogs.windows.com/windows_phone/b/wpdev/archive/2013/10/14/introducing-windows-phone-preview-for-developers.aspx">Update 3 (a.k.a. GDR3)</a>, as it causes such devices to show a mostly desktop view instead of narrow "phone" view. To address this, you'll need to <strong>include the following CSS and JavaScript to work around the bug</strong>.</p>
 <div class="highlight"><pre><code class="css"><span class="k">@-webkit-viewport</span>   <span class="p">{</span> <span class="nt">width</span><span class="o">:</span> <span class="nt">device-width</span><span class="o">;</span> <span class="p">}</span>
 <span class="k">@-moz-viewport</span>      <span class="p">{</span> <span class="nt">width</span><span class="o">:</span> <span class="nt">device-width</span><span class="o">;</span> <span class="p">}</span>
 <span class="k">@-ms-viewport</span>       <span class="p">{</span> <span class="nt">width</span><span class="o">:</span> <span class="nt">device-width</span><span class="o">;</span> <span class="p">}</span>
@@ -678,6 +678,14 @@ Copy any changes made here over to the README too. -->
   <h3 id="support-browser-zooming">Browser zooming</h3>
   <p>Page zooming inevitably presents rendering artifacts in some components, both in Bootstrap and the rest of the web. Depending on the issue, we may be able to fix it (search first and then open an issue if need be). However, we tend to ignore these as they often have no direct solution other than hacky workarounds.</p>
 
+  <h3 id="support-printing">Printer viewports</h3>
+  <p>Even in some modern browsers, printing can be quirky. In particular, as of Chrome v32 and regardless of margin settings, Chrome uses a viewport width significantly narrower than the physical paper size when resolving media queries while printing a webpage. This can result in Bootstrap's extra-small grid being unexpectedly activated when printing. <a href="https://github.com/twbs/bootstrap/issues/12078">See #12078 for some details.</a> Suggested workarounds:</p>
+  <ul>
+    <li>Embrace the extra-small grid and make sure your page looks acceptable under it.</li>
+    <li>Customize the values of the <code>@screen-*</code> Less variables so that your printer paper is considered larger than extra-small.</li>
+    <li>Add custom media queries to change the grid size breakpoints for print media only.</li>
+  </ul>
+
   <h3 id="support-android-stock-browser">Android stock browser</h3>
   <p>Out of the box, Android 4.1 (and even some newer releases apparently) ship with the Browser app as the default web browser of choice (as opposed to Chrome). Unfortunately, the Browser app has lots of bugs and inconsistencies with CSS in general.</p>
   <h4>Select menus</h4>
@@ -701,7 +709,7 @@ Copy any changes made here over to the README too. -->
   <h1 id="third-parties" class="page-header">Third party support</h1>
   <p class="lead">While we don't officially support any third party plugins or add-ons, we do offer some useful advice to help avoid potential issues in your projects.</p>
 
-  <h3>Box-sizing</h3>
+  <h3 id="third-box-sizing">Box-sizing</h3>
   <p>Some third party software, including Google Maps and Google Custom Search Engine, conflict with Bootstrap due to <code>* { box-sizing: border-box; }</code>, a rule which makes it so <code>padding</code> does not affect the final computed width of an element. Learn more about <a href="http://css-tricks.com/box-sizing/">box model and sizing at CSS Tricks</a>.</p>
   <p>Depending on the context, you may override as-needed (Option 1) or reset the box-sizing for entire regions (Option 2).</p>
 <div class="highlight"><pre><code class="css"><span class="c">/* Box-sizing resets</span>
@@ -944,6 +952,7 @@ Copy any changes made here over to the README too. -->
     <li><a href="#support-safari-percentages">Safari percent rounding</a></li>
     <li><a href="#support-fixed-position-keyboards">Modals, navbars, and virtual keyboards</a></li>
     <li><a href="#support-browser-zooming">Browser zooming</a></li>
+    <li><a href="#support-printing">Printer viewports</a></li>
     <li><a href="#support-android-stock-browser">Android stock browser</a></li>
   </ul>
 </li>
@@ -988,7 +997,7 @@ Copy any changes made here over to the README too. -->
     <p>Maintained with the help of <a href="https://github.com/todc/todc-bootstrap/graphs/contributors">our contributors</a>.</p>
     <p>Code licensed under <a href="http://www.opensource.org/licenses/mit-license.php" target="_blank">MIT License</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
     <ul class="footer-links muted">
-      <li>Currently v3.1.0-3.1.0</li>
+      <li>Currently v3.1.0-3.2.0</li>
       <li>&middot;</li>
       <li><a href="https://github.com/todc/todc-bootstrap">GitHub</a></li>
       <li>&middot;</li>
