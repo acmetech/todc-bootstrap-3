@@ -24,20 +24,23 @@
 <!-- Documentation extras -->
 <link href="../assets/css/docs.min.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="../assets/js/ie-emulation-modes-warning.js"></script>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.1/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
 <!-- Favicons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-                               <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+                               <link rel="icon" href="../assets/ico/favicon.ico">
 
   </head>
   <body id="top">
-    <a class="sr-only" href="#content">Skip to main content</a>
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
     <!-- Docs master nav -->
     <header class="navbar navbar-masthead navbar-default navbar-fixed-top" role="banner">
@@ -86,9 +89,7 @@
 
       <div class="row">
         <div class="col-md-9" role="main">
-          <!-- Glyphicons
-================================================== -->
-<div class="bs-docs-section">
+          <div class="bs-docs-section">
   <h1 id="glyphicons" class="page-header">Glyphicons</h1>
 
   <h2 id="glyphicons-glyphs">Available glyphs</h2>
@@ -1106,6 +1107,19 @@
     <h4>Don't mix with other components</h4>
     <p>Icon classes cannot be directly combined with other components. They should not be used along with other classes on the same element. Instead, add a nested <code>&lt;span&gt;</code> and apply the icon classes to the <code>&lt;span&gt;</code>.</p>
   </div>
+  <div class="bs-callout bs-callout-danger">
+    <h4>Only for use on empty elements</h4>
+    <p>Icon classes should only be used on elements that contain no text content and have no child elements.</p>
+  </div>
+  <div class="bs-callout bs-callout-info">
+    <h4>Changing the icon font location</h4>
+    <p>By default, Bootstrap assumes that the icon font files will be located in the <code>../fonts/</code> directory relative to your deployed CSS. For example, if your CSS file is at <code>http://example.com/foobar/css/bootstrap.css</code>, then your font files should be at <code>http://example.com/foobar/fonts/glyphicons-halflings-regular.woff</code>, etc.</p>
+    <p>If you are placing the icon font files elsewhere or changing their filenames, you will need to adjust the <code>@icon-font-path</code> and/or <code>@icon-font-name</code> Less variables accordingly.</p>
+  </div>
+  <div class="bs-callout bs-callout-info">
+    <h4><code>@import</code>ing Bootstrap via Less may require adjusting the icon font location</h4>
+    <p>If you <code>@import</code> Bootstrap's Less source into your own Less file, you may need to adjust the <code>@icon-font-path</code> Less variable due to the way that relative paths in <code>url(...)</code>s work in Less.</p>
+  </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;glyphicon glyphicon-search&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
 </code></pre></div>
 
@@ -1134,10 +1148,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Dropdowns
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="dropdowns" class="page-header">Dropdowns</h1>
 
@@ -1314,7 +1324,7 @@
           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
           <li role="presentation" class="divider"></li>
-          <li class="dropdown-submenu pull-left">
+          <li class="dropdown-submenu dropdown-menu-left">
             <a tabindex="-1" href="#">More options</a>
             <ul class="dropdown-menu">
               <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Second level link</a></li>
@@ -1331,7 +1341,7 @@
     <div class="clearfix"></div>
   </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span> <span class="na">aria-labelledby=</span><span class="s">&quot;dropdownSubMenu&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown-submenu pull-left&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown-submenu dropdown-menu-left&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">tabindex=</span><span class="s">&quot;-1&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>More options<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">&quot;presentation&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">&quot;menuitem&quot;</span> <span class="na">tabindex=</span><span class="s">&quot;-1&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Second level link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -1345,10 +1355,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Button Groups
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="btn-groups" class="page-header">Button groups</h1>
 
@@ -1538,6 +1544,11 @@
     <h4>Handling borders</h4>
     <p>Due to the specific HTML and CSS used to justify buttons (namely <code>display: table-cell</code>), the borders between them are doubled. In regular button groups, <code>margin-left: -1px</code> is used to stack the borders instead of removing them. However, <code>margin</code> doesn't work with <code>display: table-cell</code>. As a result, depending on your customizations to Bootstrap, you may wish to remove or re-color the borders.</p>
   </div>
+  <div class="bs-callout bs-callout-warning">
+    <h4>IE8 and borders</h4>
+    <p>Internet Explorer 8 doesn't render borders in on buttons in a justified button group, whether it's on <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> elements. To get around that, wrap each button in another <code>.btn-group</code>.</p>
+    <p>See <a href="https://github.com/twbs/bootstrap/issues/12476">#12476</a> for more information.</p>
+  </div>
 
   <h4>With <code>&lt;a&gt;</code> elements</h4>
   <p>Just wrap a series of <code>.btn</code>s in <code>.btn-group.btn-group-justified</code>.</p>
@@ -1599,10 +1610,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Split button dropdowns
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="btn-dropdowns" class="page-header">Button dropdowns</h1>
 
@@ -1898,7 +1905,7 @@
           <span class="caret"></span>
           <span class="sr-only">Toggle Dropdown</span>
         </button>
-        <ul class="dropdown-menu pull-right" role="menu">
+        <ul class="dropdown-menu dropdown-menu-right" role="menu">
           <li><a href="#">Action</a></li>
           <li><a href="#">Another action</a></li>
           <li><a href="#">Something else here</a></li>
@@ -1921,10 +1928,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Input groups
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="input-groups" class="page-header">Input groups</h1>
 
@@ -2126,7 +2129,7 @@
           <input type="text" class="form-control">
           <div class="input-group-btn">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
-            <ul class="dropdown-menu pull-right" role="menu">
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
               <li><a href="#">Action</a></li>
               <li><a href="#">Another action</a></li>
               <li><a href="#">Something else here</a></li>
@@ -2159,7 +2162,7 @@
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-group-btn&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Action <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
-        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu pull-right&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu dropdown-menu-right&quot;</span><span class="nt">&gt;</span>
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -2203,7 +2206,7 @@
               <span class="caret"></span>
               <span class="sr-only">Toggle Dropdown</span>
             </button>
-            <ul class="dropdown-menu pull-right" role="menu">
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
               <li><a href="#">Action</a></li>
               <li><a href="#">Another action</a></li>
               <li><a href="#">Something else here</a></li>
@@ -2231,10 +2234,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Navs
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="nav" class="page-header">Navs</h1>
 
@@ -2426,10 +2425,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Navbar
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="navbar" class="page-header">Navbar</h1>
 
@@ -2448,6 +2443,10 @@
   <div class="bs-callout bs-callout-danger">
     <h4>Requires JavaScript</h4>
     <p>If JavaScript is disabled and the viewport is narrow enough that the navbar collapses, it will be impossible to expand the navbar and view the content within the <code>.navbar-collapse</code>.</p>
+  </div>
+  <div class="bs-callout bs-callout-info">
+    <h4>Changing the collapsed mobile navbar breakpoint</h4>
+    <p>The navbar collapses into its vertical mobile view when the viewport is narrower than <code>@grid-float-breakpoint</code>, and expands into its horizontal non-mobile view when the viewport is at least <code>@grid-float-breakpoint</code> in width. Adjust this variable in the Less source to control when the navbar collapses/expands. The default value is <code>768px</code> (the smallest "small" or "tablet" screen).</p>
   </div>
 
   <div class="bs-example">
@@ -2470,7 +2469,7 @@
             <li class="active"><a href="#">Link</a></li>
             <li><a href="#">Link</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
@@ -2491,7 +2490,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Link</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
@@ -2524,7 +2523,7 @@
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Dropdown <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/b&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Dropdown <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
             <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
             <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -2545,7 +2544,7 @@
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav navbar-nav navbar-right&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Dropdown <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/b&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Dropdown <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
             <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
             <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -2695,6 +2694,11 @@
   <h2 id="navbar-component-alignment">Component alignment</h2>
   <p>Align nav links, forms, buttons, or text, using the <code>.navbar-left</code> or <code>.navbar-right</code> utility classes. Both classes will add a CSS float in the specified direction. For example, to align nav links, put them in a separate <code>&lt;ul&gt;</code> with the respective utility class applied.</p>
   <p>These classes are mixin-ed versions of <code>.pull-left</code> and <code>.pull-right</code>, but they're scoped to media queries for easier handling of navbar components across device sizes.</p>
+  <div class="bs-callout bs-callout-warning">
+    <h4>Right aligning multiple components</h4>
+    <p>Navbars currently have a limitation with multiple <code>.navbar-right</code> classes. To properly space content, we use negative margin on the last <code>.navbar-right</code> element. When there are multiple elements using that class, these margins don't work as intended.</p>
+    <p>We'll revisit this when we can rewrite that component in v4.</p>
+  </div>
 
 
   <h2 id="navbar-fixed-top">Fixed to top</h2>
@@ -2850,10 +2854,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Masthead
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="navbar-masthead" class="page-header">Masthead</h1>
 
@@ -2889,7 +2889,7 @@
             <li class="active"><a href="#">Link</a></li>
             <li><a href="#">Link</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
@@ -2910,7 +2910,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Link</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
@@ -2943,7 +2943,7 @@
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Dropdown <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/b&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Dropdown <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
             <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
             <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -2964,7 +2964,7 @@
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav navbar-nav navbar-right&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Dropdown <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/b&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Dropdown <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
             <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
             <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -3096,6 +3096,11 @@
   <h2 id="navbar-masthead-component-alignment">Component alignment</h2>
   <p>Align nav links, forms, buttons, or text, using the <code>.navbar-left</code> or <code>.navbar-right</code> utility classes. Both classes will add a CSS float in the specified direction. For example, to align nav links, put them in a separate <code>&lt;ul&gt;</code> with the respective utility class applied.</p>
   <p>These classes are mixin-ed versions of <code>.pull-left</code> and <code>.pull-right</code>, but they're scoped to media queries for easier handling of navbar components across device sizes.</p>
+  <div class="bs-callout bs-callout-warning">
+    <h4>Right aligning multiple components</h4>
+    <p>Mastheads currently have a limitation with multiple <code>.navbar-right</code> classes. To properly space content, we use negative margin on the last <code>.navbar-right</code> element. When there are multiple elements using that class, these margins don't work as intended.</p>
+    <p>We'll revisit this when we can rewrite that component in v4.</p>
+  </div>
 
 
   <h2 id="navbar-masthead-fixed-top">Fixed to top</h2>
@@ -3251,10 +3256,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Toolbar
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="navbar-toolbar" class="page-header">Toolbar</h1>
 
@@ -3281,7 +3282,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="#" class="navbar-brand dropdown-toggle" data-toggle="dropdown">Brand <b class="caret"></b></a>
+          <a href="#" class="navbar-brand dropdown-toggle" data-toggle="dropdown">Brand <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
@@ -3299,7 +3300,7 @@
             <li class="active"><a href="#">Link</a></li>
             <li><a href="#">Link</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
@@ -3320,7 +3321,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Link</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
@@ -3344,7 +3345,7 @@
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
       <span class="nt">&lt;/button&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;navbar-brand dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Brand <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/b&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;navbar-brand dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Brand <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -3362,7 +3363,7 @@
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Dropdown <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/b&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Dropdown <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
             <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
             <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -3383,7 +3384,7 @@
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav navbar-nav navbar-right&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Dropdown <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/b&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Dropdown <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
             <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
             <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -3616,6 +3617,11 @@
   <h2 id="navbar-toolbar-component-alignment">Component alignment</h2>
   <p>Align nav links, forms, buttons, or text, using the <code>.navbar-left</code> or <code>.navbar-right</code> utility classes. Both classes will add a CSS float in the specified direction. For example, to align nav links, put them in a separate <code>&lt;ul&gt;</code> with the respective utility class applied.</p>
   <p>These classes are mixin-ed versions of <code>.pull-left</code> and <code>.pull-right</code>, but they're scoped to media queries for easier handling of navbar components across device sizes.</p>
+  <div class="bs-callout bs-callout-warning">
+    <h4>Right aligning multiple components</h4>
+    <p>Toolbars currently have a limitation with multiple <code>.navbar-right</code> classes. To properly space content, we use negative margin on the last <code>.navbar-right</code> element. When there are multiple elements using that class, these margins don't work as intended.</p>
+    <p>We'll revisit this when we can rewrite that component in v4.</p>
+  </div>
 
 
   <h2 id="navbar-toolbar-fixed-top">Fixed to top</h2>
@@ -3770,10 +3776,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Breadcrumbs
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="breadcrumbs" class="page-header">Breadcrumbs</h1>
 
@@ -3847,10 +3849,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Pagination
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="pagination" class="page-header">Pagination</h1>
 
@@ -3998,10 +3996,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Labels
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="labels" class="page-header">Labels</h1>
 
@@ -4036,10 +4030,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Badges
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="badges" class="page-header">Badges</h1>
 
@@ -4100,10 +4090,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Jumbotron
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="jumbotron" class="page-header">Jumbotron</h1>
 
@@ -4130,10 +4116,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Page header
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="page-header" class="page-header">Page header</h1>
 
@@ -4149,10 +4131,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Thumbnails
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="thumbnails" class="page-header">Thumbnails</h1>
 
@@ -4245,10 +4223,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Alerts
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="alerts" class="page-header">Alerts</h1>
 
@@ -4263,34 +4237,34 @@
   </div>
 
   <div class="bs-example">
-    <div class="alert alert-success">
+    <div class="alert alert-success" role="alert">
       <strong>Well done!</strong> You successfully read this important alert message.
     </div>
-    <div class="alert alert-info">
+    <div class="alert alert-info" role="alert">
       <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
     </div>
-    <div class="alert alert-warning">
+    <div class="alert alert-warning" role="alert">
       <strong>Warning!</strong> Better check yourself, you're not looking too good.
     </div>
-    <div class="alert alert-danger">
+    <div class="alert alert-danger" role="alert">
       <strong>Oh snap!</strong> Change a few things up and try submitting again.
     </div>
   </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-success&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-info&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-warning&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-danger&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-success&quot;</span> <span class="na">role=</span><span class="s">&quot;alert&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-info&quot;</span> <span class="na">role=</span><span class="s">&quot;alert&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-warning&quot;</span> <span class="na">role=</span><span class="s">&quot;alert&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-danger&quot;</span> <span class="na">role=</span><span class="s">&quot;alert&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
   <h2 id="alerts-dismissable">Dismissable alerts</h2>
   <p>Build on any alert by adding an optional <code>.alert-dismissable</code> and close button.</p>
   <div class="bs-example">
-    <div class="alert alert-warning alert-dismissable">
+    <div class="alert alert-warning alert-dismissable" role="alert">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
       <strong>Warning!</strong> Better check yourself, you're not looking too good.
     </div>
   </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-warning alert-dismissable&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-warning alert-dismissable&quot;</span> <span class="na">role=</span><span class="s">&quot;alert&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;close&quot;</span> <span class="na">data-dismiss=</span><span class="s">&quot;alert&quot;</span> <span class="na">aria-hidden=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;strong&gt;</span>Warning!<span class="nt">&lt;/strong&gt;</span> Better check yourself, you&#39;re not looking too good.
 <span class="nt">&lt;/div&gt;</span>
@@ -4304,38 +4278,34 @@
   <h2 id="alerts-links">Links in alerts</h2>
   <p>Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>
   <div class="bs-example">
-    <div class="alert alert-success">
+    <div class="alert alert-success" role="alert">
       <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
     </div>
-    <div class="alert alert-info">
+    <div class="alert alert-info" role="alert">
       <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
     </div>
-    <div class="alert alert-warning">
+    <div class="alert alert-warning" role="alert">
       <strong>Warning!</strong> Better check yourself, you're <a href="#" class="alert-link">not looking too good</a>.
     </div>
-    <div class="alert alert-danger">
+    <div class="alert alert-danger" role="alert">
       <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
     </div>
   </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-success&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-success&quot;</span> <span class="na">role=</span><span class="s">&quot;alert&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;alert-link&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-info&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-info&quot;</span> <span class="na">role=</span><span class="s">&quot;alert&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;alert-link&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-warning&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-warning&quot;</span> <span class="na">role=</span><span class="s">&quot;alert&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;alert-link&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-danger&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-danger&quot;</span> <span class="na">role=</span><span class="s">&quot;alert&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;alert-link&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 </div>
 
-
-
-<!-- Progress bars
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="progress" class="page-header">Progress bars</h1>
 
@@ -4377,6 +4347,33 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
+
+  <h3 id="progress-low-percentages">Low percentages</h3>
+  <p>Progress bars representing low single digit percentages, as well as 0%, include a <code>min-width: 20px;</code> for legibility.</p>
+  <div class="bs-example">
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        0%
+      </div>
+    </div>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
+        2%
+      </div>
+    </div>
+  </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span><span class="nt">&gt;</span>
+    0%
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;progress-bar&quot;</span> <span class="na">role=</span><span class="s">&quot;progressbar&quot;</span> <span class="na">aria-valuenow=</span><span class="s">&quot;2&quot;</span> <span class="na">aria-valuemin=</span><span class="s">&quot;0&quot;</span> <span class="na">aria-valuemax=</span><span class="s">&quot;100&quot;</span> <span class="na">style=</span><span class="s">&quot;width: 2%;&quot;</span><span class="nt">&gt;</span>
+    2%
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
 
   <h3 id="progress-alternatives">Contextual alternatives</h3>
   <p>Progress bars use some of the same button and alert classes for consistent styles.</p>
@@ -4513,10 +4510,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Media object
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="media" class="page-header">Media object</h1>
 
@@ -4632,10 +4625,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- List group
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="list-group" class="page-header">List group</h1>
 
@@ -5009,6 +4998,30 @@
 <span class="nt">&lt;/ul&gt;</span>
 </code></pre></div>
 
+  <h3 id="list-group-disabled">Disabled items</h3>
+  <p>Add <code>.disabled</code> to a <code>.list-group-item</code> to gray it out to appear disabled.</p>
+  <div class="bs-example">
+    <div class="list-group">
+      <a href="#" class="list-group-item disabled">
+        Cras justo odio
+      </a>
+      <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+      <a href="#" class="list-group-item">Morbi leo risus</a>
+      <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+      <a href="#" class="list-group-item">Vestibulum at eros</a>
+    </div>
+  </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;list-group&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item disabled&quot;</span><span class="nt">&gt;</span>
+  Cras justo odio
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Dapibus ac facilisis in<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Morbi leo risus<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Porta ac consectetur ac<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>Vestibulum at eros<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
   <h3 id="list-group-contextual-classes">Contextual classes</h3>
   <p>Use contextual classes to style list items, default or linked. Also includes <code>.active</code> state.</p>
   <div class="bs-example">
@@ -5072,10 +5085,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Panels
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="panels" class="page-header">Panels</h1>
 
@@ -5348,10 +5357,29 @@
 </code></pre></div>
 </div>
 
+<div class="bs-docs-section">
+  <h1 id="responsive-embed" class="page-header">Responsive embed</h1>
 
+  <p>Allow browsers to determine video or slideshow dimensions based on the width of their containing block by creating an intrinsic ratio that will properly scale on any device.</p>
+  <p>Rules are directly applied to <code>&lt;iframe&gt;</code>, <code>&lt;embed&gt;</code>, and <code>&lt;object&gt;</code> elements; optionally use an explicit descendant class <code>.embed-responsive-item</code> when you want to match the styling for other attributes.</p>
+  <p><strong>Pro-Tip!</strong> You don't need to include <code>frameborder="0"</code> in your <code>&lt;iframe&gt;</code>s as we override that for you.</p>
+  <div class="bs-example">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="//www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+    </div>
+  </div>
+<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- 16:9 aspect ratio --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;embed-responsive embed-responsive-16by9&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;iframe</span> <span class="na">class=</span><span class="s">&quot;embed-responsive-item&quot;</span> <span class="na">src=</span><span class="s">&quot;…&quot;</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-<!-- Wells
-================================================== -->
+<span class="c">&lt;!-- 4:3 aspect ratio --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;embed-responsive embed-responsive-4by3&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;iframe</span> <span class="na">class=</span><span class="s">&quot;embed-responsive-item&quot;</span> <span class="na">src=</span><span class="s">&quot;…&quot;</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+</div>
+
 <div class="bs-docs-section">
   <h1 id="wells" class="page-header">Wells</h1>
 
@@ -5383,10 +5411,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Scrollbars
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="scrollbars" class="page-header">Scrollbars</h1>
 
@@ -5417,10 +5441,6 @@
 </code></pre></div>
 </div>
 
-
-
-<!-- Scrollable shadow
-================================================== -->
 <div class="bs-docs-section">
   <h1 id="scrollable-shadow" class="page-header">Scrollable shadow</h1>
 
@@ -5450,6 +5470,7 @@
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 </div>
+
 
         </div>
         <div class="col-md-3">
@@ -5600,6 +5621,7 @@
   <ul class="nav">
     <li><a href="#progress-basic">Basic example</a></li>
     <li><a href="#progress-label">With label</a></li>
+    <li><a href="#progress-low-percentages">Low percentages</a></li>
     <li><a href="#progress-alternatives">Contextual alternatives</a></li>
     <li><a href="#progress-striped">Striped</a></li>
     <li><a href="#progress-animated">Animated</a></li>
@@ -5619,6 +5641,7 @@
     <li><a href="#list-group-basic">Basic example</a></li>
     <li><a href="#list-group-badges">Badges</a></li>
     <li><a href="#list-group-linked">Linked items</a></li>
+    <li><a href="#list-group-disabled">Disabled items</a></li>
     <li><a href="#list-group-contextual-classes">Contextual classes</a></li>
     <li><a href="#list-group-custom-content">Custom content</a></li>
   </ul>
@@ -5633,6 +5656,7 @@
     <li><a href="#panels-list-group">With list groups</a>
   </ul>
 </li>
+<li><a href="#responsive-embed">Responsive embed</a></li>
 <li><a href="#wells">Wells</a></li>
 <li><a href="#scrollbars">Scrollbars</a></li>
 <li><a href="#scrollable-shadow">Scrollable shadow</a></li>
